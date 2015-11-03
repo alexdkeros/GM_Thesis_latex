@@ -1,6 +1,9 @@
-\contentsline {chapter}{List of Tables}{v}{chapter*.2}
-\contentsline {chapter}{List of Figures}{vi}{chapter*.3}
-\contentsline {part}{I\hspace {1em}INTRODUCTION AND BACKGROUND}{1}{part.1}
+\contentsline {chapter}{Abstract}{iii}{Doc-Start}
+\contentsline {chapter}{Public Abstract}{iv}{chapter*.1}
+\contentsline {chapter}{Acknowledgments}{v}{chapter*.2}
+\contentsline {chapter}{List of Tables}{viii}{chapter*.4}
+\contentsline {chapter}{List of Figures}{ix}{chapter*.5}
+\contentsline {part}{I\hspace {1em}INTRODUCTION AND PRELIMINARIES}{1}{part.1}
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
 \contentsline {section}{\numberline {1.1}Overview}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Motivation}{2}{section.1.2}
@@ -15,25 +18,28 @@
 \contentsline {section}{\numberline {2.2}Multiobjective Optimization}{3}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Minimax}{3}{subsection.2.2.1}
 \contentsline {section}{\numberline {2.3}Maximum Weight Matching in Graphs}{3}{section.2.3}
+\contentsline {section}{\numberline {2.4}Savitzky-Golay Filtering}{3}{section.2.4}
 \contentsline {part}{II\hspace {1em}PROBLEM DEFINITION AND IMPLEMENTATION}{4}{part.2}
 \contentsline {chapter}{\numberline {3}Problem Statement}{5}{chapter.3}
 \contentsline {chapter}{\numberline {4}Implementation}{6}{chapter.4}
-\contentsline {section}{\numberline {4.1}Grouped Balancing}{6}{section.4.1}
+\contentsline {section}{\numberline {4.1}Geometric Monitoring}{6}{section.4.1}
 \contentsline {section}{\numberline {4.2}Heuristic Balancing}{6}{section.4.2}
-\contentsline {section}{\numberline {4.3}Node Matching}{6}{section.4.3}
+\contentsline {section}{\numberline {4.3}Distance Based Node Matching}{6}{section.4.3}
 \contentsline {section}{\numberline {4.4}Implementation Challenges}{6}{section.4.4}
 \contentsline {part}{III\hspace {1em}RESULTS AND CONCLUSIONS}{7}{part.3}
 \contentsline {chapter}{\numberline {5}Experimental Results}{8}{chapter.5}
-\contentsline {section}{\numberline {5.1}Heuristic Balancing}{8}{section.5.1}
-\contentsline {section}{\numberline {5.2}Node Matching}{8}{section.5.2}
-\contentsline {section}{\numberline {5.3}Overall Results}{8}{section.5.3}
+\contentsline {section}{\numberline {5.1}Experimental Setting}{8}{section.5.1}
+\contentsline {section}{\numberline {5.2}Heuristic Balancing}{8}{section.5.2}
+\contentsline {section}{\numberline {5.3}Distance Based Node Matching}{8}{section.5.3}
+\contentsline {section}{\numberline {5.4}Overall Results}{8}{section.5.4}
 \contentsline {chapter}{\numberline {6}Conclusions and Future Work}{9}{chapter.6}
 \contentsline {section}{\numberline {6.1}Conclusions}{9}{section.6.1}
 \contentsline {section}{\numberline {6.2}Future Work}{9}{section.6.2}
 \contentsline {chapter}{References}{10}{chapter.7}
-\contentsline {chapter}{Appendix}{13}{chapter.8}
-\contentsline {section}{Chapter{} A\hspace {12pt} Tools}{14}{appendix.I}
-\contentsline {section}{\numberline {A.1}Python}{14}{section.I.1}
-\contentsline {section}{\numberline {A.2}Numpy and Scipy}{14}{section.I.2}
-\contentsline {section}{\numberline {A.3}Openopt}{14}{section.I.3}
-\contentsline {section}{\numberline {A.4}NetworkX}{14}{section.I.4}
+\contentsline {chapter}{Appendix}{11}{chapter.8}
+\contentsline {section}{Chapter{} A\hspace {12pt} Geometric Monitoring Python Implementation}{12}{appendix.I}
+\contentsline {section}{\numberline {A.1}Python}{12}{section.I.1}
+\contentsline {section}{\numberline {A.2}Numpy and Scipy}{12}{section.I.2}
+\contentsline {section}{\numberline {A.3}Openopt}{12}{section.I.3}
+\contentsline {section}{\numberline {A.4}NetworkX}{12}{section.I.4}
+\contentsline {section}{\numberline {A.5}Putting It All Together}{12}{section.I.5}

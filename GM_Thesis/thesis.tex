@@ -80,7 +80,7 @@
 \deansecondtitle{}
 
 % Degree Information
-\degree{Bachelor}
+\degree{Undergraduate}
 \month{September}
 \year{2015}
 \university{Technical University of Crete}
@@ -96,7 +96,7 @@
     \include{doc/abstract}
     \include{doc/pubAbstract}
     \include{doc/dedication}  % optional
-    \include{doc/acknowledgements}     % optional
+    \include{doc/acknowledgments}     % optional
 
     \tableofcontents
     \listoftables
@@ -110,15 +110,15 @@
 
     % Chapters
     %part
-	\part{INTRODUCTION AND BACKGROUND}      
+	\part{INTRODUCTION AND PRELIMINARIES} \label{pt:introPrelim}    
     \include{doc/introduction}
     \include{doc/theoreticalBackground}
 	%part    
-    \part{PROBLEM DEFINITION AND IMPLEMENTATION}
+    \part{PROBLEM DEFINITION AND IMPLEMENTATION} \label{pt:probDefImpl}
     \include{doc/probStatement}
     \include{doc/implementation}
     %part
-    \part{RESULTS AND CONCLUSIONS}
+    \part{RESULTS AND CONCLUSIONS} \label{pt:resConc}
     \include{doc/expResults}
     \include{doc/conclusions}
     
@@ -131,7 +131,7 @@
     \references{thesis}{IEEEtran.bst}
 	
 	\makeappendix
-    \include{doc/appendixTools} % optional
+	\include{doc/appendixGMPythonImpl}    
     %\include{vita}     % optional
     %}}}
 \end{document}
