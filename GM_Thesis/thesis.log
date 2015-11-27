@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.6.23)  3 NOV 2015 15:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.6.23)  27 NOV 2015 04:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -408,9 +408,9 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 61.
  (./thesis.aux
 (./doc/abstract.aux) (./doc/pubAbstract.aux) (./doc/dedication.aux)
 (./doc/acknowledgments.aux) (./doc/introduction.aux)
-(./doc/theoreticalBackground.aux) (./doc/probStatement.aux)
-(./doc/implementation.aux) (./doc/expResults.aux) (./doc/conclusions.aux)
-(./doc/appendixGMPythonImpl.aux))
+(./doc/theoreticalBackground.aux) (./doc/relatedWork.aux)
+(./doc/probStatement.aux) (./doc/implementation.aux) (./doc/expResults.aux)
+(./doc/conclusions.aux) (./doc/appendixGMPythonImpl.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
@@ -608,47 +608,56 @@ Chapter 2.
 LaTeX Warning: Citation `GM-sharfmanShusterKeren' on page 3 undefined on input 
 line 3.
 
-) [3
+[3
 
 
 
-] [4
+] [4] [5]) [6]
+\openout2 = `doc/relatedWork.aux'.
+
+ (./doc/relatedWork.tex
+Chapter 3.
+) [7
+
+
+
+] [8
 
 
 ]
 \openout2 = `doc/probStatement.aux'.
 
  (./doc/probStatement.tex
-Chapter 3.
-) [5
+Chapter 4.
+) [9
 
 
 ]
 \openout2 = `doc/implementation.aux'.
 
  (./doc/implementation.tex
-Chapter 4.
-) [6
+Chapter 5.
+) [10
 
 
 
-] [7
+] [11
 
 
 ]
 \openout2 = `doc/expResults.aux'.
 
  (./doc/expResults.tex
-Chapter 5.
-) [8
+Chapter 6.
+) [12
 
 
 ]
 \openout2 = `doc/conclusions.aux'.
 
  (./doc/conclusions.tex
-Chapter 6.
-) [9
+Chapter 7.
+) [13
 
 
 
@@ -660,11 +669,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
 LaTeX Warning: Empty `thebibliography' environment on input line 24.
 
-) [10
+) [14
 
 
 
-] [11
+] [15
 
 ]
 \openout2 = `doc/appendixGMPythonImpl.aux'.
@@ -674,36 +683,39 @@ Overfull \hbox (2.76404pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/20.74 Geometric Mon-i-tor-ing Python Im-ple-men-ta-tion 
  []
 
-) [12
+) [16
 
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 137.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 138.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
  (./thesis.aux (./doc/abstract.aux) (./doc/pubAbstract.aux)
 (./doc/dedication.aux) (./doc/acknowledgments.aux) (./doc/introduction.aux)
-(./doc/theoreticalBackground.aux) (./doc/probStatement.aux)
-(./doc/implementation.aux) (./doc/expResults.aux) (./doc/conclusions.aux)
-(./doc/appendixGMPythonImpl.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 137.
+(./doc/theoreticalBackground.aux) (./doc/relatedWork.aux)
+(./doc/probStatement.aux) (./doc/implementation.aux) (./doc/expResults.aux)
+(./doc/conclusions.aux) (./doc/appendixGMPythonImpl.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 9BA329F5B5F6D333F07FCDD0F1E66209;2580.
+(rerunfilecheck)             Checksum: 82C23FFF310FE6268677028CE80D9192;2573.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 138.
  ) 
 Here is how much of TeX's memory you used:
- 10287 strings out of 493105
- 154002 string characters out of 6137072
+ 10301 strings out of 493105
+ 154209 string characters out of 6137072
  297032 words of memory out of 5000000
- 13478 multiletter control sequences out of 15000+600000
+ 13480 multiletter control sequences out of 15000+600000
  11671 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,6n,40p,706b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,6n,40p,801b,342s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
@@ -711,10 +723,10 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti10.pfb>
-Output written on thesis.pdf (21 pages, 103805 bytes).
+Output written on thesis.pdf (25 pages, 109406 bytes).
 PDF statistics:
- 357 PDF objects out of 1000 (max. 8388607)
- 323 compressed objects within 4 object streams
- 68 named destinations out of 1000 (max. 500000)
+ 377 PDF objects out of 1000 (max. 8388607)
+ 339 compressed objects within 4 object streams
+ 73 named destinations out of 1000 (max. 500000)
  329 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -4,22 +4,23 @@ The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: doc/abstract.aux
 A level-1 auxiliary file: doc/pubAbstract.aux
 A level-1 auxiliary file: doc/dedication.aux
-A level-1 auxiliary file: doc/acknowledgements.aux
+A level-1 auxiliary file: doc/acknowledgments.aux
 A level-1 auxiliary file: doc/introduction.aux
 A level-1 auxiliary file: doc/theoreticalBackground.aux
+A level-1 auxiliary file: doc/relatedWork.aux
 A level-1 auxiliary file: doc/probStatement.aux
 A level-1 auxiliary file: doc/implementation.aux
 A level-1 auxiliary file: doc/expResults.aux
 A level-1 auxiliary file: doc/conclusions.aux
 The style file: IEEEtran.bst.bst
 A level-1 auxiliary file: doc/appendixGMPythonImpl.aux
-I found no \citation commands---while reading file thesis.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: thesis.bib
+Warning--I didn't find a database entry for "GM-sharfmanShusterKeren"
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
@@ -27,7 +28,7 @@ Database file #1: thesis.bib
 Done.
 You've used 0 entries,
             4039 wiz_defined-function locations,
-            820 strings with 7449 characters,
+            823 strings with 7513 characters,
 and the built_in function-call counts, 103 in all, are:
 = -- 0
 > -- 0
@@ -66,4 +67,4 @@ warning$ -- 0
 while$ -- 0
 width$ -- 0
 write$ -- 22
-(There was 1 error message)
+(There was 1 warning)

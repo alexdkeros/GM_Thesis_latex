@@ -1,19 +1,113 @@
 \chapter{Theoretical Background} \label{chap:theorBack}
 
-The present chapter contains the necessary background knowledge used throughout the length of this thesis. Section \ref{sec:theorBack-GM} describes the \emph{Geometric Monitoring} method in detail, as presented in \cite{GM-sharfmanShusterKeren}. Section \ref{sec:theorBack-MOP} introduces \emph{Multiobjective Optimization} and presents the algorithms used in our implementation. Section \ref{sec:theorBack-MWMGraphs} outlines \emph{Graph Maximum Weight Matching} used for node pairing and, finally, section \ref{sec:theorBack-SavitzkyGolay} demonstrates the \emph{Savitzky-Golay filtering} used for velocity approximation.
+The present chapter contains the necessary background knowledge used throughout the length of this thesis. Section~\ref{sec:theorBack-GM} describes the \emph{``Geometric Approach to Monitoring Threshold Functions over Distributed Data Streams''} in detail, as formulated by I.Sharfman, A.Shuster, D.Keren \cite{GM-sharfmanShusterKeren}. Section~\ref{sec:theorBack-MOP} presents \emph{multi-objective optimization} and  dives into the algorithms used in our implementation. Section \ref{sec:theorBack-MWMGraphs} discusses \emph{graph maximum weight matching} used for node pairing and, finally, in Section~\ref{sec:theorBack-SavitzkyGolay} we explain the \emph{Savitzky-Golay filtering} used for velocity approximation.
 
 \section{Geometric Monitoring of Distributed Streams} \label{sec:theorBack-GM}
 
-\subsection{Distributed Streams} \label{subsec:theorBack-GM-distrStreams}
+The Continuous Distributed Monitoring Model, a.k.a. Data Stream System
 
-\subsection{Computational Model} \label{subsec:theorBack-GM-compModel}
+idea: having a real-time overview over the system
+
+application examples: ISP network traffic, distributed sensors etc
+
+complexity: monitoring value or threshold monitoring over the whole set of observations, in real time
+
+goal: minimize communication while retaining the highest accuracy possible
+
+possible solutions:\\
+	1.centralize\\
+		- suffers from network overload, storage overload\\
+	2.poll\\
+		- not real time, update frequency-accuracy trade-off\\
+	3.GM monitoring\\
+	    -apply convex opt theory in order to reduce communication while retaining accuracy bounds
+
+details of geometric monitoring model
+
+\subsection{System Architecture} \label{subsec:theorBack-GM-sysArch}
+
+fully distributed node topology\\
+	.no coordinator-center node\\
+	.communication between nodes\\
+	*image
+
+coordinator based node topology\\
+	.coordinator-center node\\
+	.nodes communicate only with coordinator\\
+	*image
+
+\subsection{Computational Model} \label{subsec:theorBack-GM-compMod}
+
+stream and node notation\\
+weights\\
+statistics vectors\\
+	global statistics vector\\
+monitored function\\
+threshold
+
+estimate vector\\
+drift vector
+
+general operation of distributed algorithm\\
+	drift vector definition
+
+general operation of coordinator based algorithm\\
+	*balancing process\\
+		slack vector\\
+	drift vector definition
 
 \subsection{Geometric Interpretation} \label{subsec:theorBack-GM-geomInt}
 
+node local constraints make sure global violation is accurately monitored\\
+how?
+
+convexity property of drift vectors
+
+theorem of bounded convex hull by local constraints (balls)
+
+monochromaticity of balls
+
+balls monochromatic means threshold upheld
+
+
+\subsection{Protocol} \label{subsec:theorBack-GM-protocol}
+
+decentralized algorithm (in short, for completeness)
+
+centralized algorithm (in detail)\\
+*we will focus on that
+
+
 \section{Multiobjective Optimization} \label{sec:theorBack-MOP}
 
-\subsection{Minimax} \label{subsec:theorBack-MOP-minimax}
+what is mop\\
+use examples\\
+kinds:\\
+	a.numerical\\
+	b.evolutionary
+
+\subsection{Sohr's algorithm a.k.a. ralg} \label{subsec:theorBack-MOP-minimax}
+
+algorithm description
 
 \section{Maximum Weight Matching in Graphs} \label{sec:theorBack-MWMGraphs}
 
+general graph theory (introductory)
+
+what is max weight matching
+
+algorithm description
+
 \section{Savitzky-Golay Filtering} \label{sec:theorBack-SavitzkyGolay}
+
+filtering generals\\
+examples of uses of filters\\
+filters:\\
+	Kalman\\
+		+,-
+	Moving Average\\
+		+,-
+	Savitzky-Golay a.k.a. ???
+		+,-
+
+algorithm description
