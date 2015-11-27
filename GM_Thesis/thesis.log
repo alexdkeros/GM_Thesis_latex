@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.6.23)  27 NOV 2015 04:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.6.23)  27 NOV 2015 04:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -629,6 +629,11 @@ Chapter 3.
 
  (./doc/probStatement.tex
 Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
 ) [9
 
 
@@ -637,11 +642,11 @@ Chapter 4.
 
  (./doc/implementation.tex
 Chapter 5.
-) [10
+[10
 
 
 
-] [11
+]) [11] [12
 
 
 ]
@@ -649,15 +654,20 @@ Chapter 5.
 
  (./doc/expResults.tex
 Chapter 6.
-) [12
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--31
+
+ []
+
+) [13
 
 
-]
+] [14]
 \openout2 = `doc/conclusions.aux'.
 
  (./doc/conclusions.tex
 Chapter 7.
-) [13
+) [15
 
 
 
@@ -669,11 +679,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
 LaTeX Warning: Empty `thebibliography' environment on input line 24.
 
-) [14
+) [16
 
 
 
-] [15
+] [17
 
 ]
 \openout2 = `doc/appendixGMPythonImpl.aux'.
@@ -683,7 +693,7 @@ Overfull \hbox (2.76404pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/20.74 Geometric Mon-i-tor-ing Python Im-ple-men-ta-tion 
  []
 
-) [16
+) [18
 
 
 
@@ -698,21 +708,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 82C23FFF310FE6268677028CE80D9192;2573.
+(rerunfilecheck)             Checksum: 24E291C1934D1614BED3BB57F1A61A1B;2573.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 138.
  ) 
 Here is how much of TeX's memory you used:
- 10301 strings out of 493105
- 154209 string characters out of 6137072
+ 10305 strings out of 493105
+ 154266 string characters out of 6137072
  297032 words of memory out of 5000000
- 13480 multiletter control sequences out of 15000+600000
+ 13481 multiletter control sequences out of 15000+600000
  11671 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,6n,40p,801b,342s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -723,10 +730,10 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti10.pfb>
-Output written on thesis.pdf (25 pages, 109406 bytes).
+Output written on thesis.pdf (27 pages, 112127 bytes).
 PDF statistics:
- 377 PDF objects out of 1000 (max. 8388607)
- 339 compressed objects within 4 object streams
- 73 named destinations out of 1000 (max. 500000)
+ 386 PDF objects out of 1000 (max. 8388607)
+ 346 compressed objects within 4 object streams
+ 76 named destinations out of 1000 (max. 500000)
  329 words of extra memory for PDF output out of 10000 (max. 10000000)
 
