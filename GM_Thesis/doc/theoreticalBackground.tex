@@ -1,16 +1,21 @@
-\chapter{Theoretical Background} \label{chap:theorBack}
+ \chapter{Theoretical Background} \label{chap:theorBack}
 
 The present chapter contains the necessary background knowledge used throughout the length of this thesis. Section~\ref{sec:theorBack-GM} describes the \emph{``Geometric Approach to Monitoring Threshold Functions over Distributed Data Streams''} in detail, as formulated by I.Sharfman, A.Shuster, D.Keren \cite{GM-sharfmanShusterKeren}. Section~\ref{sec:theorBack-MOP} presents \emph{multi-objective optimization} and  dives into the algorithms used in our implementation. Section \ref{sec:theorBack-MWMGraphs} discusses \emph{graph maximum weight matching} used for node pairing and, finally, in Section~\ref{sec:theorBack-SavitzkyGolay} we explain the \emph{Savitzky-Golay filtering} used for velocity approximation.
 
+%TODO gaussian process and lwpr?
+
 \section{Geometric Monitoring of Distributed Streams} \label{sec:theorBack-GM}
 
-The Continuous Distributed Monitoring Model, a.k.a. Data Stream System
+The Continuous Distributed Monitoring Model, a.k.a. Data Stream System (definition)
 
 idea: having a real-time overview over the system
+	differing from tradition DBMS: push paradigm vs pull paradigm, continuous queries
 
 application examples: ISP network traffic, distributed sensors etc
 
 complexity: monitoring value or threshold monitoring over the whole set of observations, in real time
+			monitoring an arbitrary function (non linear function example), 
+			arbitrary number of features
 
 goal: minimize communication while retaining the highest accuracy possible
 
