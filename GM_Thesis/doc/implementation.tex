@@ -1,6 +1,7 @@
 \chapter{Implementation} \label{chap:impl}
 
 This chapter provides a detailed description of the implemented system. In Section~\ref{sec:impl-GM}, the Geometric Monitoring method implementation is analyzed, along with the necessary simplyfing assumptions to aid experimentation. Following that, in Section~\ref{sec:impl-distNodeMatch} an algorithm for node matching is proposed, inspired by the violation recovery method found in~\cite{Keren2014GMHetStreams}. In Section~\ref{sec:impl-heuristic}, the heuristic based balancing method for local violation resolution is presented, along with the necessary data stream tracking scheme. Finally, the main implementation challenges are discussed.
+
 \section{Geometric Monitoring Implementation} \label{sec:impl-GM}
 
 The initial Geometric Monitoring method~\cite{Sharfman2006GM}, which is described in detail in Section~\ref{sec:theorBack-GM}, provides two algorithms for threshold monitoring of distributed data streams. These algorithms operate on different network structures and implement a somewhat different handling of threshold violations.
@@ -8,7 +9,7 @@ The initial Geometric Monitoring method~\cite{Sharfman2006GM}, which is describe
 The decentralized algorithm operates on a coordinator-less enviroment, where nodes are allowed to communicate with each other, whereas the coordinator-based algorithm has a Star network topology, where the coordinator node is the central node (the \emph{hub}) and the Monitoring nodes recide on the edges of the network.
 The algorithm operating on the decentralized setting does not provide a balancing process for local violation resolution. On the other hand, the coordinator based algorithm implements a violation resolution operation every time a local violation occurs, which aims to minimize the communication overhead induced by false violation reports. 
 
-Our focus is centered towards a simplified \textbf{coordinator-based algorithm}(Algorithm~\ref{algo:GM-coordBased}), described in Section~\ref{sec:theorBack-GM}, as it provides a framework for the heuristic balancing process, as well as the node matching operation presented in detail in Sections~\ref{sec:impl-heuristic} and ~\ref{sec:impl-distNodeMatch} respectively.
+Our focus is centered towards a simplified \textbf{coordinator-based algorithm} (Algorithm~\ref{algo:GM-coordBased}), described in Section~\ref{sec:theorBack-GM}, as it provides a framework for the heuristic balancing process, as well as the node matching operation presented in detail in Sections~\ref{sec:impl-heuristic} and ~\ref{sec:impl-distNodeMatch} respectively.
 
 To aid method formulation and experimetation, the following simplifying assumptions have been made regarding the coordinator-based algorithm:
 \begin{itemize}
@@ -50,10 +51,26 @@ To aid method formulation and experimetation, the following simplifying assumpti
 
 \section{Distance Based Node Matching} \label{sec:impl-distNodeMatch}
 
-node matching interpretation and why I did it (i.e. follow global statistics vector)\\
-*image
+recover/resolve by selecting a subset of nodes to communicate with
 
-distance based node matching algorithm
+local violations do not imply global violation, false positives
+
+describe balancing meaning in general
+
+previous work - randomly choose
+
+deligiannakis paper - partition nodes to disjoint pairs to optimaly balance each other\\
+describe their method shortly\\
+criticize their method shortly\\
+
+our method:\\
+describe in detail, mentioning that its the same process as in deligiannakis\\
+*image of disjoint pairs\\
+mention our criterion for matching\\
+*image of matching results on classic balancing method\\
+emphasize global statistics vector following, emphasize matching of nodes on the extremes (i.e. higher velocity one with lower velocity one)
+
+algorithm\\
 
 \section{Heuristic Balancing} \label{sec:impl-heuristic}
 
