@@ -1,17 +1,59 @@
 \chapter{Implementation} \label{chap:impl}
 
-implementation details
+This chapter provides a detailed description of the implemented system. In Section~\ref{sec:impl-GM}, the Geometric Monitoring method implementation is analyzed, along with the necessary simplyfing assumptions to aid experimentation. Following that, in Section~\ref{sec:impl-distNodeMatch} an algorithm for node matching is proposed, inspired by the violation recovery method found in~\cite{Keren2014GMHetStreams}. In Section~\ref{sec:impl-heuristic}, the heuristic based balancing method for local violation resolution is presented, along with the necessary data stream tracking scheme. Finally, the main implementation challenges are discussed.
+\section{Geometric Monitoring Implementation} \label{sec:impl-GM}
 
-assumptions made (before we dive deep)
+The initial Geometric Monitoring method~\cite{Sharfman2006GM}, which is described in detail in Section~\ref{sec:theorBack-GM}, provides two algorithms for threshold monitoring of distributed data streams. These algorithms operate on different network structures and implement a somewhat different handling of threshold violations.
 
-\section{Geometric Monitoring} \label{sec:impl-GM}
+The decentralized algorithm operates on a coordinator-less enviroment, where nodes are allowed to communicate with each other, whereas the coordinator-based algorithm has a Star network topology, where the coordinator node is the central node (the \emph{hub}) and the Monitoring nodes recide on the edges of the network.
+The algorithm operating on the decentralized setting does not provide a balancing process for local violation resolution. On the other hand, the coordinator based algorithm implements a violation resolution operation every time a local violation occurs, which aims to minimize the communication overhead induced by false violation reports. 
 
-*in short!, reference original paper (and other using same stuff)
+Our focus is centered towards a simplified \textbf{coordinator-based algorithm}(Algorithm~\ref{algo:GM-coordBased}), described in Section~\ref{sec:theorBack-GM}, as it provides a framework for the heuristic balancing process, as well as the node matching operation presented in detail in Sections~\ref{sec:impl-heuristic} and ~\ref{sec:impl-distNodeMatch} respectively.
 
-system arch (centralized)
+To aid method formulation and experimetation, the following simplifying assumptions have been made regarding the coordinator-based algorithm:
+\begin{itemize}
+\item Communication between nodes is considered instantaneous. There is no delay when passing messages through the network.
 
-computational model (main vectors)\\
-	!exclude balancing process!
+\item The system operates in an iterative fashion, as described in Algorithm~\ref{algo:singleHandlingNetwork}. This simplification of the real-time distributed monitoring process to an iterative process provides a more managable setting for experimentation without distorting the results of the proposed methods, which can be applied directly to the original real-time distributed setting.
+
+\item The system pauses at each violation, until the violation is resolved. During violation resolution Monitoring nodes do not receive updates from their respective data streams.
+
+\item The Coordinator node does not participate in the monitoring operation. The Coordinator node does not receive updates from a data stream, it only receives messages from the Monitoring nodes in case of threshold violation.
+
+\end{itemize}
+
+\begin{algorithm}[H]
+\setstretch{1.30}
+\SetKwData{Node}{node}\SetKwData{GlobalViolation}{Global\_Violation}\SetKwData{MonitoringNodes}{Monitoring\_Nodes}\SetKwData{Coord}{coordinator}\SetKwData{LocalViolation}{Local\_Violation}
+
+\SetKwFunction{DataUpdate}{data\_update}\SetKwFunction{ComputeDrift}{compute\_drift\_vector}\SetKwFunction{Report}{report}\SetKwFunction{Balance}{balance}\SetKwFunction{CheckViolation}{check\_for\_violation}
+
+\SetAlgoLined
+\Begin{
+ initialization\;
+ 	\Repeat{\GlobalViolation}{
+		\ForAll{\MonitoringNodes}{
+			\Node.\DataUpdate{}\;
+			\Node.\ComputeDrift{}\;
+		}
+		\ForAll{\MonitoringNodes}{
+			\Node.\CheckViolation{}\;
+			\If{\LocalViolation}{
+				\Node.\Report{}\;
+				\Coord.\Balance{}\;
+			}
+		}
+	}
+}
+ \caption{Iterative network operation \label{algo:singleHandlingNetwork}} 
+\end{algorithm}
+
+\section{Distance Based Node Matching} \label{sec:impl-distNodeMatch}
+
+node matching interpretation and why I did it (i.e. follow global statistics vector)\\
+*image
+
+distance based node matching algorithm
 
 \section{Heuristic Balancing} \label{sec:impl-heuristic}
 
@@ -20,17 +62,10 @@ balancing process geometric interpretation\\
 
 balancing process algorithm
 
-\subsection{Velocity Estimation via Savitzky-Golay} \label{subsec:impl-heuristic-vel}
+\subsection{Smoothing, Velocity and Acceleration Estimation via Savitzky-Golay} \label{subsec:impl-heuristic-vel}
 
 S-G implementation\\
 *image
-
-\section{Distance Based Node Matching} \label{sec:impl-distNodeMatch}
-
-node matching interpretation and why I did it (i.e. follow global statistics vector)\\
-*image
-
-distance based node matching algorithm
 
 \section{Implementation Challenges} \label{sec:impl-implChallenges}
 
