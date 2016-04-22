@@ -26,45 +26,45 @@ Warning--I didn't find a database entry for "GM-sharfmanShusterKeren"
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 2 entries,
+You've used 4 entries,
             4039 wiz_defined-function locations,
-            843 strings with 8176 characters,
-and the built_in function-call counts, 2278 in all, are:
-= -- 176
-> -- 59
-< -- 21
-+ -- 34
-- -- 10
-* -- 133
-:= -- 341
-add.period$ -- 5
-call.type$ -- 2
-change.case$ -- 2
-chr.to.int$ -- 51
-cite$ -- 2
-duplicate$ -- 144
-empty$ -- 164
-format.name$ -- 12
-if$ -- 509
+            858 strings with 8571 characters,
+and the built_in function-call counts, 3663 in all, are:
+= -- 299
+> -- 84
+< -- 30
++ -- 48
+- -- 14
+* -- 200
+:= -- 573
+add.period$ -- 10
+call.type$ -- 4
+change.case$ -- 4
+chr.to.int$ -- 75
+cite$ -- 4
+duplicate$ -- 240
+empty$ -- 279
+format.name$ -- 17
+if$ -- 825
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 26
-newline$ -- 33
-num.names$ -- 2
-pop$ -- 57
+int.to.str$ -- 4
+missing$ -- 44
+newline$ -- 41
+num.names$ -- 4
+pop$ -- 94
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 166
+skip$ -- 274
 stack$ -- 0
-substring$ -- 121
-swap$ -- 131
-text.length$ -- 4
+substring$ -- 179
+swap$ -- 208
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 2
+type$ -- 4
 warning$ -- 0
-while$ -- 9
-width$ -- 3
-write$ -- 49
+while$ -- 15
+width$ -- 5
+write$ -- 72
 (There was 1 warning)

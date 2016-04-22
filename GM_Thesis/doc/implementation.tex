@@ -1,6 +1,6 @@
 \chapter{Implementation} \label{chap:impl}
 
-This chapter provides a detailed description of the implemented system. In Section~\ref{sec:impl-GM}, the Geometric Monitoring method implementation is analyzed, along with the necessary simplyfing assumptions to aid experimentation. Following that, in Section~\ref{sec:impl-distNodeMatch} an algorithm for node matching is proposed, inspired by the violation recovery method found in~\cite{Keren2014GMHetStreams}. In Section~\ref{sec:impl-heuristic}, the heuristic based balancing method for local violation resolution is presented, along with the necessary data stream tracking scheme. Finally, the main implementation challenges are discussed.
+This chapter provides a detailed description of the implemented system. In Section~\ref{sec:impl-GM}, the Geometric Monitoring method implementation is described, along with the necessary simplyfing assumptions to aid experimentation. Following that, in Section~\ref{sec:impl-distNodeMatch} an algorithm for node matching is proposed, inspired by the violation recovery method found in~\cite{Keren2014GMHetStreams}. In Section~\ref{sec:impl-heuristic}, the heuristic based balancing method for local violation resolution is presented, along with the necessary data stream tracking scheme. Finally, the main implementation challenges are discussed.
 
 \section{Geometric Monitoring Implementation} \label{sec:impl-GM}
 
@@ -11,11 +11,13 @@ The algorithm operating on the decentralized setting does not provide a balancin
 
 Our focus is centered towards a simplified \textbf{coordinator-based algorithm} (Algorithm~\ref{algo:GM-coordBased}), described in Section~\ref{sec:theorBack-GM}, as it provides a framework for the heuristic balancing process, as well as the node matching operation presented in detail in Sections~\ref{sec:impl-heuristic} and ~\ref{sec:impl-distNodeMatch} respectively.
 
-To aid method formulation and experimetation, the following simplifying assumptions have been made regarding the coordinator-based algorithm:
+To aid method formulation and experimentation, the following simplifying assumptions have been made regarding the coordinator-based algorithm:
 \begin{itemize}
-\item Communication between nodes is considered instantaneous. There is no delay when passing messages through the network.
+\item Communication between nodes is considered instantaneous. There is no delay when passing messages through the network. The problem of message handling in a real-world Geometric Monitoring method implementation, where message delays are induced by the underlying network, has been studied in detail in~\cite{Babis2013SimulatorStreams}.
 
-\item The system operates in an iterative fashion, as described in Algorithm~\ref{algo:singleHandlingNetwork}. This simplification of the real-time distributed monitoring process to an iterative process provides a more managable setting for experimentation without distorting the results of the proposed methods, which can be applied directly to the original real-time distributed setting.
+\item Communication between nodes is considered loss-less and reliable. In case network reliability can not be guaranteed appropriate methods should be considered.
+
+\item The system operates in an iterative fashion, as described in Algorithm~\ref{algo:singleHandlingNetwork}. This simplification of the real-time distributed monitoring process to an iterative process provides a more manageable setting for experimentation without distorting the results of the proposed methods, which can be applied directly to the original real-time distributed setting.
 
 \item The system pauses at each violation, until the violation is resolved. During violation resolution Monitoring nodes do not receive updates from their respective data streams.
 
@@ -51,18 +53,13 @@ To aid method formulation and experimetation, the following simplifying assumpti
 
 \section{Distance Based Node Matching} \label{sec:impl-distNodeMatch}
 
-recover/resolve by selecting a subset of nodes to communicate with
+The balancing method of the coordinator-based algorithm, as described in Section~\ref{sec:theorBack-GM}~\cite{Sharfman2006GM, Sharfman2008ShapeSensGM}, aims at resolving local violations that do not result in a global violation (\emph{false alarms}) by balancing the violating node's drift vector with the respective vectors of randomly chosen nodes. Consider the violating node $i$, $w_i=1$, so that the bounding ball $B(\vec{e}(t), \vec{u_i}(t))$ is not monochromatic, and the randomly requested node $j$, $w_j=1$, so that the newly formed bounding ball is $B(\vec{e}(t), \frac{\vec{u_i}(t)+\vec{u_j}(t)}{2})$. If the resulting bounding ball is monochromatic the violation is resolved, otherwise another node is randomly requested for balancing.
 
-local violations do not imply global violation, false positives
+As observed in~\cite{Keren2014GMHetStreams}, the original balancing method's node choosing scheme can be inefficient, so a more efficient and deterministic approach should be adopted. Optimal pairing of nodes and the construction of a hierarchical structure (Figure~\ref{fig:nodePairHierarchy}) reduces the communication overhead of false alarms, with the vast majority of violation resolutions requiring only the specified node pair to be successful. The criterion by which nodes are paired attempts to maximize the probability of a successful balance by maximizing \textit{``the percentage of pairs of data vectors from both nodes whose sum is in the Minkowski sum of the nodes' safe-zones''}~\cite{Keren2014GMHetStreams}, or, in this case, whose resulting bounding ball is monochromatic.
 
-describe balancing meaning in general
+Here, the same node pairing scheme is followed with a different, distance based, criterion for pairing nodes into disjoint pairs and creating the hierarchical structure. 
 
-previous work - randomly choose
-
-deligiannakis paper - partition nodes to disjoint pairs to optimaly balance each other\\
-describe their method shortly\\
-criticize their method shortly\\
-
+\\
 our method:\\
 describe in detail, mentioning that its the same process as in deligiannakis\\
 *image of disjoint pairs\\

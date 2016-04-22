@@ -40,4 +40,18 @@ I.~Sharfman, A.~Schuster, and D.~Keren, ``A geometric approach to monitoring
   \url{http://doi.acm.org/10.1145/1142473.1142508}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Babis2013SimulatorStreams}
+B.~Babalis, ``A simulator for monitoring data streams,'' Master's thesis,
+  Technical University of Crete, Chania, Greece, 2013.
+
+\bibitem{Sharfman2008ShapeSensGM}
+\BIBentryALTinterwordspacing
+I.~Sharfman, A.~Schuster, and D.~Keren, ``Shape sensitive geometric
+  monitoring,'' in \emph{Proceedings of the Twenty-seventh ACM
+  SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems}, ser. PODS
+  '08.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2008, pp.
+  301--310. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/1376916.1376958}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

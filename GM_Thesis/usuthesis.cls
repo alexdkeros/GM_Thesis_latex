@@ -302,7 +302,7 @@
     bottom=1in,
     headheight=\@@fontsize,
     headsep=\baselineskip,
-    footskip=0pt}
+    footskip=10pt}
 
 \tabskip 0.1em plus 10em minus 0.1em
 
