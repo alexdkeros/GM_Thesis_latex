@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2016.3.23)  25 APR 2016 19:30
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2016.3.23)  25 APR 2016 19:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1256,6 +1256,9 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 141.
 
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 141.
  ) 

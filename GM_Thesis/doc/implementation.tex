@@ -60,13 +60,13 @@ As observed in~\cite{Keren2014GMHetStreams}, the original balancing method's nod
 Here, the same node pairing scheme is followed, but with a different, distance based, criterion for grouping nodes into disjoint pairs and creating the hierarchical structure depicted in Figure~\ref{fig:nodePairHierarchy}. The method proceeds as follows:
 \begin{enumerate}
 \item Monitoring nodes are visualized as the nodes of a complete graph $G=(V,E)$, where $V=\{n_1, n_2, ... , n_k\}$ vertex set consists of the initial Monitoring nodes (\emph{``Type-1 nodes''}) and $E=\{(n_i, n_j)\ \forall i,j \in \{1, ..., k\}, i \neq j\}$ edge set contains an edge for every pair of vertices.
-\item Weights are assigned to all edges $E$. The weight of each edge is defined as the cumulative distance of the mean of each pair of data vectors from the \emph{global} mean of all Monitoring nodes' data vectors, plus the cumulative distance of each pair of data vectors:
+\item Weights are assigned to all edges $E$. The weight of each edge is defined as the cumulative distance of the value of the monitoring function on the mean of each pair of data vectors from the value of the monitoring function on the \emph{global} mean of all Monitoring nodes' data vectors, plus the cumulative distance of each pair of data vectors:
 \begin{equation}
 w_{i,j}=
-\sum_{t=0}^{t_{end}}{(\vec{v}_{global}(t)-\frac{\vec{v_i}(t)+\vec{v_j}(t)}{2})+(\vec{v_i}(t)-\vec{v_j}(t))}
+\sum_{t=0}^{t_{end}}{[(f(\vec{v}_{global}(t))-f(\frac{\vec{v_i}(t)+\vec{v_j}(t)}{2}))+(|\vec{v_i}(t)-\vec{v_j}(t)|)]}
 \label{form:distanceMatchingWeights}
 \end{equation}
-, where $v_i(t)$ the data update of node $n_i$ at time $t$ and $\vec{v}_{global}(t)$ the global mean of all Monitoring nodes at time $t$.
+, where $v_i(t)$ the data update of node $n_i$ at time $t$, $\vec{v}_{global}(t)$ the global mean of all Monitoring nodes at time $t$ and $f(\cdot)$ the monitoring function.
 
 \item Maximum weighted matching is performed on the resulting graph, so that nodes are partitioned into disjoined sets $M_i$, $|M_i|=2\ \forall i \in \{1, ..., \frac{k}{2}\}$.
 \item Each set $M_i, i \in \{1, ..., \frac{k}{2}\}$ is considered a single node, so that a new complete graph $G'=(V', E')$ is created, where $V'=\{M_1, ..., M_{\frac{k}{2}}\}$ (\emph{``Type-2 nodes''}) the new vertex set and $E'=\{(M_i, M_j)\ \forall i,j \in \{1, ..., \frac{k}{2}\}\}$ the new edge set. Weights are assigned to the new edges and the process repeats until the resulting graph contains only a single vertex (\emph{``Type-k node''}), which incorporates all the initial Monitoring nodes. 
