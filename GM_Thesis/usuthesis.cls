@@ -327,7 +327,7 @@
 \newif\if@reportORproposal \@reportORproposalfalse
 
 \def\doctype#1{\gdef\Zdocument{#1}}
-\def\year#1{\gdef\Zyear{#1}}
+\def\myyear#1{\gdef\Zyear{#1}}
 \def\month#1{\gdef\Zmonth{#1}}
 \def\title#1{\gdef\Ztitle{#1}}
 \def\author#1{\gdef\Zauthor{#1}}
