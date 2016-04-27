@@ -25,31 +25,32 @@ To aid method formulation and experimentation, the following simplifying assumpt
 
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% single handling network algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{algorithm}[H]
 \setstretch{1.30}
-\SetKwData{Node}{node}\SetKwData{GlobalViolation}{Global\_Violation}\SetKwData{MonitoringNodes}{Monitoring\_Nodes}\SetKwData{Coord}{coordinator}\SetKwData{LocalViolation}{Local\_Violation}
 
-\SetKwFunction{DataUpdate}{data\_update}\SetKwFunction{ComputeDrift}{compute\_drift\_vector}\SetKwFunction{Report}{report}\SetKwFunction{Balance}{balance}\SetKwFunction{CheckViolation}{check\_for\_violation}
+\KwData{$monitoringNodes$: a list of Monitoring nodes,~$coordinator$: the Coordinator node}
 
 \SetAlgoLined
 \Begin{
  initialization\;
- 	\Repeat{\GlobalViolation}{
-		\ForAll{\MonitoringNodes}{
-			\Node.\DataUpdate{}\;
-			\Node.\ComputeDrift{}\;
+ 	\Repeat{$globalViolation$}{
+		\ForEach{$node \in\ monitoringNodes$}{
+			$node.DataVectorUpdate()$\;
+			$node.ComputeDriftVector()$\;
 		}
-		\ForAll{\MonitoringNodes}{
-			\Node.\CheckViolation{}\;
-			\If{\LocalViolation}{
-				\Node.\Report{}\;
-				\Coord.\Balance{}\;
+		\ForEach{$node \in\ monitoringNodes$}{
+			$node.CheckForViolation()$\;
+			\If{$localViolation$}{
+				$node.Report()$\;
+				$coordinator.Balance()$\;
 			}
 		}
 	}
 }
- \caption{Iterative network operation \label{algo:singleHandlingNetwork}} 
+\caption{Iterative network operation \label{algo:singleHandlingNetwork}} 
 \end{algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Distance Based Node Matching} \label{sec:impl-distNodeMatch}
 
@@ -63,7 +64,7 @@ Here, the same node pairing scheme is followed, but with a different, distance b
 \item Weights are assigned to all edges $E$. The weight of each edge is defined as the cumulative distance of the value of the monitoring function on the mean of each pair of data vectors from the value of the monitoring function on the \emph{global} mean of all Monitoring nodes' data vectors, plus the cumulative distance of each pair of data vectors:
 \begin{equation}
 w_{i,j}=
-\sum_{t=0}^{t_{end}}{[(f(\vec{v}_{global}(t))-f(\frac{\vec{v_i}(t)+\vec{v_j}(t)}{2}))+(|\vec{v_i}(t)-\vec{v_j}(t)|)]}
+\sum_{t=t_0}^{t_{end}}{[(f(\vec{v}_{global}(t))-f(\frac{\vec{v_i}(t)+\vec{v_j}(t)}{2}))+(|\vec{v_i}(t)-\vec{v_j}(t)|)]}
 \label{form:distanceMatchingWeights}
 \end{equation}
 , where $v_i(t)$ the data update of node $n_i$ at time $t$, $\vec{v}_{global}(t)$ the global mean of all Monitoring nodes at time $t$ and $f(\cdot)$ the monitoring function.
@@ -72,14 +73,40 @@ w_{i,j}=
 \item Each set $M_i, i \in \{1, ..., \frac{k}{2}\}$ is considered a single node, so that a new complete graph $G'=(V', E')$ is created, where $V'=\{M_1, ..., M_{\frac{k}{2}}\}$ (\emph{``Type-2 nodes''}) the new vertex set and $E'=\{(M_i, M_j)\ \forall i,j \in \{1, ..., \frac{k}{2}\}\}$ the new edge set. Weights are assigned to the new edges and the process repeats until the resulting graph contains only a single vertex (\emph{``Type-k node''}), which incorporates all the initial Monitoring nodes. 
 \end{enumerate} 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% hierarchy figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
 \centering
 \includegraphics[trim=0 9cm 0 0]{img/NodeMatchingHierarchy.tex}
 \caption{Hierarchical pairing scheme example  for node set $\{n_1, n_2, n_3, n_4, n_5, n_6, n_7, n_8\}$.} 
 \label{fig:nodePairHierarchy}
 \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% node matching algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{algorithm}[H]
+\SetAlgoLined
+\setstretch{1.30}
+\SetKwFunction{DistancePairer}{DistancePairer}
+\SetKwProg{Fn}{Function}{}{end}
+\Fn{\DistancePairer{$nodes$,$i$}}{
+	\KwData{$nodes=[(n_1, [\vec{v_1}(t_0), ... , \vec{v_1}(t_{end})]), ... , (n_k, [\vec{v_k}(t_0), ... , \vec{v_k}(t_{end})])]$: list of nodes with their respective data vectors, $i$: pair type, initial=1} 
+	\KwResult{$nodeHierarchy$: dictionary of \emph{Type-k} pairs}
 
+	\If(\tcp*[f]{recursion stoping condition}){$length(nodes)=1$}{
+		\Return{$nodeHierarchy$}\;
+	}
+	$g=CreateCompleteGraph(nodes)$\tcp*[r]{complete graph with $nodes$ as vertices} 
+	\ForEach(\tcp*[f]{assign weights to edges}){$(n_i, n_j)\in g.Edges()$}{
+		$w_{i,j}=
+		\sum_{t=t_0}^{t_{end}}{[(f(\vec{v}_{global}(t))-f(\frac{\vec{v_i}(t)+\vec{v_j}(t)}{2}))+(|\vec{v_i}(t)-\vec{v_j}(t)|)]}$\;
+		$g.edge(n_i, n_j).weight=w_{i,j}$\;
+	}
+	$nodeHierarchy(\text{Type-i})=g.maximalWeightMatching()$\tcp*[r]{node pairs of \emph{Type-}$i$}
+	\DistancePairer{$nodeHierarchy(\text{Type-i}),i*2$}\;
+}
+\caption{Recursively create Monitoring node pairs and hierarchy \label{algo:nodeMatching}} 
+\end{algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 our method:\\
 describe in detail, mentioning that its the same process as in deligiannakis\\
 *image of disjoint pairs\\

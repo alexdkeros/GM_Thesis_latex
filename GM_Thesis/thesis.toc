@@ -25,23 +25,23 @@
 \contentsline {chapter}{\numberline {5}Implementation}{10}{chapter.5}
 \contentsline {section}{\numberline {5.1}Geometric Monitoring Implementation}{10}{section.5.1}
 \contentsline {section}{\numberline {5.2}Distance Based Node Matching}{12}{section.5.2}
-\contentsline {section}{\numberline {5.3}Heuristic Balancing}{14}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Smoothing, Velocity and Acceleration Estimation via Savitzky-Golay}{14}{subsection.5.3.1}
-\contentsline {section}{\numberline {5.4}Implementation Challenges}{14}{section.5.4}
-\contentsline {part}{III\hspace {1em}RESULTS AND CONCLUSIONS}{15}{part.3}
-\contentsline {chapter}{\numberline {6}Experimental Results}{16}{chapter.6}
-\contentsline {section}{\numberline {6.1}Experimental Setting}{16}{section.6.1}
-\contentsline {section}{\numberline {6.2}Distance Based Node Matching}{16}{section.6.2}
-\contentsline {section}{\numberline {6.3}Heuristic Balancing}{16}{section.6.3}
-\contentsline {section}{\numberline {6.4}Overall Results}{16}{section.6.4}
-\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{18}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusions}{18}{section.7.1}
-\contentsline {section}{\numberline {7.2}Future Work}{18}{section.7.2}
-\contentsline {chapter}{References}{19}{chapter.8}
-\contentsline {chapter}{Appendix}{20}{chapter.9}
-\contentsline {section}{Chapter{} A\hspace {12pt} Geometric Monitoring Python Implementation}{21}{appendix.J}
-\contentsline {section}{\numberline {A.1}Python}{21}{section.J.1}
-\contentsline {section}{\numberline {A.2}Numpy and Scipy}{21}{section.J.2}
-\contentsline {section}{\numberline {A.3}Openopt}{21}{section.J.3}
-\contentsline {section}{\numberline {A.4}NetworkX}{21}{section.J.4}
-\contentsline {section}{\numberline {A.5}Putting It All Together}{21}{section.J.5}
+\contentsline {section}{\numberline {5.3}Heuristic Balancing}{15}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Smoothing, Velocity and Acceleration Estimation via Savitzky-Golay}{15}{subsection.5.3.1}
+\contentsline {section}{\numberline {5.4}Implementation Challenges}{15}{section.5.4}
+\contentsline {part}{III\hspace {1em}RESULTS AND CONCLUSIONS}{16}{part.3}
+\contentsline {chapter}{\numberline {6}Experimental Results}{17}{chapter.6}
+\contentsline {section}{\numberline {6.1}Experimental Setting}{17}{section.6.1}
+\contentsline {section}{\numberline {6.2}Distance Based Node Matching}{17}{section.6.2}
+\contentsline {section}{\numberline {6.3}Heuristic Balancing}{17}{section.6.3}
+\contentsline {section}{\numberline {6.4}Overall Results}{17}{section.6.4}
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{19}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusions}{19}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future Work}{19}{section.7.2}
+\contentsline {chapter}{References}{20}{chapter.8}
+\contentsline {chapter}{Appendix}{21}{chapter.9}
+\contentsline {section}{Chapter{} A\hspace {12pt} Geometric Monitoring Python Implementation}{22}{appendix.J}
+\contentsline {section}{\numberline {A.1}Python}{22}{section.J.1}
+\contentsline {section}{\numberline {A.2}Numpy and Scipy}{22}{section.J.2}
+\contentsline {section}{\numberline {A.3}Openopt}{22}{section.J.3}
+\contentsline {section}{\numberline {A.4}NetworkX}{22}{section.J.4}
+\contentsline {section}{\numberline {A.5}Putting It All Together}{22}{section.J.5}
