@@ -44,14 +44,18 @@ I.~Sharfman, A.~Schuster, and D.~Keren, ``A geometric approach to monitoring
 B.~Babalis, ``A simulator for monitoring data streams,'' Master's thesis,
   Technical University of Crete, Chania, Greece, 2013.
 
-\bibitem{Sharfman2008ShapeSensGM}
+\bibitem{Sharfman2012ShapeSensGM}
+D.~Keren, I.~Sharfman, A.~Schuster, and A.~Livne, ``Shape sensitive geometric
+  monitoring,'' \emph{IEEE Transactions on Knowledge and Data Engineering},
+  vol.~24, no.~8, pp. 1520--1535, Aug 2012.
+
+\bibitem{Keren2013SafeZones}
 \BIBentryALTinterwordspacing
-I.~Sharfman, A.~Schuster, and D.~Keren, ``Shape sensitive geometric
-  monitoring,'' in \emph{Proceedings of the Twenty-seventh ACM
-  SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems}, ser. PODS
-  '08.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2008, pp.
-  301--310. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/1376916.1376958}
+D.~Keren, G.~Sagy, A.~Abboud, D.~Ben{-}David, I.~Sharfman, and A.~Schuster,
+  ``Safe-zones for monitoring distributed streams,'' in \emph{Proceedings of
+  the First International Workshop on Big Dynamic Distributed Data, Riva del
+  Garda, Italy, August 30, 2013}, 2013, pp. 7--12. [Online]. Available:
+  \url{http://ceur-ws.org/Vol-1018/paper11.pdf}
 \BIBentrySTDinterwordspacing
 
 \end{thebibliography}

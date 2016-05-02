@@ -297,9 +297,9 @@
     truedimen,
     bindingoffset=0in,  % bindingoffset + left = required 1.5in margin
     left=1in,
-    top=0.5in,
+    top=0.8in,
     right=1in,
-    bottom=1in,
+    bottom=0.5in,
     headheight=\@@fontsize,
     headsep=\baselineskip,
     footskip=10pt}
