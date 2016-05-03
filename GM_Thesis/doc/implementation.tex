@@ -217,16 +217,24 @@ accel_i&: \text{the acceleration of the maximum value of the monitoring function
 P'&: \text{the balancing set}
 \end{align*}
 \newpage
-Solution to this optimization problem is given by the \emph{Sequential Least Squares Programming (SLSQP)} solver, 
-which is described in Subsection~\ref{subsec:theorBack-SLSQP}. The problem is decomposed and formulated using an additional helping parameter $z$ in order to avoid non-differentiable functions (such as $\min$ and $\max$) and to aid computation by the solver.
+Solution to the above optimization problem (\ref{form:mop}) is given by the \emph{Sequential Least Squares Programming (SLSQP)} solver, which is described in Subsection~\ref{subsec:theorBack-SLSQP}. The problem is decomposed and formulated using an additional helping parameter $z$ in order to avoid non-differentiable functions (such as $\min$ and $\max$) and to aid computation by the solver.
 
 In the heuristic optimization problem defined previously (\ref{form:mop}) the nested optimization of detecting the maximum value of an arbitrary monitoring function inside the bounding ball $B(\vec{e},\vec{u_i})$ is existent. This optimization problem is formed as follows:
+\begin{align}
+\max &\quad f \label{form:maxvalinball-func}\\
+	\text{s.t.}&\quad \sum_{i=1}^d(x_i-c_i)^2=r^2 \label{form:maxvalinball-ball}
+\end{align}
+where:
 \begin{align*}
-\max &\quad f  \numberthis \label{form:maxvalinball}\\
-	\text{s.t.}&\quad \sum_{i=1}^d(x_i-c_i)^2=r^2
+f&: \text{the monitoring function $f(\cdot)$}\\
+x_i&: \text{element $i$ of $d$-dimensional vector $\vec{x}$}\\
+c_i&: \text{element $i$ of $d$-dimensional vector $\vec{c}$, which represents the center of the sphere}\\
+r&: \text{the radius of the sphere}\\
+d&: \text{the space dimensionality}\\
+\text{Eq.~\ref{form:maxvalinball-ball}}&:\text{a $(d+1)$ dimensional sphere in $\mathbb{R}^d$}
 \end{align*}
 
-
+The optimization problem of detecting the maximum value of a function inside a sphere (\ref{form:maxvalinball-func}) is solved using \emph{Constrained Function Minimization (CONMIN)}, which implements the method of feasible directions, as described in Subsection~\ref{subsec:theorBack-CONMIN}.
 
 \subsection{Smoothing, Velocity and Acceleration Estimation via Savitzky-Golay} \label{subsec:impl-heuristic-vel}
 
