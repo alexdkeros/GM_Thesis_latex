@@ -130,7 +130,7 @@ w_{i,j}=
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The incentive behind the distance based node pairing scheme comes from the need to track the global data vector as closely as possible, with only a subset of the total node population's data vectors at each balancing attempt. By considering the distance of the mean of a pair of data vectors from the global data vector (distance $d_1$ in Figure~\ref{fig:distoptpairdetailed}) the \emph{``quality''} and \emph{``accuracy''} of the tracking ability of each pair is evaluated. Additionally, by taking into account the in-between distance of data vectors of each node pair (distance $d_2$ in Figure~\ref{fig:distoptpairdetailed}), pairs from the limits of the data vector velocity spectrum that manage to \emph{``cancel each other out''} more effectively are encouraged.
-\newpage
+
 \section{Heuristic Balancing} \label{sec:impl-heuristic}
 %TODO: check notes for additional stuff to add
 
@@ -138,19 +138,39 @@ The balancing method incorporated into the \emph{coordinator based} algorithm of
 
 While this method partially succeeds in reducing the communication burden of false alarms either by requesting only a subset of the total node set each time a Local Violation occurs or by setting the drift vectors to a safe point (represented by the balance vector), major drawbacks can be noted regarding vector positioning and bounding ball construction. Updated vector assignment as a result of the ``optimization'' procedure does not take into account the idiosyncrasies of the monitoring function and the admissible region it produces. Additionally, all nodes taking part in the balancing process are handled identically, without taking advantage of the differences in the behavior of each node.
 
-Previous work proposed selecting an optimal reference vector, instead of the estimate vector for bounding ball computation, along with shape customization of the local constraints at the nodes according to the node's needs~\cite{Sharfman2012ShapeSensGM}. Local constraint customization served as the basis for the now popular \emph{Safe-Zone} framework~\cite{Keren2013SafeZones, Keren2014GMHetStreams}, which diverges from the traditional bounding sphere setting, while maintaining the same fundamental idea of distance computation of a point from a set of support vectors~\cite{Samoladas2013Unification}, preserving the essence of the admissible region and retaining the balancing process of the coordinator based scenario.
+Previous work proposed selecting an optimal reference vector, instead of the estimate vector for bounding ball construction, along with shape customization of the local constraints at the nodes according to the node's needs~\cite{Sharfman2012ShapeSensGM}. Local constraint customization served as the basis for the now popular \emph{Safe-Zone} framework~\cite{Keren2013SafeZones, Keren2014GMHetStreams}, which diverges from the traditional bounding sphere setting, while maintaining the same fundamental idea of distance computation of a point from a set of support vectors~\cite{Samoladas2013Unification}, preserving the essence of the admissible region and retaining the balancing process of the coordinator based scenario.
 
-our approach: optimaly position new drift vectors to maxinize the time until a local violation.\\
-use simple velocity and acceleration estimations of drift vectors to enhance results.
+This thesis proposes a novel heuristic approach for optimal positioning of drift vectors, which takes into account both the temporal behavior of each node's data stream, as well as the peculiarities of the monitoring function over said data streams. Aim of the heuristic optimization is the maximization of the estimated time until the following Local Violation occurs, which, expressed as an optimization formula, receives the following form:
+\newpage
+\begin{equation}
+\max\min\frac{2*(T-x_i)}{vel_i(t_{lv})\sqrt{2*(T-x_i)*accel_i(t_{lv})+{vel_i}^2(t_{lv})}}, \forall n_i \in P'
+\label{form:heuristic}
+\end{equation}
+where:
+\begin{align*}
+T&:\text{monitoring threshold}\\
+x_i&:\text{the maximum value of the monitoring function $f(\cdot)$ over the bounding ball $B(\vec{e}(t_{lv}), \vec{u_i}(t_{lv}))$,}\\&\qquad\text{where $t_{lv}$ is the time a Local Violation occurred and $i$ the index of node $n_i$}\\
+vel_i(t_{lv})&:\text{the estimated velocity of the maximum value of the monitoring function $f(\cdot)$}\\&\qquad\text{when applied to the bounding ball created by the data stream update of node $n_i$}\\&\qquad\text{and the estimate vector $\vec{e}$ at time $t_{lv}$}\\
+accel_i(t_{lv})&:\text{the estimated acceleration of the maximum value of the monitoring function $f(\cdot)$}\\&\qquad\text{when applied to the bounding ball created by the data stream update of node $n_i$}\\&\qquad\text{and the estimate vector $\vec{e}$ at time $t_{lv}$}\\
+t_{lv}&:\text{time of Local Violation occurrence}\\
+P'&:\text{the balancing set}\\
+\end{align*}
 
-the heuristic formula and explain
+The Equation~\ref{form:heuristic} originates from the the combination of elementary kinematic equations, as such:\\
+Assume a moving object $i$ at point $x_i$, with acceleration $a_i$ and current velocity $v_i$. Let $v_f$ be the object's final velocity when it reaches a threshold point $T$ at time $t$, from which it deviates by $d=T-x_i$. Let current time be $t=0$.\\
+Distance (or \emph{Displacement}) is described by:
+\begin{equation}
+d=\frac{v_i+v_f}{2}*t
+\label{form:displacement}
+\end{equation}
+Final velocity is defined as:
+\begin{equation}
+v_f^2=v_i^2+2*a*d
+\label{form:finalVel}
+\end{equation}
+By solving Equation~\ref{form:finalVel} for $v_f$, plugging it into Equation~\ref{form:displacement} and solving the resulting Equation for $t$, we extract the desired result (Equation~\ref{form:heuristic}).
 
-images of optimal positions in 2-d (3-d?)
-
-analyze the method (bilevel multiobjective optimization), write the formulas of optimization (stackoverflow style)\\
-mention solvers used 
-
-algorithm
+The newly defined heuristic optimization formula (\ref{form:heuristic}) aims to maximize the time until the next Local Violation concerning any of the nodes belonging in the balancing set. By taking into account the maximum value of the monitoring function $f(\cdot)$ inside the bounding ball created by each data stream update and the estimate vector, and by computing acceleration and velocity measures of this value over time, an approximate mapping of the data stream space to the one dimensional space of the arbitrary monitoring function is achieved. This permits the computation of the optimal positions the balanced drift vectors should take in order to maximize the time they reach the monitoring threshold, as depicted in Figure~\ref{fig:heuristicbalancing}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% balancing figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[t!]
@@ -170,6 +190,43 @@ algorithm
 \caption{Balancing methods}
 \end{figure*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%TODO: algo, images
+\subsection{Implementation of the Heuristic Balancing}
+
+In order transform the heuristic optimization formula (\ref{form:heuristic}) into an applicable setting, \emph{multi-objective optimization} (Section~\ref{sec:theorBack-MOP}) is used. The optimization function is now defined as such:
+\begin{align*}
+\min -z&\\
+	\text{s.t.}\ \ z&\leq g(h(\vec{e},\vec{u_0}), vel_0, accel_0, T)\\
+	z&\leq g(h(\vec{e},\vec{u_1}), vel_1, accel_1, T)\\
+	&\vdots  \numberthis \label{form:mop}\\
+	z&\leq g(h(\vec{e},\vec{u_n}), vel_n, accel_n, T)\\
+	\vec{b}&=\frac{1}{\sum_{i=0}^n{w_i}}\sum_{i=0}^n{(w_i*\vec{u_i})} &&,\forall n_i \in P'
+\end{align*}
+where:
+\begin{align*}
+g&:\mathbb{R}^4 \to \mathbb{R}, \text{the heuristic optimization function as defined in Equation~\ref{form:heuristic}}\\
+h&:\mathbb{R}^d \to \mathbb{R}, \text{the function computing the maximum value of the monitoring function $f(\cdot)$ in $B(\vec{e},\vec{u_i})$,}\\&\qquad\text{which is an optimization problem by itself}\\
+d&: \text{the data vector dimensionality}\\
+T&: \text{the monitoring threshold}\\
+\vec{u_i}&: \text{the drift vector of node $n_i$}\\
+w_i&: \text{the weight of node $n_i$}\\
+vel_i&: \text{the velocity of the maximum value of the monitoring function when applied to the ball}\\&\qquad\text{ defined by node's $n_i$ drift vector $\vec{u_i}$ and the estimate vector $\vec{e}$}\\
+accel_i&: \text{the acceleration of the maximum value of the monitoring function when applied to the ball}\\&\qquad\text{ defined by node's $n_i$ drift vector $\vec{u_i}$ and the estimate vector $\vec{e}$}\\
+\vec{b}&: \text{the balancing vector}\\
+P'&: \text{the balancing set}
+\end{align*}
+\newpage
+Solution to this optimization problem is given by the \emph{Sequential Least Squares Programming (SLSQP)} solver, 
+which is described in Subsection~\ref{subsec:theorBack-SLSQP}. The problem is decomposed and formulated using an additional helping parameter $z$ in order to avoid non-differentiable functions (such as $\min$ and $\max$) and to aid computation by the solver.
+
+In the heuristic optimization problem defined previously (\ref{form:mop}) the nested optimization of detecting the maximum value of an arbitrary monitoring function inside the bounding ball $B(\vec{e},\vec{u_i})$ is existent. This optimization problem is formed as follows:
+\begin{align*}
+\max &\quad f  \numberthis \label{form:maxvalinball}\\
+	\text{s.t.}&\quad \sum_{i=1}^d(x_i-c_i)^2=r^2
+\end{align*}
+
+
 
 \subsection{Smoothing, Velocity and Acceleration Estimation via Savitzky-Golay} \label{subsec:impl-heuristic-vel}
 

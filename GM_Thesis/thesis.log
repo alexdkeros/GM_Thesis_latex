@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.6.23)  3 MAY 2016 00:28
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2015.6.23)  3 MAY 2016 21:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -940,11 +940,11 @@ LaTeX Font Info:    ... okay on input line 92.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot truedimen 
 * h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(57.81621pt, 701.01878pt, 36.135pt)
+* v-part:(T,H,B)=(57.81621pt, 679.33757pt, 57.81621pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
 * \textwidth=469.75502pt
-* \textheight=666.41878pt
+* \textheight=644.73756pt
 * \oddsidemargin=0.0pt
 * \evensidemargin=0.0pt
 * \topmargin=-14.45378pt
@@ -1166,36 +1166,41 @@ File: img/distoptpair_example_full.jpeg Graphic file (type QTm)
 <use  "img/distoptpair_example_full.jpeg" >
 File: img/distoptpair_example_detail.png Graphic file (type QTm)
 
-<use  "img/distoptpair_example_detail.png" > [14] [15]
+<use  "img/distoptpair_example_detail.png" > [14] [15] [16]
+Overfull \hbox (28.69421pt too wide) in paragraph at lines 157--157
+[] 
+ []
 
-LaTeX Warning: Citation `Samoladas2013Unification' on page 16 undefined on inpu
-t line 141.
-
-[16] (./img/classic_balancing.tex)
+[17] (./img/classic_balancing.tex)
 File: img/classic_balancing.tex Graphic file (type tex)
 
-Overfull \hbox (8.06339pt too wide) in paragraph at lines 167--168
+Overfull \hbox (8.06339pt too wide) in paragraph at lines 180--181
  [][] 
  []
 
 (./img/heuristic_balancing.tex)
 File: img/heuristic_balancing.tex Graphic file (type tex)
 
-Overfull \hbox (8.06339pt too wide) in paragraph at lines 173--174
+Overfull \hbox (8.06339pt too wide) in paragraph at lines 186--187
  [][] 
  []
 
+[18]
+Overfull \hbox (27.89682pt too wide) in paragraph at lines 218--218
+[] 
+ []
 
-Underfull \hbox (badness 10000) in paragraph at lines 183--188
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 233--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--190
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
-[17]) [18] [19
+) [20] [21
 
 
 ]
@@ -1208,15 +1213,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--31
 
  []
 
-) [20
+[22
 
 
-] [21]
+]) [23]
 \openout2 = `doc/conclusions.aux'.
 
  (./doc/conclusions.tex
 Chapter 7.
-) [22
+) [24
 
 
 
@@ -1225,11 +1230,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
 
-) [23
+) [25
 
 
 
-] [24
+] [26
 
 ]
 \openout2 = `doc/appendixGMPythonImpl.aux'.
@@ -1239,7 +1244,7 @@ Overfull \hbox (2.76404pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/20.74 Geometric Mon-i-tor-ing Python Im-ple-men-ta-tion 
  []
 
-) [25
+) [27
 
 
 
@@ -1260,12 +1265,12 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
  ) 
 Here is how much of TeX's memory you used:
- 33035 strings out of 493727
- 710154 string characters out of 6147890
- 897171 words of memory out of 5000000
- 35729 multiletter control sequences out of 15000+600000
+ 33042 strings out of 493727
+ 710267 string characters out of 6147890
+ 897195 words of memory out of 5000000
+ 35736 multiletter control sequences out of 15000+600000
  18817 words of font info for 72 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,21n,77p,1084b,1247s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (34 pages).
+Output written on thesis.pdf (36 pages).

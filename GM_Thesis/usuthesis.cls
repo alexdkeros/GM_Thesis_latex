@@ -299,7 +299,7 @@
     left=1in,
     top=0.8in,
     right=1in,
-    bottom=0.5in,
+    bottom=0.8in,
     headheight=\@@fontsize,
     headsep=\baselineskip,
     footskip=10pt}
@@ -550,6 +550,9 @@
     }
 }
 %}}}
+
+%selective numbering of equations
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
 
 %{{{ Define some frontmatter and backmatter environments
 % Public Abstract
