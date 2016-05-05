@@ -62,4 +62,12 @@ D.~Keren, G.~Sagy, A.~Abboud, D.~Ben{-}David, I.~Sharfman, and A.~Schuster,
 V.~Samoladas, ``Unification fo safe zones and the geometric method with
   application to generalized median monitoring,'' October 2013.
 
+\bibitem{SavGol1964SmoothDiff}
+\BIBentryALTinterwordspacing
+A.~Savitzky and M.~J.~E. Golay, ``Smoothing and differentiation of data by
+  simplified least squares procedures.'' \emph{Analytical Chemistry}, vol.~36,
+  no.~8, pp. 1627--1639, 1964. [Online]. Available:
+  \url{http://dx.doi.org/10.1021/ac60214a047}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

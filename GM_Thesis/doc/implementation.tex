@@ -96,7 +96,7 @@ w_{i,j}=
 \SetKwFunction{DistancePairer}{DistancePairer}
 \SetKwProg{Fn}{Function}{}{end}
 \Fn{\DistancePairer{$nodes$,$i$}}{
-	\KwData{$nodes=[(n_1, [\vec{v_1}(t_0), ... , \vec{v_1}(t_{end})]), ... , (n_k, [\vec{v_k}(t_0), ... , \vec{v_k}(t_{end})])]$: list of nodes with their respective data vectors, $i$: pair type, initial=1} 
+	\KwData{$nodes=[(n_1, [\vec{v_1}(t_0), ... , \vec{v_1}(t_{end})]), ... , (n_k, [\vec{v_k}(t_0), ... , \vec{v_k}(t_{end})])]$: list of nodes with their respective data vectors,$i$: pair type, initial=1} 
 	\KwResult{$nodeHierarchy$: dictionary of \emph{Type-k} pairs}
 
 	\If(\tcp*[f]{recursion stopping condition}){$length(nodes)=1$}{
@@ -117,16 +117,16 @@ w_{i,j}=
 ~
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% distance figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
 \begin{figure}
+\vspace*{-2cm}
         \centering
-		\includegraphics[scale=0.33]{img/distoptpair_example_full.jpeg}
+		\includegraphics[scale=0.35]{img/distoptpair_example_full.jpeg}
         \caption{The drift vectors during Geometric Monitoring operation until a Global Violation. Distance based node matching is used on 4 nodes ($\{n_0, n_1, n_2, n_3\}$), with 1-dimensional data vectors, threshold $T=100$ and $f(x)=x$ as the monitoring function. The \emph{Type-2} node pairs are $\{n_0, n_3\}$ and $\{n_1, n_2\}$.}\label{fig:distoptpair}
 \end{figure}
 \begin{figure}
         \centering
-		\includegraphics[scale=0.23]{img/distoptpair_example_detail.png}
+		\includegraphics[scale=0.35]{img/distoptpair_example_detail_edited.jpeg}
         \caption{Detailed depiction of the Geometric Monitoring operation of Figure~\ref{fig:distoptpair}. Distance based node matching operating on 4 nodes ($\{n_0, n_1, n_2, n_3\}$), with 1-dimensional data vectors, threshold $T=100$ and $f(x)=x$ as the monitoring function. Distance $d_1$ denotes the distance of the data vector mean of the paired nodes $n_0$ and $n_3$ from the global mean (\emph{global data vector}) at $t=25$, whereas distance $d_2$ denotes the in-between distance of data vectors $\vec{v_0}(t)$ and $\vec{v_3}(t)$ of the node pair at time $t=25$ (before a Local Violation occurs, where $\vec{e}=0$ and $\vec{u_i}(t)=\vec{v_i}(t)\ \forall\ i\in[0,1,2,3], t<30$). Both distances are taking part in the edge weighting process, according to Equation~\ref{form:distanceMatchingWeights}.} \label{fig:distoptpairdetailed}
 \end{figure}%
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The incentive behind the distance based node pairing scheme comes from the need to track the global data vector as closely as possible, with only a subset of the total node population's data vectors at each balancing attempt. By considering the distance of the mean of a pair of data vectors from the global data vector (distance $d_1$ in Figure~\ref{fig:distoptpairdetailed}) the \emph{``quality''} and \emph{``accuracy''} of the tracking ability of each pair is evaluated. Additionally, by taking into account the in-between distance of data vectors of each node pair (distance $d_2$ in Figure~\ref{fig:distoptpairdetailed}), pairs from the limits of the data vector velocity spectrum that manage to \emph{``cancel each other out''} more effectively are encouraged.
@@ -141,7 +141,6 @@ While this method partially succeeds in reducing the communication burden of fal
 Previous work proposed selecting an optimal reference vector, instead of the estimate vector for bounding ball construction, along with shape customization of the local constraints at the nodes according to the node's needs~\cite{Sharfman2012ShapeSensGM}. Local constraint customization served as the basis for the now popular \emph{Safe-Zone} framework~\cite{Keren2013SafeZones, Keren2014GMHetStreams}, which diverges from the traditional bounding sphere setting, while maintaining the same fundamental idea of distance computation of a point from a set of support vectors~\cite{Samoladas2013Unification}, preserving the essence of the admissible region and retaining the balancing process of the coordinator based scenario.
 
 This thesis proposes a novel heuristic approach for optimal positioning of drift vectors, which takes into account both the temporal behavior of each node's data stream, as well as the peculiarities of the monitoring function over said data streams. Aim of the heuristic optimization is the maximization of the estimated time until the following Local Violation occurs, which, expressed as an optimization formula, receives the following form:
-\newpage
 \begin{equation}
 \max\min\frac{2*(T-x_i)}{vel_i(t_{lv})\sqrt{2*(T-x_i)*accel_i(t_{lv})+{vel_i}^2(t_{lv})}}, \forall n_i \in P'
 \label{form:heuristic}
@@ -236,23 +235,71 @@ d&: \text{the space dimensionality}\\
 
 The optimization problem of detecting the maximum value of a function inside a sphere (\ref{form:maxvalinball-func}) is solved using \emph{Constrained Function Minimization (CONMIN)}, which implements the method of feasible directions, as described in Subsection~\ref{subsec:theorBack-CONMIN}.
 
+The resulting heuristic balancing algorithmic implementation is summarized in the following Algorithm:\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% node matching algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{algorithm}[H]
+\SetAlgoLined
+\setstretch{1.30}
+\SetKwFunction{RepMessageReceived}{RepMessageReceived}
+\SetKwFunction{RequestNode}{RequestNode}
+\SetKwFunction{Balance}{Balance}
+\SetKwProg{Fn}{Function}{}{end}
+
+\Fn{\RepMessageReceived{$<n_i$,$v_i$,$u_i$,$vel_i$,$accel_i>$}}{
+	add $n_i$ to balancing set $P'$\;
+	\Balance{}\;
+}
+
+\Fn{\Balance{$P'$}}{
+	\If{$length(P')=1$}{
+		\RequestNode{}\tcp*[r]{request node based on respective gathering scheme}
+	}
+
+	$\vec{b}=\sum_{P'}{\frac{w_i*\vec{u_i}}{w_i}}$\;
+
+	\If{$B(\vec{e},\vec{b})$ is monochromatic}{
+		\tcc{heuristic optimization procedure,\\ returns the optimal drift vector positions in set $O$}
+		$O=DriftVectorOptimizationProblem()$\;
+
+		\ForEach{$n_i \in P'$}{
+			$\Delta\delta_i=w_i*\vec{u_i}'-w_i*\vec{u_i}$\tcp*[r]{$\vec{u_i}'$ denotes the optimal drift vector position}
+			$Send(<ADJSLK,n_i,\Delta\delta_i>)$\;
+		}
+	}
+}
+\caption{Heuristic Balancing \label{algo:heuristicbalancing}} 
+\end{algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Smoothing, Velocity and Acceleration Estimation via Savitzky-Golay} \label{subsec:impl-heuristic-vel}
 
-why S-G:
-smoothing and derivation at the same time\\
-precomputed coefficients (real time)\\
-easy implementation\\
-customizable(window and order)\\
+The heuristic balancing method proposed previously (Section~\ref{sec:impl-heuristic}) requires an efficient estimation of the velocity and the acceleration of the output of the monitoring function over the maximum value of the bounding ball. Additionally, a smoothing operation over the data stream series would be beneficial, in order to grasp the trend (increasing or decreasing) of the data stream without letting noisy updates and extreme fluctuations misguide the optimization operation. 
 
-S-G implementation and algorithm\\
+The \emph{Savitzky-Golay smoothing filter}~\cite{SavGol1964SmoothDiff} (Section~\ref{sec:theorBack-SavitzkyGolay}) is ideal in the heuristic Geometric Monitoring setting, for it smooths and derivates the signal without much additional computational burden, allowing it to be applied directly at the Monitoring Nodes' data streams. By assuming equidistant data points the precomputation of convolution coefficients becomes trivial when specifying the window size, the window center, the order of the polynomial and the desired derivative. Following that, the precomputed coefficients are applied to the desired signal by a simple convolution, which is both fast and, if required, on-line. The application of the filter on a noisy signal, along with the velocity and the acceleration computation of this signal, is shown in Figure~\ref{fig:savgol}.
 
-Example images of same data smoothed, velocity and acceleration (3 figures or all in one?)
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% savgol figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}
+\centering
+\includegraphics[scale=0.60]{img/savgol.pdf}
+\caption{Savitzky-Golay filtering of a signal with added Gaussian noise. The smoothing window is 50 points in length, centered at the far end, as in the real-time smoothing applied to the Geometric Monitoring setting. The polynomial order is 2 for the smoothed signal, 3 for the velocity estimation and 5 for the acceleration estimation of the original signal.} 
+\label{fig:savgol}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Implementation Challenges} \label{sec:impl-implChallenges}
 
-training data\\
-can be overcome, worst case scenario our algorithm operates just like the original GM
+The proposed methods and algorithms incur some implementation challenges, which, on the greater part, can be managed.
 
-complexity of optimization (i.e. optimal point location)
+Regarding the \emph{distance based node matching} presented in Section~\ref{sec:impl-distNodeMatch}: 
+\begin{itemize}
+\item In order to extract the optimal node pairs training data must be available. This situation can be handled in two ways. One way is to initiate execution of the Geometric Monitoring task using the original method of randomly requesting nodes during balancing, until the necessary amount of data to train the model has been cumulated. Then the model can be trained and the operation can be switched to the distance based node matching scheme. A more appropriate solution could be to incrementally update the node pairs using the data provided by message passing in the standard Geometric Monitoring execution, or by occasionally polling the monitoring nodes during low network activity until a satisfiable amount of data has been gathered.
+\end{itemize}
 
-complexity of optimization (i.e. node matching)
+Regarding the \emph{heuristic balancing} method presented in Section~\ref{sec:impl-heuristic}:
+\begin{itemize}
+\item The bi-level multi-objective optimization incorporated into the method can become computationally expensive when dealing with a large balancing set or with highly dimensional data streams. Attention must be paid to the selected solvers responsible for the optimization task, for some solvers can be more effective than others in different settings and different monitoring function applications. Additionally, some solvers provide customization parameters, such as \emph{tolerance} and \emph{iteration count}, among others, that greatly influence the execution time of the optimization routine, as well as the precision of the results.
+\item The \emph{Savitzky-Golay smoothing filter}, responsible for smoothing and differentiating the signals representing the maximum value of the monitoring function over the bounding spheres, is directly affected by the selected window length and the polynomial order. That being the case, care must be taken to select appropriate values that effectively track the general trends without compromising detail important to the optimization routine.
+\end{itemize}
