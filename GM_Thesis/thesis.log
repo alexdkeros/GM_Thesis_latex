@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2016.3.23)  5 MAY 2016 18:19
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2016.3.23)  12 MAY 2016 20:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1110,38 +1110,28 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  (./doc/introduction.tex
 Chapter 1.
-) [2
+[2
 
 
-]
+]) [3]
 \openout2 = `doc/theoreticalBackground.aux'.
 
  (./doc/theoreticalBackground.tex
 Chapter 2.
-
-LaTeX Warning: Citation `GM-sharfmanShusterKeren' on page 3 undefined on input 
-line 3.
-
-
-Overfull \hbox (3.31606pt too wide) in paragraph at lines 11--13
-[]\OT1/cmr/m/n/10.95 idea: hav-ing a real-time overview over the sys-tem dif-fe
-r-ing from tra-di-tion DBMS: push paradigm
- []
-
-[3
+[4
 
 
 
-] [4] [5]) [6]
+] [5] [6]) [7]
 \openout2 = `doc/relatedWork.aux'.
 
  (./doc/relatedWork.tex
 Chapter 3.
-) [7
+) [8
 
 
 
-] [8
+] [9
 
 
 ]
@@ -1154,7 +1144,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-) [9
+) [10
 
 
 ]
@@ -1163,29 +1153,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
  (./doc/implementation.tex
 Chapter 5.
 
-LaTeX Warning: Reference `algo:GM-coordBased' on page 10 undefined on input lin
+LaTeX Warning: Reference `algo:GM-coordBased' on page 11 undefined on input lin
 e 12.
 
-[10
+[11
 
 
 
-] [11] [12] (./img/NodeMatchingHierarchy.tex
+] [12] [13] (./img/NodeMatchingHierarchy.tex
 \du=\skip65
 )
 File: img/NodeMatchingHierarchy.tex Graphic file (type tex)
- [13]
+ [14]
 File: img/distoptpair_example_full.jpeg Graphic file (type QTm)
 
 <use  "img/distoptpair_example_full.jpeg" >
 File: img/distoptpair_example_detail_edited.jpeg Graphic file (type QTm)
 
-<use  "img/distoptpair_example_detail_edited.jpeg" > [14] [15] [16]
+<use  "img/distoptpair_example_detail_edited.jpeg" > [15] [16] [17]
 Overfull \hbox (28.69421pt too wide) in paragraph at lines 156--156
 [] 
  []
 
-[17] (./img/classic_balancing.tex)
+[18] (./img/classic_balancing.tex)
 File: img/classic_balancing.tex Graphic file (type tex)
 
 Overfull \hbox (8.06339pt too wide) in paragraph at lines 179--180
@@ -1199,14 +1189,14 @@ Overfull \hbox (8.06339pt too wide) in paragraph at lines 185--186
  [][] 
  []
 
-[18]
+[19]
 Overfull \hbox (27.89682pt too wide) in paragraph at lines 217--217
 [] 
  []
 
-[19] [20] [21]
+[20] [21] [22]
 File: img/savgol.pdf Graphic file (type QTm)
- <use  "img/savgol.pdf" > [22]) [23] [24
+ <use  "img/savgol.pdf" > [23]) [24] [25
 
 
 ]
@@ -1219,15 +1209,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--31
 
  []
 
-[25
+[26
 
 
-]) [26]
+]) [27]
 \openout2 = `doc/conclusions.aux'.
 
  (./doc/conclusions.tex
 Chapter 7.
-) [27
+) [28
 
 
 
@@ -1236,11 +1226,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
 
-) [28
+[29
 
 
 
-] [29
+]) [30] [31
 
 ]
 \openout2 = `doc/appendixGMPythonImpl.aux'.
@@ -1250,7 +1240,7 @@ Overfull \hbox (2.76404pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/20.74 Geometric Mon-i-tor-ing Python Im-ple-men-ta-tion 
  []
 
-) [30
+) [32
 
 
 
@@ -1268,15 +1258,18 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 142.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
  ) 
 Here is how much of TeX's memory you used:
- 33373 strings out of 495506
- 732315 string characters out of 6184882
+ 33374 strings out of 495506
+ 732350 string characters out of 6184882
  910449 words of memory out of 5000000
- 36019 multiletter control sequences out of 15000+600000
+ 36020 multiletter control sequences out of 15000+600000
  18817 words of font info for 72 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  55i,21n,79p,1084b,1191s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (39 pages).
+Output written on thesis.pdf (41 pages).

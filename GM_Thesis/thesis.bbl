@@ -21,13 +21,13 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{Keren2014GMHetStreams}
+\bibitem{Babcock2002DataStreamSystems}
 \BIBentryALTinterwordspacing
-D.~Keren, G.~Sagy, A.~Abboud, D.~Ben-David, A.~Schuster, I.~Sharfman, and
-  A.~Deligiannakis, ``Geometric monitoring of heterogeneous streams.''
-  \emph{IEEE Trans. Knowl. Data Eng.}, vol.~26, no.~8, pp. 1890--1903, 2014.
-  [Online]. Available:
-  \url{http://dblp.uni-trier.de/db/journals/tkde/tkde26.html#KerenSABSSD14}
+B.~Babcock, S.~Babu, M.~Datar, R.~Motwani, and J.~Widom, ``Models and issues in
+  data stream systems,'' in \emph{Proceedings of the Twenty-first ACM
+  SIGMOD-SIGACT-SIGART Symposium on Principles of Database Systems}, ser. PODS
+  '02.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2002, pp.
+  1--16. [Online]. Available: \url{http://doi.acm.org/10.1145/543613.543615}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Sharfman2006GM}
@@ -38,6 +38,23 @@ I.~Sharfman, A.~Schuster, and D.~Keren, ``A geometric approach to monitoring
   SIGMOD '06.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM,
   2006, pp. 301--312. [Online]. Available:
   \url{http://doi.acm.org/10.1145/1142473.1142508}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Garofalakis2013SketchBasedGM}
+\BIBentryALTinterwordspacing
+M.~N. Garofalakis, D.~Keren, and V.~Samoladas, ``Sketch-based geometric
+  monitoring of distributed stream queries.'' \emph{PVLDB}, vol.~6, no.~10, pp.
+  937--948, 2013. [Online]. Available:
+  \url{http://dblp.uni-trier.de/db/journals/pvldb/pvldb6.html#GarofalakisKS13}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Keren2014GMHetStreams}
+\BIBentryALTinterwordspacing
+D.~Keren, G.~Sagy, A.~Abboud, D.~Ben-David, A.~Schuster, I.~Sharfman, and
+  A.~Deligiannakis, ``Geometric monitoring of heterogeneous streams.''
+  \emph{IEEE Trans. Knowl. Data Eng.}, vol.~26, no.~8, pp. 1890--1903, 2014.
+  [Online]. Available:
+  \url{http://dblp.uni-trier.de/db/journals/tkde/tkde26.html#KerenSABSSD14}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Babis2013SimulatorStreams}

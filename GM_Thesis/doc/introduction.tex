@@ -1,7 +1,36 @@
 \chapter{Introduction} \label{chap:intro}
 \section{Overview} \label{sec:intro-overview}
 
+
+A multitude of recent emergent applications require real-time handling of rapidly incoming data, that may as well be great in size and distributed in nature. Such applications that follow a continuous distributed monitoring model are classified as \emph{Data Stream Systems}~\cite{Babcock2002DataStreamSystems}. Notable examples include, among others, distributed sensors, ISP network traffic monitoring, telecommunication system management, event monitoring, and real-time analysis tools for financial data.
+
+These systems differ from the traditional Database Management Systems (DBMS), in the sense that they are following a \emph{pull paradigm}, where large scale event monitoring is required or continuous queries are issued, instead of the \emph{push paradigm}, where one-shot queries normally take place. Data Stream Systems are required to efficiently process, in real-time, data streams that are of high volume, continuous, size unbound, and most likely violative, in the sense that it would be inefficient to store them in memory. Additionally, the distributed nature of some applications incur an additional challenge to such systems, for they are required to communicate via a bandwidth-limited and possibly delay-inducing network in order to synchronize, reorganize, and provide a real-time overview of the results.
+
+Consequently, intelligent algorithms must be devised that are able to guarantee high accuracy standards while limiting the communication overhead induced to the distributed setting. 
+
+
+application examples: 	threshold monitoring~\cite{Sharfman2006GM}
+						value monitoring (which can be reduced to threshold monitoring [error threshold monitoring] - paper: sketch-based geometric monitoring of distributed stream queries - garofalakis, keren, samoladas ~\cite{Garofalakis2013SketchBasedGM})
+						
+
+complexity: monitoring value or threshold monitoring over the whole set of observations, in real time
+			monitoring an arbitrary function (non linear function example), 
+			arbitrary number of features
+
+
+
+possible solutions:\\
+	1.centralize\\
+		- suffers from network overload, storage overload\\
+	2.poll\\
+		- not real time, update frequency-accuracy trade-off\\
+	3.GM monitoring\\
+	    -apply convex opt theory in order to reduce communication while retaining accuracy bounds
+
 \section{Motivation} \label{sec:intro-motivation}
+
+A lot of work towards this direction, based on GM.
+We believe that there is still room for improvements regarding the way the method handles and represents data streams
 
 \section{Contributions} \label{sec:intro-contr}
 
