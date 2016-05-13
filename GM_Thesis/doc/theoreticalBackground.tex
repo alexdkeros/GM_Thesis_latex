@@ -6,22 +6,33 @@ The present chapter contains the background knowledge required throughout the le
 
 \section{Geometric Monitoring of Distributed Streams} \label{sec:theorBack-GM}
  
-The \emph{Geometric Monitoring} method~\cite{Sharfman2006GM} was initially devised as a way to monitor threshold crossings of arbitrary functions over distributed data streams, i.e. be able to determine whether an arbitrary \emph{monitoring function} $f(\cdot)$ over the data streams violated a predetermined threshold ($f(\cdot)>T$ or $f(\cdot)<T$). By mapping data streams to a feature space defined by the dimensionality of each data stream update and monitoring the convex hull surrounding the value of the monitoring function, Sharfman et al. were able to decompose the monitoring task into local constraints and apply distributed threshold monitoring, while reducing or eliminating the costs required by central data processing.
+The \emph{Geometric Monitoring} method~\cite{Sharfman2006GM} was initially devised as a way to monitor threshold crossings of arbitrary functions over distributed data streams, i.e. be able to determine whether an arbitrary \emph{monitoring function} $f(\cdot)$ over the data streams violated a predetermined threshold ($f(\cdot)>T$ or $f(\cdot)<T$). By mapping data streams to a feature space defined by the dimensionality of each data stream update and monitoring the convex hull surrounding the value of the monitoring function, Sharfman et al. were able to decompose the monitoring task into local constraints and apply distributed threshold monitoring, while reducing the communication costs required by central data processing.
 
-In the current section a detailed presentation of this method is taking place. In Subsection~\ref{subsec:theorBack-GM-sysArch} two system architectures are shown, a fully distributed scenario and a coordinator based one, where Geometric Monitoring can be applied. Subsection~\ref{subsec:theorBack-GM-compMod} explains the computational model, followed by the method's geometric interpretation in Subsection~\ref{subsec:theorBack-GM-geomInt}. Finally, in Subsection~\ref{subsec:theorBack-GM-protocol} the application's monitoring protocol implementing the Geometric Method is described.
+In the current section a detailed presentation of this method is taking place. In Subsection~\ref{subsec:theorBack-GM-sysArch} two system architectures are shown, a decentralized scenario and a centralized one, where Geometric Monitoring can be applied. Subsection~\ref{subsec:theorBack-GM-compMod} explains the computational model, followed by the method's geometric interpretation in Subsection~\ref{subsec:theorBack-GM-geomInt}. Finally, in Subsection~\ref{subsec:theorBack-GM-protocol} the protocol implementing the Geometric Monitoring method is described.
 
 
 \subsection{System Architecture} \label{subsec:theorBack-GM-sysArch}
 
-fully distributed node topology\\
-	.no coordinator-center node\\
-	.communication between nodes\\
-	*image
+In~\cite{Sharfman2006GM} two different scenarios of Geometric Monitoring corresponding to different network topologies are examined. The \emph{decentralized scenario} refers to a topology where nodes are allowed to communicate with each other and a central node is absent. The \emph{centralized scenario} models a star network topology, where a coordinator node communicating with all other nodes is existent.
 
-coordinator based node topology\\
-	.coordinator-center node\\
-	.nodes communicate only with coordinator\\
-	*image
+\subsubsection{Decentralized scenario} \label{subsubsec:theorBack-GM-decentralized}
+
+The topology examined is that of a partially or fully connected mesh network where a coordinator node is absent and nodes are allowed to broadcast to the network or communicate with each other according to the links existent between them. Data stream updates arrive continuously at each of the monitoring nodes and nodes must always be synchronized, i.e. all nodes must be aware of the monitoring task state at all times. An example is depicted in Figure~\ref{fig:decentralized}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% decentralized figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\centering
+\includegraphics{img/decentralized.tex}
+\caption{Network topology example of the decentralized scenario. Dashed lines represent data streams and half arrows represent message exchanges.} 
+\label{fig:decentralized}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Centralized scenario}
+
+The \emph{centralized}, or \emph{coordinator-based} scenario is built upon a star network topology, where all monitoring nodes communicate with a central node, the \emph{coordinator node}. Nodes receive data stream updates continuously, and must communicate their state information to the coordinator node when needed. Communication between monitoring nodes is not allowed, thus, only the communicator can, and must, be aware of the state of the monitoring task at all times.
+
+*image
 
 \subsection{Computational Model} \label{subsec:theorBack-GM-compMod}
 
