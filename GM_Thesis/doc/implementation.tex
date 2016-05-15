@@ -21,7 +21,7 @@ To aid method formulation and experimentation, the following simplifying assumpt
 
 \item The system pauses at each violation, until the violation is resolved. During violation resolution Monitoring nodes do not receive updates from their respective data streams.
 
-\item The Coordinator node does not participate in the monitoring operation. The Coordinator node does not receive updates from a data stream, it only receives messages from the Monitoring nodes in case of threshold violation.
+\item The Coordinator node does not participate in the monitoring operation. The Coordinator node does not receive updates from a data stream, it only receives messages from the Monitoring nodes in case of threshold violation. This assumption can easily be elevated by considering an additional monitoring node responsible for handling the coordinator's data stream monitoring operation. 
 
 \end{itemize}
 
@@ -279,11 +279,11 @@ The \emph{Savitzky-Golay smoothing filter}~\cite{SavGol1964SmoothDiff} (Section~
 
 
 
-
+%TODO: load savgol pic + upload to git (from demokritos)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% savgol figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
 \centering
-\includegraphics[scale=0.60]{img/savgol.pdf}
+%\includegraphics[scale=0.60]{img/savgol.pdf}
 \caption{Savitzky-Golay filtering of a signal with added Gaussian noise. The smoothing window is 50 points in length, centered at the far end, as in the real-time smoothing applied to the Geometric Monitoring setting. The polynomial order is 2 for the smoothed signal, 3 for the velocity estimation and 5 for the acceleration estimation of the original signal.} 
 \label{fig:savgol}
 \end{figure}

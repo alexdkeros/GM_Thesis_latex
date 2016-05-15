@@ -6,7 +6,7 @@ The present chapter contains the background knowledge required throughout the le
 
 \section{Geometric Monitoring of Distributed Streams} \label{sec:theorBack-GM}
  
-The \emph{Geometric Monitoring} method~\cite{Sharfman2006GM} was initially devised as a way to monitor threshold crossings of arbitrary functions over distributed data streams, i.e. be able to determine whether an arbitrary \emph{monitoring function} $f(\cdot)$ over the data streams violated a predetermined threshold ($f(\cdot)>T$ or $f(\cdot)<T$). By mapping data streams to a feature space defined by the dimensionality of each data stream update and monitoring the convex hull surrounding the value of the monitoring function, Sharfman et al. were able to decompose the monitoring task into local constraints and apply distributed threshold monitoring, while reducing the communication costs required by central data processing.
+The \emph{Geometric Monitoring} method~\cite{Sharfman2006GM} was devised as a way to monitor threshold crossings of arbitrary functions over distributed data streams, i.e. be able to determine whether an arbitrary \emph{monitoring function} $f(\cdot)$ over the data streams violated a predetermined threshold ($f(\cdot)>T$ or $f(\cdot)<T$). By mapping data streams to a feature space defined by the dimensionality of each data stream update and monitoring the convex hull surrounding the value of the monitoring function, Sharfman et al. were able to decompose the monitoring task into local constraints and apply distributed threshold monitoring, while reducing the communication costs required by central data processing.
 
 In the current section a detailed presentation of this method is taking place. In Subsection~\ref{subsec:theorBack-GM-sysArch} two system architectures are shown, a decentralized scenario and a centralized one, where Geometric Monitoring can be applied. Subsection~\ref{subsec:theorBack-GM-compMod} explains the computational model, followed by the method's geometric interpretation in Subsection~\ref{subsec:theorBack-GM-geomInt}. Finally, in Subsection~\ref{subsec:theorBack-GM-protocol} the protocol implementing the Geometric Monitoring method is described.
 
@@ -17,7 +17,7 @@ In~\cite{Sharfman2006GM} two different scenarios of Geometric Monitoring corresp
 
 \subsubsection{Decentralized scenario} \label{subsubsec:theorBack-GM-decentralized}
 
-The topology examined is that of a partially or fully connected mesh network where a coordinator node is absent and nodes are allowed to broadcast to the network or communicate with each other according to the links existent between them. Data stream updates arrive continuously at each of the monitoring nodes and nodes must always be synchronized, i.e. all nodes must be aware of the monitoring task state at all times. An example is depicted in Figure~\ref{fig:decentralized}.
+The topology examined is that of a partially or fully connected mesh network where a coordinator node is absent and nodes are allowed to broadcast to the network or communicate with each other according to the links existent between them. Data stream update vectors arrive continuously at each of the monitoring nodes and nodes must always be synchronized, i.e. all nodes must be aware of the monitoring task state at all times. An example is depicted in Figure~\ref{fig:decentralized}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% decentralized figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
@@ -30,21 +30,32 @@ The topology examined is that of a partially or fully connected mesh network whe
 
 \subsubsection{Centralized scenario}
 
-The \emph{centralized}, or \emph{coordinator-based} scenario is built upon a star network topology, where all monitoring nodes communicate with a central node, the \emph{coordinator node}. Nodes receive data stream updates continuously, and must communicate their state information to the coordinator node when needed. Communication between monitoring nodes is not allowed, thus, only the communicator can, and must, be aware of the state of the monitoring task at all times.
+The \emph{centralized}, or \emph{coordinator-based} scenario is built upon a star network topology, where all monitoring nodes communicate with a central node, the \emph{coordinator node}. Nodes receive data stream update vectors continuously, and must communicate their state information to the coordinator node when needed. The coordinator receives data stream updates as well, which can be modelled by an additional monitoring node responsible for the cooridinator node's data stream. Communication between monitoring nodes is not allowed, thus, only the communicator can, and must, be aware of the state of the monitoring task at all times. An example is depicted in Figure~\ref{fig:centralized}.
 
-*image
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% centralized figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\centering
+\includegraphics{img/centralized.tex}
+\caption{Network topology example of the centralized scenario.The bold node represents the coordinator node. Dashed lines represent data streams and half arrows represent message exchanges.} 
+\label{fig:centralized}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Computational Model} \label{subsec:theorBack-GM-compMod}
 
-stream and node notation\\
-weights\\
-statistics vectors\\
-	global statistics vector\\
-monitored function\\
-threshold
+The main goal of the Geometric Monitoring method is to efficiently detect threshold crossings of an arbitrary function over distributed data streams. This is realized via vector projections of the data streams and convex local constraint assignments regarding said vectors at the nodes.
 
-estimate vector\\
-drift vector
+Let $f:\mathbb{R}^d \to \mathbb{R}$ be an arbitrary function, the \emph{monitoring function}, whose value over the data streams needs to be monitored, so that if $f(\cdot)>T$ or $f(\cdot)<T$ an alarm is raised. For linear functions this problem is trivial, so that by letting, for example, $x_1$ and $x_2$ be data stream values at different nodes and requiring $f(\frac{x_1+x_2}{2})>10$ to be monitored, it holds that $f(\frac{x_1+x_2}{2})=\frac{f(x_1)+f(x_2)}{2}$, and the problem can be decomposed to local constraints $f(x_i)<10$ at both nodes, i.e. a node remains silent until it violates its local constraint. Consider now the case of a non-linear function. By knowing the value of the function at the nodes nothing can be deduced about the function's value over the average of the monitoring streams, and where it is positioned with respect to the threshold. Let $f(x)=10x-x^2$, $x_1=0$ and $x_2=9$. Even thought $f(x_1)=0<10$ and $f(x_2)=9<10$, their average violates the specified threshold, $f(\frac{x_1+x_2}{2})=f(4.5)=24.75>10$. 
+
+In order to be able to effectively track non-linear functions, in the likes of the afformentioned example, a mapping of the streams to a vector space is taking place. Let $P=\{p_1, ..., p_n\}$ be the monitoring node set with weights $w_1, ..., w_n$, which can be either static or time varying. Their respective data streams $S=\{s_1, ..., s_n\}$ are represented by $\vec{v_1}(t), ..., \vec{v_n}(t)$, the $d$-dimensional \emph{local statistics vectors} of the node set at time $t$. The \emph{global statistics vector} at time $t$ is the weighted average of the local statistics vectors, as such:
+\begin{equation}
+\vec{v}(t)=\frac{\sum_{i=1}^n{w_i\vec{v_i}(t)}}{\sum_{i=1}^n{w_i}}
+\label{form:globalStatsVector}
+\end{equation}
+
+due to occasional communication between nodes in decentralized, coordinator in coordinator based -> last communicated statistics vector->estimate vector\\
+
+statistics delta vector->drift vector mention\\
 
 general operation of distributed algorithm\\
 	drift vector definition
