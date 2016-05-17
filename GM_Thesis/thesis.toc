@@ -15,12 +15,13 @@
 \contentsline {subsubsection}{Decentralized scenario}{5}{section*.6}
 \contentsline {subsubsection}{Centralized scenario}{5}{section*.8}
 \contentsline {subsection}{\numberline {2.1.2}Computational Model}{6}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Geometric Interpretation}{7}{subsection.2.1.3}
+\contentsline {subsubsection}{Balancing process}{8}{section*.10}
+\contentsline {subsection}{\numberline {2.1.3}Geometric Interpretation}{8}{subsection.2.1.3}
 \contentsline {subsection}{\numberline {2.1.4}Protocol}{8}{subsection.2.1.4}
-\contentsline {section}{\numberline {2.2}Multiobjective Optimization}{8}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}SLSQP}{8}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Sohr's algorithm a.k.a. ralg}{8}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Savitzky-Golay Filtering}{8}{section.2.3}
+\contentsline {section}{\numberline {2.2}Multiobjective Optimization}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}SLSQP}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Sohr's algorithm a.k.a. ralg}{9}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Savitzky-Golay Filtering}{9}{section.2.3}
 \contentsline {section}{\numberline {2.4}Maximum Weight Matching in Graphs}{9}{section.2.4}
 \contentsline {chapter}{\numberline {3}Related Work}{10}{chapter.3}
 \contentsline {part}{II\hspace {1em}PROBLEM DEFINITION AND IMPLEMENTATION}{11}{part.2}

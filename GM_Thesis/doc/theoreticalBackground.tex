@@ -17,7 +17,7 @@ In~\cite{Sharfman2006GM} two different scenarios of Geometric Monitoring corresp
 
 \subsubsection{Decentralized scenario} \label{subsubsec:theorBack-GM-decentralized}
 
-The topology examined is that of a partially or fully connected mesh network where a coordinator node is absent and nodes are allowed to broadcast to the network or communicate with each other according to the links existent between them. Data stream update vectors arrive continuously at each of the monitoring nodes and nodes must always be synchronized, i.e. all nodes must be aware of the monitoring task state at all times. An example is depicted in Figure~\ref{fig:decentralized}.
+The topology examined is that of a partially or fully connected mesh network where a coordinator node is absent and nodes are allowed to broadcast to the network or communicate with each other according to the links existent between them. Data stream update vectors arrive continuously at each of the monitoring nodes and nodes must always be synchronized, i.e. all nodes must be aware of the monitoring task's state at all times. An example is depicted in Figure~\ref{fig:decentralized}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% decentralized figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
@@ -45,25 +45,36 @@ The \emph{centralized}, or \emph{coordinator-based} scenario is built upon a sta
 
 The main goal of the Geometric Monitoring method is to efficiently detect threshold crossings of an arbitrary function over distributed data streams. This is realized via vector projections of the data streams and convex local constraint assignments regarding said vectors at the nodes.
 
-Let $f:\mathbb{R}^d \to \mathbb{R}$ be an arbitrary function, the \emph{monitoring function}, whose value over the data streams needs to be monitored, so that if $f(\cdot)>T$ or $f(\cdot)<T$ an alarm is raised. For linear functions this problem is trivial, so that by letting, for example, $x_1$ and $x_2$ be data stream values at different nodes and requiring $f(\frac{x_1+x_2}{2})>10$ to be monitored, it holds that $f(\frac{x_1+x_2}{2})=\frac{f(x_1)+f(x_2)}{2}$, and the problem can be decomposed to local constraints $f(x_i)<10$ at both nodes, i.e. a node remains silent until it violates its local constraint. Consider now the case of a non-linear function. By knowing the value of the function at the nodes nothing can be deduced about the function's value over the average of the monitoring streams, and where it is positioned with respect to the threshold. Let $f(x)=10x-x^2$, $x_1=0$ and $x_2=9$. Even thought $f(x_1)=0<10$ and $f(x_2)=9<10$, their average violates the specified threshold, $f(\frac{x_1+x_2}{2})=f(4.5)=24.75>10$. 
+Let $f:\mathbb{R}^d \to \mathbb{R}$ be an arbitrary function, the \emph{monitoring function}, whose value over the data streams needs to be monitored, so that if $f(\cdot)>T$ or $f(\cdot)<T$ an alarm is raised. For linear functions this problem is trivial, so that by letting, for example, $x_1$ and $x_2$ be data stream values at different nodes and requiring $f(\frac{x_1+x_2}{2})>10$ to be monitored, it holds that $f(\frac{x_1+x_2}{2})=\frac{f(x_1)+f(x_2)}{2}$, and the problem can be decomposed to local constraints $f(x_i)<10, i=1,2$ at both nodes, i.e. a node remains silent until it violates its local constraint. Consider now the case of a non-linear function. By knowing the value of the function at the nodes nothing can be deduced about the function's value over the average of the monitoring streams and where it is positioned with respect to the threshold. Let $f(x)=10x-x^2$, $x_1=0$ and $x_2=9$. Even thought $f(x_1)=0<10$ and $f(x_2)=9<10$, their average violates the specified threshold, $f(\frac{x_1+x_2}{2})=f(4.5)=24.75>10$. 
 
-In order to be able to effectively track non-linear functions, in the likes of the afformentioned example, a mapping of the streams to a vector space is taking place. Let $P=\{p_1, ..., p_n\}$ be the monitoring node set with weights $w_1, ..., w_n$, which can be either static or time varying. Their respective data streams $S=\{s_1, ..., s_n\}$ are represented by $\vec{v_1}(t), ..., \vec{v_n}(t)$, the $d$-dimensional \emph{local statistics vectors} of the node set at time $t$. The \emph{global statistics vector} at time $t$ is the weighted average of the local statistics vectors, as such:
+In order to be able to effectively track non-linear functions, in the likes of the aforementioned example, a mapping of the streams to a vector space is taking place. Let $P=\{p_1, ..., p_n\}$ be the monitoring node set with weights $w_1, ..., w_n$, which can be either static or time varying. Their respective data streams $S=\{s_1, ..., s_n\}$ are represented by $\vec{v_1}(t), ..., \vec{v_n}(t)$, the $d$-dimensional \emph{local statistics vectors} of the nodes at time $t$. The \emph{global statistics vector} at time $t$ is the weighted average of the local statistics vectors, as such:
 \begin{equation}
 \vec{v}(t)=\frac{\sum_{i=1}^n{w_i\vec{v_i}(t)}}{\sum_{i=1}^n{w_i}}
 \label{form:globalStatsVector}
 \end{equation}
 
-due to occasional communication between nodes in decentralized, coordinator in coordinator based -> last communicated statistics vector->estimate vector\\
+Infrequent communication between monitoring nodes, in the decentralized scenario, or between monitoring nodes and the coordinator, in the coordinator-based scheme, dictates the need to keep track of the value of the global statistics vector at the time the last global communication occurred, thus forming the \emph{estimate vector}:
+\begin{equation}
+\vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}'}}{\sum_{i=1}^n {w_i}}
+\label{form:estimateVector}
+\end{equation}
+,where $\vec{v_i}'$ is the last communicated statistics vector of node $p_i$.
 
-statistics delta vector->drift vector mention\\
+At the monitoring nodes the difference between the current local statistics vector and the last communicated statistics vector is denoted by $\Delta \vec{v_i}(t)=\vec{v_i}(t)-\vec{v_i}', i=1,...,n$. The \emph{drift vector} $\vec{u_i}(t), i=1,...,n$, also maintained at the monitoring nodes, represents the deviation of each node's data stream from the global statistics vector and is defined differently in the two scenarios:
+\begin{itemize}
+\item In the \textbf{decentralized} setting the drift vector is regarded as the displacement of the local statistics vector from the estimate vector:
+\begin{equation}
+\vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)
+\label{form:decentralizedDrift}
+\end{equation}
+\item In the \textbf{centralized} setting the monitoring nodes forward their state to the coordinator node, who has a global overview of the monitoring task at hand. This property allows the coordinator to counteract the effects a specific stream has on the partially observed monitoring task with an other, ``opposite'', stream belonging to a different monitoring node. This is taken care by the \emph{balancing process} initiated every time a local violation occurs, which is responsible for computing and communicating the \emph{slack vector} $\vec{\delta_i}$ to the nodes that contributed to the process, thus providing them with the necessary disposition of their drift vectors, as follows:
+\begin{equation}
+\vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)+\frac{\vec{\delta_i}}{w_i}
+\label{form:centralizedDrift}
+\end{equation} 
+\end{itemize}
 
-general operation of distributed algorithm\\
-	drift vector definition
-
-general operation of coordinator based algorithm\\
-	*balancing process\\
-		slack vector\\
-	drift vector definition
+\subsubsection{Balancing process} \label{subsubsec:theorBack-GM-balancingProc}
 
 \subsection{Geometric Interpretation} \label{subsec:theorBack-GM-geomInt}
 
