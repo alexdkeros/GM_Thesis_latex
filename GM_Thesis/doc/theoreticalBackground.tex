@@ -60,14 +60,14 @@ Infrequent communication between monitoring nodes, in the decentralized scenario
 \end{equation}
 ,where $\vec{v_i}'$ is the last communicated statistics vector of node $p_i$.
 
-At the monitoring nodes the difference between the current local statistics vector and the last communicated statistics vector is denoted by $\Delta \vec{v_i}(t)=\vec{v_i}(t)-\vec{v_i}', i=1,...,n$. The \emph{drift vector} $\vec{u_i}(t), i=1,...,n$, also maintained at the monitoring nodes, represents the deviation of each node's data stream from the global statistics vector and is defined differently in the two scenarios:
+At the monitoring nodes the difference between the current local statistics vector and the last communicated statistics vector is denoted by $\Delta \vec{v_i}(t)=\vec{v_i}(t)-\vec{v_i}', i=1,...,n$. The \emph{drift vector} $\vec{u_i}(t), i=1,...,n$, also maintained at the monitoring nodes, represents the deviation of each node's data stream from the estimate vector and is defined differently in the two scenarios:
 \begin{itemize}
 \item In the \textbf{decentralized} setting the drift vector is regarded as the displacement of the local statistics vector from the estimate vector:
 \begin{equation}
 \vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)
 \label{form:decentralizedDrift}
 \end{equation}
-\item In the \textbf{centralized} setting the monitoring nodes forward their state to the coordinator node, who has a global overview of the monitoring task at hand. This property allows the coordinator to counteract the effects a specific stream has on the partially observed monitoring task with an other, ``opposite'', stream belonging to a different monitoring node. This is taken care by the \emph{balancing process} initiated every time a local violation occurs, which is responsible for computing and communicating the \emph{slack vector} $\vec{\delta_i}$ to the nodes that contributed to the process, thus providing them with the necessary disposition of their drift vectors, as follows:
+\item In the \textbf{centralized} setting the monitoring nodes forward their state to the coordinator node, who has a global overview of the monitoring task at hand. This property allows the coordinator to counteract the effects a specific stream has on the partially observed monitoring task with an other, ``opposite'', stream belonging to a different monitoring node. This is taken care by the \emph{balancing process} initiated every time a local violation occurs, which is responsible for computing and communicating the \emph{slack vector} $\vec{\delta_i}$ to the nodes that contributed to the process, thus providing them with the necessary disposition of their drift vectors, as such:
 \begin{equation}
 \vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)+\frac{\vec{\delta_i}}{w_i}
 \label{form:centralizedDrift}
@@ -75,6 +75,20 @@ At the monitoring nodes the difference between the current local statistics vect
 \end{itemize}
 
 \subsubsection{Balancing process} \label{subsubsec:theorBack-GM-balancingProc}
+
+The balancing process, which takes place in the \textbf{centralized scenario}, is initiated by the coordinator node every time a threshold violation occurs, with the objective of resolving a possibly false alarm with minimal communication overhead. This task is executed by collecting a subset of monitoring nodes' data, the \emph{balancing set} $P'$, until the average of their drift vectors, the \emph{balancing vector}, does not cause a threshold crossing. The balancing vector is formulated as follows:
+\begin{equation}
+\vec{b}=\frac{ \sum_{p_i \in P'} {w_i\vec{u_i}(t)} }{ \sum_{p_i \in P'} {w_i} }
+\label{form:balancingVector}
+\end{equation}
+
+After a successful balancing process has come to an end, $\Delta\vec{\delta_i}$ slack vector adjustments for all participants in the balancing set $P'$ are computed and communicated to their respective sites, so that local drift vectors can be readjusted to reflect the balancing operation by computing $\vec{\delta_i}=\vec{\delta_i}'+\Delta\vec{\delta_i}$, where $\vec{\delta_i}'$ the previous slack vector (Equation~\ref{form:centralizedDrift}). These adjustments are calculated as follows:
+\begin{equation}
+\Delta\vec{\delta_i}=w_i\vec{b}-w_i\vec{u_i}(t)\ \forall\ p_i \in P'
+\end{equation}
+, where $\sum_{p_i \in P'} \Delta \vec{\delta_i}= \vec{0}$. Once the slack vector adjustments have been communicated to the respective monitoring nodes participating in $P'$, their drift vectors are essentially set to the value of the newly computed balancing vector.
+
+In case the balancing process proves unsuccessful all monitoring nodes are contained in the balancing set $P'$ and a new estimate vector is computed with the data cumulated at the coordinator node. Subsequently, all drift vectors and slack vectors are set to $\vec{0}$.
 
 \subsection{Geometric Interpretation} \label{subsec:theorBack-GM-geomInt}
 
