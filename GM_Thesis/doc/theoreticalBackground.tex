@@ -15,7 +15,7 @@ In the current section a detailed presentation of this method is taking place. I
 
 In~\cite{Sharfman2006GM} two different scenarios of Geometric Monitoring corresponding to different network topologies are examined. The \emph{decentralized scenario} refers to a topology where nodes are allowed to communicate with each other and a central node is absent. The \emph{centralized scenario} models a star network topology, where a coordinator node communicating with all other nodes is existent.
 
-\subsubsection{Decentralized scenario} \label{subsubsec:theorBack-GM-decentralized}
+\subsubsection{Decentralized Scenario} \label{subsubsec:theorBack-GM-decentralized}
 
 The topology examined is that of a partially or fully connected mesh network where a coordinator node is absent and nodes are allowed to broadcast to the network or communicate with each other according to the links existent between them. Data stream update vectors arrive continuously at each of the monitoring nodes and nodes must always be synchronized, i.e. all nodes must be aware of the monitoring task's state at all times. An example is depicted in Figure~\ref{fig:decentralized}.
 
@@ -28,7 +28,7 @@ The topology examined is that of a partially or fully connected mesh network whe
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Centralized scenario}
+\subsubsection{Centralized Scenario}
 
 The \emph{centralized}, or \emph{coordinator-based} scenario is built upon a star network topology, where all monitoring nodes communicate with a central node, the \emph{coordinator node}. Nodes receive data stream update vectors continuously, and must communicate their state information to the coordinator node when needed. The coordinator receives data stream updates as well, which can be modelled by an additional monitoring node responsible for the cooridinator node's data stream. Communication between monitoring nodes is not allowed, thus, only the communicator can, and must, be aware of the state of the monitoring task at all times. An example is depicted in Figure~\ref{fig:centralized}.
 
@@ -74,7 +74,7 @@ At the monitoring nodes the difference between the current local statistics vect
 \end{equation} 
 \end{itemize}
 
-\subsubsection{Balancing process} \label{subsubsec:theorBack-GM-balancingProc}
+\subsubsection{Balancing Process} \label{subsubsec:theorBack-GM-balancingProc}
 
 The balancing process, which takes place in the \textbf{centralized scenario}, is initiated by the coordinator node every time a threshold violation occurs, with the objective of resolving a possibly false alarm with minimal communication overhead. This task is executed by collecting a subset of monitoring nodes' data, the \emph{balancing set} $P'$, until the average of their drift vectors, the \emph{balancing vector}, does not cause a threshold crossing. The balancing vector is formulated as follows:
 \begin{equation}
@@ -92,12 +92,27 @@ In case the balancing process proves unsuccessful all monitoring nodes are conta
 
 \subsection{Geometric Interpretation} \label{subsec:theorBack-GM-geomInt}
 
-node local constraints make sure global violation is accurately monitored\\
-how?
+estimate vector known to all nodes, assumed correct if it lies on the same side of the threshold as the true global statistics vector(unknown)
 
-convexity property of drift vectors
+decompose task to local constraints on the streams, which will guarantee a global violation hasn't occurred as long as a all local constraints hold.
 
-theorem of bounded convex hull by local constraints (balls)
+convexity property -> convex hull
+
+theorem of bounded convex hull by local constraints (balls)(proof in paper)
+
+theorem in the monitoring task->convex hull of drift vectors and estimate vector->decomposition to balls containing convex hull
+
+*image
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% convex hull figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7, trim=0 0 4.2cm 0]{img/convex_hull.tex}
+\caption{Network topology example of the centralized scenario.The bold node represents the coordinator node. Dashed lines represent data streams and half arrows represent message exchanges.} 
+\label{fig:convexHull}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Local Constraints} \label{subsubsec:theorBack-GM-localConstraints}
 
 monochromaticity of balls
 
