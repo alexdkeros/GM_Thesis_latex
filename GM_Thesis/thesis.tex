@@ -5,6 +5,8 @@
 \usepackage{epsfig}
 \usepackage{amssymb}           % add ams symbols stuff
 \usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathtools }
 \usepackage{caption}		% needed for listing captions
 \usepackage{subcaption}
 \usepackage{graphicx}          	% add graphics
@@ -64,6 +66,10 @@
     urlcolor=black
 }
 
+\newtheorem{theorem}{Theorem}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
 
 % Author and Title Information
 \author{Alexandros D. Keros}

@@ -76,7 +76,7 @@ At the monitoring nodes the difference between the current local statistics vect
 
 \subsubsection{Balancing Process} \label{subsubsec:theorBack-GM-balancingProc}
 
-The balancing process, which takes place in the \textbf{centralized scenario}, is initiated by the coordinator node every time a threshold violation occurs, with the objective of resolving a possibly false alarm with minimal communication overhead. This task is executed by collecting a subset of monitoring nodes' data, the \emph{balancing set} $P'$, until the average of their drift vectors, the \emph{balancing vector}, does not cause a threshold crossing. The balancing vector is formulated as follows:
+The balancing process taking place in the \textbf{centralized scenario} is initiated by the coordinator node every time a threshold violation occurs, with the objective of resolving a possibly false alarm with minimal communication overhead. This task is executed by collecting a subset of monitoring nodes' data, the \emph{balancing set} $P'$, until the average of their drift vectors, the \emph{balancing vector}, does not cause a threshold crossing. The balancing vector is formulated as follows:
 \begin{equation}
 \vec{b}=\frac{ \sum_{p_i \in P'} {w_i\vec{u_i}(t)} }{ \sum_{p_i \in P'} {w_i} }
 \label{form:balancingVector}
@@ -92,22 +92,32 @@ In case the balancing process proves unsuccessful all monitoring nodes are conta
 
 \subsection{Geometric Interpretation} \label{subsec:theorBack-GM-geomInt}
 
-estimate vector known to all nodes, assumed correct if it lies on the same side of the threshold as the true global statistics vector(unknown)
+The estimate vector, being the product of the system's previous global synchronization, is known to all monitoring nodes and denotes the last known position of the global statistics vector. That being said, the estimate vector is considered valid if it resides on the same side of the threshold as the unknown global statistics vector.
+In order to estimate the current position of the global statistics vector, since a mere observation of the monitoring function's value at each stream provides no information about its current location (as described in Section~\ref{subsec:theorBack-GM-compMod}), it is vital that the task is decomposed into local constraints that will guarantee the timely detection of a violation of the aforementioned statement.
 
-decompose task to local constraints on the streams, which will guarantee a global violation hasn't occurred as long as a all local constraints hold.
+The \emph{convexity property} of the drift vectors, along with Theorem~\ref{theorem:convexHull}~\cite{Sharfman2006GM}, are sufficient in provide a framework for decomposing the monitoring task into local constraints at the nodes. Both the convexity property and the relevant theorem are repeated below for completeness.
+	
+The convexity property dictates that the weighted average of the drift vectors equal the global statistics vector, as such:
+\begin{equation}
+\vec{v}(t)=\frac{\sum_{i=1}^n {w_i\vec{u_i}(t)}}{\sum_{i=1}^n {w_i}}
+\label{form:convexityProperty}
+\end{equation}
+The geometric interpretation of the property guarantees that the global statistics vector $\vec{v}$ is always contained in the convex hull defined by the drift vectors $\vec{u_i}, i=1,...,n$.
 
-convexity property -> convex hull
 
-theorem of bounded convex hull by local constraints (balls)(proof in paper)
+\begin{theorem}[Sharfman et al.~\cite{Sharfman2006GM}]\label{theorem:convexHull}
+Let $\vec{x}, \vec{y_1}, ..., \vec{y_n} \in \mathbb{R}^d$ be a set of vectors in $\mathbb{R}^d$. Let $Conv(\vec{x}, \vec{y_1}, ..., \vec{y_n})$ be the convex hull of $\vec{x}, \vec{y_1}, ..., \vec{y_n}$. Let $B(\vec{x}, \vec{y_i})$ be a ball centered at $\frac{\vec{x}+\vec{y_i}}{2}$ and with radius of $\norm{\frac{\vec{x}+\vec{y_i}}{2}}_2$ i.e., $B(\vec{x}, \vec{y_i})=\{\vec{z}\ |\ \norm{\vec{z}-\frac{\vec{x}+\vec{y_i}}{2}}_2 \leq \norm{\frac{\vec{x}+\vec{y_i}}{2}}_2 \}$, then $Conv(vec{x}, \vec{y_1}, ..., \vec{y_n}) \subset B(\vec{x}, \vec{y_i})$.
+\end{theorem}
 
-theorem in the monitoring task->convex hull of drift vectors and estimate vector->decomposition to balls containing convex hull
+Essentially, Theorem~\ref{theorem:convexHull} states that $n$ $d$-dimensional spheres defined by $n+1$ vectors can effectively bound the convex hull defined by said vectors, as such: $Conv(\vec{x}, \vec{y_1}, \vec{y_2}, ..., \vec{y_n}) \subset  \cup B(\vec{x}, \vec{y_i}), i=1,...,n$, which finds direct application to the distributed monitoring task if $\vec{x}=\vec{e}$ and $\vec{y_i}=\vec{u_i}, i=1,...,n$. An example is depicted in Figure~\ref{fig:convexHull}
+.
 
-*image
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% convex hull figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
 \centering
 \includegraphics[scale=0.7, trim=0 0 4.2cm 0]{img/convex_hull.tex}
-\caption{BLAH} 
+\caption{Example of a convex hull (light gray) defined by the drift vectors $\vec{u_i}, i=1,2,3,4,5$. The hull is bounded by the spheres created from the estimate vector $\vec{e}$ and the drift vectors $\vec{u_i}, i=1,2,3,4,5$. The global statistics vector $\vec{v}$ is guaranteed to be contained in the convex hull of the drift vectors.} 
 \label{fig:convexHull}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
