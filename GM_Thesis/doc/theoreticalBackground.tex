@@ -124,10 +124,7 @@ Essentially, Theorem~\ref{theorem:convexHull} states that $n$ $d$-dimensional sp
 
 \subsubsection{Local Constraints} \label{subsubsec:theorBack-GM-localConstraints}
 
-monochromaticity of balls
-
-balls monochromatic means threshold upheld
-
+The decomposition of the threshold monitoring task to local constraints at the nodes, in which each node monitors its respective bounding sphere $B(\vec{e}, \vec{u_i}), i=1,...n$ for a possible threshold violation, induces a coloring upon the spheres. Let $V=\{\vec{x} | f(\vec{x}>T)\}$ be the set of vectors said to be \emph{green}, and $\overline{V}=\{\vec{y} | f(\vec{y}<T)\}$ the \emph{red} set of vectors, then the local constraint monitoring at the nodes is essentially a process of monitoring the monochromaticity of a node's bounding sphere $B(\vec{e}, \vec{u_i})$ i.e., all vectors in the bounding ball are of the same color. As long as this monochromaticity is upheld for the whole of the node set, the convex hull defined by the drift vectors is monochromatic and, by the convexity property, the global statistics vector has not crossed the threshold.
 
 \subsection{Protocol} \label{subsec:theorBack-GM-protocol}
 
