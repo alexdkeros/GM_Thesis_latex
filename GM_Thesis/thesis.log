@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2016.3.23)  19 MAY 2016 19:22
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2016.3.23)  20 MAY 2016 19:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1187,16 +1187,16 @@ n/10.95 )$
 
 [9] (./img/convex_hull.tex)
 File: img/convex_hull.tex Graphic file (type tex)
- [10] [11]) [12]
+ [10] [11] [12]) [13]
 \openout2 = `doc/relatedWork.aux'.
 
  (./doc/relatedWork.tex
 Chapter 3.
-) [13
+) [14
 
 
 
-] [14
+] [15
 
 
 ]
@@ -1209,7 +1209,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
-) [15
+) [16
 
 
 ]
@@ -1218,27 +1218,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--6
  (./doc/implementation.tex
 Chapter 5.
 
-LaTeX Warning: Reference `algo:GM-coordBased' on page 16 undefined on input lin
+LaTeX Warning: Reference `algo:GM-coordBased' on page 17 undefined on input lin
 e 12.
 
-[16
+[17
 
 
 
-] [17] [18] (./img/NodeMatchingHierarchy.tex)
+] [18] [19] (./img/NodeMatchingHierarchy.tex)
 File: img/NodeMatchingHierarchy.tex Graphic file (type tex)
- [19]
+ [20]
 File: img/distoptpair_example_full.jpeg Graphic file (type QTm)
 
 <use  "img/distoptpair_example_full.jpeg" >
 File: img/distoptpair_example_detail_edited.jpeg Graphic file (type QTm)
 
-<use  "img/distoptpair_example_detail_edited.jpeg" > [20] [21] [22]
+<use  "img/distoptpair_example_detail_edited.jpeg" > [21] [22] [23]
 Overfull \hbox (28.69421pt too wide) in paragraph at lines 156--156
 [] 
  []
 
-[23] (./img/classic_balancing.tex)
+[24] (./img/classic_balancing.tex)
 File: img/classic_balancing.tex Graphic file (type tex)
 
 Overfull \hbox (8.06339pt too wide) in paragraph at lines 179--180
@@ -1252,14 +1252,14 @@ Overfull \hbox (8.06339pt too wide) in paragraph at lines 185--186
  [][] 
  []
 
-[24]
+[25]
 Overfull \hbox (27.89682pt too wide) in paragraph at lines 217--217
 [] 
  []
 
-[25] [26] [27]
+[26] [27] [28]
 File: img/savgol.pdf Graphic file (type QTm)
- <use  "img/savgol.pdf" > [28]) [29] [30
+ <use  "img/savgol.pdf" > [29]) [30] [31
 
 
 ]
@@ -1272,15 +1272,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--31
 
  []
 
-[31
+[32
 
 
-]) [32]
+]) [33]
 \openout2 = `doc/conclusions.aux'.
 
  (./doc/conclusions.tex
 Chapter 7.
-) [33
+) [34
 
 
 
@@ -1289,11 +1289,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
 
-[34
+[35
 
 
 
-]) [35] [36
+]) [36] [37
 
 ]
 \openout2 = `doc/appendixGMPythonImpl.aux'.
@@ -1303,7 +1303,7 @@ Overfull \hbox (2.76404pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/20.74 Geometric Mon-i-tor-ing Python Im-ple-men-ta-tion 
  []
 
-) [37
+) [38
 
 
 
@@ -1324,12 +1324,12 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 34026 strings out of 495506
- 743672 string characters out of 6184882
+ 34032 strings out of 495506
+ 743770 string characters out of 6184882
  928483 words of memory out of 5000000
- 36649 multiletter control sequences out of 15000+600000
+ 36655 multiletter control sequences out of 15000+600000
  18817 words of font info for 72 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 55i,21n,79p,1117b,1208s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,21n,79p,1161b,1208s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (46 pages).
+Output written on thesis.pdf (47 pages).

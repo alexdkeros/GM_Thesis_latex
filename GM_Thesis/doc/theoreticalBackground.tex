@@ -93,7 +93,7 @@ In case the balancing process proves unsuccessful all monitoring nodes are conta
 \subsection{Geometric Interpretation} \label{subsec:theorBack-GM-geomInt}
 
 The estimate vector, being the product of the system's previous global synchronization, is known to all monitoring nodes and denotes the last known position of the global statistics vector. That being said, the estimate vector is considered valid if it resides on the same side of the threshold as the unknown global statistics vector.
-In order to estimate the current position of the global statistics vector, since a mere observation of the monitoring function's value at each stream provides no information about its current location (as described in Section~\ref{subsec:theorBack-GM-compMod}), it is vital that the task is decomposed into local constraints that will guarantee the timely detection of a violation of the aforementioned statement.
+In order to estimate the current position of the global statistics vector, since a mere observation of the monitoring function's value at each stream provides no information about its current location (as described in Section~\ref{subsec:theorBack-GM-compMod}), it is vital that the task is decomposed into local constraints that will guarantee the timely detection of a violation of the estimate's vector validity.
 
 The \emph{convexity property} of the drift vectors, along with Theorem~\ref{theorem:convexHull}~\cite{Sharfman2006GM}, are sufficient in provide a framework for decomposing the monitoring task into local constraints at the nodes. Both the convexity property and the relevant theorem are repeated below for completeness.
 	
@@ -124,9 +124,56 @@ Essentially, Theorem~\ref{theorem:convexHull} states that $n$ $d$-dimensional sp
 
 \subsubsection{Local Constraints} \label{subsubsec:theorBack-GM-localConstraints}
 
-The decomposition of the threshold monitoring task to local constraints at the nodes, in which each node monitors its respective bounding sphere $B(\vec{e}, \vec{u_i}), i=1,...n$ for a possible threshold violation, induces a coloring upon the spheres. Let $V=\{\vec{x} | f(\vec{x}>T)\}$ be the set of vectors said to be \emph{green}, and $\overline{V}=\{\vec{y} | f(\vec{y}<T)\}$ the \emph{red} set of vectors, then the local constraint monitoring at the nodes is essentially a process of monitoring the monochromaticity of a node's bounding sphere $B(\vec{e}, \vec{u_i})$ i.e., all vectors in the bounding ball are of the same color. As long as this monochromaticity is upheld for the whole of the node set, the convex hull defined by the drift vectors is monochromatic and, by the convexity property, the global statistics vector has not crossed the threshold.
+The decomposition of the threshold monitoring task to local constraints at the nodes, in which each node monitors its respective bounding sphere $B(\vec{e}, \vec{u_i}), i=1,...n$ for a possible threshold violation, induces a coloring upon the spheres. Let $V=\{\vec{x} | f(\vec{x}>T)\}$ be the set of vectors said to be \emph{green}, and $\overline{V}=\{\vec{y} | f(\vec{y}<T)\}$ the \emph{red} set of vectors, then the local constraint monitoring at the nodes is essentially a process of monitoring the monochromaticity of a node's bounding sphere $B(\vec{e}, \vec{u_i})$ i.e., all vectors in the bounding ball are of the same color. As long as this monochromaticity is upheld for the whole of the node set, the convex hull defined by the drift vectors is monochromatic and, by the convexity property, the global statistics vector has not crossed the threshold. In case a single node signals a threshold crossing a \emph{local violation} has occurred. If the local violation coincides with a threshold crossing of the global statistics vector, then a \emph{global violation} has occurred.
 
 \subsection{Protocol} \label{subsec:theorBack-GM-protocol}
+
+Two variants of a network's topological structure have been proposed for application of the Geometric Monitoring method, a decentralized scenario and a centralized, coordinator-based one (Section~\ref{subsec:theorBack-GM-sysArch}). The following paragraphs present the algorithms for each of these systems.
+
+\subsubsection{Decentralized Algorithm} \label{subsubsec:theorBack-GM-decentralizedAlgo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% decentralized algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{algorithm}[H]
+\setstretch{1.30}
+
+\SetKwFunction{Initialize}{Initialize}
+\SetKwFunction{Monitor}{Monitor}
+\SetKwProg{Fn}{Function}{}{end}
+
+
+\Begin{
+	\ForEach(\tcc*[f]{Node initialization}){node $p_i$}{
+		Broadcast $\vec{v_i}(0)$\;
+		$\vec{v_i}'=\vec{v_i}(0)$\;
+		Wait messages from all other nodes\;
+		\If{messages from all vectors received}{
+			$\vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}'}}{\sum_{i=1}^n {w_i}}$\;
+		}
+	}
+
+	\ForEach(\tcc*[f]{Main monitoring task}){node $p_i$}{
+		\ForEach{new $s_i$ stream update $\vec{v_i}(t)$}{
+			Recalculate $\vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)$\;
+			\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
+				Broadcast message $<i,\vec{v_i}(t)>$\;
+				Set $\vec{v_i}'=\vec{v_i}(t)$\;
+			}
+		}
+
+		\If{new message $<j,\vec{v_j}(t)>$ received}{
+			Set $\vec{v_j}'=\vec{v_j}(t)$\;
+			Recalculate $\vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}'}}{\sum_{i=1}^n {w_i}}$\;
+			\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
+				Broadcast message $<i,\vec{v_i}(t)>$\;
+				Set $\vec{v_i}'=\vec{v_i}(t)$\;
+			}
+		}
+
+	}
+}
+\caption{Decentralized algorithm \label{algo:decentralized}} 
+\end{algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 decentralized algorithm (in short, for completeness)
 
