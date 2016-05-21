@@ -272,14 +272,43 @@ The centralized, coordinator-based geometric monitoring operation is summarized 
 
 \section{Multiobjective Optimization} \label{sec:theorBack-MOP}
 
+Multi-objective optimization (also known as multi-objective programming, vector optimization, multicriteria optimization, multiattribute optimization or Pareto optimization
+more than one objective to be optimized simultaneously
+tradeoffs between conflicting objectives
+confliction objective functions->multiple Pareto optimal solutions ie non dominated
+
+A solution is called nondominated, Pareto optimal, Pareto efficient or noninferior, if none of the objective functions can be improved in value without degrading some of the other objective values -> form the pareto front, pareto curve, pareto surface: nature of tradeoff between objective functions
+image?
+
+NP-hard to compute pareto curve->approximation methods that lead to solution representation if solution is available, solution set approximation at partialy available pareto front or non-numerically available front 
+
+Formal definition:
+Let vector of objectives $F(x)=[F_1(x), F_2(x), ..., F_m(x)]$
+\begin{align*}
+\min_{x \in \mathbb{R}^d}&\ {F(x)}\\
+\text{s.t.}&\ l\leq x \leq u\\
+			&G_i=0, i=1,...,k_e\\
+			&G_j\leq 0, j=k_e+1, ...,k
+\end{align*}
+Decision variable space 
+Objective space, the space of the objective vector (multidimensional R^n)
+image of the feasible set under F -> attained set $C=\{y \in \mathbb{R}^n | y=f(x), x\in \mathbb{R}^d\}$
+
+state examples, pick 2-3 
+aerodynamics: design decisions: engine thrust, number engines, wall thickness, wing area -> objectives: speed, range, fuel consumption, safety, building cost
+
+multiple methods originating from different viewpoints of the multiple objective optimization in order to detect pareto optimal solutions. we focus on numerical optimization
+
 what is mop\\
 use examples\\
 kinds:\\
 	a.numerical\\
 	b.evolutionary
+
 \subsection{SLSQP} \label{subsec:theorBack-SLSQP}
 
-\subsection{Sohr's algorithm a.k.a. ralg} \label{subsec:theorBack-CONMIN}
+
+\subsection{CONMIN} \label{subsec:theorBack-CONMIN}
 
 algorithm description
 
