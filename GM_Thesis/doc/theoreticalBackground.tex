@@ -28,7 +28,7 @@ The topology examined is that of a partially or fully connected mesh network whe
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection{Centralized Scenario}
+\subsubsection{Centralized Scenario}\label{subsubsec:theorBack-GM-centralized}
 
 The \emph{centralized}, or \emph{coordinator-based} scenario is built upon a star network topology, where all monitoring nodes communicate with a central node, the \emph{coordinator node}. Nodes receive data stream update vectors continuously, and must communicate their state information to the coordinator node when needed. The coordinator receives data stream updates as well, which can be modelled by an additional monitoring node responsible for the cooridinator node's data stream. Communication between monitoring nodes is not allowed, thus, only the communicator can, and must, be aware of the state of the monitoring task at all times. An example is depicted in Figure~\ref{fig:centralized}.
 
@@ -132,13 +132,11 @@ Two variants of a network's topological structure have been proposed for applica
 
 \subsubsection{Decentralized Algorithm} \label{subsubsec:theorBack-GM-decentralizedAlgo}
 
+The decentralized scenario of the geometric monitoring method, summarized in Algorithm~\ref{algo:decentralized}, operates on the mesh network described in Section~\ref{subsubsec:theorBack-GM-decentralized}. Each node $p_i$ keeps track of its drift vector $\vec{v_i}(t)$ and the previously communicated statistics vectors $\vec{v_j}'$ from all other nodes $p_j$, from which the estimate vector is locally computed. At the occurence of a local violation the violating node initiates a global system synchronization by broadcasting its local statistics vector along with its unique identifier, from which the estimate vector is globally updated so that monochromaticity checks are valid.\\ 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% decentralized algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{algorithm}[H]
 \setstretch{1.30}
-
-\SetKwFunction{Initialize}{Initialize}
-\SetKwFunction{Monitor}{Monitor}
-\SetKwProg{Fn}{Function}{}{end}
 
 
 \Begin{
@@ -158,14 +156,15 @@ Two variants of a network's topological structure have been proposed for applica
 				Broadcast message $<i,\vec{v_i}(t)>$\;
 				Set $\vec{v_i}'=\vec{v_i}(t)$\;
 			}
-		}
+		
 
-		\If{new message $<j,\vec{v_j}(t)>$ received}{
-			Set $\vec{v_j}'=\vec{v_j}(t)$\;
-			Recalculate $\vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}'}}{\sum_{i=1}^n {w_i}}$\;
-			\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
-				Broadcast message $<i,\vec{v_i}(t)>$\;
-				Set $\vec{v_i}'=\vec{v_i}(t)$\;
+			\If{new message $<j,\vec{v_j}(t)>$ received}{
+				Set $\vec{v_j}'=\vec{v_j}(t)$\;
+				Recalculate $\vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}'}}{\sum_{i=1}^n {w_i}}$\;
+				\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
+					Broadcast message $<i,\vec{v_i}(t)>$\;
+					Set $\vec{v_i}'=\vec{v_i}(t)$\;
+				}
 			}
 		}
 
@@ -175,10 +174,100 @@ Two variants of a network's topological structure have been proposed for applica
 \end{algorithm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-decentralized algorithm (in short, for completeness)
 
-centralized algorithm (in detail)\\
-*we will focus on that
+\subsubsection{Centralized Algorithm} \label{subsubsec:theorBack-GM-centralizedAlgo}
+
+The centralized, coordinator-based geometric monitoring operation is summarized in Algorithms~\ref{algo:centralizedMonitoringNode},  and~\ref{algo:centralizedCoordinatorNode}, where the execution sequence of the monitoring nodes and the execution sequence of the coordinator node are described, respectively. The topology is that of a star network, where nodes are allowed to communicate exclusively with the coordinator node, as described in Section~\ref{subsubsec:theorBack-GM-centralized}. The coordinator node is responsible for answering queries about the monitoring status i.e., has absolute knowledge about threshold violations, and handles the balancing process (Section~\ref{subsubsec:theorBack-GM-balancingProc}). Local streams are tracked by the monitoring nodes on the basis of the last communicated estimate vector, and must inform the coordinator for any local threshold violation. The coordinator node can also monitor is respective data stream without any change in the described framework.\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% centralized monitoring node algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{algorithm}[H]
+\setstretch{1.30}
+\Begin{
+	\ForEach(\tcc*[f]{Node initialization}){node $p_i$}{
+		Send $<INIT,\vec{v_i}(0)>$ message to coordinator\;
+		$\vec{v_i}'=\vec{v_i}(0)$\;
+		$\vec{\delta_i}=\vec{0}$\;
+		Wait message from coordinator\;
+		\If{$<NEW\textnormal{-}EST, \vec{e}>$ message received}{
+			Set $\vec{e}(t)=\vec{e}$\;
+		}
+	}
+
+	\ForEach(\tcc*[f]{Main monitoring task}){node $p_i$}{
+		\ForEach{new $s_i$ stream update $\vec{v_i}(t)$}{
+			Recalculate $\vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)+\frac{\vec{\delta_i}}{w_i}$\;
+			\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
+				Send $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message to coordinator\;
+				Wait for $<NEW\textnormal{-}EST,\cdot>$ or $<ADJ\textnormal{-}SLK,\cdot>$ message from coordinator\;
+			}
+		
+		
+			\If{new message $<REQ>$ received}{
+				Send $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message to coordinator\;
+				Wait for $<NEW\textnormal{-}EST,\cdot>$ or $<ADJ\textnormal{-}SLK,\cdot>$ message from coordinator\;
+
+			}
+
+			\If{new $<NEW\textnormal{-}EST, \vec{e}>$ message received}{
+				Set $\vec{e}(t)=\vec{e}$\;
+				$\vec{v_i}'=\vec{v_i}(t)$\;
+				$\vec{\delta_i}=\vec{0}$\;
+			} 
+
+			\If{new $<ADJ\textnormal{-}SLK, \Delta\vec{\delta_i}>$ message received}{
+				$\vec{\delta_i}=\vec{\delta_i}+\Delta\vec{\delta_i}$\;
+			}
+
+		}
+
+	}
+}
+\caption{Centralized algorithm's monitoring node operation \label{algo:centralizedMonitoringNode}} 
+\end{algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% centralized coordinator node algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{algorithm}
+\setstretch{1.30}
+
+\SetKwFunction{Balance}{Balance}
+\SetKwProg{Fn}{Function}{}{end}
+
+\Begin{
+	
+	Wait for $<INIT, \cdot>$ messages from all monitoring nodes\tcc*[r]{Initialization}
+	$\vec{e}(0)=\frac{\sum_{i=1}^n {w_i \vec{v_i}(0)}}{\sum_{i=1}^n {w_i}}$\;
+
+	\If(\tcc*[f]{Monitoring operation}){new $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message received}{
+		$P'=P' \cup \{<i,\vec{v_i}(t),\vec{u_i}(t)>\}$\;
+		\Balance{$P'$}\;
+	}
+}
+
+\Fn(\tcc*[f]{Balancing Process}){\Balance{$P'$}}{
+	$\vec{b}=\frac{ \sum_{p_i \in P'} {w_i\vec{u_i}(t)} }{ \sum_{p_i \in P'} {w_i} }$\;
+	\uIf{$B(\vec{e}, \vec{b})$ is \emph{not} monochromatic}{
+		\uIf{$P-P'\neq \emptyset$}{
+			Send $<REQ>$ message to random node in $P-P'$ set\;
+		}
+		\Else{
+			$\vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}(t)}}{\sum_{i=1}^n {w_i}}$\;
+			Send $<NEW\textnormal{-}EST, \vec{e}(t)>$ message to all nodes\;
+			\Return \;
+		}
+	}
+	\Else{
+		\ForEach{$p_i \in P'$}{
+			$\Delta\vec{\delta_i}=w_i\vec{b}-w_i\vec{u_i}(t)$\;
+			Send $<ADJ\textnormal{-}SLK, \Delta\vec{\delta_i}>$ message to node $p_i$\;
+			\Return \;
+		}
+	}
+
+}
+\caption{Centralized algorithm's coordinator node operation\label{algo:centralizedCoordinatorNode}} 
+\end{algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \section{Multiobjective Optimization} \label{sec:theorBack-MOP}
