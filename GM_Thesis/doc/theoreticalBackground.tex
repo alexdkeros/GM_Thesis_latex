@@ -47,7 +47,7 @@ The main goal of the Geometric Monitoring method is to efficiently detect thresh
 
 Let $f:\mathbb{R}^d \to \mathbb{R}$ be an arbitrary function, the \emph{monitoring function}, whose value over the data streams needs to be monitored, so that if $f(\cdot)>T$ or $f(\cdot)<T$ an alarm is raised. For linear functions this problem is trivial, so that by letting, for example, $x_1$ and $x_2$ be data stream values at different nodes and requiring $f(\frac{x_1+x_2}{2})>10$ to be monitored, it holds that $f(\frac{x_1+x_2}{2})=\frac{f(x_1)+f(x_2)}{2}$, and the problem can be decomposed to local constraints $f(x_i)<10, i=1,2$ at both nodes, i.e. a node remains silent until it violates its local constraint. Consider now the case of a non-linear function. By knowing the value of the function at the nodes nothing can be deduced about the function's value over the average of the monitoring streams and where it is positioned with respect to the threshold. Let $f(x)=10x-x^2$, $x_1=0$ and $x_2=9$. Even thought $f(x_1)=0<10$ and $f(x_2)=9<10$, their average violates the specified threshold, $f(\frac{x_1+x_2}{2})=f(4.5)=24.75>10$. 
 
-In order to be able to effectively track non-linear functions, in the likes of the aforementioned example, a mapping of the streams to a vector space is taking place. Let $P=\{p_1, ..., p_n\}$ be the monitoring node set with weights $w_1, ..., w_n$, which can be either static or time varying. Their respective data streams $S=\{s_1, ..., s_n\}$ are represented by $\vec{v_1}(t), ..., \vec{v_n}(t)$, the $d$-dimensional \emph{local statistics vectors} of the nodes at time $t$. The \emph{global statistics vector} at time $t$ is the weighted average of the local statistics vectors, as such:
+In order to be able to effectively track non-linear functions, in the likes of the aforementioned example, a mapping of the streams to a vector space is taking place. Let $P=\{p_1, \dots, p_n\}$ be the monitoring node set with weights $w_1, \dots, w_n$, which can be either static or time varying. Their respective data streams $S=\{s_1, \dots, s_n\}$ are represented by $\vec{v_1}(t), \dots, \vec{v_n}(t)$, the $d$-dimensional \emph{local statistics vectors} of the nodes at time $t$. The \emph{global statistics vector} at time $t$ is the weighted average of the local statistics vectors, as such:
 \begin{equation}
 \vec{v}(t)=\frac{\sum_{i=1}^n{w_i\vec{v_i}(t)}}{\sum_{i=1}^n{w_i}}
 \label{form:globalStatsVector}
@@ -60,7 +60,7 @@ Infrequent communication between monitoring nodes, in the decentralized scenario
 \end{equation}
 ,where $\vec{v_i}'$ is the last communicated statistics vector of node $p_i$.
 
-At the monitoring nodes the difference between the current local statistics vector and the last communicated statistics vector is denoted by $\Delta \vec{v_i}(t)=\vec{v_i}(t)-\vec{v_i}', i=1,...,n$. The \emph{drift vector} $\vec{u_i}(t), i=1,...,n$, also maintained at the monitoring nodes, represents the deviation of each node's data stream from the estimate vector and is defined differently in the two scenarios:
+At the monitoring nodes the difference between the current local statistics vector and the last communicated statistics vector is denoted by $\Delta \vec{v_i}(t)=\vec{v_i}(t)-\vec{v_i}', i=1,\dots,n$. The \emph{drift vector} $\vec{u_i}(t), i=1,\dots,n$, also maintained at the monitoring nodes, represents the deviation of each node's data stream from the estimate vector and is defined differently in the two scenarios:
 \begin{itemize}
 \item In the \textbf{decentralized} setting the drift vector is regarded as the displacement of the local statistics vector from the estimate vector:
 \begin{equation}
@@ -102,14 +102,14 @@ The convexity property dictates that the weighted average of the drift vectors e
 \vec{v}(t)=\frac{\sum_{i=1}^n {w_i\vec{u_i}(t)}}{\sum_{i=1}^n {w_i}}
 \label{form:convexityProperty}
 \end{equation}
-The geometric interpretation of the property guarantees that the global statistics vector $\vec{v}$ is always contained in the convex hull defined by the drift vectors $\vec{u_i}, i=1,...,n$.
+The geometric interpretation of the property guarantees that the global statistics vector $\vec{v}$ is always contained in the convex hull defined by the drift vectors $\vec{u_i}, i=1,\dots,n$.
 
 
 \begin{theorem}[Sharfman et al.~\cite{Sharfman2006GM}]\label{theorem:convexHull}
-Let $\vec{x}, \vec{y_1}, ..., \vec{y_n} \in \mathbb{R}^d$ be a set of vectors in $\mathbb{R}^d$. Let $Conv(\vec{x}, \vec{y_1}, ..., \vec{y_n})$ be the convex hull of $\vec{x}, \vec{y_1}, ..., \vec{y_n}$. Let $B(\vec{x}, \vec{y_i})$ be a ball centered at $\frac{\vec{x}+\vec{y_i}}{2}$ and with radius of $\norm{\frac{\vec{x}+\vec{y_i}}{2}}_2$ i.e., $B(\vec{x}, \vec{y_i})=\{\vec{z}\ |\ \norm{\vec{z}-\frac{\vec{x}+\vec{y_i}}{2}}_2 \leq \norm{\frac{\vec{x}+\vec{y_i}}{2}}_2 \}$, then $Conv(vec{x}, \vec{y_1}, ..., \vec{y_n}) \subset B(\vec{x}, \vec{y_i})$.
+Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors in $\mathbb{R}^d$. Let $Conv(\vec{x}, \vec{y_1}, \dots, \vec{y_n})$ be the convex hull of $\vec{x}, \vec{y_1}, \dots, \vec{y_n}$. Let $B(\vec{x}, \vec{y_i})$ be a ball centered at $\frac{\vec{x}+\vec{y_i}}{2}$ and with radius of $\norm{\frac{\vec{x}+\vec{y_i}}{2}}_2$ i.e., $B(\vec{x}, \vec{y_i})=\{\vec{z}\ |\ \norm{\vec{z}-\frac{\vec{x}+\vec{y_i}}{2}}_2 \leq \norm{\frac{\vec{x}+\vec{y_i}}{2}}_2 \}$, then $Conv(vec{x}, \vec{y_1}, \dots, \vec{y_n}) \subset B(\vec{x}, \vec{y_i})$.
 \end{theorem}
 
-Essentially, Theorem~\ref{theorem:convexHull} states that $n$ $d$-dimensional spheres defined by $n+1$ vectors can effectively bound the convex hull defined by said vectors, as such: $Conv(\vec{x}, \vec{y_1}, \vec{y_2}, ..., \vec{y_n}) \subset  \cup B(\vec{x}, \vec{y_i}), i=1,...,n$, which finds direct application to the distributed monitoring task if $\vec{x}=\vec{e}$ and $\vec{y_i}=\vec{u_i}, i=1,...,n$. An example is depicted in Figure~\ref{fig:convexHull}
+Essentially, Theorem~\ref{theorem:convexHull} states that $n$ $d$-dimensional spheres defined by $n+1$ vectors can effectively bound the convex hull defined by said vectors, as such: $Conv(\vec{x}, \vec{y_1}, \vec{y_2}, \dots, \vec{y_n}) \subset  \cup B(\vec{x}, \vec{y_i}), i=1,\dots,n$, which finds direct application to the distributed monitoring task if $\vec{x}=\vec{e}$ and $\vec{y_i}=\vec{u_i}, i=1,\dots,n$. An example is depicted in Figure~\ref{fig:convexHull}
 .
 
 
@@ -124,7 +124,7 @@ Essentially, Theorem~\ref{theorem:convexHull} states that $n$ $d$-dimensional sp
 
 \subsubsection{Local Constraints} \label{subsubsec:theorBack-GM-localConstraints}
 
-The decomposition of the threshold monitoring task to local constraints at the nodes, in which each node monitors its respective bounding sphere $B(\vec{e}, \vec{u_i}), i=1,...n$ for a possible threshold violation, induces a coloring upon the spheres. Let $V=\{\vec{x} | f(\vec{x}>T)\}$ be the set of vectors said to be \emph{green}, and $\overline{V}=\{\vec{y} | f(\vec{y}<T)\}$ the \emph{red} set of vectors, then the local constraint monitoring at the nodes is essentially a process of monitoring the monochromaticity of a node's bounding sphere $B(\vec{e}, \vec{u_i})$ i.e., all vectors in the bounding ball are of the same color. As long as this monochromaticity is upheld for the whole of the node set, the convex hull defined by the drift vectors is monochromatic and, by the convexity property, the global statistics vector has not crossed the threshold. In case a single node signals a threshold crossing a \emph{local violation} has occurred. If the local violation coincides with a threshold crossing of the global statistics vector, then a \emph{global violation} has occurred.
+The decomposition of the threshold monitoring task to local constraints at the nodes, in which each node monitors its respective bounding sphere $B(\vec{e}, \vec{u_i}), i=1,\dots n$ for a possible threshold violation, induces a coloring upon the spheres. Let $V=\{\vec{x} | f(\vec{x}>T)\}$ be the set of vectors said to be \emph{green}, and $\overline{V}=\{\vec{y} | f(\vec{y}<T)\}$ the \emph{red} set of vectors, then the local constraint monitoring at the nodes is essentially a process of monitoring the monochromaticity of a node's bounding sphere $B(\vec{e}, \vec{u_i})$ i.e., all vectors in the bounding ball are of the same color. As long as this monochromaticity is upheld for the whole of the node set, the convex hull defined by the drift vectors is monochromatic and, by the convexity property, the global statistics vector has not crossed the threshold. In case a single node signals a threshold crossing a \emph{local violation} has occurred. If the local violation coincides with a threshold crossing of the global statistics vector, then a \emph{global violation} has occurred.
 
 \subsection{Protocol} \label{subsec:theorBack-GM-protocol}
 
@@ -270,40 +270,24 @@ The centralized, coordinator-based geometric monitoring operation is summarized 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\section{Multiobjective Optimization} \label{sec:theorBack-MOP}
+\section{Multi-objective Optimization} \label{sec:theorBack-MOP}
 
-Multi-objective optimization (also known as multi-objective programming, vector optimization, multicriteria optimization, multiattribute optimization or Pareto optimization
-more than one objective to be optimized simultaneously
-tradeoffs between conflicting objectives
-confliction objective functions->multiple Pareto optimal solutions ie non dominated
+\emph{Multi-objective optimization}, also known as multi-objective programming, vector optimization and Pareto optimization, belongs to the field of \emph{decision making} and focuses on mathematical optimization problems, where multiple, possibly conflicting, objectives exist and are required to be simultaneously optimized. Such problems arise in a multitude of fields, from engineering to finance and molecular studies. 
 
-A solution is called nondominated, Pareto optimal, Pareto efficient or noninferior, if none of the objective functions can be improved in value without degrading some of the other objective values -> form the pareto front, pareto curve, pareto surface: nature of tradeoff between objective functions
-image?
+One example application originating from the field of aeronautics is the optimization of objectives such as speed, travel range, fuel consumption, safety and aircraft building costs by taking into account decision variables in the likes of engine trust, number of engines, wall thickness, wing area and luggage capacity. Attempts at optimizing such a problem usually leads to a plethora of optimal solutions, where trade-offs must be made regarding the decision variables.
 
-NP-hard to compute pareto curve->approximation methods that lead to solution representation if solution is available, solution set approximation at partialy available pareto front or non-numerically available front 
+Such solutions, where none of the objective functions can be improved without the simultaneous degradation of other objective functions' values, are called \emph{non-dominated}, or \emph{Pareto optimal solutions}. A formalization of a multi-objective optimization framework is stated in Equation~\ref{form:multiObjOpt}.
 
-Formal definition:
-Let vector of objectives $F(x)=[F_1(x), F_2(x), ..., F_m(x)]$
+Let vector of $m$ objectives $F(x)=[F_1(x), F_2(x), \dots, F_m(x)]$:
 \begin{align*}
-\min_{x \in \mathbb{R}^d}&\ {F(x)}\\
-\text{s.t.}&\ l\leq x \leq u\\
-			&G_i=0, i=1,...,k_e\\
-			&G_j\leq 0, j=k_e+1, ...,k
+&\min_{x \in \mathbb{R}^d}{F(x)}\\
+&\ \text{s.t.}\ l\leq x \leq u \numberthis \label{form:multiObjOpt} \\
+			&\qquad G_i=0, i=1,\dots,k_e\\
+			&\qquad G_j\leq 0, j=k_e+1, \dots,k
 \end{align*}
-Decision variable space 
-Objective space, the space of the objective vector (multidimensional R^n)
-image of the feasible set under F -> attained set $C=\{y \in \mathbb{R}^n | y=f(x), x\in \mathbb{R}^d\}$
+, where $x \in \mathbb{R}^d$ is the decision variable vector, $l$ and $u$ denote the respective lower and upper bounds of $x$, $G_i$ are the equality constraints and $G_j$ are the inequality constraints the solution must uphold. The decision variable vector is said to exist into the \emph{decision variable space}, and the objective vector lies in the \emph{oblective space}. A mapping of the feasible set under $F$ forms the \emph{attained set} $C=\{y \in \mathbb{R}^m | y=F(x), x\in \mathbb{R}^d\}$. A graphical representation of the Pareto optimal solutions creates the \emph{Pareto front}, \emph{Pareto curve}, or \emph{Pareto surface}, as shown in Figure~\ref{fig:paretoCurve}.
 
-state examples, pick 2-3 
-aerodynamics: design decisions: engine thrust, number engines, wall thickness, wing area -> objectives: speed, range, fuel consumption, safety, building cost
-
-multiple methods originating from different viewpoints of the multiple objective optimization in order to detect pareto optimal solutions. we focus on numerical optimization
-
-what is mop\\
-use examples\\
-kinds:\\
-	a.numerical\\
-	b.evolutionary
+Finding the Pareto optimal solution to a multi-objective optimization problem is generally a \emph{NP-hard} problem. Thus, various approximation methods exist that lead to the optimal solution, if this is available, or provide a solution set approximation in the case of non-available or partially available Pareto fronts. These methods originate from different viewpoints of the multi-objective optimization problem and can be divided into numerical and evolutionary optimization algorithms, with our focus being targeted towards the former.
 
 \subsection{SLSQP} \label{subsec:theorBack-SLSQP}
 
