@@ -298,7 +298,14 @@ Let vector of $m$ objectives $F(x)=[F_1(x), F_2(x), \dots, F_m(x)]$:
 
 Finding the Pareto optimal solution to such problems is generally \emph{NP-hard} in complexity. Thus, various approximation methods exist that either lead to the optimal solution, if this is available, or provide a solution set approximation in the case of non-available or partially available Pareto fronts. These methods originate from different viewpoints of the multi-objective optimization problem and can be divided into numerical and evolutionary optimization algorithms, with our focus being targeted towards the former.
 
-\subsection{SLSQP} \label{subsec:theorBack-SLSQP}
+\subsection{Non-linear Constrained Optimization Problems}
+line search variant
+each iteration a direction dn is chosen from current location xn. Successive point relative to previous xn and selected direction. 
+feasible point to another by choosing at each iteration a direction and a step size
+iteratively generate sequence of points xn from i 1 to inf until termination or convergence
+
+write in algo as in phd in mail
+\subsubsection{SLSQP} \label{subsubsec:theorBack-SLSQP}
 
 sequential least squares programming
 sequential quadratic programming
@@ -308,15 +315,29 @@ sequence of quadratic programming problems
 Lagrangian l approximated by quadratic function
 constraints approximated by linear hyper-space
 
-each iteration a direction dn is chosen from current location xn. Successive point relative to previous xn and selected direction. 
+second order approximation of objective func(lagrangian)
+
+formalism in sequential quadratic programming
 
 see matlab opt pdf
+google han powell
+google quasi-newton
 
 Han–Powell quasi–Newton method
 
-\subsection{CONMIN} \label{subsec:theorBack-CONMIN}
+quasi newton : approximations of the inverse of the Hessian (see phd for formula of approximation)
 
-algorithm description
+feasibility of direction not guaranteed
+
+\subsubsection{CONMIN} \label{subsubsec:theorBack-CONMIN}
+
+non linear optimization
+
+constrained function minimization
+
+feasible directions method
+see feasibility in phd paper linear constrained optimization
+
 
 \section{Savitzky-Golay Filtering} \label{sec:theorBack-SavitzkyGolay}
 
