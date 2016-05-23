@@ -272,11 +272,11 @@ The centralized, coordinator-based geometric monitoring operation is summarized 
 
 \section{Multi-objective Optimization} \label{sec:theorBack-MOP}
 
-\emph{Multi-objective optimization}, also known as multi-objective programming, vector optimization and Pareto optimization, belongs to the field of \emph{decision making} and focuses on mathematical optimization problems, where multiple, possibly conflicting, objectives exist and are required to be simultaneously optimized. Such problems arise in a multitude of fields, from engineering to finance and molecular studies. 
+\emph{Multi-objective optimization}, also known as multi-objective programming, vector optimization and Pareto optimization, belongs to the field of \emph{decision making} and focuses on mathematical optimization problems. As it is evident by the term, multiple, possibly conflicting, objectives exist and are required to be simultaneously optimized. Such problems arise in a multitude of fields, from engineering to finance and molecular studies. 
 
-One example application originating from the field of aeronautics is the optimization of objectives such as speed, travel range, fuel consumption, safety and aircraft building costs by taking into account decision variables in the likes of engine trust, number of engines, wall thickness, wing area and luggage capacity. Attempts at optimizing such a problem usually leads to a plethora of optimal solutions, where trade-offs must be made regarding the decision variables.
+One example application originating from the field of aeronautics is the optimization of objectives such as speed, travel range, fuel consumption, safety and aircraft building costs by taking into account decision variables in the likes of engine trust, number of engines, wall thickness, wing area and luggage capacity. Attempts at optimizing such problems usually lead to a plethora of optimal solutions, where trade-offs must be made regarding the decision variables.
 
-Such solutions, where none of the objective functions can be improved without the simultaneous degradation of other objective functions' values, are called \emph{non-dominated}, or \emph{Pareto optimal solutions}. A formalization of a multi-objective optimization framework is stated in Equation~\ref{form:multiObjOpt}.
+Optimal solutions, where none of the objective functions can be improved without the simultaneous degradation of other objective functions' values, are called \emph{non-dominated}, or \emph{Pareto optimal solutions}. A formalization of a multi-objective optimization framework is stated in Equation~\ref{form:multiObjOpt}.
 
 Let vector of $m$ objectives $F(x)=[F_1(x), F_2(x), \dots, F_m(x)]$:
 \begin{align*}
@@ -285,12 +285,34 @@ Let vector of $m$ objectives $F(x)=[F_1(x), F_2(x), \dots, F_m(x)]$:
 			&\qquad G_i=0, i=1,\dots,k_e\\
 			&\qquad G_j\leq 0, j=k_e+1, \dots,k
 \end{align*}
-, where $x \in \mathbb{R}^d$ is the decision variable vector, $l$ and $u$ denote the respective lower and upper bounds of $x$, $G_i$ are the equality constraints and $G_j$ are the inequality constraints the solution must uphold. The decision variable vector is said to exist into the \emph{decision variable space}, and the objective vector lies in the \emph{oblective space}. A mapping of the feasible set under $F$ forms the \emph{attained set} $C=\{y \in \mathbb{R}^m | y=F(x), x\in \mathbb{R}^d\}$. A graphical representation of the Pareto optimal solutions creates the \emph{Pareto front}, \emph{Pareto curve}, or \emph{Pareto surface}, as shown in Figure~\ref{fig:paretoCurve}.
+, where $x \in \mathbb{R}^d$ is the decision variable vector, $l$ and $u$ denote the respective lower and upper bounds of $x$, $G_i$ are the equality constraints and $G_j$ are the inequality constraints the solution must uphold. The decision variable vector is said to exist into the \emph{decision variable space}, and the objective vector lies in the \emph{objective space}. A mapping of the feasible set under $F$ forms the \emph{attained set} $C=\{y \in \mathbb{R}^m | y=F(x), x\in \mathbb{R}^d\}$. A graphical representation of the Pareto optimal solutions creates the \emph{Pareto front}, \emph{Pareto curve}, or \emph{Pareto surface}, as shown in Figure~\ref{fig:paretoCurve}.
 
-Finding the Pareto optimal solution to a multi-objective optimization problem is generally a \emph{NP-hard} problem. Thus, various approximation methods exist that lead to the optimal solution, if this is available, or provide a solution set approximation in the case of non-available or partially available Pareto fronts. These methods originate from different viewpoints of the multi-objective optimization problem and can be divided into numerical and evolutionary optimization algorithms, with our focus being targeted towards the former.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% pareto figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7, trim=0 0 0.5cm 0]{img/pareto.tex}
+\caption{Example of the objective space of a multi-objective optimization problem with two objective functions. The feasible region is shaded with gray, and the respective Pareto front is denoted with bold. Points \emph{a}, and \emph{b} mark the optimal points for each of the two depicted objective functions, $F_1$ and $F_2$ respectively.} 
+\label{fig:paretoCurve}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Finding the Pareto optimal solution to such problems is generally \emph{NP-hard} in complexity. Thus, various approximation methods exist that either lead to the optimal solution, if this is available, or provide a solution set approximation in the case of non-available or partially available Pareto fronts. These methods originate from different viewpoints of the multi-objective optimization problem and can be divided into numerical and evolutionary optimization algorithms, with our focus being targeted towards the former.
 
 \subsection{SLSQP} \label{subsec:theorBack-SLSQP}
 
+sequential least squares programming
+sequential quadratic programming
+non-linear optimization
+obj function and constraints twice continuously differentiable
+sequence of quadratic programming problems
+Lagrangian l approximated by quadratic function
+constraints approximated by linear hyper-space
+
+each iteration a direction dn is chosen from current location xn. Successive point relative to previous xn and selected direction. 
+
+see matlab opt pdf
+
+Han–Powell quasi–Newton method
 
 \subsection{CONMIN} \label{subsec:theorBack-CONMIN}
 
