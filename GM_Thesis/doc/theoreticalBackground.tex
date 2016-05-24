@@ -280,12 +280,12 @@ Optimal solutions, where none of the objective functions can be improved without
 
 Let vector of $m$ objectives $F(x)=[F_1(x), F_2(x), \dots, F_m(x)]$:
 \begin{align*}
-&\min_{x \in \mathbb{R}^d}{F(x)}\\
+&\min_{x \in \mathbb{R}^n}{F(x)}\\
 &\ \text{s.t.}\ l\leq x \leq u \numberthis \label{form:multiObjOpt} \\
 			&\qquad G_i=0, i=1,\dots,k_e\\
 			&\qquad G_j\leq 0, j=k_e+1, \dots,k
 \end{align*}
-, where $x \in \mathbb{R}^d$ is the decision variable vector, $l$ and $u$ denote the respective lower and upper bounds of $x$, $G_i$ are the equality constraints and $G_j$ are the inequality constraints the solution must uphold. The decision variable vector is said to exist into the \emph{decision variable space}, and the objective vector lies in the \emph{objective space}. A mapping of the feasible set under $F$ forms the \emph{attained set} $C=\{y \in \mathbb{R}^m | y=F(x), x\in \mathbb{R}^d\}$. A graphical representation of the Pareto optimal solutions creates the \emph{Pareto front}, \emph{Pareto curve}, or \emph{Pareto surface}, as shown in Figure~\ref{fig:paretoCurve}.
+, where $x \in \mathbb{R}^n$ is the decision variable vector, $l$ and $u$ denote the respective lower and upper bounds of $x$, $G_i$ are the equality constraints and $G_j$ are the inequality constraints the solution must uphold. The decision variable vector is said to exist into the \emph{decision variable space}, and the objective vector lies in the \emph{objective space}. A mapping of the feasible set under $F$ forms the \emph{attained set} $C=\{y \in \mathbb{R}^m | y=F(x), x\in \mathbb{R}^n\}$. A graphical representation of the Pareto optimal solutions creates the \emph{Pareto front}, \emph{Pareto curve}, or \emph{Pareto surface}, as shown in Figure~\ref{fig:paretoCurve}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% pareto figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
@@ -298,36 +298,42 @@ Let vector of $m$ objectives $F(x)=[F_1(x), F_2(x), \dots, F_m(x)]$:
 
 Finding the Pareto optimal solution to such problems is generally \emph{NP-hard} in complexity. Thus, various approximation methods exist that either lead to the optimal solution, if this is available, or provide a solution set approximation in the case of non-available or partially available Pareto fronts. These methods originate from different viewpoints of the multi-objective optimization problem and can be divided into numerical and evolutionary optimization algorithms, with our focus being targeted towards the former.
 
-\subsection{Non-linear Constrained Optimization Problems}
-line search variant
-each iteration a direction dn is chosen from current location xn. Successive point relative to previous xn and selected direction. 
-feasible point to another by choosing at each iteration a direction and a step size
-iteratively generate sequence of points xn from i 1 to inf until termination or convergence
+\subsection{Non-linear Constrained Optimization Problems} \label{subsec:theorBack-NCOP}
 
-write in algo as in phd in mail
-\subsubsection{SLSQP} \label{subsubsec:theorBack-SLSQP}
+Solutions to optimization problems where the objective functions are generally non-linear and both equality and inequality constraints exist are usually provided by iterative methods similar to \emph{line search} for single objective optimization problems. At each iteration $z$ an appropriate direction $d_z$ and a successive point $x_{z+1}$ is chosen given the current position $x_z$. Following this paradigm a sequence of points $\{x_z\}_{z=1}^\infty$ and directions $\{d_z\}_{z=1}^\infty$ are produced until the maximum iteration limit is reached or convergence has been achieved. A generic primal descent algorithm is shown in Algorithm~\ref{algo:nco-primal_descent}.
 
-sequential least squares programming
-sequential quadratic programming
-non-linear optimization
-obj function and constraints twice continuously differentiable
-sequence of quadratic programming problems
-Lagrangian l approximated by quadratic function
-constraints approximated by linear hyper-space
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% nonlinear constrained opt algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{algorithm}[H]
+\setstretch{1.30}
+\Begin{
+	Choose initial point $x_0 \in X$ and set $z=0$ \tcc*[r]{Initialization}
+	\While(\tcc*[f]{Search}){Termination condition not satisfied}{
+		$z=z+1$\;
+		Determine search direction $d_z$\;
+		Determine step length $t_z$, so that $f(x_z+t_zd_z)<f(x_z)$\;
+		Update \;
+	}
+}
+\caption{Generic primal descent \label{algo:nco-primal_descent}} 
+\end{algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{SQP} \label{subsubsec:theorBack-SQP}
 
-second order approximation of objective func(lagrangian)
+Following the framework of non-linear constrained optimization algorithms the \emph{sequential quadratic programming} methods attempt to solve problems by quadratically approximating non-linear objective functions subject to linearly approximated equality and inequality constraints by decomposing the original problem to a sequence of quadratic programming subproblems.
 
-formalism in sequential quadratic programming
+Given the general case of the multi-objective optimization problem in Equation~\ref{form:multiObjOpt} a \emph{Lagrangian function} is formed:
+\begin{equation}
+\mathcal{L}(x,\lambda)=F(x)+\sum_{i=1}^k{\lambda_i G_i(x)}
+\label{form:lagrangian}
+\end{equation}
+, with $\lambda$ being \emph{Lagrangian multipliers}. Based on the newly created function a decomposition to quadratic programming subproblems is taking place, where non-linear constraints are linearized and inequality constraints substitute the bound constraints found in Equation~\ref{form:multiObjOpt}, as such:
+\begin{align*}
+\min_{d \in \mathbb{R}^n}\ &{\frac{1}{2} d^T H_z d + \nabla F(x_z)^T d}\\
+&\nabla G_i(x_z)^T d + G_i(x_z)=0, i=1, \dots, k_e \numberthis \label{form:QPsubprob}\\
+&\nabla G_i(x_z)^T d + G_i(x_z)\leq 0, i=k_e+1, \dots k
+\end{align*}
+, with $H_z$ being a Hessian matrix approximation at iteration $z$ and $d$ being the search direction. Subsequently, by obtaining a step length $t_z$ through a line search method the following iteration point is computed, as stated in Algorithm~\ref{algo:nco-primal_descent}. 
 
-see matlab opt pdf
-google han powell
-google quasi-newton
-
-Han–Powell quasi–Newton method
-
-quasi newton : approximations of the inverse of the Hessian (see phd for formula of approximation)
-
-feasibility of direction not guaranteed
 
 \subsubsection{CONMIN} \label{subsubsec:theorBack-CONMIN}
 
