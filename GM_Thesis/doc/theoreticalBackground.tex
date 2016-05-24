@@ -300,26 +300,41 @@ Finding the Pareto optimal solution to such problems is generally \emph{NP-hard}
 
 \subsection{Non-linear Constrained Optimization Problems} \label{subsec:theorBack-NCOP}
 
-Solutions to optimization problems where the objective functions are generally non-linear and both equality and inequality constraints exist are usually provided by iterative methods similar to \emph{line search} for single objective optimization problems. At each iteration $z$ an appropriate direction $d_z$ and a successive point $x_{z+1}$ is chosen given the current position $x_z$. Following this paradigm a sequence of points $\{x_z\}_{z=1}^\infty$ and directions $\{d_z\}_{z=1}^\infty$ are produced until the maximum iteration limit is reached or convergence has been achieved. A generic primal descent algorithm is shown in Algorithm~\ref{algo:nco-primal_descent}.
+Solutions to optimization problems where the objective functions are generally non-linear and both equality and inequality constraints exist are usually provided by iterative methods similar to \emph{line search} for single objective optimization problems. At each iteration $t$ an appropriate direction $d_t$ and a successive point $x_{t+1}$ is chosen given the current position $x_t$. Following this paradigm a sequence of points $\{x_t\}_{t=1}^\infty$ and directions $\{d_t\}_{t=1}^\infty$ are produced until the maximum iteration limit is reached or convergence has been achieved. A generic primal descent algorithm is shown in Algorithm~\ref{algo:nco-primal_descent}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% nonlinear constrained opt algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{algorithm}[H]
 \setstretch{1.30}
 \Begin{
-	Choose initial point $x_0 \in X$ and set $z=0$ \tcc*[r]{Initialization}
+	Choose initial point $x_0 \in X$ and set $t=0$ \tcc*[r]{Initialization}
 	\While(\tcc*[f]{Search}){Termination condition not satisfied}{
-		$z=z+1$\;
-		Determine search direction $d_z$\;
-		Determine step length $t_z$, so that $f(x_z+t_zd_z)<f(x_z)$\;
+		$t=t+1$\;
+		Determine search direction $d_t$\;
+		Determine step length $s_t$, so that $f(x_t+s_td_t)<f(x_t)$\;
 		Update \;
 	}
 }
 \caption{Generic primal descent \label{algo:nco-primal_descent}} 
 \end{algorithm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{Feasible Directions} \label{subsubsec:theorBack-feasibleDir}
+
+The method of \emph{feasible directions} for constrained function minimization attempts to iteratively converge to an optimal point on the basis of Algorithm~\ref{algo:nco-primal_descent} by employing \emph{usable feasible directions}.
+
+A search direction $d_t$ is termed as \emph{usable feasible direction} if it satisfies two properties:
+\begin{enumerate}
+\item a small disposition towards direction $d_t$ does not violate any constraint i.e.,
+$$d_t^T \nabla G(x_t)\leq 0$$
+\item a move towards $d_t$ reduces the objective functions value i.e.,
+$$d_t^T \nabla F(x_t)<0$$.
+\end{enumerate}
+
+In case the feasible region $D$ is convex the line connecting the optimal point, $x^\star$, with any other arbitrary point $x \in D$ lies completely inside the convex region and is, thus, reachable via the feasible directions method.
+
 \subsubsection{SQP} \label{subsubsec:theorBack-SQP}
 
-Following the framework of non-linear constrained optimization algorithms the \emph{sequential quadratic programming} methods attempt to solve problems by quadratically approximating non-linear objective functions subject to linearly approximated equality and inequality constraints by decomposing the original problem to a sequence of quadratic programming subproblems.
+Following the framework of non-linear constrained optimization algorithms the \emph{sequential quadratic programming} almost feasible point methods attempt to solve problems by quadratically approximating non-linear objective functions subject to linearly approximated equality and inequality constraints by decomposing the original problem to a sequence of quadratic programming subproblems. Such methods do not always produce feasible points during iterations, but ultimately feasibility is enforced.
 
 Given the general case of the multi-objective optimization problem in Equation~\ref{form:multiObjOpt} a \emph{Lagrangian function} is formed:
 \begin{equation}
@@ -328,22 +343,11 @@ Given the general case of the multi-objective optimization problem in Equation~\
 \end{equation}
 , with $\lambda$ being \emph{Lagrangian multipliers}. Based on the newly created function a decomposition to quadratic programming subproblems is taking place, where non-linear constraints are linearized and inequality constraints substitute the bound constraints found in Equation~\ref{form:multiObjOpt}, as such:
 \begin{align*}
-\min_{d \in \mathbb{R}^n}\ &{\frac{1}{2} d^T H_z d + \nabla F(x_z)^T d}\\
-&\nabla G_i(x_z)^T d + G_i(x_z)=0, i=1, \dots, k_e \numberthis \label{form:QPsubprob}\\
-&\nabla G_i(x_z)^T d + G_i(x_z)\leq 0, i=k_e+1, \dots k
+\min_{d \in \mathbb{R}^n}\ &{\frac{1}{2} d^T H_t d + \nabla F(x_t)^T d}\\
+&\nabla G_i(x_t)^T d + G_i(x_t)=0, i=1, \dots, k_e \numberthis \label{form:QPsubprob}\\
+&\nabla G_i(x_t)^T d + G_i(x_t)\leq 0, i=k_e+1, \dots k
 \end{align*}
-, with $H_z$ being a Hessian matrix approximation at iteration $z$ and $d$ being the search direction. Subsequently, by obtaining a step length $t_z$ through a line search method the following iteration point is computed, as stated in Algorithm~\ref{algo:nco-primal_descent}. 
-
-
-\subsubsection{CONMIN} \label{subsubsec:theorBack-CONMIN}
-
-non linear optimization
-
-constrained function minimization
-
-feasible directions method
-see feasibility in phd paper linear constrained optimization
-
+, with $H_z$ being a Hessian matrix approximation at iteration $t$ and $d$ being the search direction. Subsequently, by obtaining a step length $s_t$ through a line search method the following iteration point is computed, as stated in Algorithm~\ref{algo:nco-primal_descent}. 
 
 \section{Savitzky-Golay Filtering} \label{sec:theorBack-SavitzkyGolay}
 
