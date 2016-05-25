@@ -216,7 +216,7 @@ accel_i&: \text{the acceleration of the maximum value of the monitoring function
 P'&: \text{the balancing set}
 \end{align*}
 \newpage
-Solution to the above optimization problem (\ref{form:mop}) is given by the \emph{Sequential Least Squares Programming (SLSQP)} solver, which is described in Subsection~\ref{subsec:theorBack-SLSQP}. The problem is decomposed and formulated using an additional helping parameter $z$ in order to avoid non-differentiable functions (such as $\min$ and $\max$) and to aid computation by the solver.
+Solution to the above optimization problem (\ref{form:mop}) is given by a \emph{Sequential Least Squares Programming (SLSQP)} solver, which implements \emph{sequential quadratic programming} (described briefly in Section~\ref{subsec:theorBack-NCOP}) by using the \emph{Han-Powell quasi-Newton} method with \emph{BFGS} update at each iteration for the Hessian matrix approximation, and an \emph{L1-test function} for computing the step length. The solver is implemented by the \emph{pyOpt} Python optimization library~\cite{pyOptSLSQP}. The problem is decomposed and formulated using an additional helping parameter $z$ in order to avoid non-differentiable functions (such as $\min$ and $\max$) and to aid computation by the solver.
 
 In the heuristic optimization problem defined previously (\ref{form:mop}) the nested optimization of detecting the maximum value of an arbitrary monitoring function inside the bounding ball $B(\vec{e},\vec{u_i})$ is existent. This optimization problem is formed as follows:
 \begin{align}
@@ -233,7 +233,7 @@ d&: \text{the space dimensionality}\\
 \text{Eq.~\ref{form:maxvalinball-ball}}&:\text{a $(d+1)$ dimensional sphere in $\mathbb{R}^d$}
 \end{align*}
 
-The optimization problem of detecting the maximum value of a function inside a sphere (\ref{form:maxvalinball-func}) is solved using \emph{Constrained Function Minimization (CONMIN)}, which implements the method of feasible directions, as described in Subsection~\ref{subsec:theorBack-CONMIN}.
+The optimization problem of detecting the maximum value of a function inside a sphere (\ref{form:maxvalinball-func}) is solved using \emph{Constrained Function Minimization (CONMIN)}, which implements the method of feasible directions, as described in Section~\ref{subsec:theorBack-NCOP} and implemented by the \emph{pyOpt} Python optimization library~\cite{pyOptCONMIN}.
 
 The resulting heuristic balancing algorithmic implementation is summarized in the following Algorithm:\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% node matching algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -351,17 +351,54 @@ Given the general case of the multi-objective optimization problem in Equation~\
 
 \section{Savitzky-Golay Filtering} \label{sec:theorBack-SavitzkyGolay}
 
-filtering generals\\
-examples of uses of filters\\
-filters:\\
-	Kalman\\
-		+,-
-	Moving Average\\
-		+,-
-	Savitzky-Golay a.k.a. ???
-		+,-
+The \emph{Savitzky-Golay filter}~\cite{savGol} is a digital, low-pass smoothing filter following the paradigm of \emph{moving window averaging} i.e., 
+$$g_i=\sum_{n=-n_L}^{n_R} c_n f_{i+n}$$
+,where the underlying function $f(\cdot)$, with $f_i=f(x_i)$ denoting the value of the function at data point $x_i$, is approximated over a window of size $n_L+n_R+1$ by a higher order polynomial so that coefficients $c_n$ retain higher moment information.
 
-algorithm description
+Assume equidistant data points and let the polynomial of order $M$: $$ y_i(x)=a_0+a_1 \frac{x-x_i}{\Delta x}+a_2 (\frac{x-x_i}{\Delta x})^2 + \dots + a_M (\frac{x-x_i}{\Delta x})^M $$ 
+Firstly a \emph{least squares fit} of the polynomial is taking place over the span of the window:
+$$ \sum_{j=i-n_L}^{i+n_R} (y_i(x_j)-f_j)^2= \text{min}$$
+Subsequently the value of $g_i$ is set to the resulting value of the fitted point $x_i$, and this process proceeds iteratively for all data points.
+
+While a seemingly burdensome process, by considering that the least squares fitting requires just a single linear matrix inversion and that the coefficients $a_i$ of the fitted polynomial are linear in the data values, the computation can be notably simplified to a pre-computation of the smoothing coefficients and a subsequent convolution.
+
+Following a matrix notation, we define the matrix $\mathbf{J}$ containing the $n_L+n_R+1$ points corresponding to each order of the polynomial:
+$$\mathbf{J}=\begin{bmatrix}
+    1      & -n_L   & \dots &(-n_L)^M \\
+    \vdots & \vdots &       &  \vdots \\
+    1      &     0  & \dots &	0     \\
+    \vdots & \vdots &       & \vdots  \\
+    1      &   n_R  & \dots &  n_R^M
+\end{bmatrix}
+\in \mathbb{R}^{(n_L+n_R+1)\times(M+1)}$$
+The vector $\mathbf{a}$ containing the polynomial coefficients:
+$$\mathbf{a}=\begin{bmatrix}
+a_M\\
+\vdots\\
+a_1\\
+a_0
+\end{bmatrix}
+\in \mathbb{R}^{M+1}$$
+The vector $\mathbf{f}$ of the $n_L+n_R+1$ original data points:
+$$\mathbf{f}=\begin{bmatrix}
+f_{i-n_L}\\
+\vdots\\
+f_i\\
+\vdots\\
+f_{i+n_R}
+\end{bmatrix}
+\in \mathbb{R}^{n_L+n_R+1}$$
+Thus, the least squares fitting can be written as : 
+$$\norm{\mathbf{J}\mathbf{a}-\mathbf{f}}_2=\text{min}$$
+
+By solving the resulting normal equations: $$\mathbf{a}=(\mathbf{J}^T \mathbf{J})^{-1} \mathbf{J}^T \mathbf{f}$$ the polynomial coefficients can be computed.
+Finally, the \emph{convolution coefficients} are contained in:
+$$\mathbf{C}=(\mathbf{J}^T \mathbf{J})^{-1} \mathbf{J}^T$$
+,and the smoothed signal can be easily computed as such:
+$$g_i=(\mathbf{C} e_{M+1})^T \mathbf{f}$$
+, with $e_{M+1}$ being the $(M+1)$st unit vector.
+
+From the above it can be seen that the value of the resulting signal at the center point is obtained from a single set of coefficients, while the remaining sets are able to produce the desired derivatives of the original signal. By incorporating a set of data over a window of length $n_L+n_R+1$ for the computation of a single point it is assumed that the redundancy present in distant data aids at increasing the signal to noise ratio.
 
 \section{Maximum Weight Matching in Graphs} \label{sec:theorBack-MWMGraphs}
 
