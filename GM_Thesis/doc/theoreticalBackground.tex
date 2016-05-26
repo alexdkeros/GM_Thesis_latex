@@ -351,7 +351,7 @@ Given the general case of the multi-objective optimization problem in Equation~\
 
 \section{Savitzky-Golay Filtering} \label{sec:theorBack-SavitzkyGolay}
 
-The \emph{Savitzky-Golay filter}~\cite{savGol} is a digital, low-pass smoothing filter following the paradigm of \emph{moving window averaging} i.e., 
+The \emph{Savitzky-Golay filter}~\cite{SavGol1964SmoothDiff} is a digital, low-pass smoothing filter following the paradigm of \emph{moving window averaging} i.e., 
 $$g_i=\sum_{n=-n_L}^{n_R} c_n f_{i+n}$$
 ,where the underlying function $f(\cdot)$, with $f_i=f(x_i)$ denoting the value of the function at data point $x_i$, is approximated over a window of size $n_L+n_R+1$ by a higher order polynomial so that coefficients $c_n$ retain higher moment information.
 

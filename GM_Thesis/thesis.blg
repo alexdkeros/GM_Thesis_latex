@@ -28,45 +28,45 @@ Warning--I didn't find a database entry for "DBLP:conf/vldb/2013bd3"
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 14 entries,
+You've used 22 entries,
             4039 wiz_defined-function locations,
-            923 strings with 10565 characters,
-and the built_in function-call counts, 10451 in all, are:
-= -- 865
-> -- 221
-< -- 89
-+ -- 129
-- -- 35
-* -- 499
-:= -- 1614
-add.period$ -- 33
-call.type$ -- 14
-change.case$ -- 17
-chr.to.int$ -- 210
-cite$ -- 14
-duplicate$ -- 731
-empty$ -- 816
-format.name$ -- 43
-if$ -- 2386
+            984 strings with 12629 characters,
+and the built_in function-call counts, 17606 in all, are:
+= -- 1467
+> -- 369
+< -- 152
++ -- 210
+- -- 57
+* -- 868
+:= -- 2698
+add.period$ -- 54
+call.type$ -- 22
+change.case$ -- 25
+chr.to.int$ -- 366
+cite$ -- 22
+duplicate$ -- 1224
+empty$ -- 1398
+format.name$ -- 73
+if$ -- 4044
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 132
-newline$ -- 79
-num.names$ -- 11
-pop$ -- 297
+int.to.str$ -- 22
+missing$ -- 218
+newline$ -- 115
+num.names$ -- 19
+pop$ -- 485
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 809
+skip$ -- 1353
 stack$ -- 0
-substring$ -- 505
-swap$ -- 614
-text.length$ -- 19
+substring$ -- 876
+swap$ -- 1034
+text.length$ -- 30
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 14
+type$ -- 22
 warning$ -- 0
-while$ -- 43
-width$ -- 16
-write$ -- 174
+while$ -- 78
+width$ -- 24
+write$ -- 273
 (There was 1 error message)

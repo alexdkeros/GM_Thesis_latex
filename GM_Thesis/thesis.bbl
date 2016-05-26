@@ -48,11 +48,11 @@ M.~N. Garofalakis, D.~Keren, and V.~Samoladas, ``Sketch-based geometric
   \url{http://dblp.uni-trier.de/db/journals/pvldb/pvldb6.html#GarofalakisKS13}
 \BIBentrySTDinterwordspacing
 
-\bibitem{savGol}
+\bibitem{SavGol1964SmoothDiff}
 \BIBentryALTinterwordspacing
-A.~Savitzky and M.~J.~E. Golay, ``{Smoothing and Differentiation of Data by
-  Simplified Least Squares Procedures.}'' \emph{Anal. Chem.}, vol.~36, no.~8,
-  pp. 1627--1639, Jul. 1964. [Online]. Available:
+A.~Savitzky and M.~J.~E. Golay, ``Smoothing and differentiation of data by
+  simplified least squares procedures.'' \emph{Analytical Chemistry}, vol.~36,
+  no.~8, pp. 1627--1639, 1964. [Online]. Available:
   \url{http://dx.doi.org/10.1021/ac60214a047}
 \BIBentrySTDinterwordspacing
 
@@ -60,28 +60,61 @@ A.~Savitzky and M.~J.~E. Golay, ``{Smoothing and Differentiation of Data by
 J.~Edmonds, ``Paths, trees and flowers,'' \emph{Canadian Journal of
   Mathematics}, pp. 449--467, 1965.
 
-\bibitem{Keren2014GMHetStreams}
+\bibitem{DilmanReactiveMonitoring}
+M.~Dilman and D.~Raz, ``Efficient reactive monitoring,'' \emph{IEEE Journal on
+  Selected Areas in Communications}, vol.~20, no.~4, pp. 668--676, May 2002.
+
+\bibitem{KeralapuraCommEfficientThresholdCounts}
 \BIBentryALTinterwordspacing
-D.~Keren, G.~Sagy, A.~Abboud, D.~Ben-David, A.~Schuster, I.~Sharfman, and
-  A.~Deligiannakis, ``Geometric monitoring of heterogeneous streams.''
-  \emph{IEEE Trans. Knowl. Data Eng.}, vol.~26, no.~8, pp. 1890--1903, 2014.
-  [Online]. Available:
-  \url{http://dblp.uni-trier.de/db/journals/tkde/tkde26.html#KerenSABSSD14}
+R.~Keralapura, G.~Cormode, and J.~Ramamirtham, ``Communication-efficient
+  distributed monitoring of thresholded counts,'' in \emph{Proceedings of the
+  2006 ACM SIGMOD International Conference on Management of Data}, ser. SIGMOD
+  '06.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2006, pp.
+  289--300. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/1142473.1142507}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Babis2013SimulatorStreams}
-B.~Babalis, ``A simulator for monitoring data streams,'' Master's thesis,
-  Technical University of Crete, Chania, Greece, 2013.
+\bibitem{OlstonAdaptiveFiltersContQueries}
+\BIBentryALTinterwordspacing
+C.~Olston, J.~Jiang, and J.~Widom, ``Adaptive filters for continuous queries
+  over distributed data streams,'' in \emph{Proceedings of the 2003 ACM SIGMOD
+  International Conference on Management of Data}, ser. SIGMOD '03.\hskip 1em
+  plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2003, pp. 563--574.
+  [Online]. Available: \url{http://doi.acm.org/10.1145/872757.872825}
+\BIBentrySTDinterwordspacing
 
-\bibitem{Sharfman2012ShapeSensGM}
-D.~Keren, I.~Sharfman, A.~Schuster, and A.~Livne, ``Shape sensitive geometric
-  monitoring,'' \emph{IEEE Transactions on Knowledge and Data Engineering},
-  vol.~24, no.~8, pp. 1520--1535, Aug 2012.
+\bibitem{BabcockDistributedTopk}
+\BIBentryALTinterwordspacing
+B.~Babcock and C.~Olston, ``Distributed top-k monitoring,'' in
+  \emph{Proceedings of the 2003 ACM SIGMOD International Conference on
+  Management of Data}, ser. SIGMOD '03.\hskip 1em plus 0.5em minus 0.4em\relax
+  New York, NY, USA: ACM, 2003, pp. 28--39. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/872757.872764}
+\BIBentrySTDinterwordspacing
 
-\bibitem{networkxMaxWeight}
-networkx-maximum weight matching.
-  \url{https://networkx.github.io/documentation/networkx-1.9/reference/generated/networkx.algorithms.matching.max_weight_matching.html}.
-  Accessed: 2016-02-25.
+\bibitem{GibbonsSimpleFuncEstimationOverUnion}
+\BIBentryALTinterwordspacing
+P.~B. Gibbons and S.~Tirthapura, ``Estimating simple functions on the union of
+  data streams,'' in \emph{Proceedings of the Thirteenth Annual ACM Symposium
+  on Parallel Algorithms and Architectures}, ser. SPAA '01.\hskip 1em plus
+  0.5em minus 0.4em\relax New York, NY, USA: ACM, 2001, pp. 281--291. [Online].
+  Available: \url{http://doi.acm.org/10.1145/378580.378687}
+\BIBentrySTDinterwordspacing
+
+\bibitem{GibbonsDistrStreamAlgosSlidingWindows}
+\BIBentryALTinterwordspacing
+B.~P. Gibbons and S.~Tirthapura, ``Distributed streams algorithms for sliding
+  windows,'' \emph{Theory of Computing Systems}, vol.~37, no.~3, pp. 457--478,
+  2004. [Online]. Available: \url{http://dx.doi.org/10.1007/s00224-004-1156-4}
+\BIBentrySTDinterwordspacing
+
+\bibitem{CormodeApproxContQueryingDistrStreams}
+\BIBentryALTinterwordspacing
+G.~Cormode and M.~Garofalakis, ``Approximate continuous querying over
+  distributed streams,'' \emph{ACM Trans. Database Syst.}, vol.~33, no.~2, pp.
+  9:1--9:39, Jun. 2008. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/1366102.1366106}
+\BIBentrySTDinterwordspacing
 
 \bibitem{Keren2013SafeZones}
 \BIBentryALTinterwordspacing
@@ -96,6 +129,43 @@ D.~Keren, G.~Sagy, A.~Abboud, D.~Ben{-}David, I.~Sharfman, and A.~Schuster,
 V.~Samoladas, ``Unification fo safe zones and the geometric method with
   application to generalized median monitoring,'' October 2013.
 
+\bibitem{Sharfman2012ShapeSensGM}
+D.~Keren, I.~Sharfman, A.~Schuster, and A.~Livne, ``Shape sensitive geometric
+  monitoring,'' \emph{IEEE Transactions on Knowledge and Data Engineering},
+  vol.~24, no.~8, pp. 1520--1535, Aug 2012.
+
+\bibitem{Keren2014GMHetStreams}
+\BIBentryALTinterwordspacing
+D.~Keren, G.~Sagy, A.~Abboud, D.~Ben-David, A.~Schuster, I.~Sharfman, and
+  A.~Deligiannakis, ``Geometric monitoring of heterogeneous streams.''
+  \emph{IEEE Trans. Knowl. Data Eng.}, vol.~26, no.~8, pp. 1890--1903, 2014.
+  [Online]. Available:
+  \url{http://dblp.uni-trier.de/db/journals/tkde/tkde26.html#KerenSABSSD14}
+\BIBentrySTDinterwordspacing
+
+\bibitem{GiatrakosPredictionGM}
+\BIBentryALTinterwordspacing
+N.~Giatrakos, A.~Deligiannakis, M.~Garofalakis, I.~Sharfman, and A.~Schuster,
+  ``Prediction-based geometric monitoring over distributed data streams,'' in
+  \emph{Proceedings of the 2012 ACM SIGMOD International Conference on
+  Management of Data}, ser. SIGMOD '12.\hskip 1em plus 0.5em minus 0.4em\relax
+  New York, NY, USA: ACM, 2012, pp. 265--276. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/2213836.2213867}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Babis2013SimulatorStreams}
+B.~Babalis, ``A simulator for monitoring data streams,'' Master's thesis,
+  Technical University of Crete, Chania, Greece, 2013.
+
+\bibitem{BenDavid2012ViolationRI}
+D.~Ben-David, D.~Keren, and A.~Schuster, ``Violation resolution in distributed
+  stream networks,'' Master's thesis, Technion University, 2012.
+
+\bibitem{networkxMaxWeight}
+networkx-maximum weight matching.
+  \url{https://networkx.github.io/documentation/networkx-1.9/reference/generated/networkx.algorithms.matching.max_weight_matching.html}.
+  Accessed: 2016-02-25.
+
 \bibitem{pyOptSLSQP}
 pyopt - slsqp. \url{http://www.pyopt.org/reference/optimizers.slsqp.html}.
   Accessed: 2016-02-25.
@@ -103,13 +173,5 @@ pyopt - slsqp. \url{http://www.pyopt.org/reference/optimizers.slsqp.html}.
 \bibitem{pyOptCONMIN}
 pyopt - conmin. \url{http://www.pyopt.org/reference/optimizers.conmin.html}.
   Accessed: 2016-02-25.
-
-\bibitem{SavGol1964SmoothDiff}
-\BIBentryALTinterwordspacing
-A.~Savitzky and M.~J.~E. Golay, ``Smoothing and differentiation of data by
-  simplified least squares procedures.'' \emph{Analytical Chemistry}, vol.~36,
-  no.~8, pp. 1627--1639, 1964. [Online]. Available:
-  \url{http://dx.doi.org/10.1021/ac60214a047}
-\BIBentrySTDinterwordspacing
 
 \end{thebibliography}

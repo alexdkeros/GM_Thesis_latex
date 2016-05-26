@@ -1,17 +1,29 @@
 \chapter{Related Work} \label{chap:relWork}
 
-cite papers working on the original metioned above
+the initial geometric monitoring method Sharfman et al.~\cite{Sharfman2006GM},two scenarios , a geometric approach on monitoring distributed streams with arbitrary functions
+some work preceded this for distributed environments:
 
-function specific stuff
+threshold monitoring of sum of variables~\cite{DilmanReactiveMonitoring}
+local thresholds to improve performance of Dilmanm, Keralapura et al.~\cite{KeralapuraCommEfficientThresholdCounts}
 
-bounding ellipsoids
+coordinator approximate answers on tracking of specific aggregation operations, sum, avg, min\cite{OlstonAdaptiveFiltersContQueries}
 
-reference vector change (estimate vector)
+monitor k-largest aggregates by enforcing local constraints on nodes, 
+resolution process in case of constraint violation to check whether it was a false alarm, like original GM~\cite{BabcockDistributedTopk}
 
-safe zones
+estimating functions over distributed data streams~\cite{GibbonsSimpleFuncEstimationOverUnion, GibbonsDistrStreamAlgosSlidingWindows}
 
-prediction
+complex aggregate query approximate answering by coordinator node, synopses at distributed nodes and communicate with coordinator when local constraint is violated, significant divergence in local data, employ predicition~\cite{CormodeApproxContQueryingDistrStreams}
 
-matching
+unification of complex approximate query answering with GM, reduction of approximate distr stream monitoring to threshold crossing conditions~\cite{Garofalakis2013SketchBasedGM}
 
-*no work on slack vector distribution during balancing, we do!
+arbitrary function, node specific shapes instead of bounding balls, optimal local constraints, node tailored- Safe Zones, violation recovery by hierarchical structure on the basis of disjoint node partitioning, as here
+NP-hard in complexity, approximate solutions for low dimentional data~\cite{Keren2013SafeZones}
+
+unification of safe zones with gm, fundamentally the same~\cite{Samoladas2013Unification}
+
+previous work on gm a special case of safe zones, ellipsoidal bounds - minimize volume of bounding region, communication of temporal data, first and second moments - distribution of data, decoupling of the estimate vector as the reference vector for bounding region construction~\cite{Sharfman2012ShapeSensGM}
+
+constraints tailored to fit data distributions at the nodes, propose specific shapes easily computable and tailored to the nodes data distributions - safe zones, hierarchical data clustering for constraint computation and violation resolution~\cite{Keren2014GMHetStreams}
+
+incorporate variety of preditors-prediction models (also velocity and acceleration), generalization of geometric monitoring scheme~\cite{GiatrakosPredictionGM}
