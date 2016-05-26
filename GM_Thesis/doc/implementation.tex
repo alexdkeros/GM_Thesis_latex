@@ -73,7 +73,7 @@ w_{i,j}=
 \end{equation}
 , where $\vec{v_i}(t)$ the data update of node $n_i$ at time $t$, $\vec{v}_{global}(t)$ the global mean of all Monitoring nodes at time $t$ and $f(\cdot)$ the monitoring function.
 
-\item Maximum weighted matching is performed on the resulting graph, so that nodes are partitioned into disjointed sets $M_i$, $|M_i|=2\ \forall i \in [1, ..., \frac{k}{2}]$. 
+\item Maximum weighted matching is performed on the resulting graph via the \emph{primal-dual} method implemented in the \emph{networkx} Python library~\cite{networkxMaxWeight}, so that nodes are partitioned into disjointed sets $M_i$, $|M_i|=2\ \forall i \in [1, ..., \frac{k}{2}]$. 
 
 \item Each set $M_i, i \in [1, ..., \frac{k}{2}]$ is considered a single node, so that a new complete graph $G'=(V', E')$ is created, where $V'=\{M_1, ..., M_{\frac{k}{2}}\}$ (\emph{``Type-2 nodes''}) the new vertex set and $E'=\{(M_i, M_j)\ \forall i,j \in [1, ..., \frac{k}{2}]\}$ the new edge set. Weights are assigned to the new edges and the process repeats until the resulting graph contains only a single vertex (\emph{``Type-k node''}), which incorporates all the initial Monitoring nodes.
 

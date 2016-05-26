@@ -363,31 +363,33 @@ Subsequently the value of $g_i$ is set to the resulting value of the fitted poin
 While a seemingly burdensome process, by considering that the least squares fitting requires just a single linear matrix inversion and that the coefficients $a_i$ of the fitted polynomial are linear in the data values, the computation can be notably simplified to a pre-computation of the smoothing coefficients and a subsequent convolution.
 
 Following a matrix notation, we define the matrix $\mathbf{J}$ containing the $n_L+n_R+1$ points corresponding to each order of the polynomial:
-$$\mathbf{J}=\begin{bmatrix}
+\begin{align*}
+\mathbf{J}=&\begin{bmatrix}
     1      & -n_L   & \dots &(-n_L)^M \\
     \vdots & \vdots &       &  \vdots \\
     1      &     0  & \dots &	0     \\
     \vdots & \vdots &       & \vdots  \\
     1      &   n_R  & \dots &  n_R^M
 \end{bmatrix}
-\in \mathbb{R}^{(n_L+n_R+1)\times(M+1)}$$
-The vector $\mathbf{a}$ containing the polynomial coefficients:
-$$\mathbf{a}=\begin{bmatrix}
+\in \mathbb{R}^{(n_L+n_R+1)\times(M+1)}
+\intertext{The vector $\mathbf{a}$ containing the polynomial coefficients:}
+&\qquad\ \mathbf{a}=\begin{bmatrix}
 a_M\\
 \vdots\\
 a_1\\
 a_0
 \end{bmatrix}
-\in \mathbb{R}^{M+1}$$
-The vector $\mathbf{f}$ of the $n_L+n_R+1$ original data points:
-$$\mathbf{f}=\begin{bmatrix}
+\in \mathbb{R}^{M+1}
+\intertext{The vector $\mathbf{f}$ of the $n_L+n_R+1$ original data points:}
+&\qquad\mathbf{f}=\begin{bmatrix}
 f_{i-n_L}\\
 \vdots\\
 f_i\\
 \vdots\\
 f_{i+n_R}
 \end{bmatrix}
-\in \mathbb{R}^{n_L+n_R+1}$$
+\in \mathbb{R}^{n_L+n_R+1}
+\end{align*}
 Thus, the least squares fitting can be written as : 
 $$\norm{\mathbf{J}\mathbf{a}-\mathbf{f}}_2=\text{min}$$
 
@@ -400,10 +402,62 @@ $$g_i=(\mathbf{C} e_{M+1})^T \mathbf{f}$$
 
 From the above it can be seen that the value of the resulting signal at the center point is obtained from a single set of coefficients, while the remaining sets are able to produce the desired derivatives of the original signal. By incorporating a set of data over a window of length $n_L+n_R+1$ for the computation of a single point it is assumed that the redundancy present in distant data aids at increasing the signal to noise ratio.
 
-\section{Maximum Weight Matching in Graphs} \label{sec:theorBack-MWMGraphs}
+\section{Matching in Graphs} \label{sec:theorBack-MWMGraphs}
 
-general graph theory (introductory)
+Let $G=(V,E)$ be a graph with $V$ being the vertex set and $E$ being the set of edges connecting said vertices. In graph theory a \emph{matching} forms a subset of edges $M\subseteq E$, so that no two edges share a common vertex, with a \emph{perfect matching} covering the whole vertex set of the graph. Subsequently, a \emph{maximum matching} is defined as the matching $M$ with the largest possible number of edges, and a \emph{maximum weight matching} is the matching $M$ that maximizes the sum of edge weights. 
 
-what is max weight matching
 
-algorithm description
+
+\subsubsection{Maximum Weight Matching, the Primal-Dual method}
+
+The \emph{Primal-Dual method} for maximum weight matching in graphs~\cite{EdmondsMatching} is based of the duality found in Linear Programming problems.
+
+Specifically, let a Linear Programming optimization problem (Equation~\ref{form:primalLP}), its \emph{Dual Linear program} (Equation~\ref{form:dualLP}) is formulated so that its variables, the \emph{dual variables}, model the constraints of the original problem, while its constraints represent the \emph{primal variables} of the original problem. This allows optimization of the primal problem's value by tightening its bounds, as computed by the dual program. By optimizing the value and retaining feasibility of the dual program the -not necessarily feasible- primal problem approaches feasibility. Finally, due to equivalence between the primal program and its dual, the algorithm terminates with both optimal primal and dual solutions. This relationship is depicted in Equation~\ref{form:relationshipPrimalDual}.
+
+\begin{align}
+\begin{split}
+\text{Constraints in Primal}&\Longleftrightarrow \text{Variables in Dual}\\
+\text{Constraints in Dual}\quad &\Longleftrightarrow \text{Variables in Primal}\label{form:relationshipPrimalDual}
+\end{split}
+\end{align}
+
+The general linear program formulation, along with its dual, are shown in Equations~\ref{form:primalLP} and~\ref{form:dualLP}, respectively:
+
+\noindent\begin{minipage}{.5\linewidth}
+\begin{align*}
+%\intertext{The primal:}
+\max&\quad\mathbf{c}^T \mathbf{x}\\
+\text{s.t.}&\quad\mathbf{A}\mathbf{x}\leq\mathbf{b} \numberthis \label{form:primalLP}\\
+	&\quad\mathbf{x}\geq 0
+\end{align*}
+\end{minipage}%
+\noindent\begin{minipage}{.5\linewidth}
+\begin{align*}
+%\intertext{The dual:}
+\min&\quad\mathbf{b}^T \mathbf{y}\\
+\text{s.t.}&\quad\mathbf{A}^T\mathbf{y}\geq\mathbf{c} \numberthis \label{form:dualLP}\\
+	&\quad\mathbf{y}\geq 0
+\end{align*}
+\end{minipage}\\
+
+\noindent,where $\mathbf{A}\in \mathbb{R}^{M\times N}$, $\mathbf{b} \in \mathbb{R}^M$, $\mathbf{c} \in \mathbb{R}^N$ , $\mathbf{x} \in \mathbb{R}^N$ are the primal variables, and $\mathbf{y} \in \mathbb{R}^M$ are the respective dual variables.
+
+
+Following this paradigm the maximum weight matching problem can be formulated as Primal-Dual linear programming problem. By defining a positive weight function on the vertices $y:V \rightarrow \mathbb{R}^{+}$, a \emph{weighted vertex cover} is a subset $C \subseteq V$ such that $\forall e=(u,v) \in E, u,v \in C: y_u + y_v \geq w_{u,v}$. Additionally, let a matching $M$ and $x_{u,v}=1$ iff edge $e_{u,v}=(u,v) \in M$. The resulting linear programming pair is depicted in Equations~\ref{form:primalMWM} and~\ref{form:dualMWM}, the former being the primal program and the latter being its respective dual program.
+
+\noindent\begin{minipage}{.5\linewidth}
+\begin{align*}
+%\intertext{The primal:}
+\max&\quad \sum_{(u,v) \in E} x_{u,v} w_{u,v}\\
+\text{s.t.}&\quad \sum_{u \in e: e\in E} x_e \leq 1 &&, u \in V \numberthis \label{form:primalMWM}\\
+	&\qquad x_{u,v}\geq 0 &&, (u,v) \in E
+\end{align*}
+\end{minipage}%
+\noindent\begin{minipage}{.5\linewidth}
+\begin{align*}
+%\intertext{The dual:}
+\min&\quad \sum_{u \in V} y_u\\
+\text{s.t.}&\quad y_u+y_v \geq w_{u,v} &&,(u,v) \in E \numberthis \label{form:dualMWM}\\
+	&\quad y_u\geq 0 &&, u \in V
+\end{align*}
+\end{minipage}%

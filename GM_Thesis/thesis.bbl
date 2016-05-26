@@ -56,6 +56,10 @@ A.~Savitzky and M.~J.~E. Golay, ``{Smoothing and Differentiation of Data by
   \url{http://dx.doi.org/10.1021/ac60214a047}
 \BIBentrySTDinterwordspacing
 
+\bibitem{EdmondsMatching}
+J.~Edmonds, ``Paths, trees and flowers,'' \emph{Canadian Journal of
+  Mathematics}, pp. 449--467, 1965.
+
 \bibitem{Keren2014GMHetStreams}
 \BIBentryALTinterwordspacing
 D.~Keren, G.~Sagy, A.~Abboud, D.~Ben-David, A.~Schuster, I.~Sharfman, and
@@ -73,6 +77,11 @@ B.~Babalis, ``A simulator for monitoring data streams,'' Master's thesis,
 D.~Keren, I.~Sharfman, A.~Schuster, and A.~Livne, ``Shape sensitive geometric
   monitoring,'' \emph{IEEE Transactions on Knowledge and Data Engineering},
   vol.~24, no.~8, pp. 1520--1535, Aug 2012.
+
+\bibitem{networkxMaxWeight}
+networkx-maximum weight matching.
+  \url{https://networkx.github.io/documentation/networkx-1.9/reference/generated/networkx.algorithms.matching.max_weight_matching.html}.
+  Accessed: 2016-02-25.
 
 \bibitem{Keren2013SafeZones}
 \BIBentryALTinterwordspacing
