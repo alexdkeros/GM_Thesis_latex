@@ -1,17 +1,19 @@
 \chapter{Related Work} \label{chap:relWork}
 
-the initial geometric monitoring method Sharfman et al.~\cite{Sharfman2006GM},two scenarios , a geometric approach on monitoring distributed streams with arbitrary functions
-some work preceded this for distributed environments:
-
 threshold monitoring of sum of variables~\cite{DilmanReactiveMonitoring}
+
 local thresholds to improve performance of Dilmanm, Keralapura et al.~\cite{KeralapuraCommEfficientThresholdCounts}
 
+
 coordinator approximate answers on tracking of specific aggregation operations, sum, avg, min\cite{OlstonAdaptiveFiltersContQueries}
+
+estimating functions over distributed data streams~\cite{GibbonsSimpleFuncEstimationOverUnion, GibbonsDistrStreamAlgosSlidingWindows}
 
 monitor k-largest aggregates by enforcing local constraints on nodes, 
 resolution process in case of constraint violation to check whether it was a false alarm, like original GM~\cite{BabcockDistributedTopk}
 
-estimating functions over distributed data streams~\cite{GibbonsSimpleFuncEstimationOverUnion, GibbonsDistrStreamAlgosSlidingWindows}
+the initial geometric monitoring method Sharfman et al.~\cite{Sharfman2006GM},two scenarios , a geometric approach on monitoring distributed streams with arbitrary functions
+some work preceded this for distributed environments:
 
 complex aggregate query approximate answering by coordinator node, synopses at distributed nodes and communicate with coordinator when local constraint is violated, significant divergence in local data, employ predicition~\cite{CormodeApproxContQueryingDistrStreams}
 

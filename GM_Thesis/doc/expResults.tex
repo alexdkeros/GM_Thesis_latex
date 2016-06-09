@@ -1,32 +1,57 @@
-\chapter{Experimental Results} \label{chap:expRes}
+\chapter{Experiments} \label{chap:exp}
 
-experimental result showcase
+in order to evaluate the proposed methods compared our algorithms to original GM, hierarchical clustering (mention acronyms). structure of chapter
 
-\section{Experimental Setting} \label{sec:expRes-setting}
+\section{Data and Setup}
 
-dataset used
 
-reference appendix for tools, mention in short
+\subsection{Synthetic Data}
 
-\section{Distance Based Node Matching} \label{sec:expRes-distNodeMatch}
+how was synthetic data formed, what characteristics do they have
+the monitoring function
 
-comparison with random matching\\
-comparison with distribution node matching deligiannakis\\
-!use same balancing, both classic and heuristic! (i.e. 1st all with classic, then all with heuristic)
-explain
+create synthetic data to evaluate performance under a controled environment, test with different parameters
 
-\section{Heuristic Balancing} \label{sec:expRes-heuristic}
+*images
 
-comparison with classic balancing\\
-!random matching!\\
-explain
+acronyms
 
-how S-G affects results
+%TODO: include actual dataset?
+\subsection{Air Quality Database}
 
-\section{Overall Results} \label{sec:expRes-overall}
+what is air quality database
 
-summarise results\\
-compare classic random and classic distribution optpair with heuristic distance optpair\\
-observe how S-G affects results again\\
+how were the streams formed and why
 
-explain
+chosen functions
+
+*images
+
+\section{Experimental Results}
+
+\subsection{Node Matching Algorithms}
+
+compare distance based node matching to distribution based node matching and the random selection algorithm with the classic balancing method
+
+*images
+
+\subsection{Balancing methods}
+
+compare classic balancing with heuristic balancing with random selection algorithm
+
+*images
+
+\subsection{Monitoring Synthetic Data}
+
+compare classic random with heuristic distance based matching over a range of nodes, a range of window sizes and a range of orders for SG
+
+*images
+
+%TODO:actual data?
+\subsection{Monitoring Air Quality Data}
+
+compare classic random with heristic distance based matching for the actual data, over a range of nodes and sg parameters to check how it affects performance
+
+actual data streams that have great variance and irregularities lead to poor proposed algorithm performance
+
+*images
