@@ -1,31 +1,9 @@
 \chapter{Related Work} \label{chap:relWork}
 
-threshold monitoring of sum of variables~\cite{DilmanReactiveMonitoring}
+A great deal of prior work exists on threshold monitoring and monitoring of distributed sets of data streams, mostly focusing on applications where the monitored function is well defined and linear. In~\cite{DilmanReactiveMonitoring} the sum of a distributed set of variables is monitored for threshold crossings, with~\cite{KeralapuraCommEfficientThresholdCounts} proposing the addition of local constraints to reduce communication overhead. Continuous tracking and approximate answering of specific aggregation operations (sum, averaging and minimum) over a coordinator-based scenario is explored in~\cite{OlstonAdaptiveFiltersContQueries}. Additionally, \cite{GibbonsSimpleFuncEstimationOverUnion, GibbonsDistrStreamAlgosSlidingWindows} provide methods for estimating simple functions over distributed data streams. $k$-largest aggregate value monitoring is described in~\cite{BabcockDistributedTopk}, where local constraint enforcement and efficient resolution of false constraint violations is presented.
 
-local thresholds to improve performance of Dilmanm, Keralapura et al.~\cite{KeralapuraCommEfficientThresholdCounts}
+Elevation of the restriction of monitoring function linearity happens at~\cite{Sharfman2006GM}, where a geometric method for threshold monitoring of arbitrary functions over coordinator-based and mesh-like network topologies is described. In~\cite{CormodeApproxContQueryingDistrStreams} approximate answers to complex aggregate queries are provided by a coordinator node, with the distributed nodes retaining synopses of the monitored data and communicating them when local constraints are being violated i.e., significant divergence of local data from the previously communicated data has been observed. Furthermore, prediction mechanisms are employed in order to reduce the communication burden. By reducing the approximate query answering to local threshold crossing monitoring at the distributed nodes,~\cite{Garofalakis2013SketchBasedGM} succeeds in unifying the continuous monitoring task with the geometric monitoring method of~\cite{Sharfman2006GM}.
 
+Safe Zones are introduced in~\cite{Keren2013SafeZones} as an extension of the geometric monitoring method of~\cite{Sharfman2006GM},
+where an arbitrary function is geometrically monitored by employing optimal local constraints at the nodes, that are fitted to each node's data distribution. In order to reduce the computational burden of optimal local constraint formation a hierarchical node clustering scheme is implemented that allows recursive computation of the problem at hand. In~\cite{Samoladas2013Unification} the Safe Zones and the bounding balls of the geometric monitoring method are proven to be fundamentally the same. Following that claim,~\cite{Sharfman2012ShapeSensGM} explores ellipsoidal bounds as a way to minimize the volume of bounding regions and reduce the communication overhead induced by false alarms. Additionally, communication of temporal data, along with first and second moments of the nodes' data distributions, as well as a method for decoupling the estimate vector from it's use as the reference vector for bounding region construction is proposed. Constraints tailored to fit data distributions at the nodes are also explored in~\cite{Keren2014GMHetStreams}, where simple and efficiently computable shapes, as well as a hierarchical clustering of the monitoring nodes into disjoint sets that maximize the probability of resolution of false alarms, are proposed. Finally,~\cite{GiatrakosPredictionGM} offers a generalization of the geometric monitoring scheme by incorporating a variety of prediction models based on velocity and acceleration of the vector representations of the data streams.
 
-coordinator approximate answers on tracking of specific aggregation operations, sum, avg, min\cite{OlstonAdaptiveFiltersContQueries}
-
-estimating functions over distributed data streams~\cite{GibbonsSimpleFuncEstimationOverUnion, GibbonsDistrStreamAlgosSlidingWindows}
-
-monitor k-largest aggregates by enforcing local constraints on nodes, 
-resolution process in case of constraint violation to check whether it was a false alarm, like original GM~\cite{BabcockDistributedTopk}
-
-the initial geometric monitoring method Sharfman et al.~\cite{Sharfman2006GM},two scenarios , a geometric approach on monitoring distributed streams with arbitrary functions
-some work preceded this for distributed environments:
-
-complex aggregate query approximate answering by coordinator node, synopses at distributed nodes and communicate with coordinator when local constraint is violated, significant divergence in local data, employ predicition~\cite{CormodeApproxContQueryingDistrStreams}
-
-unification of complex approximate query answering with GM, reduction of approximate distr stream monitoring to threshold crossing conditions~\cite{Garofalakis2013SketchBasedGM}
-
-arbitrary function, node specific shapes instead of bounding balls, optimal local constraints, node tailored- Safe Zones, violation recovery by hierarchical structure on the basis of disjoint node partitioning, as here
-NP-hard in complexity, approximate solutions for low dimentional data~\cite{Keren2013SafeZones}
-
-unification of safe zones with gm, fundamentally the same~\cite{Samoladas2013Unification}
-
-previous work on gm a special case of safe zones, ellipsoidal bounds - minimize volume of bounding region, communication of temporal data, first and second moments - distribution of data, decoupling of the estimate vector as the reference vector for bounding region construction~\cite{Sharfman2012ShapeSensGM}
-
-constraints tailored to fit data distributions at the nodes, propose specific shapes easily computable and tailored to the nodes data distributions - safe zones, hierarchical data clustering for constraint computation and violation resolution~\cite{Keren2014GMHetStreams}
-
-incorporate variety of preditors-prediction models (also velocity and acceleration), generalization of geometric monitoring scheme~\cite{GiatrakosPredictionGM}

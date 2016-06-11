@@ -142,11 +142,12 @@ Previous work proposed selecting an optimal reference vector, instead of the est
 
 This thesis proposes a novel heuristic approach for optimal positioning of drift vectors, which takes into account both the temporal behavior of each node's data stream, as well as the peculiarities of the monitoring function over said data streams. Aim of the heuristic optimization is the maximization of the estimated time until the following Local Violation occurs, which, expressed as an optimization formula, receives the following form:
 \begin{equation}
-\max\min\frac{2*(T-x_i)}{vel_i(t_{lv})\sqrt{2*(T-x_i)*accel_i(t_{lv})+{vel_i}^2(t_{lv})}}, \forall n_i \in P'
+\max\min \frac{(T-x_i)-accel_i(t_{lv})*t^2}{vel_i(t_{lv})}, \forall n_i \in P'
 \label{form:heuristic}
 \end{equation}
 where:
 \begin{align*}
+t&:\text{the variable to optimize}\\
 T&:\text{monitoring threshold}\\
 x_i&:\text{the maximum value of the monitoring function $f(\cdot)$ over the bounding ball $B(\vec{e}(t_{lv}), \vec{u_i}(t_{lv}))$,}\\&\qquad\text{where $t_{lv}$ is the time a Local Violation occurred and $i$ the index of node $n_i$}\\
 vel_i(t_{lv})&:\text{the estimated velocity of the maximum value of the monitoring function $f(\cdot)$}\\&\qquad\text{when applied to the bounding ball created by the data stream update of node $n_i$}\\&\qquad\text{and the estimate vector $\vec{e}$ at time $t_{lv}$}\\
@@ -155,19 +156,20 @@ t_{lv}&:\text{time of Local Violation occurrence}\\
 P'&:\text{the balancing set}\\
 \end{align*}
 
-The Equation~\ref{form:heuristic} originates from the the combination of elementary kinematic equations, as such:\\
+The Equation~\ref{form:heuristic} originates from elementary kinematic equations, as such:\\
 Assume a moving object $i$ at point $x_i$, with acceleration $a_i$ and current velocity $v_i$. Let $v_f$ be the object's final velocity when it reaches a threshold point $T$ at time $t$, from which it deviates by $d=T-x_i$. Let current time be $t=0$.\\
-Distance (or \emph{Displacement}) is described by:
+Distance (or \emph{Displacement}) in terms of velocity and acceleration is described by:
 \begin{equation}
-d=\frac{v_i+v_f}{2}*t
+d=v_i t+a t^2
 \label{form:displacement}
 \end{equation}
-Final velocity is defined as:
-\begin{equation}
-v_f^2=v_i^2+2*a*d
-\label{form:finalVel}
-\end{equation}
-By solving Equation~\ref{form:finalVel} for $v_f$, plugging it into Equation~\ref{form:displacement} and solving the resulting Equation for $t$, we extract the desired result (Equation~\ref{form:heuristic}).
+For which it holds:
+\begin{align*}
+d&=v_i t+a t^2 \leftrightarrow\\
+T-x_i&=v_i t + a t^2 \leftrightarrow\\
+t&=\frac{(T-x_i)-a t^2}{v_i}\\
+\end{align*}
+Thus, $t$ is the expected time the moving object reaches the threshold point $T$.
 
 The newly defined heuristic optimization formula (\ref{form:heuristic}) aims to maximize the time until the next Local Violation concerning any of the nodes belonging in the balancing set. By taking into account the maximum value of the monitoring function $f(\cdot)$ inside the bounding ball created by each data stream update and the estimate vector, and by computing acceleration and velocity measures of this value over time, an approximate mapping of the data stream space to the one dimensional space of the arbitrary monitoring function is achieved. This permits the computation of the optimal positions the balanced drift vectors should take in order to maximize the time they reach the monitoring threshold, as depicted in Figure~\ref{fig:heuristicbalancing}.
 
