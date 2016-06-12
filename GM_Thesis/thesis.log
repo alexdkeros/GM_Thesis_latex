@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2016.5.27)  12 JUN 2016 17:37
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2016.5.27)  12 JUN 2016 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -954,11 +954,8 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 67.
 (./doc/abstract.aux) (./doc/pubAbstract.aux) (./doc/dedication.aux)
 (./doc/acknowledgments.aux) (./doc/introduction.aux)
 (./doc/theoreticalBackground.aux) (./doc/relatedWork.aux)
-(./doc/probStatement.aux) (./doc/implementation.aux) (./doc/expResults.aux
-
-LaTeX Warning: Label `fig:balComp-msgs' multiply defined.
-
-) (./doc/conclusions.aux) (./doc/appendixGMPythonImpl.aux))
+(./doc/probStatement.aux) (./doc/implementation.aux) (./doc/expResults.aux)
+(./doc/conclusions.aux) (./doc/appendixGMPythonImpl.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
@@ -1373,12 +1370,7 @@ File: img/bal_msg_interweaving_nodes.pdf Graphic file (type QTm)
 <use  "img/bal_msg_interweaving_nodes.pdf" >
 File: img/bal_msg_noisyinterweaving_nodes.pdf Graphic file (type QTm)
 
-<use  "img/bal_msg_noisyinterweaving_nodes.pdf" >
-
-LaTeX Warning: Reference `fig:balComp-drifts' on page 49 undefined on input lin
-e 226.
-
-[49]
+<use  "img/bal_msg_noisyinterweaving_nodes.pdf" > [49]
 
 LaTeX Warning: Text page 50 contains only floats.
 
@@ -1386,18 +1378,60 @@ LaTeX Warning: Text page 50 contains only floats.
 Overfull \vbox (4.43068pt too high) has occurred while \output is active []
 
 
-[50]
+[50] [51]
 File: img/bal_classic_drifts_linear2N.pdf Graphic file (type QTm)
  <use  "img/bal_classic_drifts_linear2N.pdf" >
 File: img/bal_heuristic_drifts_linear2N.pdf Graphic file (type QTm)
 
-<use  "img/bal_heuristic_drifts_linear2N.pdf" > [51]) [52]
+<use  "img/bal_heuristic_drifts_linear2N.pdf" > [52]
+File: img/main_msg_linear_nodes.pdf Graphic file (type QTm)
+
+<use  "img/main_msg_linear_nodes.pdf" >
+File: img/main_msg_interweaving_nodes.pdf Graphic file (type QTm)
+
+<use  "img/main_msg_interweaving_nodes.pdf" >
+File: img/main_msg_noisyinterweaving_nodes.pdf Graphic file (type QTm)
+
+<use  "img/main_msg_noisyinterweaving_nodes.pdf" >
+File: img/main_msg_linear_window.pdf Graphic file (type QTm)
+
+<use  "img/main_msg_linear_window.pdf" >
+File: img/main_msg_interweaving_window.pdf Graphic file (type QTm)
+
+<use  "img/main_msg_interweaving_window.pdf" >
+File: img/main_msg_noisyinterweaving_window.pdf Graphic file (type QTm)
+
+<use  "img/main_msg_noisyinterweaving_window.pdf" >
+File: img/main_msg_linear_order.pdf Graphic file (type QTm)
+
+<use  "img/main_msg_linear_order.pdf" >
+File: img/main_msg_interweaving_order.pdf Graphic file (type QTm)
+
+<use  "img/main_msg_interweaving_order.pdf" >
+File: img/main_msg_noisyinterweaving_order.pdf Graphic file (type QTm)
+
+<use  "img/main_msg_noisyinterweaving_order.pdf" >
+File: img/main_msg_linear_dims.pdf Graphic file (type QTm)
+
+<use  "img/main_msg_linear_dims.pdf" >
+File: img/main_msg_interweaving_dims.pdf Graphic file (type QTm)
+
+<use  "img/main_msg_interweaving_dims.pdf" >
+File: img/main_msg_noisyinterweaving_dims.pdf Graphic file (type QTm)
+
+<use  "img/main_msg_noisyinterweaving_dims.pdf" >
+File: img/main_classic_drifts_linear4N.pdf Graphic file (type QTm)
+
+<use  "img/main_classic_drifts_linear4N.pdf" >
+File: img/main_heuristic_drifts_linear4N.pdf Graphic file (type QTm)
+
+<use  "img/main_heuristic_drifts_linear4N.pdf" > [53]) [54] [55]
 \openout2 = `doc/conclusions.aux'.
 
 
 (./doc/conclusions.tex
 Chapter 7.
-) [53
+) [56
 
 
 
@@ -1406,11 +1440,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
 
-[54
+[57
 
 
 
-] [55]
+] [58]
 Underfull \hbox (badness 10000) in paragraph at lines 165--168
 []\OT1/cmr/m/n/10.95 9 / reference / generated / networkx . algorithms . matchi
 ng . max[]weight[]matching . html[]$[][]. Ac-cessed:
@@ -1422,7 +1456,7 @@ Underfull \hbox (badness 2229) in paragraph at lines 178--180
 /www.eea.europa.eu/data-and-
  []
 
-) [56] [57
+) [59] [60
 
 ]
 \openout2 = `doc/appendixGMPythonImpl.aux'.
@@ -1432,7 +1466,7 @@ Overfull \hbox (2.76404pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/20.74 Geometric Mon-i-tor-ing Python Im-ple-men-ta-tion 
  []
 
-) [58
+) [61
 
 
 
@@ -1451,17 +1485,17 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 148.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 33871 strings out of 493727
- 725919 string characters out of 6147890
- 915527 words of memory out of 5000000
- 36512 multiletter control sequences out of 15000+600000
+ 33904 strings out of 493727
+ 726939 string characters out of 6147890
+ 916725 words of memory out of 5000000
+ 36531 multiletter control sequences out of 15000+600000
  20402 words of font info for 77 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,24n,77p,1565b,1264s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (68 pages).
+Output written on thesis.pdf (71 pages).

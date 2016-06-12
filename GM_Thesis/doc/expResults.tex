@@ -202,7 +202,7 @@ These results can be explained by viewing how each methods handles node pairing,
 
 \subsection{Balancing methods} \label{subsec:balComp}
 
-During the balancing process of the original geometric monitoring method~\cite{Sharfman2006GM} (GM) the computed drift vectors of the nodes are set to the value of the balancing vector that successfully resolves the reported Local Violation. In contrast, the heuristic balancing method proposed in this thesis (HM) attempts to optimize the positioning of the new drift vectors by taking into account the properties of each stream. Figure~\ref{fig:balComp-msgs} illustrates the communication cost induced by the balancing methods over a range of 2 to 20 nodes for the datasets \emph{LIN, INT} and \emph{NOISE}, when applied alongside the random node selection method (RAND) for violation resolution.
+During the balancing process of the original geometric monitoring method~\cite{Sharfman2006GM} (GM) the computed drift vectors of the nodes are set to the value of the balancing vector that successfully resolves the reported Local Violation. In contrast, the heuristic balancing method proposed in this thesis (HM) attempts to optimize the positioning of the new drift vectors by taking into account the properties of each stream. Figure~\ref{fig:balComp-msgs} illustrates the communication cost induced by the balancing methods over a range of 2 to 20 nodes for the datasets \emph{LIN, INT} and \emph{NOISE}, when applied alongside the random node selection method (RAND) for violation resolution. For the HM method a window size of 10 and an approximation order of 1 are employed for the Savitzky-Golay filter.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%msgs bal  figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!htb]
@@ -219,11 +219,11 @@ During the balancing process of the original geometric monitoring method~\cite{S
   \caption{Communication cost of methods GM and HM for the \emph{NOISE} dataset.}
 \end{subfigure}
 \vspace{0.5cm}
-\caption{Comparison of the GM and HM methods in terms of communication cost over a range of 20 nodes.} \label{fig:balComp-msgs}
+\caption{Comparison of the GM and HM methods in terms of communication cost over a range of 20 nodes. For the Savitzky-Golay filter of HM method a window size of 10 and an order of 1 are employed.} \label{fig:balComp-msgs}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-When applied to the \emph{LIN} dataset the HM method consistently surpasses the original GM balancing method in terms of communication reduction by optimally positioning the drift vectors following a Local Violation resolution, a property illustrated in Figure~\ref{fig:balComp-drifts} for 2 monitoring nodes. When data streams become more complex and unpredictable, i.e., the \emph{INT} and \emph{NOISE} datasets, the HM method provides a similar to slightly worse performance than that of GM, due to variable velocities and accelerations affecting the performance of the optimization function.
+When applied to the \emph{LIN} dataset the HM method consistently surpasses the original GM balancing method in terms of communication reduction by optimally positioning the drift vectors following a Local Violation resolution, a property illustrated in Figure~\ref{fig:balComp-drifts} for 2 monitoring nodes. When data streams become more complex and unpredictable, i.e., the \emph{INT} and \emph{NOISE} datasets, the HM method provides a similar to slightly worse performance than that of GM, due to variable velocities and accelerations affecting the performance of the optimization function. Additionally, the selection of random nodes at each resolution attempt hampers the performance of HM due to the fact that optimal positioning computation is relative to the nodes taking part in a specific balancing process. Thus, when an optimized drift vector participates in a subsequent balancing process with a different node set the existing optimization and the ``correlation'' between optimized sets is discarded.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%drifts bal lin figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!htb]
@@ -242,9 +242,100 @@ When applied to the \emph{LIN} dataset the HM method consistently surpasses the 
 
 \subsection{Monitoring Synthetic Data} \label{subsec:mainComp}
 
-compare classic random with heuristic distance based matching over a range of nodes, a range of window sizes and a range of orders for SG
+In order to eliminate the unpredictability the RAND method incurs to HM, we compare the GM method with a combination of our proposed methods (DIST, HM), resulting to the HDM method. Figure~\ref{fig:mainComp-msgs} depicts the performance of the two methods over a range of 2 to 20 nodes, in terms of communication cost. Following that, Figures~\ref{fig:mainComp-order} and~\ref{fig:mainComp-wl} examine the way the Savitzky-Golay filter parameters affect the performance of HDM. Finally, Figure~\ref{fig:mainComp-dims} illustrates the scalability of the HDM method compared to the GM method, in terms of communication cost and stream dimensionality.
 
-*images
+Once again, the HDM method outperforms the original GM method when applied onto the \emph{LIN} dataset for any parameter setting of the Savitzky-Golay filter. When datasets in the likes of \emph{INT} and \emph{NOISE} are employed, where smooth and drastic velocity changes can be observed, respectively, fine-tuning the filter's parameters can reduce the communication burden of HDM significantly, surpassing the GM algorithm in terms of communication reduction. Finally, when multiple stream dimensions are monitored the HDM method illustrates similar performance as with its one-dimensional stream counterparts.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%msgs main  figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!htb]
+\begin{subfigure}{0.32\textwidth}
+  \includegraphics[width=\linewidth]{img/main_msg_linear_nodes.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{LIN} dataset. The Savitzky-Golay window size is set to 10 and the approximation order is set to 1.}
+\end{subfigure}\hfill
+\begin{subfigure}{0.32\textwidth}
+  \includegraphics[width=\linewidth]{img/main_msg_interweaving_nodes.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{INT} dataset. The Savitzky-Golay window size is set to 10 and the approximation order is set to 1.}
+\end{subfigure}\hfill
+\begin{subfigure}{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{img/main_msg_noisyinterweaving_nodes.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{NOISE} dataset. The Savitzky-Golay window size is set to 24 and the approximation order is set to 1.}
+\end{subfigure}
+\vspace{0.5cm}
+\caption{Comparison of the GM and HDM methods in terms of communication cost over a range of 20 nodes.} \label{fig:mainComp-msgs}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%wl main  figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!htb]
+\begin{subfigure}{0.32\textwidth}
+  \includegraphics[width=\linewidth]{img/main_msg_linear_window.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{LIN} dataset.}
+\end{subfigure}\hfill
+\begin{subfigure}{0.32\textwidth}
+  \includegraphics[width=\linewidth]{img/main_msg_interweaving_window.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{INT} dataset.}
+\end{subfigure}\hfill
+\begin{subfigure}{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{img/main_msg_noisyinterweaving_window.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{NOISE} dataset.}
+\end{subfigure}
+\vspace{0.5cm}
+\caption{Comparison of the GM and HDM methods in terms of communication cost over a range of window sizes, for 16 nodes. The approximation order is set to 1 for all experiments.} \label{fig:mainComp-wl}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%order main  figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!htb]
+\begin{subfigure}{0.32\textwidth}
+  \includegraphics[width=\linewidth]{img/main_msg_linear_order.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{LIN} dataset. The Savitzky-Golay window size is set to 10.}
+\end{subfigure}\hfill
+\begin{subfigure}{0.32\textwidth}
+  \includegraphics[width=\linewidth]{img/main_msg_interweaving_order.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{INT} dataset. The Savitzky-Golay window size is set to 40.}
+\end{subfigure}\hfill
+\begin{subfigure}{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{img/main_msg_noisyinterweaving_order.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{NOISE} dataset. The Savitzky-Golay window size is set to 24.}
+\end{subfigure}
+\vspace{0.5cm}
+\caption{Comparison of the GM and HDM methods in terms of communication cost over a range of Savitzky-Golay appriximation orders, for 16 nodes.} \label{fig:mainComp-order}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%dims main  figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!htb]
+\begin{subfigure}{0.32\textwidth}
+  \includegraphics[width=\linewidth]{img/main_msg_linear_dims.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{LIN} dataset.}
+\end{subfigure}\hfill
+\begin{subfigure}{0.32\textwidth}
+  \includegraphics[width=\linewidth]{img/main_msg_interweaving_dims.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{INT} dataset.}
+\end{subfigure}\hfill
+\begin{subfigure}{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{img/main_msg_noisyinterweaving_dims.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{NOISE} dataset.}
+\end{subfigure}
+\vspace{0.5cm}
+\caption{Comparison of the GM and HDM methods in terms of communication cost over a range of stream dimensions, for 8 nodes. Savitzky-Golay's window size is set to 10 and the approximation order is set to 1 for all experiments. The monitoring function is a multi-variable quadratic function dependent on the stream dimensionality.} \label{fig:mainComp-dims}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%drifts main lin figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!htb]
+\begin{subfigure}{0.49\textwidth}
+  \includegraphics[width=\linewidth]{img/main_classic_drifts_linear4N.pdf}
+  \caption{Drift vectors of 2 nodes, as formulated by the GM algorithm.}
+\end{subfigure}\hfill
+\begin{subfigure}{0.49\textwidth}
+  \includegraphics[width=\linewidth]{img/main_heuristic_drifts_linear4N.pdf}
+  \caption{Drift vectors of 2 nodes, as formulated by the HDM algorithm.}
+\end{subfigure}\hfill
+\vspace{0.5cm}
+\caption{The drift vectors of 2 nodes with streams originating from the \emph{LIN} dataset, when the GM and HDM methods are applied.} \label{fig:mainComp-drifts}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %TODO:actual data?
 \subsection{Monitoring Air Quality Data} \label{subsec:actualComp}
