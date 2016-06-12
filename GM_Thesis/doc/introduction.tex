@@ -8,18 +8,30 @@ These systems differ from the traditional Database Management Systems (DBMS), in
 
 Consequently, intelligent algorithms must be devised that are able to guarantee high accuracy standards while limiting the communication overhead induced to the distributed setting. Approaches such as collecting all data to a central node for processing and polling nodes for data updates, as easily implementable as they may be, are prohibitive is such a decentralized scenario, either due to the communication and storage overhead they induce, or due to the accuracy degradation they inflict. 
 
-The geometric monitoring method proposed by Sharfman et al.~\cite{Sharfman2006GM} consists of a geometric approach in which convex optimization theory is being employed in order to guarantee that communication between distributed nodes takes place only when needed, while maintaining strict bounds on the accuracy of the monitoring task. By decomposing the task to local constraints at the  nodes, and by employing a clever mechanism for resolving constraint violations that are not representative of the system's state, i.e. false alarms, the communication between sites is significantly reduced without any accuracy degradation.
+The geometric threshold monitoring method proposed by Sharfman et al.~\cite{Sharfman2006GM} consists of a geometric approach in which convex optimization theory is being employed in order to guarantee that communication between distributed nodes takes place only when needed, while maintaining strict bounds on the accuracy of the monitoring task. By decomposing the task to local constraints at the  nodes, and by employing a clever mechanism for resolving constraint violations that are not representative of the system's state, i.e. false alarms, the communication between sites is significantly reduced without any accuracy degradation.
 
 Following this framework, much work has emerged attempting to improve the communication bounds of the geometric monitoring method and to generalize the method to applications in the likes of continuous query answering. Following this trend, this thesis employs heuristics structured on top of multi-objective optimization problems and signal processing filters in order to better the performance of the geometric monitoring algorithm. Additionally, an existing method for hierarchical clustering of distributed streams, found in~\cite{Sharfman2012ShapeSensGM}, is improved and simplified.
 
-Evaluation of the proposed algorithms over synthetic and real-world datasets exhibits an improvement of up to 60\% over the original geometric monitoring method. Furthermore, the behaviour of the proposed algorithms in different settings is being researched.
+Evaluation of the proposed algorithms over synthetic and real-world datasets exhibits an improvement of up to 60\% over the original geometric monitoring method. Furthermore, the behavior of the proposed algorithms in different settings is being researched.
 
 
 \section{Motivation} \label{sec:intro-motivation}
+
+
+
 
 A lot of work towards this direction, based on GM.
 We believe that there is still room for improvements regarding the way the method handles and represents data streams
 
 \section{Contributions} \label{sec:intro-contr}
 
+This thesis contributes to the research on distributed streams following the geometric monitoring framework by providing:
+\begin{itemize}
+\item a heuristic method for resolving false threshold violations by employing multi-objective optimization theory and estimations of data stream moments in order to optimally position vectors representing data streams in space,
+\item an improved algorithm over an existing hierarchical node clustering method for deterministic violation resolution between a subset of distributed streams,
+\item a throughout evaluation of the proposed algorithms on synthetic and real-world data by employing the seminar geometric monitoring method as the null model. By implementing the aforementioned algorithms a significant reduction of the communication overhead induced by the geometric monitoring can be achieved. Furthermore, the cases where the proposed algorithms do not perform well are examined and the factors that hamper their performance are analyzed.
+\end{itemize}
+
 \section{Thesis Outline} \label{sec:intro-thesisOutline}
+
+Chapter~\ref{chap:theorBack} provides the necessary theoretical background used throughout this thesis, including the geometric monitoring framework, multi-objective optimization theory, graph matching theory and the Savitzky-Golay smoothing and differentiating filter. Related work is surveyed in Chapter~\ref{chap:relWork}. The problem formulation, along with a detailed analysis of the implementation of the proposed methods follows in Chapters~\ref{chap:probStatement} and~\ref{chap:impl}, respectively. Finally, experimental evaluation of our work takes place in Chapter~\ref{chap:exp}, before providing concluding remarks, as well as proposals for future work, in Chapter~\ref{chap:concFuture}.

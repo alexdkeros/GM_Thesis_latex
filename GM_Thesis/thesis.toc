@@ -8,48 +8,48 @@
 \contentsline {section}{\numberline {1.1}Overview}{2}{section.1.1}
 \contentsline {section}{\numberline {1.2}Motivation}{3}{section.1.2}
 \contentsline {section}{\numberline {1.3}Contributions}{3}{section.1.3}
-\contentsline {section}{\numberline {1.4}Thesis Outline}{3}{section.1.4}
-\contentsline {chapter}{\numberline {2}Theoretical Background}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Geometric Monitoring of Distributed Streams}{4}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}System Architecture}{4}{subsection.2.1.1}
-\contentsline {subsubsection}{Decentralized Scenario}{5}{section*.6}
-\contentsline {subsubsection}{Centralized Scenario}{5}{section*.8}
-\contentsline {subsection}{\numberline {2.1.2}Computational Model}{6}{subsection.2.1.2}
-\contentsline {subsubsection}{Balancing Process}{8}{section*.10}
-\contentsline {subsection}{\numberline {2.1.3}Geometric Interpretation}{9}{subsection.2.1.3}
-\contentsline {subsubsection}{Local Constraints}{10}{section*.12}
-\contentsline {subsection}{\numberline {2.1.4}Protocol}{11}{subsection.2.1.4}
-\contentsline {subsubsection}{Decentralized Algorithm}{11}{section*.13}
-\contentsline {subsubsection}{Centralized Algorithm}{12}{section*.14}
-\contentsline {section}{\numberline {2.2}Multi-objective Optimization}{15}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Non-linear Constrained Optimization Problems}{17}{subsection.2.2.1}
-\contentsline {subsubsection}{Feasible Directions}{18}{section*.19}
-\contentsline {subsubsection}{SQP}{18}{section*.20}
-\contentsline {section}{\numberline {2.3}Savitzky-Golay Filtering}{19}{section.2.3}
-\contentsline {section}{\numberline {2.4}Matching in Graphs}{22}{section.2.4}
-\contentsline {subsubsection}{Maximum Weight Matching, the Primal-Dual method}{22}{section*.23}
-\contentsline {chapter}{\numberline {3}Related Work}{24}{chapter.3}
-\contentsline {part}{II\hspace {1em}PROBLEM DEFINITION AND IMPLEMENTATION}{26}{part.2}
-\contentsline {chapter}{\numberline {4}Problem Statement}{27}{chapter.4}
-\contentsline {chapter}{\numberline {5}Implementation}{28}{chapter.5}
-\contentsline {section}{\numberline {5.1}Geometric Monitoring Implementation}{28}{section.5.1}
-\contentsline {section}{\numberline {5.2}Distance Based Node Matching}{30}{section.5.2}
-\contentsline {section}{\numberline {5.3}Heuristic Balancing}{34}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Implementation of the Heuristic Balancing}{36}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Smoothing, Velocity and Acceleration Estimation via Savitzky-Golay}{39}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4}Implementation Challenges}{40}{section.5.4}
-\contentsline {part}{III\hspace {1em}RESULTS AND CONCLUSIONS}{42}{part.3}
-\contentsline {chapter}{\numberline {6}Experiments}{43}{chapter.6}
-\contentsline {section}{\numberline {6.1}Data, Setup and Monitoring Functions}{43}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Synthetic Datasets}{43}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Air Quality Database}{45}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Monitoring Functions}{47}{subsection.6.1.3}
-\contentsline {section}{\numberline {6.2}Experimental Results}{47}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Node Matching Algorithms}{48}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Balancing methods}{49}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Monitoring Synthetic Data}{52}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Monitoring Air Quality Data}{53}{subsection.6.2.4}
-\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{56}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusions}{56}{section.7.1}
-\contentsline {section}{\numberline {7.2}Future Work}{56}{section.7.2}
-\contentsline {chapter}{References}{57}{chapter.8}
+\contentsline {section}{\numberline {1.4}Thesis Outline}{4}{section.1.4}
+\contentsline {chapter}{\numberline {2}Theoretical Background}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Geometric Monitoring of Distributed Streams}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}System Architecture}{5}{subsection.2.1.1}
+\contentsline {subsubsection}{Decentralized Scenario}{6}{section*.6}
+\contentsline {subsubsection}{Centralized Scenario}{6}{section*.8}
+\contentsline {subsection}{\numberline {2.1.2}Computational Model}{7}{subsection.2.1.2}
+\contentsline {subsubsection}{Balancing Process}{9}{section*.10}
+\contentsline {subsection}{\numberline {2.1.3}Geometric Interpretation}{10}{subsection.2.1.3}
+\contentsline {subsubsection}{Local Constraints}{11}{section*.12}
+\contentsline {subsection}{\numberline {2.1.4}Protocol}{12}{subsection.2.1.4}
+\contentsline {subsubsection}{Decentralized Algorithm}{12}{section*.13}
+\contentsline {subsubsection}{Centralized Algorithm}{13}{section*.14}
+\contentsline {section}{\numberline {2.2}Multi-objective Optimization}{16}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Non-linear Constrained Optimization Problems}{18}{subsection.2.2.1}
+\contentsline {subsubsection}{Feasible Directions}{19}{section*.19}
+\contentsline {subsubsection}{SQP}{19}{section*.20}
+\contentsline {section}{\numberline {2.3}Savitzky-Golay Filtering}{20}{section.2.3}
+\contentsline {section}{\numberline {2.4}Matching in Graphs}{23}{section.2.4}
+\contentsline {subsubsection}{Maximum Weight Matching, the Primal-Dual method}{23}{section*.23}
+\contentsline {chapter}{\numberline {3}Related Work}{25}{chapter.3}
+\contentsline {part}{II\hspace {1em}PROBLEM DEFINITION AND IMPLEMENTATION}{27}{part.2}
+\contentsline {chapter}{\numberline {4}Problem Statement}{28}{chapter.4}
+\contentsline {chapter}{\numberline {5}Implementation}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Geometric Monitoring Implementation}{29}{section.5.1}
+\contentsline {section}{\numberline {5.2}Distance Based Node Matching}{31}{section.5.2}
+\contentsline {section}{\numberline {5.3}Heuristic Balancing}{35}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Implementation of the Heuristic Balancing}{37}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Smoothing, Velocity and Acceleration Estimation via Savitzky-Golay}{40}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Implementation Challenges}{41}{section.5.4}
+\contentsline {part}{III\hspace {1em}RESULTS AND CONCLUSIONS}{43}{part.3}
+\contentsline {chapter}{\numberline {6}Experiments}{44}{chapter.6}
+\contentsline {section}{\numberline {6.1}Data, Setup and Monitoring Functions}{44}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Synthetic Datasets}{44}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Air Quality Database}{46}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Monitoring Functions}{48}{subsection.6.1.3}
+\contentsline {section}{\numberline {6.2}Experimental Results}{48}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Node Matching Algorithms}{49}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Balancing methods}{50}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Monitoring Synthetic Data}{53}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Monitoring Air Quality Data}{54}{subsection.6.2.4}
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{57}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusions}{57}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future Work}{57}{section.7.2}
+\contentsline {chapter}{References}{58}{chapter.8}
