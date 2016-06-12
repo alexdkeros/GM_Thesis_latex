@@ -12,6 +12,8 @@
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Interweaving data stream examples (NOISE)\relax }}{45}{figure.caption.41}
 \contentsline {figure}{\numberline {6.4}{\ignorespaces Streams of 8 nodes monitoring the variance of $NO_2$ air pollutant.\relax }}{46}{figure.caption.42}
 \contentsline {figure}{\numberline {6.5}{\ignorespaces Streams of 8 nodes monitoring the ratio $NO/NO_2$.\relax }}{46}{figure.caption.43}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Comparison of RAND, DISTR and DIST methods in terms of communication cost in messages over the range of 20 nodes.\relax }}{48}{figure.caption.44}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Number of nodes required to successfully resolve a violation, as a fraction of total Local Violations, for methods RAND, DISTR and DIST.\relax }}{49}{figure.caption.45}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Drift vectors of 4 nodes as a result of application of RAND, DIST and DISTR methods over the \emph {LIN} dataset.\relax }}{50}{figure.caption.46}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Comparison of RAND, DISTR and DIST methods in terms of communication cost in messages over the range of 20 nodes.\relax }}{49}{figure.caption.44}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Number of nodes required to successfully resolve a violation, as a fraction of total Local Violations, for methods RAND, DISTR and DIST.\relax }}{50}{figure.caption.45}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Drift vectors of 4 nodes as a result of application of RAND, DIST and DISTR methods over the \emph {LIN} dataset.\relax }}{51}{figure.caption.46}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Comparison of the GM and HM methods in terms of communication cost over a range of 20 nodes.\relax }}{51}{figure.caption.47}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces The drift vectors of 2 nodes with streams originating from the \emph {LIN} dataset, when the GM and HM balancing methods are applied.\relax }}{52}{figure.caption.48}
