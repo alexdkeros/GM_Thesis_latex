@@ -1,7 +1,5 @@
 \chapter{Problem Statement} \label{chap:probStatement}
 
-papers in chapter 3 do not scale well\\
-	why?\\
-	where exactly?\\
+The geometric monitoring method of~\cite{Sharfman2006GM} provides a rigid framework of projecting streams into an Euclidean, multi-dimensional space in order to effetively monitor threshold crossings of arbitrary functions. Subsequent work attemts to provide solutions to various drawbacks of the original method by optimizing local constraints at the distributed nodes, exploring node clustering schemes that will provide deterministic and efficient methods for optimal constraint computation and node selection during the balancing process, and employing forecasting models to predict and limit Local Violations that do not result to a threshold crossing of the aggregate stream.
 
-we try our luck at it, how? (one liner)
+While these attempts succeed at reducing the communication overhead of the geometric monitoring method, a scalability problem still persists regarding the dimensionality of the data streams and the monitoring node population size. This thesis explores the limits of the balancing process itself, and how optimal positioning of drift vectors into space, as well as appropriate node selection for inclusion into the balancing set can improve monitoring performance and reduce the communication cost, while taking into acount termporal stream properties, such as velocity and acceleration.
