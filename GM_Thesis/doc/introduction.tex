@@ -6,26 +6,14 @@ A multitude of recent emergent applications require real-time handling of rapidl
 
 These systems differ from the traditional Database Management Systems (DBMS), in the sense that they are following a \emph{pull paradigm}, where large scale event monitoring is required or continuous queries are issued, instead of the \emph{push paradigm}, where one-shot queries normally take place. Data Stream Systems are required to efficiently process, in real-time, data streams that are of high volume, continuous, size unbound, and most likely violative, in the sense that it would be inefficient to store them in memory. Additionally, the distributed nature of some applications incur an additional challenge to such systems, for they are required to communicate via a bandwidth-limited and possibly delay-inducing network in order to synchronize, reorganize, and provide a real-time overview of the results.
 
-Consequently, intelligent algorithms must be devised that are able to guarantee high accuracy standards while limiting the communication overhead induced to the distributed setting. 
+Consequently, intelligent algorithms must be devised that are able to guarantee high accuracy standards while limiting the communication overhead induced to the distributed setting. Approaches such as collecting all data to a central node for processing and polling nodes for data updates, as easily implementable as they may be, are prohibitive is such a decentralized scenario, either due to the communication and storage overhead they induce, or due to the accuracy degradation they inflict. 
 
+The geometric monitoring method proposed by Sharfman et al.~\cite{Sharfman2006GM} consists of a geometric approach in which convex optimization theory is being employed in order to guarantee that communication between distributed nodes takes place only when needed, while maintaining strict bounds on the accuracy of the monitoring task. By decomposing the task to local constraints at the  nodes, and by employing a clever mechanism for resolving constraint violations that are not representative of the system's state, i.e. false alarms, the communication between sites is significantly reduced without any accuracy degradation.
 
-application examples: 	threshold monitoring~\cite{Sharfman2006GM}
-						value monitoring (which can be reduced to threshold monitoring [error threshold monitoring] - paper: sketch-based geometric monitoring of distributed stream queries - garofalakis, keren, samoladas ~\cite{Garofalakis2013SketchBasedGM})
-						
+Following this framework, much work has emerged attempting to improve the communication bounds of the geometric monitoring method and to generalize the method to applications in the likes of continuous query answering. Following this trend, this thesis employs heuristics structured on top of multi-objective optimization problems and signal processing filters in order to better the performance of the geometric monitoring algorithm. Additionally, an existing method for hierarchical clustering of distributed streams, found in~\cite{Sharfman2012ShapeSensGM}, is improved and simplified.
 
-complexity: monitoring value or threshold monitoring over the whole set of observations, in real time
-			monitoring an arbitrary function (non linear function example), 
-			arbitrary number of features
+Evaluation of the proposed algorithms over synthetic and real-world datasets exhibits an improvement of up to 60\% over the original geometric monitoring method. Furthermore, the behaviour of the proposed algorithms in different settings is being researched.
 
-
-
-possible solutions:\\
-	1.centralize\\
-		- suffers from network overload, storage overload\\
-	2.poll\\
-		- not real time, update frequency-accuracy trade-off\\
-	3.GM monitoring\\
-	    -apply convex opt theory in order to reduce communication while retaining accuracy bounds
 
 \section{Motivation} \label{sec:intro-motivation}
 

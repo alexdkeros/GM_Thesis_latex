@@ -53,10 +53,3 @@
 \contentsline {section}{\numberline {7.1}Conclusions}{56}{section.7.1}
 \contentsline {section}{\numberline {7.2}Future Work}{56}{section.7.2}
 \contentsline {chapter}{References}{57}{chapter.8}
-\contentsline {chapter}{Appendix}{60}{chapter.9}
-\contentsline {section}{Chapter{} A\hspace {12pt} Geometric Monitoring Python Implementation}{61}{appendix.J}
-\contentsline {section}{\numberline {A.1}Python}{61}{section.J.1}
-\contentsline {section}{\numberline {A.2}Numpy and Scipy}{61}{section.J.2}
-\contentsline {section}{\numberline {A.3}Openopt}{61}{section.J.3}
-\contentsline {section}{\numberline {A.4}NetworkX}{61}{section.J.4}
-\contentsline {section}{\numberline {A.5}Putting It All Together}{61}{section.J.5}
