@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2016.5.27)  12 JUN 2016 03:32
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2016.5.27)  12 JUN 2016 06:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1128,13 +1128,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 !! List of Figures...!!
-(./thesis.lof)
+(./thesis.lof [9
+
+])
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
- [9
-
-] [10] [1
+ [10] [1
 
 ]
 \openout2 = `doc/introduction.aux'.
@@ -1311,12 +1311,32 @@ Overfull \hbox (16.98344pt too wide) in paragraph at lines 65--66
  [][] 
  []
 
-[44] [45]) [46]
+[44]
+File: img/AT_NO2_sq_2014_8N_global.pdf Graphic file (type QTm)
+ <use  "img/AT_NO2_sq_2014_8N_global.pdf" >
+File: img/AT_NO2_sq_2014_8N_streams.pdf Graphic file (type QTm)
+
+<use  "img/AT_NO2_sq_2014_8N_streams.pdf" >
+Overfull \hbox (16.98344pt too wide) in paragraph at lines 89--90
+ [][] 
+ []
+
+[45]
+File: img/AT_NO2_NO_2014_8N_global.pdf Graphic file (type QTm)
+ <use  "img/AT_NO2_NO_2014_8N_global.pdf" >
+File: img/AT_NO2_NO_2014_8N_streams.pdf Graphic file (type QTm)
+
+<use  "img/AT_NO2_NO_2014_8N_streams.pdf" >
+Overfull \hbox (16.98344pt too wide) in paragraph at lines 106--107
+ [][] 
+ []
+
+[46] [47]) [48]
 \openout2 = `doc/conclusions.aux'.
 
  (./doc/conclusions.tex
 Chapter 7.
-) [47
+) [49
 
 
 
@@ -1325,17 +1345,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
 
-[48
+[50
 
 
 
-] [49]
+] [51]
 Underfull \hbox (badness 10000) in paragraph at lines 165--168
 []\OT1/cmr/m/n/10.95 9 / reference / generated / networkx . algorithms . matchi
 ng . max[]weight[]matching . html[]$[][]. Ac-cessed:
  []
 
-) [50] [51
+
+Underfull \hbox (badness 2229) in paragraph at lines 178--180
+[]\OT1/cmr/m/n/10.95 European en-vi-ron-men-tal agency - aq e-reporting. http:/
+/www.eea.europa.eu/data-and-
+ []
+
+) [52] [53
 
 ]
 \openout2 = `doc/appendixGMPythonImpl.aux'.
@@ -1345,7 +1371,7 @@ Overfull \hbox (2.76404pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/20.74 Geometric Mon-i-tor-ing Python Im-ple-men-ta-tion 
  []
 
-) [52
+) [54
 
 
 
@@ -1366,12 +1392,12 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 33821 strings out of 493727
- 724448 string characters out of 6147890
+ 33832 strings out of 493727
+ 724725 string characters out of 6147890
  915175 words of memory out of 5000000
- 36480 multiletter control sequences out of 15000+600000
+ 36487 multiletter control sequences out of 15000+600000
  20056 words of font info for 76 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,24n,77p,1565b,1264s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (62 pages).
+Output written on thesis.pdf (64 pages).

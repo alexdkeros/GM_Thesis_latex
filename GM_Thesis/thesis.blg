@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: doc/abstract.aux
@@ -28,45 +28,45 @@ Warning--I didn't find a database entry for "DBLP:conf/vldb/2013bd3"
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 22 entries,
+You've used 23 entries,
             4039 wiz_defined-function locations,
-            984 strings with 12629 characters,
-and the built_in function-call counts, 17606 in all, are:
-= -- 1467
-> -- 369
+            988 strings with 12747 characters,
+and the built_in function-call counts, 17850 in all, are:
+= -- 1482
+> -- 370
 < -- 152
-+ -- 210
++ -- 211
 - -- 57
-* -- 868
-:= -- 2698
-add.period$ -- 54
-call.type$ -- 22
-change.case$ -- 25
+* -- 869
+:= -- 2735
+add.period$ -- 56
+call.type$ -- 23
+change.case$ -- 26
 chr.to.int$ -- 366
-cite$ -- 22
-duplicate$ -- 1224
-empty$ -- 1398
+cite$ -- 23
+duplicate$ -- 1249
+empty$ -- 1430
 format.name$ -- 73
-if$ -- 4044
+if$ -- 4100
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 218
-newline$ -- 115
+int.to.str$ -- 23
+missing$ -- 224
+newline$ -- 118
 num.names$ -- 19
-pop$ -- 485
+pop$ -- 504
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1353
+skip$ -- 1376
 stack$ -- 0
 substring$ -- 876
-swap$ -- 1034
+swap$ -- 1045
 text.length$ -- 30
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 22
+type$ -- 23
 warning$ -- 0
 while$ -- 78
-width$ -- 24
-write$ -- 273
+width$ -- 25
+write$ -- 279
 (There was 1 error message)

@@ -83,15 +83,6 @@ C.~Olston, J.~Jiang, and J.~Widom, ``Adaptive filters for continuous queries
   [Online]. Available: \url{http://doi.acm.org/10.1145/872757.872825}
 \BIBentrySTDinterwordspacing
 
-\bibitem{BabcockDistributedTopk}
-\BIBentryALTinterwordspacing
-B.~Babcock and C.~Olston, ``Distributed top-k monitoring,'' in
-  \emph{Proceedings of the 2003 ACM SIGMOD International Conference on
-  Management of Data}, ser. SIGMOD '03.\hskip 1em plus 0.5em minus 0.4em\relax
-  New York, NY, USA: ACM, 2003, pp. 28--39. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/872757.872764}
-\BIBentrySTDinterwordspacing
-
 \bibitem{GibbonsSimpleFuncEstimationOverUnion}
 \BIBentryALTinterwordspacing
 P.~B. Gibbons and S.~Tirthapura, ``Estimating simple functions on the union of
@@ -106,6 +97,15 @@ P.~B. Gibbons and S.~Tirthapura, ``Estimating simple functions on the union of
 B.~P. Gibbons and S.~Tirthapura, ``Distributed streams algorithms for sliding
   windows,'' \emph{Theory of Computing Systems}, vol.~37, no.~3, pp. 457--478,
   2004. [Online]. Available: \url{http://dx.doi.org/10.1007/s00224-004-1156-4}
+\BIBentrySTDinterwordspacing
+
+\bibitem{BabcockDistributedTopk}
+\BIBentryALTinterwordspacing
+B.~Babcock and C.~Olston, ``Distributed top-k monitoring,'' in
+  \emph{Proceedings of the 2003 ACM SIGMOD International Conference on
+  Management of Data}, ser. SIGMOD '03.\hskip 1em plus 0.5em minus 0.4em\relax
+  New York, NY, USA: ACM, 2003, pp. 28--39. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/872757.872764}
 \BIBentrySTDinterwordspacing
 
 \bibitem{CormodeApproxContQueryingDistrStreams}
@@ -173,5 +173,9 @@ pyopt - slsqp. \url{http://www.pyopt.org/reference/optimizers.slsqp.html}.
 \bibitem{pyOptCONMIN}
 pyopt - conmin. \url{http://www.pyopt.org/reference/optimizers.conmin.html}.
   Accessed: 2016-02-25.
+
+\bibitem{AirBase}
+European environmental agency - aq e-reporting.
+  http://www.eea.europa.eu/data-and-maps/data/aqereporting-1.
 
 \end{thebibliography}
