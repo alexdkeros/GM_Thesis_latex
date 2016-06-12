@@ -127,7 +127,7 @@ The monitoring functions used during the experiments were carefully chosen in or
 
 The following experiments are performed in order to gain an insight on the behavior of the methods proposed in this thesis and how these compare to methods presented in prior work, focusing on the communication overhead induced by each method until a Global Violation takes place. 
 
-In Subsection~\ref{subsec:matchingComp} our distance based node matching algorithm (Section~\ref{sec:impl-distNodeMatch}) is compared with two methods of violation resolution found in related work. Subsection~\ref{subsec:balComp} compares the balancing algorithm of the seminar work on geometric monitoring with our proposed, heuristic, method. Subsequently,in Subsection~\ref{subsec:mainComp} our HDM method is compared with the GM method while exploring the impact different tuning parameters induce on the performance of our algorithm. Finally, our algorithm HDM is put to test using datasets from a real-world domain, with GM operating as the baseline method, in Subsection~\ref{actualComp}.
+In Subsection~\ref{subsec:matchingComp} our distance based node matching algorithm (Section~\ref{sec:impl-distNodeMatch}) is compared with two methods of violation resolution found in related work. Subsection~\ref{subsec:balComp} compares the balancing algorithm of the seminar work on geometric monitoring with our proposed, heuristic, method. Subsequently,in Subsection~\ref{subsec:mainComp} our HDM method is compared with the GM method while exploring the impact different tuning parameters induce on the performance of our algorithm. Finally, our algorithm HDM is put to test using datasets from a real-world domain, with GM operating as the baseline method, in Subsection~\ref{subsec:actualComp}.
 
 \subsection{Node Matching Algorithms} \label{subsec:matchingComp}
 
@@ -244,7 +244,7 @@ When applied to the \emph{LIN} dataset the HM method consistently surpasses the 
 
 In order to eliminate the unpredictability the RAND method incurs to HM, we compare the GM method with a combination of our proposed methods (DIST, HM), resulting to the HDM method. Figure~\ref{fig:mainComp-msgs} depicts the performance of the two methods over a range of 2 to 20 nodes, in terms of communication cost. Following that, Figures~\ref{fig:mainComp-order} and~\ref{fig:mainComp-wl} examine the way the Savitzky-Golay filter parameters affect the performance of HDM. Finally, Figure~\ref{fig:mainComp-dims} illustrates the scalability of the HDM method compared to the GM method, in terms of communication cost and stream dimensionality.
 
-Once again, the HDM method outperforms the original GM method when applied onto the \emph{LIN} dataset for any parameter setting of the Savitzky-Golay filter. When datasets in the likes of \emph{INT} and \emph{NOISE} are employed, where smooth and drastic velocity changes can be observed, respectively, fine-tuning the filter's parameters can reduce the communication burden of HDM significantly, surpassing the GM algorithm in terms of communication reduction. Finally, when multiple stream dimensions are monitored the HDM method illustrates similar performance as with its one-dimensional stream counterparts.
+Once again, the HDM method outperforms the original GM method when applied onto the \emph{LIN} dataset for any parameter setting of the Savitzky-Golay filter by achieving a communication reduction of up to 60 percent. When datasets in the likes of \emph{INT} and \emph{NOISE} are employed, where smooth and drastic velocity changes can be observed, respectively, fine-tuning the filter's parameters can reduce the communication burden of HDM significantly, surpassing the GM algorithm in terms of communication reduction, as shown in Figures~\ref{fig:mainComp-order} and~\ref{fig:mainComp-wl}. Finally, when multiple stream dimensions are monitored the HDM method illustrates similar performance as with its one-dimensional stream counterparts.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%msgs main  figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!htb]
@@ -340,8 +340,22 @@ Once again, the HDM method outperforms the original GM method when applied onto 
 %TODO:actual data?
 \subsection{Monitoring Air Quality Data} \label{subsec:actualComp}
 
-compare classic random with heristic distance based matching for the actual data, over a range of nodes and sg parameters to check how it affects performance
+In this final experiment a real-world dataset is employed, originating from air quality measurements. Specifically, the variance of $NO_2$ and the ratio of $NO$ to $NO_2$ are monitored in order to evaluate the HDM and GM methods over real-world applications, once again in terms of communication costs over a range of 4 to 16 nodes, as shown in Figure~\ref{fig:actualComp}.
 
-actual data streams that have great variance and irregularities lead to poor proposed algorithm performance
+The HDM method exhibits a decent performance when the appropriate Savitzky-Golay parameters are carefully selected, even though the streams are characterized by great variance and irregularities in time. Compared to the GM method, the HDM method succeeds at reducing the communication overhead by approximately 10 percent.
 
-*images
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%msgs actual figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!htb]
+\begin{subfigure}{0.49\textwidth}
+  \includegraphics[width=\linewidth]{img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf}
+  \caption{Communication costs of methods GM and HDM over a range of 4 to 16 nodes, when variance monitoring of $NO_2$ is taking place. The Savitzky-Golay window size is set to 6 and the approximation order is set to 2.}
+\end{subfigure}\hfill
+\begin{subfigure}{0.49\textwidth}
+  \includegraphics[width=\linewidth]{img/actual_msg_NO2_NO_2014_nodes.pdf}
+  \caption{Communication costs of methods GM and HDM over a range of 4 to 16 nodes, when monitoring the ratio $NO$ to $NO_2$. The Savitzky-Golay window size is set to 10 and the approximation order is set to 1.}
+\end{subfigure}\hfill
+\vspace{0.5cm}
+\caption{Comparison of HDM and GM methods in terms of communication cost over a range of 4 to 16 nodes originating from the air pollution dataset.} \label{fig:actualComp}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

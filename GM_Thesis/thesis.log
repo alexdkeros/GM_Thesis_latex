@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2016.5.27)  12 JUN 2016 19:01
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2016.5.27)  12 JUN 2016 19:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1328,11 +1328,7 @@ Overfull \hbox (16.98344pt too wide) in paragraph at lines 105--106
  [][] 
  []
 
-[45] [46]
-
-LaTeX Warning: Reference `actualComp' on page 47 undefined on input line 130.
-
-[47] [48]
+[45] [46] [47] [48]
 File: img/matching_msg_linear.pdf Graphic file (type QTm)
  <use  "img/matching_msg_linear.pdf" >
 File: img/matching_msg_interweaving.pdf Graphic file (type QTm)
@@ -1425,7 +1421,14 @@ File: img/main_classic_drifts_linear4N.pdf Graphic file (type QTm)
 <use  "img/main_classic_drifts_linear4N.pdf" >
 File: img/main_heuristic_drifts_linear4N.pdf Graphic file (type QTm)
 
-<use  "img/main_heuristic_drifts_linear4N.pdf" > [53]) [54] [55]
+<use  "img/main_heuristic_drifts_linear4N.pdf" > [53]
+File: img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf Graphic file (type QTm)
+
+
+<use  "img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf" >
+File: img/actual_msg_NO2_NO_2014_nodes.pdf Graphic file (type QTm)
+
+<use  "img/actual_msg_NO2_NO_2014_nodes.pdf" >) [54] [55]
 \openout2 = `doc/conclusions.aux'.
 
 
@@ -1484,16 +1487,13 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 148.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 33904 strings out of 493727
- 726939 string characters out of 6147890
- 916725 words of memory out of 5000000
- 36531 multiletter control sequences out of 15000+600000
+ 33908 strings out of 493727
+ 727105 string characters out of 6147890
+ 916898 words of memory out of 5000000
+ 36533 multiletter control sequences out of 15000+600000
  20402 words of font info for 77 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,24n,77p,1565b,1264s stack positions out of 5000i,500n,10000p,200000b,80000s
