@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2016.5.27)  12 JUN 2016 21:52
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2016.5.27)  12 JUN 2016 22:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1349,10 +1349,17 @@ File: img/matchings_classic_distoptpair_drifts.pdf Graphic file (type QTm)
 <use  "img/matchings_classic_distoptpair_drifts.pdf" >
 File: img/matchings_classic_distroptpair_drifts.pdf Graphic file (type QTm)
 
-<use  "img/matchings_classic_distroptpair_drifts.pdf" >
-File: img/bal_msg_linear_nodes.pdf Graphic file (type QTm)
+<use  "img/matchings_classic_distroptpair_drifts.pdf" > [50]
 
-<use  "img/bal_msg_linear_nodes.pdf" >
+LaTeX Warning: Text page 51 contains only floats.
+
+
+Overfull \vbox (4.43068pt too high) has occurred while \output is active []
+
+
+[51]
+File: img/bal_msg_linear_nodes.pdf Graphic file (type QTm)
+ <use  "img/bal_msg_linear_nodes.pdf" >
 Underfull \hbox (badness 1112) in paragraph at lines 211--211
 \OT1/cmr/m/n/10 ods GM and HM for the \OT1/cmr/m/it/10 LIN
  []
@@ -1361,17 +1368,10 @@ File: img/bal_msg_interweaving_nodes.pdf Graphic file (type QTm)
 <use  "img/bal_msg_interweaving_nodes.pdf" >
 File: img/bal_msg_noisyinterweaving_nodes.pdf Graphic file (type QTm)
 
-<use  "img/bal_msg_noisyinterweaving_nodes.pdf" > [50]
-
-LaTeX Warning: Text page 51 contains only floats.
-
-
-Overfull \vbox (4.43068pt too high) has occurred while \output is active []
-
-
-[51] [52]
+<use  "img/bal_msg_noisyinterweaving_nodes.pdf" > [52]
 File: img/bal_classic_drifts_linear2N.pdf Graphic file (type QTm)
- <use  "img/bal_classic_drifts_linear2N.pdf" >
+
+<use  "img/bal_classic_drifts_linear2N.pdf" >
 File: img/bal_heuristic_drifts_linear2N.pdf Graphic file (type QTm)
 
 <use  "img/bal_heuristic_drifts_linear2N.pdf" > [53]
@@ -1423,7 +1423,7 @@ File: img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf Graphic file (type QTm)
 <use  "img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf" >
 File: img/actual_msg_NO2_NO_2014_nodes.pdf Graphic file (type QTm)
 
-<use  "img/actual_msg_NO2_NO_2014_nodes.pdf" >) [55] [56]
+<use  "img/actual_msg_NO2_NO_2014_nodes.pdf" > [55]) [56]
 \openout2 = `doc/conclusions.aux'.
 
 
@@ -1467,6 +1467,9 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 148.
 
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
