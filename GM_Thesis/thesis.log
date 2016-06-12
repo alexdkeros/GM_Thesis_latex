@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2016.5.27)  11 JUN 2016 23:29
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2016.5.27)  12 JUN 2016 03:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1134,7 +1134,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [9
 
-] [1
+] [10] [1
 
 ]
 \openout2 = `doc/introduction.aux'.
@@ -1283,12 +1283,40 @@ Chapter 6.
 [43
 
 
-]) [44]
+]
+File: img/linear1D20N_global.pdf Graphic file (type QTm)
+ <use  "img/linear1D20N_global.pdf" >
+File: img/linear1D20N_streams.pdf Graphic file (type QTm)
+
+<use  "img/linear1D20N_streams.pdf" >
+Overfull \hbox (16.98344pt too wide) in paragraph at lines 29--30
+ [][] 
+ []
+
+File: img/interweaving1D20N_global.pdf Graphic file (type QTm)
+<use  "img/interweaving1D20N_global.pdf" >
+File: img/interweaving1D20N_streams.pdf Graphic file (type QTm)
+
+<use  "img/interweaving1D20N_streams.pdf" >
+Overfull \hbox (16.98344pt too wide) in paragraph at lines 47--48
+ [][] 
+ []
+
+File: img/noisyinterweaving1D20N_global.pdf Graphic file (type QTm)
+<use  "img/noisyinterweaving1D20N_global.pdf" >
+File: img/noisyinterweaving1D20N_streams.pdf Graphic file (type QTm)
+
+<use  "img/noisyinterweaving1D20N_streams.pdf" >
+Overfull \hbox (16.98344pt too wide) in paragraph at lines 65--66
+ [][] 
+ []
+
+[44] [45]) [46]
 \openout2 = `doc/conclusions.aux'.
 
  (./doc/conclusions.tex
 Chapter 7.
-) [45
+) [47
 
 
 
@@ -1297,17 +1325,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
 
-[46
+[48
 
 
 
-] [47]
+] [49]
 Underfull \hbox (badness 10000) in paragraph at lines 165--168
 []\OT1/cmr/m/n/10.95 9 / reference / generated / networkx . algorithms . matchi
 ng . max[]weight[]matching . html[]$[][]. Ac-cessed:
  []
 
-) [48] [49
+) [50] [51
 
 ]
 \openout2 = `doc/appendixGMPythonImpl.aux'.
@@ -1317,7 +1345,7 @@ Overfull \hbox (2.76404pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/20.74 Geometric Mon-i-tor-ing Python Im-ple-men-ta-tion 
  []
 
-) [50
+) [52
 
 
 
@@ -1338,12 +1366,12 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 33804 strings out of 493727
- 724010 string characters out of 6147890
- 915176 words of memory out of 5000000
- 36469 multiletter control sequences out of 15000+600000
+ 33821 strings out of 493727
+ 724448 string characters out of 6147890
+ 915175 words of memory out of 5000000
+ 36480 multiletter control sequences out of 15000+600000
  20056 words of font info for 76 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,24n,77p,1565b,1264s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (59 pages).
+Output written on thesis.pdf (62 pages).

@@ -40,22 +40,22 @@
 \contentsline {section}{\numberline {5.4}Implementation Challenges}{40}{section.5.4}
 \contentsline {part}{III\hspace {1em}RESULTS AND CONCLUSIONS}{42}{part.3}
 \contentsline {chapter}{\numberline {6}Experiments}{43}{chapter.6}
-\contentsline {section}{\numberline {6.1}Data and Setup}{43}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Synthetic Data}{43}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Air Quality Database}{43}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Experimental Results}{43}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Node Matching Algorithms}{43}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Balancing methods}{44}{subsection.6.2.2}
-\contentsline {subsection}{\numberline {6.2.3}Monitoring Synthetic Data}{44}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Monitoring Air Quality Data}{44}{subsection.6.2.4}
-\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{45}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conclusions}{45}{section.7.1}
-\contentsline {section}{\numberline {7.2}Future Work}{45}{section.7.2}
-\contentsline {chapter}{References}{46}{chapter.8}
-\contentsline {chapter}{Appendix}{49}{chapter.9}
-\contentsline {section}{Chapter{} A\hspace {12pt} Geometric Monitoring Python Implementation}{50}{appendix.J}
-\contentsline {section}{\numberline {A.1}Python}{50}{section.J.1}
-\contentsline {section}{\numberline {A.2}Numpy and Scipy}{50}{section.J.2}
-\contentsline {section}{\numberline {A.3}Openopt}{50}{section.J.3}
-\contentsline {section}{\numberline {A.4}NetworkX}{50}{section.J.4}
-\contentsline {section}{\numberline {A.5}Putting It All Together}{50}{section.J.5}
+\contentsline {section}{\numberline {6.1}Data, Setup and Monitoring Functions}{43}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Synthetic Datasets}{43}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Air Quality Database}{44}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Experimental Results}{45}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Node Matching Algorithms}{46}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Balancing methods}{46}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Monitoring Synthetic Data}{46}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Monitoring Air Quality Data}{46}{subsection.6.2.4}
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{47}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conclusions}{47}{section.7.1}
+\contentsline {section}{\numberline {7.2}Future Work}{47}{section.7.2}
+\contentsline {chapter}{References}{48}{chapter.8}
+\contentsline {chapter}{Appendix}{51}{chapter.9}
+\contentsline {section}{Chapter{} A\hspace {12pt} Geometric Monitoring Python Implementation}{52}{appendix.J}
+\contentsline {section}{\numberline {A.1}Python}{52}{section.J.1}
+\contentsline {section}{\numberline {A.2}Numpy and Scipy}{52}{section.J.2}
+\contentsline {section}{\numberline {A.3}Openopt}{52}{section.J.3}
+\contentsline {section}{\numberline {A.4}NetworkX}{52}{section.J.4}
+\contentsline {section}{\numberline {A.5}Putting It All Together}{52}{section.J.5}
