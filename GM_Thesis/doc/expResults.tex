@@ -122,26 +122,57 @@ The monitoring functions used during the experiments were carefully chosen in or
 
 \section{Experimental Results} \label{sec:exp}
 
-\subsection{Node Matching Algorithms}
+The following experiments are performed in order to gain an insight on the behavior of the methods proposed in this thesis and how these compare to methods presented in prior work, focusing on the communication overhead induced by each method. 
+
+In Subsection~\ref{subsec:matchingComp} our distance based node matching algorithm (Section~\ref{sec:impl-distNodeMatch}) is compared with two methods of violation resolution found in related work. Subsection~\ref{subsec:balComp} compares the balancing algorithm of the seminar work on geometric monitoring with our proposed, heuristic, method. Subsequently, our HDM method is compared with the GM method while exploring the impact different tuning parameters induce on the performance of our algorithm. Finally, our algorithm HDM is put to test using datasets from a real-world domain, with GM operating as the baseline method.
+
+\subsection{Node Matching Algorithms} \label{subsec:matchingComp}
+
+The seminar geometric monitoring method~\cite{Sharfman2006GM} dictates that random nodes are requested in order to perform a violation resolution via the balancing method (RAND). Subsequent work~\cite{Keren2014GMHetStreams} examines the partitioning of nodes into disjoint pairs, so that the probability of a violation resolution in case of a local violation is maximized by maximizing the percentage of data vectors that result to a successful balancing operation (DISTR), either by iterating over all data vectors pairs between all nodes and evaluating the constraint, or by employing the pdfs of the data streams. Our proposed method depends only on simple Euclidean distance computations between data stream vectors, not being bound on the monitoring function and its possible irregularities. All three methods are being compared using the original geometric monitoring balancing method GM.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%msgs matching lin figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure*}[t!]
+\centering
+\begin{subfigure}[t]{0.31\textwidth}
+\centering
+\includegraphics[scale=0.28, trim=10.5cm 0 0 0]{img/matching_msg_linear.pdf}
+\caption{Global statistics stream of 8 nodes monitoring the variance of $NO_2$ air pollutant.}
+\end{subfigure}
+\begin{subfigure}[t]{0.31\textwidth}
+\centering
+\includegraphics[scale=0.28, trim=4.5cm 0 0 0]{img/matching_msg_interweaving.pdf}
+\caption{Local statistics streams of 8 nodes monitoring the variance of $NO_2$ air pollutant.} 
+\end{subfigure}
+\begin{subfigure}[t]{0.31\textwidth}
+\centering
+\includegraphics[scale=0.28]{img/matching_msg_noisyinterweaving.pdf}
+\caption{Local statistics streams of 8 nodes monitoring the variance of $NO_2$ air pollutant.} 
+\end{subfigure}
+\vspace{0.5cm}
+\caption{Streams of 8 nodes monitoring the variance of $NO_2$ air pollutant.}\label{fig:NO2_sq}
+\end{figure*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 compare distance based node matching to distribution based node matching and the random selection algorithm with the classic balancing method
 
 *images
 
-\subsection{Balancing methods}
+\subsection{Balancing methods} \label{subsec:balComp}
 
 compare classic balancing with heuristic balancing with random selection algorithm
 
 *images
 
-\subsection{Monitoring Synthetic Data}
+\subsection{Monitoring Synthetic Data} \label{subsec:mainComp}
 
 compare classic random with heuristic distance based matching over a range of nodes, a range of window sizes and a range of orders for SG
 
 *images
 
 %TODO:actual data?
-\subsection{Monitoring Air Quality Data}
+\subsection{Monitoring Air Quality Data} \label{subsec:actualComp}
 
 compare classic random with heristic distance based matching for the actual data, over a range of nodes and sg parameters to check how it affects performance
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2016.5.27)  12 JUN 2016 06:05
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/dev/Debian) (preloaded format=xelatex 2016.5.27)  12 JUN 2016 06:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -954,8 +954,11 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 67.
 (./doc/abstract.aux) (./doc/pubAbstract.aux) (./doc/dedication.aux)
 (./doc/acknowledgments.aux) (./doc/introduction.aux)
 (./doc/theoreticalBackground.aux) (./doc/relatedWork.aux)
-(./doc/probStatement.aux) (./doc/implementation.aux) (./doc/expResults.aux)
-(./doc/conclusions.aux) (./doc/appendixGMPythonImpl.aux))
+(./doc/probStatement.aux) (./doc/implementation.aux) (./doc/expResults.aux
+
+LaTeX Warning: Label `fig:NO2_sq' multiply defined.
+
+) (./doc/conclusions.aux) (./doc/appendixGMPythonImpl.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
@@ -1331,12 +1334,28 @@ Overfull \hbox (16.98344pt too wide) in paragraph at lines 106--107
  [][] 
  []
 
-[46] [47]) [48]
+[46] [47]
+File: img/matching_msg_linear.pdf Graphic file (type QTm)
+ <use  "img/matching_msg_linear.pdf" >
+File: img/matching_msg_interweaving.pdf Graphic file (type QTm)
+
+<use  "img/matching_msg_interweaving.pdf" >
+Overfull \hbox (0.64604pt too wide) in paragraph at lines 143--144
+ [][] 
+ []
+
+File: img/matching_msg_noisyinterweaving.pdf Graphic file (type QTm)
+<use  "img/matching_msg_noisyinterweaving.pdf" >
+Overfull \hbox (36.49626pt too wide) in paragraph at lines 148--149
+ [][] 
+ []
+
+[48]) [49]
 \openout2 = `doc/conclusions.aux'.
 
  (./doc/conclusions.tex
 Chapter 7.
-) [49
+) [50
 
 
 
@@ -1345,11 +1364,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
 
-[50
+[51
 
 
 
-] [51]
+] [52]
 Underfull \hbox (badness 10000) in paragraph at lines 165--168
 []\OT1/cmr/m/n/10.95 9 / reference / generated / networkx . algorithms . matchi
 ng . max[]weight[]matching . html[]$[][]. Ac-cessed:
@@ -1361,7 +1380,7 @@ Underfull \hbox (badness 2229) in paragraph at lines 178--180
 /www.eea.europa.eu/data-and-
  []
 
-) [52] [53
+) [53] [54
 
 ]
 \openout2 = `doc/appendixGMPythonImpl.aux'.
@@ -1371,7 +1390,7 @@ Overfull \hbox (2.76404pt too wide) in paragraph at lines 1--1
 []\OT1/cmr/bx/n/20.74 Geometric Mon-i-tor-ing Python Im-ple-men-ta-tion 
  []
 
-) [54
+) [55
 
 
 
@@ -1389,15 +1408,18 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 148.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 33832 strings out of 493727
- 724725 string characters out of 6147890
+ 33842 strings out of 493727
+ 724982 string characters out of 6147890
  915175 words of memory out of 5000000
- 36487 multiletter control sequences out of 15000+600000
+ 36494 multiletter control sequences out of 15000+600000
  20056 words of font info for 76 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,24n,77p,1565b,1264s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on thesis.pdf (64 pages).
+Output written on thesis.pdf (65 pages).
