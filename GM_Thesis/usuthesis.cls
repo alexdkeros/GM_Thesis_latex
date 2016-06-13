@@ -291,19 +291,31 @@
 %{{{ Set up margins, and other page parameters.
 % Use the geometry package for margins to make our life easier
 \RequirePackage{geometry}
+%\geometry{%
+%  	paper=letterpaper,
+%    includeheadfoot,
+%    truedimen,
+%    bindingoffset=0in,  % bindingoffset + left = required 1.5in margin
+%    left=1in,
+%    top=0.6in,
+%    right=1in,
+%    bottom=0.6in,
+%    headheight=\@@fontsize,
+%    headsep=\baselineskip,
+%    footskip=40pt}
 \geometry{%
     paper=letterpaper,
     includeheadfoot,
     truedimen,
-    bindingoffset=0in,  % bindingoffset + left = required 1.5in margin
+    bindingoffset=0.5in,  % bindingoffset + left = required 1.5in margin
     left=1in,
-    top=0.8in,
+    top=1in,
     right=1in,
-    bottom=0.8in,
+    bottom=1in,
     headheight=\@@fontsize,
     headsep=\baselineskip,
-    footskip=10pt}
-
+    footskip=24pt}
+    
 \tabskip 0.1em plus 10em minus 0.1em
 
 % set paragraph indent spacing

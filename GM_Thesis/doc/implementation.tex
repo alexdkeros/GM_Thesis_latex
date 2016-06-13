@@ -117,14 +117,13 @@ w_{i,j}=
 ~
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% distance figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%    
 \begin{figure}
-\vspace*{-2cm}
         \centering
-		\includegraphics[scale=0.35]{img/distoptpair_example_full.jpeg}
+		\includegraphics[scale=0.30]{img/distoptpair_example_full.jpeg}
         \caption{The drift vectors during Geometric Monitoring operation until a Global Violation. Distance based node matching is used on 4 nodes ($\{n_0, n_1, n_2, n_3\}$), with 1-dimensional data vectors, threshold $T=100$ and $f(x)=x$ as the monitoring function. The \emph{Type-2} node pairs are $\{n_0, n_3\}$ and $\{n_1, n_2\}$.}\label{fig:distoptpair}
 \end{figure}
 \begin{figure}
         \centering
-		\includegraphics[scale=0.35]{img/distoptpair_example_detail_edited.jpeg}
+		\includegraphics[scale=0.30]{img/distoptpair_example_detail_edited.jpeg}
         \caption{Detailed depiction of the Geometric Monitoring operation of Figure~\ref{fig:distoptpair}. Distance based node matching operating on 4 nodes ($\{n_0, n_1, n_2, n_3\}$), with 1-dimensional data vectors, threshold $T=100$ and $f(x)=x$ as the monitoring function. Distance $d_1$ denotes the distance of the data vector mean of the paired nodes $n_0$ and $n_3$ from the global mean (\emph{global data vector}) at $t=25$, whereas distance $d_2$ denotes the in-between distance of data vectors $\vec{v_0}(t)$ and $\vec{v_3}(t)$ of the node pair at time $t=25$ (before a Local Violation occurs, where $\vec{e}=0$ and $\vec{u_i}(t)=\vec{v_i}(t)\ \forall\ i\in[0,1,2,3], t<30$). Both distances are taking part in the edge weighting process, according to Equation~\ref{form:distanceMatchingWeights}.} \label{fig:distoptpairdetailed}
 \end{figure}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

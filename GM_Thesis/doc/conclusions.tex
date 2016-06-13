@@ -2,25 +2,15 @@
 
 \section{Conclusions} \label{sec:concFuture-conc}
 
+While the geometric monitoring method and its successors provide an efficient framework for monitoring distributed data streams, prior work's experimental results indicate that the scalability of this method can be vastly improved while respecting a communication-accuracy trade-off. Aspects of the method, such as optimal local constraints at the nodes, as provided by Safe Zones~\cite{Keren2013SafeZones}, as well as deterministic selection of nodes during the balancing process~\cite{Keren2014GMHetStreams} succeed at relieving the communication burden of the monitoring task at hand.
 
+Motivated by the aforementioned work on geometric monitoring, this thesis proposes a heuristic method to improve the original balancing process, an aspect not extensively reviewed. By employing multi-objective optimization methods, and specifically \emph{Sequential Least Squares Programming}, as well as the \emph{Savitzky-Golay smoothing and differentiating filter} for smoothing and estimating the velocity and acceleration of data stream projections, we propose a method to optimally position drift vectors during a balancing process in order to maximize the estimated time until a successive Local Violation. Furthermore, a distance-based improvement of the method for hierarchical clustering of nodes, originally proposed in~\cite{Keren2014GMHetStreams}, is presented, which clusters node pairs into disjoint sets that will effectively lead to a successful balance, while closely tracking the (unknown) global statistics stream and, at the same time, decoupling the matching operation from the monitoring function. Both of these methods are fully compatible with the original geometric monitoring method, as well as the improvements found in related work.
 
-problem statement in short\\
-what has been done in short\\
-our contributions\\
-mop
-sg
-distance based node matching
-directly applicable with the rest of the work done on GM
-synthetic and actual data
-explored node scalability
-oprimal selection of sg parameters
-good performance on linear and smooth steams
-short explanation of contributions 
+Evaluation on synthetic and real-world datasets retrieved from the ``European Environmental Agency - AQ e-Reporting'' database showcase the advantages and the drawbacks of our methods. When the monitoring task is compromised of smooth data streams without violent fluctuations and relatively low noise our heuristic method for node balancing, alongside our hierarchical node clustering scheme, achieves a communication reduction of up to 60\% compared to the original geometric monitoring method. On the other hand, when data streams are irregular as a function of time, or their signal to noise level is low, care must be taken at the selection of the Savitzky-Golay filter parameters for velocity and acceleration estimation of streams.
+
 
 \section{Future Work} \label{sec:concFuture-future}
 
-parameter estimation algorithm for sg
-sophisticated prediction models
-gaussian processes
-different solvers
-apply to the rest of the work to explore interraction
+Multi-objective optimization and advanced solvers are able to provide optimal, or nearly optimal solutions to a variety of fields, including the area of distributed data streams. As a multitude of sophisticated solvers exist, further research directed towards the formulation of more elaborate optimizing functions regarding the balancing process of the geometric monitoring method would be a promising continuation of contemporary work on the subject. 
+
+Regarding the estimation of velocity and acceleration of data streams in order to avert future constraint violations, sophisticated prediction models, such as multi-dimensional Gaussian processes and parameter estimation techniques for signal processing filters in the likes of the Savitzky-Golay filter provide an interesting field for exploration and experimentation on data stream systems.

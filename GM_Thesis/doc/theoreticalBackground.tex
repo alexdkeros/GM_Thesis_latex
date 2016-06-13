@@ -179,6 +179,51 @@ The decentralized scenario of the geometric monitoring method, summarized in Alg
 
 The centralized, coordinator-based geometric monitoring operation is summarized in Algorithms~\ref{algo:centralizedMonitoringNode},  and~\ref{algo:centralizedCoordinatorNode}, where the execution sequence of the monitoring nodes and the execution sequence of the coordinator node are described, respectively. The topology is that of a star network, where nodes are allowed to communicate exclusively with the coordinator node, as described in Section~\ref{subsubsec:theorBack-GM-centralized}. The coordinator node is responsible for answering queries about the monitoring status i.e., has absolute knowledge about threshold violations, and handles the balancing process (Section~\ref{subsubsec:theorBack-GM-balancingProc}). Local streams are tracked by the monitoring nodes on the basis of the last communicated estimate vector, and must inform the coordinator for any local threshold violation. The coordinator node can also monitor is respective data stream without any change in the described framework.\\
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% centralized coordinator node algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{algorithm}
+\setstretch{1.30}
+
+\SetKwFunction{Balance}{Balance}
+\SetKwProg{Fn}{Function}{}{end}
+
+\Begin{
+	
+	Wait for $<INIT, \cdot>$ messages from all monitoring nodes\tcc*[r]{Initialization}
+	$\vec{e}(0)=\frac{\sum_{i=1}^n {w_i \vec{v_i}(0)}}{\sum_{i=1}^n {w_i}}$\;
+
+	\If(\tcc*[f]{Monitoring operation}){new $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message received}{
+		$P'=P' \cup \{<i,\vec{v_i}(t),\vec{u_i}(t)>\}$\;
+		\Balance{$P'$}\;
+	}
+}
+
+\Fn(\tcc*[f]{Balancing Process}){\Balance{$P'$}}{
+	$\vec{b}=\frac{ \sum_{p_i \in P'} {w_i\vec{u_i}(t)} }{ \sum_{p_i \in P'} {w_i} }$\;
+	\uIf{$B(\vec{e}, \vec{b})$ is \emph{not} monochromatic}{
+		\uIf{$P-P'\neq \emptyset$}{
+			Send $<REQ>$ message to random node in $P-P'$ set\;
+		}
+		\Else{
+			$\vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}(t)}}{\sum_{i=1}^n {w_i}}$\;
+			Send $<NEW\textnormal{-}EST, \vec{e}(t)>$ message to all nodes\;
+			\Return \;
+		}
+	}
+	\Else{
+		\ForEach{$p_i \in P'$}{
+			$\Delta\vec{\delta_i}=w_i\vec{b}-w_i\vec{u_i}(t)$\;
+			Send $<ADJ\textnormal{-}SLK, \Delta\vec{\delta_i}>$ message to node $p_i$\;
+			\Return \;
+		}
+	}
+
+}
+\caption{Centralized algorithm's coordinator node operation\label{algo:centralizedCoordinatorNode}} 
+\end{algorithm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% centralized monitoring node algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{algorithm}[H]
 \setstretch{1.30}
@@ -225,50 +270,6 @@ The centralized, coordinator-based geometric monitoring operation is summarized 
 \caption{Centralized algorithm's monitoring node operation \label{algo:centralizedMonitoringNode}} 
 \end{algorithm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% centralized coordinator node algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{algorithm}
-\setstretch{1.30}
-
-\SetKwFunction{Balance}{Balance}
-\SetKwProg{Fn}{Function}{}{end}
-
-\Begin{
-	
-	Wait for $<INIT, \cdot>$ messages from all monitoring nodes\tcc*[r]{Initialization}
-	$\vec{e}(0)=\frac{\sum_{i=1}^n {w_i \vec{v_i}(0)}}{\sum_{i=1}^n {w_i}}$\;
-
-	\If(\tcc*[f]{Monitoring operation}){new $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message received}{
-		$P'=P' \cup \{<i,\vec{v_i}(t),\vec{u_i}(t)>\}$\;
-		\Balance{$P'$}\;
-	}
-}
-
-\Fn(\tcc*[f]{Balancing Process}){\Balance{$P'$}}{
-	$\vec{b}=\frac{ \sum_{p_i \in P'} {w_i\vec{u_i}(t)} }{ \sum_{p_i \in P'} {w_i} }$\;
-	\uIf{$B(\vec{e}, \vec{b})$ is \emph{not} monochromatic}{
-		\uIf{$P-P'\neq \emptyset$}{
-			Send $<REQ>$ message to random node in $P-P'$ set\;
-		}
-		\Else{
-			$\vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}(t)}}{\sum_{i=1}^n {w_i}}$\;
-			Send $<NEW\textnormal{-}EST, \vec{e}(t)>$ message to all nodes\;
-			\Return \;
-		}
-	}
-	\Else{
-		\ForEach{$p_i \in P'$}{
-			$\Delta\vec{\delta_i}=w_i\vec{b}-w_i\vec{u_i}(t)$\;
-			Send $<ADJ\textnormal{-}SLK, \Delta\vec{\delta_i}>$ message to node $p_i$\;
-			\Return \;
-		}
-	}
-
-}
-\caption{Centralized algorithm's coordinator node operation\label{algo:centralizedCoordinatorNode}} 
-\end{algorithm}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \section{Multi-objective Optimization} \label{sec:theorBack-MOP}
 
