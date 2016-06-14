@@ -703,7 +703,7 @@
         \rule{2.5in}{1pt} \hspace{0.5in}  \rule{2.5in}{1pt}\\[-3pt]
         \makebox[2.5in][l]{\Zmajorprof} \hspace{0.5in}
         \makebox[2.5in][l]{\Zfirstreader}\\
-        \makebox[2.5in][l]{Major Professor} \hspace{0.5in}
+        \makebox[2.5in][l]{Supervisor} \hspace{0.5in}
         \makebox[2.5in][l]{Committee Member}
         \null\vskip 2\baselineskip
 

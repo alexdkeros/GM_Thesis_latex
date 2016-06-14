@@ -16,7 +16,9 @@ Interweaving streams(\emph{INT}) are produced from the same parent distribution 
 
 Noisy streams (\emph{NOISE}) are the result of the previously used parent distribution with $\sigma=100$ as the standard deviation of each stream's velocity, $\lambda=0.15$ the velocity update parameter, and  $\mathcal{N}(0,30)$ the distribution of the additive Gaussian noise. Such one dimensional streams corresponding to 20 monitoring nodes, along with the resulting global statistics stream, are depicted in Figure~\ref{fig:noiseStreams}.
 
-When necessary, a partitioning of the dataset into training and testing sets is executed by uniformly sampling $20\%$ of the initial dataset as the training set, with the rest being the testing dataset.
+When necessary, a partitioning of the dataset into training and testing sets is executed by uniformly sampling $20\%$ of the initial dataset as the training set, with the rest being the testing dataset. 
+
+Unless stated otherwise, thresholds are set to $1*10^4$ for the \emph{LIN} dataset, $2*10^3$ for the \emph{INT} dataset, and $2.5*10^3$ for the \emph{NOISE} dataset, irrespective of the number of streams in each experiment. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%LIN synthetic datasets figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure*}[!h]
@@ -111,6 +113,8 @@ The real world dataset consists of measurements of air pollutants, as measured d
 
 Where applicable the training dataset is regarded as the first month of the year.
 
+Thresholds that lead to approximately 100 data stream updates until a Global Violation were selected, irrespective of the stream population.
+
 \subsection{Monitoring Functions}
 
 The monitoring functions used during the experiments were carefully chosen in order to illustrate, as accurately as possible, the properties and behavior of each examined method. Specifically:
@@ -137,7 +141,7 @@ A graphical illustration of the required nodes for a successful violation resolu
 These results can be explained by viewing how each methods handles node pairing, in Figure~\ref{fig:matchingComp-drifts}. It is evident that the DIST method attempts to group together data streams that are more likely to ``balance each other out'' by taking into account the in-between distance, as well as the distance of the average of the two streams from the global data stream. On the other hand, the DISTR method assists node pairings whose average will not induce a Local Violation, while allowing streams that are more likely to violate the threshold be grouped together. Subsequently, when a node from the latter pair signals a threshold crossing, its pair will not be able to successfully resolve the violation, thus requesting additional nodes from a higher level of the hierarchical clustering.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%msgs matching lin figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
+\begin{figure}[!t]
 \begin{subfigure}{0.32\textwidth}
   \includegraphics[width=\linewidth]{img/matching_msg_linear.pdf}
   \caption{Communication costs of methods RAND,DISTR and DIST for the \emph{LIN} dataset.}
@@ -154,9 +158,26 @@ These results can be explained by viewing how each methods handles node pairing,
 \caption{Comparison of RAND, DISTR and DIST methods in terms of communication cost in messages over the range of 20 nodes.} \label{fig:matchingComp-msgs}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%drifts matching lin figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!b]
+\begin{subfigure}{0.32\textwidth}
+  \includegraphics[width=\linewidth]{img/matchings_classic_random_drifts.pdf}
+  \caption{Drift vectors of 4 nodes as a result of the RAND method.}
+\end{subfigure}\hfill
+\begin{subfigure}{0.32\textwidth}
+  \includegraphics[width=\linewidth]{img/matchings_classic_distoptpair_drifts.pdf}
+  \caption{Drift vectors of 4 nodes as a result of the DIST method.}
+\end{subfigure}\hfill
+\begin{subfigure}{0.32\textwidth}%
+  \includegraphics[width=\linewidth]{img/matchings_classic_distroptpair_drifts.pdf}
+  \caption{Drift vectors of 4 nodes as a result of the DISTR method.}
+\end{subfigure}
+\vspace{0.5cm}
+\caption{Drift vectors of 4 nodes as a result of application of RAND, DIST and DISTR methods over the \emph{LIN} dataset.} \label{fig:matchingComp-drifts}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%matchings matching lin figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]\centering
+\begin{figure}[!ht]\centering
 \vspace{-0.5cm}
 \begin{subfigure}{\textwidth}
 	\centering
@@ -177,25 +198,6 @@ These results can be explained by viewing how each methods handles node pairing,
 \caption{Number of nodes required to successfully resolve a violation, as a fraction of total Local Violations, for methods RAND, DISTR and DIST.} \label{fig:matchingComp-matchings}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%drifts matching lin figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
-\begin{subfigure}{0.32\textwidth}
-  \includegraphics[width=\linewidth]{img/matchings_classic_random_drifts.pdf}
-  \caption{Drift vectors of 4 nodes as a result of the RAND method.}
-\end{subfigure}\hfill
-\begin{subfigure}{0.32\textwidth}
-  \includegraphics[width=\linewidth]{img/matchings_classic_distoptpair_drifts.pdf}
-  \caption{Drift vectors of 4 nodes as a result of the DIST method.}
-\end{subfigure}\hfill
-\begin{subfigure}{0.32\textwidth}%
-  \includegraphics[width=\linewidth]{img/matchings_classic_distroptpair_drifts.pdf}
-  \caption{Drift vectors of 4 nodes as a result of the DISTR method.}
-\end{subfigure}
-\vspace{0.5cm}
-\caption{Drift vectors of 4 nodes as a result of application of RAND, DIST and DISTR methods over the \emph{LIN} dataset.} \label{fig:matchingComp-drifts}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Balancing methods} \label{subsec:balComp}
 

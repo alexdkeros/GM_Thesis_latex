@@ -1,8 +1,9 @@
 \begin{abstract}
 
-BLAH BLAH
+Modern applications, such as telecommunication and sensor networks, have brought distributed data streams to the foreground, with monitoring tasks being an important aspect of such systems. The inefficiency of collecting data to a central point for processing dictates the need to devise local or semi-local algorithms that aim to reduce the communication overhead while retaining accuracy standards. 
 
+The \emph{geometric monitoring method} [Sharfman et al., ``A Geometric Approach to Monitoring Threshold Functions over Distributed Data Streams'', ACM SIGMOD '06 ICMD] provides a framework for enforcing local constraints at distributed nodes, as well as a method for resolving violations not representing the system's state i.e., false alarms, in order to reduce the necessary communication with the coordinating node. Furthermore, successive work proposed optimizations to the selection process of the nodes participating to the set that resolves such violations. 
 
-
+We propose a heuristic method that exploits data stream characteristics and utilizes multi-objective optimization in order to avert, or delay, successive false alarms by optimally positioning vector representations of data streams during the violation resolution process. Additionally, a hierarchical node clustering method for deterministic and optimal node selection, found in [ Keren et al., ``Geometric Monitoring of Heterogeneous Streams'', IEEE Trans. Knowl. Data Eng., 2014], is improved and simplified. Extensive experimentation on real-world and synthetic datasets showcase that the proposed methods can reduce the communication burden in half, compared to that of the original geometric monitoring method.
 
 \end{abstract}

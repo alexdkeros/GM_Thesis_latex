@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.3.23)  13 JUN 2016 18:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.3.23)  14 JUN 2016 18:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -944,11 +944,10 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 Package hyperref Info: Option `colorlinks' set `true' on input line 67.
 \c@theorem=\count168
  (./thesis.aux
-(./doc/abstract.aux) (./doc/pubAbstract.aux) (./doc/dedication.aux)
-(./doc/acknowledgments.aux) (./doc/introduction.aux)
-(./doc/theoreticalBackground.aux) (./doc/relatedWork.aux)
-(./doc/probStatement.aux) (./doc/implementation.aux) (./doc/expResults.aux)
-(./doc/conclusions.aux))
+(./doc/abstract.aux) (./doc/dedication.aux) (./doc/acknowledgments.aux)
+(./doc/introduction.aux) (./doc/theoreticalBackground.aux)
+(./doc/relatedWork.aux) (./doc/probStatement.aux) (./doc/implementation.aux)
+(./doc/expResults.aux) (./doc/conclusions.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
@@ -1066,32 +1065,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--2
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--8
+Underfull \hbox (badness 10000) in paragraph at lines 9--9
 
  []
 
 
-Package hyperref Warning: Suppressing link with empty target on input line 8.
+Package hyperref Warning: Suppressing link with empty target on input line 9.
 
 ) [3
 
 
 ]
-\openout2 = `doc/pubAbstract.aux'.
-
- (./doc/pubAbstract.tex [4
-
-
-
-])
 \openout2 = `doc/dedication.aux'.
 
 
 No file doc/dedication.tex.
 \openout2 = `doc/acknowledgments.aux'.
 
-(./doc/acknowledgments.tex [5
-
+(./doc/acknowledgments.tex [4
 
 
 
@@ -1111,7 +1102,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 1.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [6
+) [5
 
 
 
@@ -1119,23 +1110,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
- [7]
-!! List of Tables...!!
-(./thesis.lot)
-\tf@lot=\write6
-\openout6 = `thesis.lot'.
-
- [8
-
-]
+ [6]
 !! List of Figures...!!
-(./thesis.lof [9
+(./thesis.lof [7
 
 ])
-\tf@lof=\write7
-\openout7 = `thesis.lof'.
+\tf@lof=\write6
+\openout6 = `thesis.lof'.
 
- [10] [1
+ [8] [1
 
 ]
 \openout2 = `doc/introduction.aux'.
@@ -1234,7 +1217,7 @@ e 12.
 ] [31] [32] [33] (./img/NodeMatchingHierarchy.tex)
 File: img/NodeMatchingHierarchy.tex Graphic file (type tex)
 
-<img/distoptpair_example_full.jpeg, id=733, 903.375pt x 702.625pt>
+<img/distoptpair_example_full.jpeg, id=714, 903.375pt x 702.625pt>
 File: img/distoptpair_example_full.jpeg Graphic file (type jpg)
 
 <use img/distoptpair_example_full.jpeg>
@@ -1242,7 +1225,7 @@ Package pdftex.def Info: img/distoptpair_example_full.jpeg used on input line 1
 21.
 (pdftex.def)             Requested size: 271.01459pt x 210.78912pt.
 
-<img/distoptpair_example_detail_edited.jpeg, id=734, 906.38625pt x 705.63625pt>
+<img/distoptpair_example_detail_edited.jpeg, id=715, 906.38625pt x 705.63625pt>
 File: img/distoptpair_example_detail_edited.jpeg Graphic file (type jpg)
 <use img/distoptpair_example_detail_edited.jpeg>
 Package pdftex.def Info: img/distoptpair_example_detail_edited.jpeg used on inp
@@ -1273,7 +1256,7 @@ Overfull \hbox (27.89682pt too wide) in paragraph at lines 218--218
 [] 
  []
 
-[39] [40] [41] [42] <img/savgol.pdf, id=864, 650.43pt x 505.89pt>
+[39] [40] [41] [42] <img/savgol.pdf, id=846, 650.43pt x 505.89pt>
 File: img/savgol.pdf Graphic file (type pdf)
 
 <use img/savgol.pdf>
@@ -1290,215 +1273,212 @@ Chapter 6.
 [46
 
 
-] <img/linear1D20N_global.pdf, id=905, 650.43pt x 505.89pt>
+] <img/linear1D20N_global.pdf, id=885, 650.43pt x 505.89pt>
 File: img/linear1D20N_global.pdf Graphic file (type pdf)
 
 <use img/linear1D20N_global.pdf>
-Package pdftex.def Info: img/linear1D20N_global.pdf used on input line 26.
+Package pdftex.def Info: img/linear1D20N_global.pdf used on input line 28.
 (pdftex.def)             Requested size: 213.66866pt x 182.12025pt.
 
-<img/linear1D20N_streams.pdf, id=906, 650.43pt x 505.89pt>
+<img/linear1D20N_streams.pdf, id=886, 650.43pt x 505.89pt>
 File: img/linear1D20N_streams.pdf Graphic file (type pdf)
 
 <use img/linear1D20N_streams.pdf>
-Package pdftex.def Info: img/linear1D20N_streams.pdf used on input line 31.
+Package pdftex.def Info: img/linear1D20N_streams.pdf used on input line 33.
 (pdftex.def)             Requested size: 234.15462pt x 182.12025pt.
 
-Overfull \hbox (3.97209pt too wide) in paragraph at lines 31--32
- [][] 
- []
-
-<img/interweaving1D20N_global.pdf, id=907, 650.43pt x 505.89pt>
-File: img/interweaving1D20N_global.pdf Graphic file (type pdf)
-
-<use img/interweaving1D20N_global.pdf>
-Package pdftex.def Info: img/interweaving1D20N_global.pdf used on input line 44
-.
-(pdftex.def)             Requested size: 213.66866pt x 182.12025pt.
-
-<img/interweaving1D20N_streams.pdf, id=908, 650.43pt x 505.89pt>
-File: img/interweaving1D20N_streams.pdf Graphic file (type pdf)
-
-<use img/interweaving1D20N_streams.pdf>
-Package pdftex.def Info: img/interweaving1D20N_streams.pdf used on input line 4
-9.
-(pdftex.def)             Requested size: 234.15462pt x 182.12025pt.
-
-Overfull \hbox (3.97209pt too wide) in paragraph at lines 49--50
+Overfull \hbox (3.97209pt too wide) in paragraph at lines 33--34
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/noisyinterweaving1D20N_global.pdf, id=909, 650.43pt x 505.89pt>
+<img/interweaving1D20N_global.pdf, id=887, 650.43pt x 505.89pt>
+File: img/interweaving1D20N_global.pdf Graphic file (type pdf)
+
+<use img/interweaving1D20N_global.pdf>
+Package pdftex.def Info: img/interweaving1D20N_global.pdf used on input line 46
+.
+(pdftex.def)             Requested size: 213.66866pt x 182.12025pt.
+
+<img/interweaving1D20N_streams.pdf, id=888, 650.43pt x 505.89pt>
+File: img/interweaving1D20N_streams.pdf Graphic file (type pdf)
+
+<use img/interweaving1D20N_streams.pdf>
+Package pdftex.def Info: img/interweaving1D20N_streams.pdf used on input line 5
+1.
+(pdftex.def)             Requested size: 234.15462pt x 182.12025pt.
+
+Overfull \hbox (3.97209pt too wide) in paragraph at lines 51--52
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<img/noisyinterweaving1D20N_global.pdf, id=889, 650.43pt x 505.89pt>
 File: img/noisyinterweaving1D20N_global.pdf Graphic file (type pdf)
 
 <use img/noisyinterweaving1D20N_global.pdf>
 Package pdftex.def Info: img/noisyinterweaving1D20N_global.pdf used on input li
-ne 62.
+ne 64.
 (pdftex.def)             Requested size: 213.66866pt x 182.12025pt.
 
-<img/noisyinterweaving1D20N_streams.pdf, id=910, 650.43pt x 505.89pt>
+<img/noisyinterweaving1D20N_streams.pdf, id=890, 650.43pt x 505.89pt>
 File: img/noisyinterweaving1D20N_streams.pdf Graphic file (type pdf)
 
 <use img/noisyinterweaving1D20N_streams.pdf>
 Package pdftex.def Info: img/noisyinterweaving1D20N_streams.pdf used on input l
-ine 67.
+ine 69.
 (pdftex.def)             Requested size: 234.15462pt x 182.12025pt.
 
-Overfull \hbox (3.97209pt too wide) in paragraph at lines 67--68
+Overfull \hbox (3.97209pt too wide) in paragraph at lines 69--70
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/AT_NO2_NO_2014_8N_global.pdf, id=911, 650.43pt x 505.89pt>
+<img/AT_NO2_NO_2014_8N_global.pdf, id=891, 650.43pt x 505.89pt>
 File: img/AT_NO2_NO_2014_8N_global.pdf Graphic file (type pdf)
 
 <use img/AT_NO2_NO_2014_8N_global.pdf>
-Package pdftex.def Info: img/AT_NO2_NO_2014_8N_global.pdf used on input line 81
+Package pdftex.def Info: img/AT_NO2_NO_2014_8N_global.pdf used on input line 83
 .
 (pdftex.def)             Requested size: 201.79565pt x 172.00032pt.
 
-<img/AT_NO2_NO_2014_8N_streams.pdf, id=912, 650.43pt x 505.89pt>
+<img/AT_NO2_NO_2014_8N_streams.pdf, id=892, 650.43pt x 505.89pt>
 File: img/AT_NO2_NO_2014_8N_streams.pdf Graphic file (type pdf)
 
 <use img/AT_NO2_NO_2014_8N_streams.pdf>
 Package pdftex.def Info: img/AT_NO2_NO_2014_8N_streams.pdf used on input line 8
-6.
+8.
 (pdftex.def)             Requested size: 221.14326pt x 172.00032pt.
- [47 <./img/linear1D20N_global.pdf> <./img/linear1D20N_streams.pdf
 
-pdfTeX warning: pdflatex (file ./img/linear1D20N_streams.pdf): PDF inclusion: m
-ultiple pdfs with page group included in a single page
->]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/AT_NO2_sq_2014_8N_global.pdf, id=932, 650.43pt x 505.89pt>
+<img/AT_NO2_sq_2014_8N_global.pdf, id=893, 650.43pt x 505.89pt>
 File: img/AT_NO2_sq_2014_8N_global.pdf Graphic file (type pdf)
 
 <use img/AT_NO2_sq_2014_8N_global.pdf>
-Package pdftex.def Info: img/AT_NO2_sq_2014_8N_global.pdf used on input line 98
-.
+Package pdftex.def Info: img/AT_NO2_sq_2014_8N_global.pdf used on input line 10
+0.
 (pdftex.def)             Requested size: 201.79565pt x 172.00032pt.
 
-<img/AT_NO2_sq_2014_8N_streams.pdf, id=933, 650.43pt x 505.89pt>
+<img/AT_NO2_sq_2014_8N_streams.pdf, id=894, 650.43pt x 505.89pt>
 File: img/AT_NO2_sq_2014_8N_streams.pdf Graphic file (type pdf)
 
 <use img/AT_NO2_sq_2014_8N_streams.pdf>
 Package pdftex.def Info: img/AT_NO2_sq_2014_8N_streams.pdf used on input line 1
-03.
+05.
 (pdftex.def)             Requested size: 221.14326pt x 172.00032pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[48 <./img/interweaving1D20N_global.pdf> <./img/interweaving1D20N_streams.pdf
+[47] [48 <./img/linear1D20N_global.pdf> <./img/linear1D20N_streams.pdf
+
+pdfTeX warning: pdflatex (file ./img/linear1D20N_streams.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+> <./img/interweaving1D20N_global.pdf
+
+pdfTeX warning: pdflatex (file ./img/interweaving1D20N_global.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+> <./img/interweaving1D20N_streams.pdf
 
 pdfTeX warning: pdflatex (file ./img/interweaving1D20N_streams.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
-> <./img/noisyinterweaving1D20N_global.pdf
-
-pdfTeX warning: pdflatex (file ./img/noisyinterweaving1D20N_global.pdf): PDF in
-clusion: multiple pdfs with page group included in a single page
-> <./img/noisyinterweaving1D20N_streams.pdf
+>] [49 <./img/noisyinterweaving1D20N_global.pdf> <./img/noisyinterweaving1D20N_
+streams.pdf
 
 pdfTeX warning: pdflatex (file ./img/noisyinterweaving1D20N_streams.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
->] [49 <./img/AT_NO2_NO_2014_8N_global.pdf> <./img/AT_NO2_NO_2014_8N_streams.pd
-f
+> <./img/AT_NO2_NO_2014_8N_global.pdf
+
+pdfTeX warning: pdflatex (file ./img/AT_NO2_NO_2014_8N_global.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+> <./img/AT_NO2_NO_2014_8N_streams.pdf
 
 pdfTeX warning: pdflatex (file ./img/AT_NO2_NO_2014_8N_streams.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
-> <./img/AT_NO2_sq_2014_8N_global.pdf
-
-pdfTeX warning: pdflatex (file ./img/AT_NO2_sq_2014_8N_global.pdf): PDF inclusi
-on: multiple pdfs with page group included in a single page
-> <./img/AT_NO2_sq_2014_8N_streams.pdf
+>] [50 <./img/AT_NO2_sq_2014_8N_global.pdf> <./img/AT_NO2_sq_2014_8N_streams.pd
+f
 
 pdfTeX warning: pdflatex (file ./img/AT_NO2_sq_2014_8N_streams.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
->] [50] [51] <img/matching_msg_linear.pdf, id=1038, 650.43pt x 505.89pt>
+>] [51] <img/matching_msg_linear.pdf, id=1019, 650.43pt x 505.89pt>
 File: img/matching_msg_linear.pdf Graphic file (type pdf)
 
 <use img/matching_msg_linear.pdf>
-Package pdftex.def Info: img/matching_msg_linear.pdf used on input line 142.
+Package pdftex.def Info: img/matching_msg_linear.pdf used on input line 146.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
-<img/matching_msg_interweaving.pdf, id=1039, 650.43pt x 505.89pt>
+<img/matching_msg_interweaving.pdf, id=1020, 650.43pt x 505.89pt>
 File: img/matching_msg_interweaving.pdf Graphic file (type pdf)
 
 <use img/matching_msg_interweaving.pdf>
 Package pdftex.def Info: img/matching_msg_interweaving.pdf used on input line 1
-46.
+50.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
-<img/matching_msg_noisyinterweaving.pdf, id=1040, 650.43pt x 505.89pt>
+<img/matching_msg_noisyinterweaving.pdf, id=1021, 650.43pt x 505.89pt>
 File: img/matching_msg_noisyinterweaving.pdf Graphic file (type pdf)
 
 <use img/matching_msg_noisyinterweaving.pdf>
 Package pdftex.def Info: img/matching_msg_noisyinterweaving.pdf used on input l
-ine 150.
+ine 154.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
-<img/matchings_matchings_linear.pdf, id=1041, 722.7pt x 361.35pt>
-File: img/matchings_matchings_linear.pdf Graphic file (type pdf)
-
-<use img/matchings_matchings_linear.pdf>
-Package pdftex.def Info: img/matchings_matchings_linear.pdf used on input line 
-163.
-(pdftex.def)             Requested size: 338.22418pt x 169.11221pt.
-
-<img/matchings_matchings_interweaving.pdf, id=1042, 722.7pt x 361.35pt>
-File: img/matchings_matchings_interweaving.pdf Graphic file (type pdf)
-
-<use img/matchings_matchings_interweaving.pdf>
-Package pdftex.def Info: img/matchings_matchings_interweaving.pdf used on input
- line 168.
-(pdftex.def)             Requested size: 338.22418pt x 169.11221pt.
-
-<img/matchings_matchings_noisyinterweaving.pdf, id=1043, 722.7pt x 361.35pt>
-File: img/matchings_matchings_noisyinterweaving.pdf Graphic file (type pdf)
-
-<use img/matchings_matchings_noisyinterweaving.pdf>
-Package pdftex.def Info: img/matchings_matchings_noisyinterweaving.pdf used on 
-input line 173.
-(pdftex.def)             Requested size: 338.22418pt x 169.11221pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/matchings_classic_random_drifts.pdf, id=1044, 650.43pt x 505.89pt>
+<img/matchings_classic_random_drifts.pdf, id=1022, 650.43pt x 505.89pt>
 File: img/matchings_classic_random_drifts.pdf Graphic file (type pdf)
 
 <use img/matchings_classic_random_drifts.pdf>
 Package pdftex.def Info: img/matchings_classic_random_drifts.pdf used on input 
-line 184.
+line 164.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
-<img/matchings_classic_distoptpair_drifts.pdf, id=1045, 650.43pt x 505.89pt>
+<img/matchings_classic_distoptpair_drifts.pdf, id=1023, 650.43pt x 505.89pt>
 File: img/matchings_classic_distoptpair_drifts.pdf Graphic file (type pdf)
 
 <use img/matchings_classic_distoptpair_drifts.pdf>
 Package pdftex.def Info: img/matchings_classic_distoptpair_drifts.pdf used on i
-nput line 188.
+nput line 168.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
-<img/matchings_classic_distroptpair_drifts.pdf, id=1046, 650.43pt x 505.89pt>
+<img/matchings_classic_distroptpair_drifts.pdf, id=1024, 650.43pt x 505.89pt>
 File: img/matchings_classic_distroptpair_drifts.pdf Graphic file (type pdf)
 
 <use img/matchings_classic_distroptpair_drifts.pdf>
 Package pdftex.def Info: img/matchings_classic_distroptpair_drifts.pdf used on 
-input line 192.
+input line 172.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
+<img/matchings_matchings_linear.pdf, id=1025, 722.7pt x 361.35pt>
+File: img/matchings_matchings_linear.pdf Graphic file (type pdf)
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+<use img/matchings_matchings_linear.pdf>
+Package pdftex.def Info: img/matchings_matchings_linear.pdf used on input line 
+184.
+(pdftex.def)             Requested size: 338.22418pt x 169.11221pt.
 
-[52 <./img/matching_msg_linear.pdf> <./img/matching_msg_interweaving.pdf
+<img/matchings_matchings_interweaving.pdf, id=1026, 722.7pt x 361.35pt>
+File: img/matchings_matchings_interweaving.pdf Graphic file (type pdf)
+
+<use img/matchings_matchings_interweaving.pdf>
+Package pdftex.def Info: img/matchings_matchings_interweaving.pdf used on input
+ line 189.
+(pdftex.def)             Requested size: 338.22418pt x 169.11221pt.
+
+<img/matchings_matchings_noisyinterweaving.pdf, id=1027, 722.7pt x 361.35pt>
+File: img/matchings_matchings_noisyinterweaving.pdf Graphic file (type pdf)
+
+<use img/matchings_matchings_noisyinterweaving.pdf>
+Package pdftex.def Info: img/matchings_matchings_noisyinterweaving.pdf used on 
+input line 194.
+(pdftex.def)             Requested size: 338.22418pt x 169.11221pt.
+ [52 <./img/matching_msg_linear.pdf> <./img/matching_msg_interweaving.pdf
 
 pdfTeX warning: pdflatex (file ./img/matching_msg_interweaving.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
@@ -1506,195 +1486,204 @@ ion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ./img/matching_msg_noisyinterweaving.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
->] <img/bal_msg_linear_nodes.pdf, id=1078, 650.43pt x 505.89pt>
+>] <img/bal_msg_linear_nodes.pdf, id=1059, 650.43pt x 505.89pt>
 File: img/bal_msg_linear_nodes.pdf Graphic file (type pdf)
 
 <use img/bal_msg_linear_nodes.pdf>
-Package pdftex.def Info: img/bal_msg_linear_nodes.pdf used on input line 207.
+Package pdftex.def Info: img/bal_msg_linear_nodes.pdf used on input line 209.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
-Underfull \hbox (badness 1112) in paragraph at lines 208--208
+Underfull \hbox (badness 1112) in paragraph at lines 210--210
 \OT1/cmr/m/n/10 ods GM and HM for the \OT1/cmr/m/it/10 LIN
  []
 
-<img/bal_msg_interweaving_nodes.pdf, id=1079, 650.43pt x 505.89pt>
+<img/bal_msg_interweaving_nodes.pdf, id=1060, 650.43pt x 505.89pt>
 File: img/bal_msg_interweaving_nodes.pdf Graphic file (type pdf)
 
 <use img/bal_msg_interweaving_nodes.pdf>
 Package pdftex.def Info: img/bal_msg_interweaving_nodes.pdf used on input line 
-211.
+213.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
-<img/bal_msg_noisyinterweaving_nodes.pdf, id=1080, 650.43pt x 505.89pt>
+<img/bal_msg_noisyinterweaving_nodes.pdf, id=1061, 650.43pt x 505.89pt>
 File: img/bal_msg_noisyinterweaving_nodes.pdf Graphic file (type pdf)
 
 <use img/bal_msg_noisyinterweaving_nodes.pdf>
 Package pdftex.def Info: img/bal_msg_noisyinterweaving_nodes.pdf used on input 
-line 215.
+line 217.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/bal_classic_drifts_linear2N.pdf, id=1082, 650.43pt x 505.89pt>
+<img/bal_classic_drifts_linear2N.pdf, id=1063, 650.43pt x 505.89pt>
 File: img/bal_classic_drifts_linear2N.pdf Graphic file (type pdf)
 
 <use img/bal_classic_drifts_linear2N.pdf>
 Package pdftex.def Info: img/bal_classic_drifts_linear2N.pdf used on input line
- 228.
+ 230.
 (pdftex.def)             Requested size: 230.18253pt x 179.03255pt.
 
-<img/bal_heuristic_drifts_linear2N.pdf, id=1083, 650.43pt x 505.89pt>
+<img/bal_heuristic_drifts_linear2N.pdf, id=1064, 650.43pt x 505.89pt>
 File: img/bal_heuristic_drifts_linear2N.pdf Graphic file (type pdf)
 
 <use img/bal_heuristic_drifts_linear2N.pdf>
 Package pdftex.def Info: img/bal_heuristic_drifts_linear2N.pdf used on input li
-ne 232.
+ne 234.
 (pdftex.def)             Requested size: 230.18253pt x 179.03255pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[53] <img/main_msg_linear_nodes.pdf, id=1094, 650.43pt x 505.89pt>
+[53 <./img/matchings_classic_random_drifts.pdf> <./img/matchings_classic_distop
+tpair_drifts.pdf
+
+pdfTeX warning: pdflatex (file ./img/matchings_classic_distoptpair_drifts.pdf):
+ PDF inclusion: multiple pdfs with page group included in a single page
+> <./img/matchings_classic_distroptpair_drifts.pdf
+
+pdfTeX warning: pdflatex (file ./img/matchings_classic_distroptpair_drifts.pdf)
+: PDF inclusion: multiple pdfs with page group included in a single page
+>] <img/main_msg_linear_nodes.pdf, id=1098, 650.43pt x 505.89pt>
 File: img/main_msg_linear_nodes.pdf Graphic file (type pdf)
 
 <use img/main_msg_linear_nodes.pdf>
-Package pdftex.def Info: img/main_msg_linear_nodes.pdf used on input line 249.
+Package pdftex.def Info: img/main_msg_linear_nodes.pdf used on input line 251.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
-<img/main_msg_interweaving_nodes.pdf, id=1095, 650.43pt x 505.89pt>
+<img/main_msg_interweaving_nodes.pdf, id=1099, 650.43pt x 505.89pt>
 File: img/main_msg_interweaving_nodes.pdf Graphic file (type pdf)
 
 <use img/main_msg_interweaving_nodes.pdf>
 Package pdftex.def Info: img/main_msg_interweaving_nodes.pdf used on input line
- 253.
+ 255.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
-<img/main_msg_noisyinterweaving_nodes.pdf, id=1096, 650.43pt x 505.89pt>
+<img/main_msg_noisyinterweaving_nodes.pdf, id=1100, 650.43pt x 505.89pt>
 File: img/main_msg_noisyinterweaving_nodes.pdf Graphic file (type pdf)
 
 <use img/main_msg_noisyinterweaving_nodes.pdf>
 Package pdftex.def Info: img/main_msg_noisyinterweaving_nodes.pdf used on input
- line 257.
+ line 259.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/main_msg_linear_window.pdf, id=1097, 650.43pt x 505.89pt>
+<img/main_msg_linear_window.pdf, id=1101, 650.43pt x 505.89pt>
 File: img/main_msg_linear_window.pdf Graphic file (type pdf)
 
 <use img/main_msg_linear_window.pdf>
-Package pdftex.def Info: img/main_msg_linear_window.pdf used on input line 268.
+Package pdftex.def Info: img/main_msg_linear_window.pdf used on input line 270.
 
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
-<img/main_msg_interweaving_window.pdf, id=1098, 650.43pt x 505.89pt>
+<img/main_msg_interweaving_window.pdf, id=1102, 650.43pt x 505.89pt>
 File: img/main_msg_interweaving_window.pdf Graphic file (type pdf)
 
 <use img/main_msg_interweaving_window.pdf>
 Package pdftex.def Info: img/main_msg_interweaving_window.pdf used on input lin
-e 272.
+e 274.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
-<img/main_msg_noisyinterweaving_window.pdf, id=1099, 650.43pt x 505.89pt>
+<img/main_msg_noisyinterweaving_window.pdf, id=1103, 650.43pt x 505.89pt>
 File: img/main_msg_noisyinterweaving_window.pdf Graphic file (type pdf)
 
 <use img/main_msg_noisyinterweaving_window.pdf>
 Package pdftex.def Info: img/main_msg_noisyinterweaving_window.pdf used on inpu
-t line 276.
+t line 278.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/main_msg_linear_order.pdf, id=1100, 650.43pt x 505.89pt>
+<img/main_msg_linear_order.pdf, id=1104, 650.43pt x 505.89pt>
 File: img/main_msg_linear_order.pdf Graphic file (type pdf)
 
 <use img/main_msg_linear_order.pdf>
-Package pdftex.def Info: img/main_msg_linear_order.pdf used on input line 287.
+Package pdftex.def Info: img/main_msg_linear_order.pdf used on input line 289.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
-<img/main_msg_interweaving_order.pdf, id=1101, 650.43pt x 505.89pt>
+<img/main_msg_interweaving_order.pdf, id=1105, 650.43pt x 505.89pt>
 File: img/main_msg_interweaving_order.pdf Graphic file (type pdf)
 
 <use img/main_msg_interweaving_order.pdf>
 Package pdftex.def Info: img/main_msg_interweaving_order.pdf used on input line
- 291.
+ 293.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
-<img/main_msg_noisyinterweaving_order.pdf, id=1102, 650.43pt x 505.89pt>
+<img/main_msg_noisyinterweaving_order.pdf, id=1106, 650.43pt x 505.89pt>
 File: img/main_msg_noisyinterweaving_order.pdf Graphic file (type pdf)
 
 <use img/main_msg_noisyinterweaving_order.pdf>
 Package pdftex.def Info: img/main_msg_noisyinterweaving_order.pdf used on input
- line 295.
+ line 297.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/main_msg_linear_dims.pdf, id=1103, 650.43pt x 505.89pt>
+<img/main_msg_linear_dims.pdf, id=1107, 650.43pt x 505.89pt>
 File: img/main_msg_linear_dims.pdf Graphic file (type pdf)
 
 <use img/main_msg_linear_dims.pdf>
-Package pdftex.def Info: img/main_msg_linear_dims.pdf used on input line 305.
+Package pdftex.def Info: img/main_msg_linear_dims.pdf used on input line 307.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
-<img/main_msg_interweaving_dims.pdf, id=1104, 650.43pt x 505.89pt>
+<img/main_msg_interweaving_dims.pdf, id=1108, 650.43pt x 505.89pt>
 File: img/main_msg_interweaving_dims.pdf Graphic file (type pdf)
 
 <use img/main_msg_interweaving_dims.pdf>
 Package pdftex.def Info: img/main_msg_interweaving_dims.pdf used on input line 
-309.
+311.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
-<img/main_msg_noisyinterweaving_dims.pdf, id=1105, 650.43pt x 505.89pt>
+<img/main_msg_noisyinterweaving_dims.pdf, id=1109, 650.43pt x 505.89pt>
 File: img/main_msg_noisyinterweaving_dims.pdf Graphic file (type pdf)
 
 <use img/main_msg_noisyinterweaving_dims.pdf>
 Package pdftex.def Info: img/main_msg_noisyinterweaving_dims.pdf used on input 
-line 313.
+line 315.
 (pdftex.def)             Requested size: 150.32504pt x 116.91574pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/main_classic_drifts_linear4N.pdf, id=1106, 650.43pt x 505.89pt>
+<img/main_classic_drifts_linear4N.pdf, id=1110, 650.43pt x 505.89pt>
 File: img/main_classic_drifts_linear4N.pdf Graphic file (type pdf)
 
 <use img/main_classic_drifts_linear4N.pdf>
 Package pdftex.def Info: img/main_classic_drifts_linear4N.pdf used on input lin
-e 325.
+e 327.
 (pdftex.def)             Requested size: 230.18253pt x 179.03255pt.
 
-<img/main_heuristic_drifts_linear4N.pdf, id=1107, 650.43pt x 505.89pt>
+<img/main_heuristic_drifts_linear4N.pdf, id=1111, 650.43pt x 505.89pt>
 File: img/main_heuristic_drifts_linear4N.pdf Graphic file (type pdf)
 
 <use img/main_heuristic_drifts_linear4N.pdf>
 Package pdftex.def Info: img/main_heuristic_drifts_linear4N.pdf used on input l
-ine 329.
+ine 331.
 (pdftex.def)             Requested size: 230.18253pt x 179.03255pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-<img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf, id=1109, 650.43pt x 505.89p
+<img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf, id=1113, 650.43pt x 505.89p
 t>
 File: img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf Graphic file (type pdf)
 
  <use img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf>
 Package pdftex.def Info: img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf used
- on input line 347.
+ on input line 349.
 (pdftex.def)             Requested size: 230.18253pt x 179.03255pt.
 
-<img/actual_msg_NO2_NO_2014_nodes.pdf, id=1110, 650.43pt x 505.89pt>
+<img/actual_msg_NO2_NO_2014_nodes.pdf, id=1114, 650.43pt x 505.89pt>
 File: img/actual_msg_NO2_NO_2014_nodes.pdf Graphic file (type pdf)
 
 <use img/actual_msg_NO2_NO_2014_nodes.pdf>
 Package pdftex.def Info: img/actual_msg_NO2_NO_2014_nodes.pdf used on input lin
-e 351.
+e 353.
 (pdftex.def)             Requested size: 230.18253pt x 179.03255pt.
 
 
@@ -1709,20 +1698,7 @@ pdfTeX warning: pdflatex (file ./img/matchings_matchings_interweaving.pdf): PDF
 
 pdfTeX warning: pdflatex (file ./img/matchings_matchings_noisyinterweaving.pdf)
 : PDF inclusion: multiple pdfs with page group included in a single page
->] [56 <./img/matchings_classic_random_drifts.pdf> <./img/matchings_classic_dis
-toptpair_drifts.pdf
-
-pdfTeX warning: pdflatex (file ./img/matchings_classic_distoptpair_drifts.pdf):
- PDF inclusion: multiple pdfs with page group included in a single page
-> <./img/matchings_classic_distroptpair_drifts.pdf
-
-pdfTeX warning: pdflatex (file ./img/matchings_classic_distroptpair_drifts.pdf)
-: PDF inclusion: multiple pdfs with page group included in a single page
-> <./img/bal_msg_linear_nodes.pdf
-
-pdfTeX warning: pdflatex (file ./img/bal_msg_linear_nodes.pdf): PDF inclusion: 
-multiple pdfs with page group included in a single page
-> <./img/bal_msg_interweaving_nodes.pdf
+>] [56 <./img/bal_msg_linear_nodes.pdf> <./img/bal_msg_interweaving_nodes.pdf
 
 pdfTeX warning: pdflatex (file ./img/bal_msg_interweaving_nodes.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
@@ -1730,16 +1706,16 @@ sion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ./img/bal_msg_noisyinterweaving_nodes.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
->] [57 <./img/bal_classic_drifts_linear2N.pdf> <./img/bal_heuristic_drifts_line
-ar2N.pdf
+> <./img/bal_classic_drifts_linear2N.pdf
+
+pdfTeX warning: pdflatex (file ./img/bal_classic_drifts_linear2N.pdf): PDF incl
+usion: multiple pdfs with page group included in a single page
+> <./img/bal_heuristic_drifts_linear2N.pdf
 
 pdfTeX warning: pdflatex (file ./img/bal_heuristic_drifts_linear2N.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
-> <./img/main_msg_linear_nodes.pdf
+>] [57 <./img/main_msg_linear_nodes.pdf> <./img/main_msg_interweaving_nodes.pdf
 
-pdfTeX warning: pdflatex (file ./img/main_msg_linear_nodes.pdf): PDF inclusion:
- multiple pdfs with page group included in a single page
-> <./img/main_msg_interweaving_nodes.pdf
 
 pdfTeX warning: pdflatex (file ./img/main_msg_interweaving_nodes.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
@@ -1747,8 +1723,11 @@ usion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ./img/main_msg_noisyinterweaving_nodes.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
->] [58 <./img/main_msg_linear_window.pdf> <./img/main_msg_interweaving_window.p
-df
+> <./img/main_msg_linear_window.pdf
+
+pdfTeX warning: pdflatex (file ./img/main_msg_linear_window.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+> <./img/main_msg_interweaving_window.pdf
 
 pdfTeX warning: pdflatex (file ./img/main_msg_interweaving_window.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
@@ -1756,11 +1735,8 @@ lusion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ./img/main_msg_noisyinterweaving_window.pdf): PD
 F inclusion: multiple pdfs with page group included in a single page
-> <./img/main_msg_linear_order.pdf
+>] [58 <./img/main_msg_linear_order.pdf> <./img/main_msg_interweaving_order.pdf
 
-pdfTeX warning: pdflatex (file ./img/main_msg_linear_order.pdf): PDF inclusion:
- multiple pdfs with page group included in a single page
-> <./img/main_msg_interweaving_order.pdf
 
 pdfTeX warning: pdflatex (file ./img/main_msg_interweaving_order.pdf): PDF incl
 usion: multiple pdfs with page group included in a single page
@@ -1768,7 +1744,11 @@ usion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ./img/main_msg_noisyinterweaving_order.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
->] [59 <./img/main_msg_linear_dims.pdf> <./img/main_msg_interweaving_dims.pdf
+> <./img/main_msg_linear_dims.pdf
+
+pdfTeX warning: pdflatex (file ./img/main_msg_linear_dims.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+> <./img/main_msg_interweaving_dims.pdf
 
 pdfTeX warning: pdflatex (file ./img/main_msg_interweaving_dims.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
@@ -1776,16 +1756,16 @@ sion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ./img/main_msg_noisyinterweaving_dims.pdf): PDF 
 inclusion: multiple pdfs with page group included in a single page
-> <./img/main_classic_drifts_linear4N.pdf
-
-pdfTeX warning: pdflatex (file ./img/main_classic_drifts_linear4N.pdf): PDF inc
-lusion: multiple pdfs with page group included in a single page
-> <./img/main_heuristic_drifts_linear4N.pdf
+>] [59 <./img/main_classic_drifts_linear4N.pdf> <./img/main_heuristic_drifts_li
+near4N.pdf
 
 pdfTeX warning: pdflatex (file ./img/main_heuristic_drifts_linear4N.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
->] [60 <./img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf> <./img/actual_msg_
-NO2_NO_2014_nodes.pdf
+> <./img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf
+
+pdfTeX warning: pdflatex (file ./img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.
+pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./img/actual_msg_NO2_NO_2014_nodes.pdf
 
 pdfTeX warning: pdflatex (file ./img/actual_msg_NO2_NO_2014_nodes.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
@@ -1794,20 +1774,20 @@ lusion: multiple pdfs with page group included in a single page
 
  (./doc/conclusions.tex
 Chapter 7.
-[61
+[60
 
 
 
-]) [62] (./thesis.bbl
+]) [61] (./thesis.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 2--2
 
  []
 
-[63
+[62
 
 
 
-] [64]
+] [63]
 Underfull \hbox (badness 10000) in paragraph at lines 165--168
 \OT1/cmr/m/n/10.95 9 / reference / generated / networkx . algorithms . matching
  . max[]weight[]matching . html$[][]. Ac-cessed:
@@ -1819,18 +1799,18 @@ Underfull \hbox (badness 2229) in paragraph at lines 178--180
 /www.eea.europa.eu/data-and-
  []
 
-) [65]
+) [64]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
- (./thesis.aux (./doc/abstract.aux) (./doc/pubAbstract.aux)
-(./doc/dedication.aux) (./doc/acknowledgments.aux) (./doc/introduction.aux)
+ (./thesis.aux (./doc/abstract.aux) (./doc/dedication.aux)
+(./doc/acknowledgments.aux) (./doc/introduction.aux)
 (./doc/theoreticalBackground.aux) (./doc/relatedWork.aux)
 (./doc/probStatement.aux) (./doc/implementation.aux) (./doc/expResults.aux)
 (./doc/conclusions.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 776C4D8E9E42290B8CC044F7213FD518;1999.
+(rerunfilecheck)             Checksum: 381264589FE7F288DCB32A8AC99DAEB5;1896.
 
 
 LaTeX Warning: There were undefined references.
@@ -1838,10 +1818,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 31667 strings out of 494835
- 719500 string characters out of 6178235
- 913207 words of memory out of 5000000
- 33908 multiletter control sequences out of 15000+600000
+ 31648 strings out of 494835
+ 719253 string characters out of 6178235
+ 912202 words of memory out of 5000000
+ 33904 multiletter control sequences out of 15000+600000
  20042 words of font info for 76 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
  55i,24n,79p,1554b,1208s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1866,10 +1846,10 @@ s/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb>
-Output written on thesis.pdf (75 pages, 908872 bytes).
+Output written on thesis.pdf (72 pages, 908939 bytes).
 PDF statistics:
- 1542 PDF objects out of 1728 (max. 8388607)
- 1307 compressed objects within 14 object streams
- 365 named destinations out of 1000 (max. 500000)
- 484 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1515 PDF objects out of 1728 (max. 8388607)
+ 1284 compressed objects within 13 object streams
+ 360 named destinations out of 1000 (max. 500000)
+ 468 words of extra memory for PDF output out of 10000 (max. 10000000)
 
