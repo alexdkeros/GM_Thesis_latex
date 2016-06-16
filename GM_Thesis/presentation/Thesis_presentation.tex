@@ -1,0 +1,192 @@
+\documentclass[hyperref={pdfpagelabels=false}]{beamer}
+\usepackage{lmodern}
+\usetheme{Dresden}
+
+
+\setbeamerfont{subsection in toc}{size=\small}
+
+
+
+
+
+\title{Scaling Geometric Monitoring Over Distributed Streams}  
+\author{Alexandros D. Keros} 
+\date{June 23, 2016} 
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame} 
+
+
+\begin{frame}
+\frametitle{Table of contents}
+\tableofcontents
+\end{frame} 
+
+%%%%%%%%%%%%%  section: INTRODUCTION  %%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+\subsection*{Overview}
+\begin{frame} \frametitle{Data Stream Systems}
+
+\end{frame}
+\begin{frame} \frametitle{The Geometric Monitoring Method}
+
+\end{frame}
+\begin{frame} \frametitle{Motivation}
+
+\end{frame}
+\begin{frame} \frametitle{Contributions}
+
+\end{frame}
+%%%%%%%%%%%%%  section: THEOR BACK  %%%%%%%%%%%%%%%%%%%%%%%
+\section{Theoretical Background}
+\subsection{The Geometric Monitoring Method}
+\begin{frame} \frametitle{Geometric Threshold Monitoring}
+
+\end{frame}
+\begin{frame} \frametitle{System Architecture}
+
+\end{frame}
+\begin{frame} \frametitle{Computational Model}
+
+\end{frame}
+\begin{frame} \frametitle{Computational Model}\framesubtitle{Balancing Process}
+
+\end{frame}
+\begin{frame} \frametitle{Geometric Interpretation}\framesubtitle{Convexity Property}
+
+\end{frame}
+\begin{frame} \frametitle{Geometric Interpretation}\framesubtitle{Local Constraints}
+
+\end{frame}
+\begin{frame} \frametitle{Protocol}\framesubtitle{Decentralized Algorithm}
+
+\end{frame}
+\begin{frame} \frametitle{Protocol}\framesubtitle{Centralized Algorithm}
+
+\end{frame}
+\subsection{Theoretical Tools}
+\subsubsection*{Multi-objective Optimization}
+\begin{frame} \frametitle{Multi-objective Optimization}
+
+\end{frame}
+\begin{frame} \frametitle{Non-linear Constraint Optimization}\framesubtitle{Primal Descent}
+
+\end{frame}
+%slsqp
+\begin{frame} \frametitle{Feasible Directions}
+
+\end{frame}
+%conmin
+\begin{frame} \frametitle{SQP}
+
+\end{frame}
+\subsubsection*{Savitzky-Golay Filtering}
+\begin{frame} \frametitle{The Savitzky-Golay Filter}
+
+\end{frame}
+\subsubsection*{Matching in Graphs}
+\begin{frame} \frametitle{Maximum Weight Matching}\framesubtitle{The Primal-Dual Method}
+
+\end{frame}
+
+\subsection{Related Work}
+\begin{frame} \frametitle{Related Work}
+
+\end{frame}
+%%%%%%%%%%%%%  section: IMPL  %%%%%%%%%%%%%%%%%%%%%%%
+\section{Problem Statement \& Implementation}
+\subsection{Problem Statement}
+\begin{frame} \frametitle{Problem Formulation}
+
+\end{frame}
+\subsection{Implementation}
+\begin{frame} \frametitle{The Geometric Monitoring Framework}
+
+\end{frame}
+\subsubsection*{Distance-based Hierarchical Clustering}
+\begin{frame} \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Idea}
+
+\end{frame}
+\begin{frame} \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Weight Function}
+
+\end{frame}
+\begin{frame} \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Algorithm}
+
+\end{frame}
+\subsubsection*{Heuristic Balancing}
+\begin{frame} \frametitle{The Heuristic Balancing}\framesubtitle{The Idea}
+
+\end{frame}
+\begin{frame} \frametitle{The Heuristic Balancing}\framesubtitle{The Optimizing Function}
+
+\end{frame}
+\begin{frame} \frametitle{The Heuristic Balancing}\framesubtitle{The Function Formulation}
+
+\end{frame}
+\begin{frame} \frametitle{The Heuristic Balancing}\framesubtitle{The Algorithm}
+
+\end{frame}
+\subsubsection*{Violation Detection}
+\begin{frame} \frametitle{Violation Detection in the Sphere}\frametitle{An Nested Optimization Problem}
+
+\end{frame}
+\subsubsection*{The Savitzky-Golay Filter}
+\begin{frame} \frametitle{Velocity and Acceleration Estimation via SG Filtering}
+
+\end{frame}
+\subsubsection*{Challenges}
+\begin{frame} \frametitle{Implementation Challenges}
+
+\end{frame}
+%%%%%%%%%%%%%  section: EXPERIMENTS  %%%%%%%%%%%%%%%%%%%%%%%
+\section{Experimental Results}
+\subsection{Data \& Setup}
+\subsubsection*{Synthetic Data}
+\begin{frame} \frametitle{Synthetic Data}
+
+\end{frame}
+\subsubsection*{Real-world Data}
+\begin{frame} \frametitle{Real-world Data}
+
+\end{frame}
+\subsection{Experiments}
+\begin{frame} \frametitle{Notation}
+
+\end{frame}
+\subsubsection*{ Matching Algorithms}
+\begin{frame} \frametitle{RAND, DIST, DISTR Comparison}
+
+\end{frame}
+\subsubsection*{Balancing Methods}
+\begin{frame} \frametitle{GM, HM Comparison}
+
+\end{frame}
+\subsubsection*{Synthetic Data}
+\begin{frame} \frametitle{GM, HDM Comparison}\framesubtitle{Synthetic Data Monitoring}
+
+\end{frame}
+\subsubsection*{Real-world Data}
+\begin{frame} \frametitle{GM, HDM Comparison}\framesubtitle{Air Pollution Monitoring}
+
+\end{frame}
+%%%%%%%%%%%%%  section: CONCLUSION  %%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions \& Future Work}
+\subsection{Conclusion}
+\begin{frame} \frametitle{Summary \& Concluding Remarks}
+
+\end{frame}
+\subsection{Future Work}
+\begin{frame} \frametitle{Future Work}
+
+\end{frame}
+
+\begin{frame}[plain]
+\centering
+The end\\
+Questions?
+\end{frame}
+
+\end{document}
+

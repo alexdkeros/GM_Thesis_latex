@@ -1,0 +1,15 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Theoretical Background}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{The Geometric Monitoring Method}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{Theoretical Tools}{15}{0}{2}
+\beamer@subsectionintoc {2}{3}{Related Work}{21}{0}{2}
+\beamer@sectionintoc {3}{Problem Statement \& Implementation}{22}{0}{3}
+\beamer@subsectionintoc {3}{1}{Problem Statement}{22}{0}{3}
+\beamer@subsectionintoc {3}{2}{Implementation}{23}{0}{3}
+\beamer@sectionintoc {4}{Experimental Results}{34}{0}{4}
+\beamer@subsectionintoc {4}{1}{Data \& Setup}{34}{0}{4}
+\beamer@subsectionintoc {4}{2}{Experiments}{36}{0}{4}
+\beamer@sectionintoc {5}{Conclusions \& Future Work}{41}{0}{5}
+\beamer@subsectionintoc {5}{1}{Conclusion}{41}{0}{5}
+\beamer@subsectionintoc {5}{2}{Future Work}{42}{0}{5}
