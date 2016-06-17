@@ -14,3 +14,9 @@
 \beamer@slide {theorem:convexHull}{20}
 \defcounter {refsection}{0}\relax 
 \beamer@slide {fig:convexHull}{21}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {algo:decentralized}{22}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {algo:centralizedCoordinatorNode}{23}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {algo:centralizedMonitoringNode}{23}

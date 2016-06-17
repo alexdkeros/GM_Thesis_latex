@@ -5,6 +5,9 @@
 \usepackage{gincltex}
 \usepackage{epstopdf}
 \usepackage{enumerate}		% lists of items
+\usepackage[linesnumbered,lined,boxed,ruled,commentsnumbered]{algorithm2e}
+\usepackage{setspace}
+\usepackage{listings}		% code listings
 \usepackage[backend=biber]{biblatex}
 \addbibresource{presentation.bib}
 
@@ -222,7 +225,7 @@ Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors 
 \end{theorem}
 \end{frame}
 
-\begin{frame} \frametitle{Geometric Interpretation}\framesubtitle{Convexity Property}
+\begin{frame} \frametitle{Geometric Interpretation}\framesubtitle{Convexity Property \& Local Constraints}
 \begin{figure}[H]
 \begin{columns}
 \begin{column}[t]{0.35\textwidth}
@@ -238,16 +241,158 @@ Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors 
 \end{figure}
 \end{frame}
 
+\begin{frame}[plain] \frametitle{Protocol}\framesubtitle{Decentralized Algorithm}
 
-\begin{frame} \frametitle{Geometric Interpretation}\framesubtitle{Local Constraints}
+\hfill    \scalebox{0.50}{
+    \begin{minipage}{\linewidth}
+\vspace{-2cm}    
+    \begin{algorithm}[H]
+\setstretch{1.30}
+
+
+\Begin{
+	\ForEach(\tcc*[f]{Node initialization}){node $p_i$}{
+		Broadcast $\vec{v_i}(0)$\;
+		$\vec{v_i}'=\vec{v_i}(0)$\;
+		Wait messages from all other nodes\;
+		\If{messages from all vectors received}{
+			$\vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}'}}{\sum_{i=1}^n {w_i}}$\;
+		}
+	}
+
+	\ForEach(\tcc*[f]{Main monitoring task}){node $p_i$}{
+		\ForEach{new $s_i$ stream update $\vec{v_i}(t)$}{
+			Recalculate $\vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)$\;
+			\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
+				Broadcast message $<i,\vec{v_i}(t)>$\;
+				Set $\vec{v_i}'=\vec{v_i}(t)$\;
+			}
+		
+
+			\If{new message $<j,\vec{v_j}(t)>$ received}{
+				Set $\vec{v_j}'=\vec{v_j}(t)$\;
+				Recalculate $\vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}'}}{\sum_{i=1}^n {w_i}}$\;
+				\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
+					Broadcast message $<i,\vec{v_i}(t)>$\;
+					Set $\vec{v_i}'=\vec{v_i}(t)$\;
+				}
+			}
+		}
+
+	}
+}
+\caption{Decentralized algorithm \label{algo:decentralized}} 
+\end{algorithm}  
+\end{minipage}%
+    }
+\end{frame}
+
+
+\begin{frame}[plain] \frametitle{Protocol}\framesubtitle{Centralized Algorithm}
+\begin{columns}
+\begin{column}{.8\linewidth}
+
+\scalebox{0.43}{
+\begin{algorithm}[H]
+
+\setstretch{1.30}
+
+\SetKwFunction{Balance}{Balance}
+\SetKwProg{Fn}{Function}{}{end}
+
+\Begin{
+	
+	Wait for $<INIT, \cdot>$ messages from all monitoring nodes\tcc*[r]{Initialization}
+	$\vec{e}(0)=\frac{\sum_{i=1}^n {w_i \vec{v_i}(0)}}{\sum_{i=1}^n {w_i}}$\;
+
+	\If(\tcc*[f]{Monitoring operation}){new $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message received}{
+		$P'=P' \cup \{<i,\vec{v_i}(t),\vec{u_i}(t)>\}$\;
+		\Balance{$P'$}\;
+	}
+}
+
+\Fn(\tcc*[f]{Balancing Process}){\Balance{$P'$}}{
+	$\vec{b}=\frac{ \sum_{p_i \in P'} {w_i\vec{u_i}(t)} }{ \sum_{p_i \in P'} {w_i} }$\;
+	\uIf{$B(\vec{e}, \vec{b})$ is \emph{not} monochromatic}{
+		\uIf{$P-P'\neq \emptyset$}{
+			Send $<REQ>$ message to random node in $P-P'$ set\;
+		}
+		\Else{
+			$\vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}(t)}}{\sum_{i=1}^n {w_i}}$\;
+			Send $<NEW\textnormal{-}EST, \vec{e}(t)>$ message to all nodes\;
+			\Return \;
+		}
+	}
+	\Else{
+		\ForEach{$p_i \in P'$}{
+			$\Delta\vec{\delta_i}=w_i\vec{b}-w_i\vec{u_i}(t)$\;
+			Send $<ADJ\textnormal{-}SLK, \Delta\vec{\delta_i}>$ message to node $p_i$\;
+			\Return \;
+		}
+	}
+
+}
+\caption{Centralized algorithm's coordinator node operation\label{algo:centralizedCoordinatorNode}} 
+\end{algorithm}
+
+}
+\end{column}
+\begin{column}{.8\linewidth}
+\scalebox{0.46}{
+
+\begin{algorithm}[H]
+
+\setstretch{1.30}
+\Begin{
+	\ForEach(\tcc*[f]{Node initialization}){node $p_i$}{
+		Send $<INIT,\vec{v_i}(0)>$ message to coordinator\;
+		$\vec{v_i}'=\vec{v_i}(0)$\;
+		$\vec{\delta_i}=\vec{0}$\;
+		Wait message from coordinator\;
+		\If{$<NEW\textnormal{-}EST, \vec{e}>$ message received}{
+			Set $\vec{e}(t)=\vec{e}$\;
+		}
+	}
+
+	\ForEach(\tcc*[f]{Main monitoring task}){node $p_i$}{
+		\ForEach{new $s_i$ stream update $\vec{v_i}(t)$}{
+			Recalculate $\vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)+\frac{\vec{\delta_i}}{w_i}$\;
+			\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
+				Send $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message to coordinator\;
+				Wait for $<NEW\textnormal{-}EST,\cdot>$ or $<ADJ\textnormal{-}SLK,\cdot>$ message from coordinator\;
+			}
+		
+		
+			\If{new message $<REQ>$ received}{
+				Send $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message to coordinator\;
+				Wait for $<NEW\textnormal{-}EST,\cdot>$ or $<ADJ\textnormal{-}SLK,\cdot>$ message from coordinator\;
+
+			}
+
+			\If{new $<NEW\textnormal{-}EST, \vec{e}>$ message received}{
+				Set $\vec{e}(t)=\vec{e}$\;
+				$\vec{v_i}'=\vec{v_i}(t)$\;
+				$\vec{\delta_i}=\vec{0}$\;
+			} 
+
+			\If{new $<ADJ\textnormal{-}SLK, \Delta\vec{\delta_i}>$ message received}{
+				$\vec{\delta_i}=\vec{\delta_i}+\Delta\vec{\delta_i}$\;
+			}
+
+		}
+
+	}
+}
+\caption{Centralized algorithm's monitoring node operation \label{algo:centralizedMonitoringNode}} 
+
+\end{algorithm}  
+
+}
+\end{column}%
+\end{columns}
 
 \end{frame}
-\begin{frame} \frametitle{Protocol}\framesubtitle{Decentralized Algorithm}
 
-\end{frame}
-\begin{frame} \frametitle{Protocol}\framesubtitle{Centralized Algorithm}
-
-\end{frame}
 \subsection{Theoretical Tools}
 \subsubsection*{Multi-objective Optimization}
 \begin{frame} \frametitle{Multi-objective Optimization}

@@ -8,24 +8,24 @@
 \defcounter {refsection}{0}\relax 
 \beamer@subsectionintoc {2}{1}{The Geometric Monitoring Method}{14}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{2}{Theoretical Tools}{25}{0}{2}
+\beamer@subsectionintoc {2}{2}{Theoretical Tools}{24}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {2}{3}{Related Work}{31}{0}{2}
+\beamer@subsectionintoc {2}{3}{Related Work}{30}{0}{2}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {3}{Problem Statement \& Implementation}{32}{0}{3}
+\beamer@sectionintoc {3}{Problem Statement \& Implementation}{31}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {3}{1}{Problem Statement}{32}{0}{3}
+\beamer@subsectionintoc {3}{1}{Problem Statement}{31}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {3}{2}{Implementation}{33}{0}{3}
+\beamer@subsectionintoc {3}{2}{Implementation}{32}{0}{3}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {4}{Experimental Results}{44}{0}{4}
+\beamer@sectionintoc {4}{Experimental Results}{43}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{1}{Data \& Setup}{44}{0}{4}
+\beamer@subsectionintoc {4}{1}{Data \& Setup}{43}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {4}{2}{Experiments}{46}{0}{4}
+\beamer@subsectionintoc {4}{2}{Experiments}{45}{0}{4}
 \defcounter {refsection}{0}\relax 
-\beamer@sectionintoc {5}{Conclusions \& Future Work}{51}{0}{5}
+\beamer@sectionintoc {5}{Conclusions \& Future Work}{50}{0}{5}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {5}{1}{Conclusion}{51}{0}{5}
+\beamer@subsectionintoc {5}{1}{Conclusion}{50}{0}{5}
 \defcounter {refsection}{0}\relax 
-\beamer@subsectionintoc {5}{2}{Future Work}{52}{0}{5}
+\beamer@subsectionintoc {5}{2}{Future Work}{51}{0}{5}
