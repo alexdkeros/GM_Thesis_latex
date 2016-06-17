@@ -1,8 +1,12 @@
 \documentclass[hyperref={pdfpagelabels=false}]{beamer}
 \usepackage{lmodern}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{presentation.bib}
+
+
+
+
 \usetheme{Dresden}
-
-
 \setbeamerfont{subsection in toc}{size=\small}
 
 
@@ -12,6 +16,8 @@
 \title{Scaling Geometric Monitoring Over Distributed Streams}  
 \author{Alexandros D. Keros} 
 \date{June 23, 2016} 
+\addtobeamertemplate{title page}{}{\begin{center}\small Supervised by: Prof. V.Samoladas\end{center}}
+
 \begin{document}
 
 \begin{frame}
@@ -26,21 +32,71 @@
 
 %%%%%%%%%%%%%  section: INTRODUCTION  %%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
+\begin{frame}
+  \tableofcontents[currentsection]
+ \end{frame}
+ 
 \subsection*{Overview}
-\begin{frame} \frametitle{Data Stream Systems}
-
+\begin{frame} \frametitle{Data Stream Systems\footfullcite{Babcock2002DataStreamSystems}}
+\begin{itemize}
+\item \textbf{Data streams}: Continuous, high volume, size unbound, violative, probably distributed
+\item \emph{Pull paradigm}
+\item Centralizing and/or polling $\rightarrow$ prohibitive in terms of communication overhead
+\item Examples: telecommunication, sensor networks 
+\end{itemize}
 \end{frame}
-\begin{frame} \frametitle{The Geometric Monitoring Method}
 
+\begin{frame} \frametitle{The Geometric Monitoring Method\footfullcite{Sharfman2006GM}}
+\begin{itemize}
+\item Threshold monitoring
+\item Nodes communicate when needed
+	\begin{itemize}
+	\item Local constraints
+	\item Violation resolution (\emph{false alarms})
+	\end{itemize}
+\item Arbitrary function monitoring
+\item Tight accuracy bounds
+\item A promising framework for \emph{distributed data stream monitoring}
+\end{itemize}
 \end{frame}
+
 \begin{frame} \frametitle{Motivation}
-
+\setbeamercovered{transparent}
+\begin{itemize}
+\item[]<1-> Problems:
+\begin{itemize}
+	\item<1-> increasing node population
+	\item<1-> data volume
+	\item<1-> data dimensionality
+	\item<1-> arbitrary functions
+	\item<2-> \textbf{communication - accuracy tradeoff}
+\end{itemize}
+\item[]<3->Need for:
+\begin{itemize}
+	\item<3-> scalability warranties
+	\item<3-> tight accuracy bounds
+	\item<3-> incremental/real-time operation
+	\item<4-> \textbf{Minimize communication while retaining accuracy bounds}
+\end{itemize}
+\end{itemize}
 \end{frame}
+
 \begin{frame} \frametitle{Contributions}
-
+\setbeamercovered{transparent}
+Expand the \emph{geometric monitoring method}:
+\begin{itemize}
+\item<1-> heuristic method for violation resolution
+\item<2-> distance-based hierarchical node clustering\footfullcite{Keren2014GMHetStreams}
+\item<3-> throughout method evaluation on synthetic and real-world datasets
+\end{itemize}
 \end{frame}
+
 %%%%%%%%%%%%%  section: THEOR BACK  %%%%%%%%%%%%%%%%%%%%%%%
 \section{Theoretical Background}
+\begin{frame}
+  \tableofcontents[currentsection]
+ \end{frame}
+ 
 \subsection{The Geometric Monitoring Method}
 \begin{frame} \frametitle{Geometric Threshold Monitoring}
 
