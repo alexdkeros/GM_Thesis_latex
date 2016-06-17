@@ -1,15 +1,15 @@
 [0] Config.pm:343> INFO - This is Biber 2.5
 [0] Config.pm:346> INFO - Logfile is 'Thesis_presentation.blg'
-[94] biber:290> INFO - === Fri Jun 17, 2016, 16:40:29
-[273] Biber.pm:352> INFO - Reading 'Thesis_presentation.bcf'
-[516] Biber.pm:777> INFO - Found 3 citekeys in bib section 0
-[539] Biber.pm:3494> INFO - Processing section 0
-[557] Biber.pm:3658> INFO - Looking for bibtex format file 'presentation.bib' for section 0
-[649] bibtex.pm:1176> INFO - Decoding LaTeX character macros into UTF-8
-[728] bibtex.pm:1037> INFO - Found BibTeX data source 'presentation.bib'
-[764] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[764] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[765] Biber.pm:3307> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
-[765] Biber.pm:3311> INFO - No sort tailoring available for locale 'en-US'
-[770] bbl.pm:526> INFO - Writing 'Thesis_presentation.bbl' with encoding 'ascii'
-[816] bbl.pm:619> INFO - Output to Thesis_presentation.bbl
+[76] biber:290> INFO - === Fri Jun 17, 2016, 16:56:30
+[229] Biber.pm:352> INFO - Reading 'Thesis_presentation.bcf'
+[472] Biber.pm:777> INFO - Found 3 citekeys in bib section 0
+[494] Biber.pm:3494> INFO - Processing section 0
+[512] Biber.pm:3658> INFO - Looking for bibtex format file 'presentation.bib' for section 0
+[603] bibtex.pm:1176> INFO - Decoding LaTeX character macros into UTF-8
+[682] bibtex.pm:1037> INFO - Found BibTeX data source 'presentation.bib'
+[718] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[718] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[718] Biber.pm:3307> INFO - Sorting list 'nty/global/' of type 'entry' with scheme 'nty' and locale 'en-US'
+[718] Biber.pm:3311> INFO - No sort tailoring available for locale 'en-US'
+[723] bbl.pm:526> INFO - Writing 'Thesis_presentation.bbl' with encoding 'ascii'
+[769] bbl.pm:619> INFO - Output to Thesis_presentation.bbl

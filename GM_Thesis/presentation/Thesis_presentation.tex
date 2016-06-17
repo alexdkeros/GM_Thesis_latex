@@ -1,5 +1,10 @@
 \documentclass[hyperref={pdfpagelabels=false}]{beamer}
 \usepackage{lmodern}
+\usepackage{graphicx}          	% add graphics
+\usepackage{tikz,pgfplots}
+\usepackage{gincltex}
+\usepackage{epstopdf}
+\usepackage{enumerate}		% lists of items
 \usepackage[backend=biber]{biblatex}
 \addbibresource{presentation.bib}
 
@@ -8,9 +13,7 @@
 
 \usetheme{Dresden}
 \setbeamerfont{subsection in toc}{size=\small}
-
-
-
+\setbeamertemplate{blocks}[rounded][shadow=false]
 
 
 \title{Scaling Geometric Monitoring Over Distributed Streams}  
@@ -37,7 +40,7 @@
  \end{frame}
  
 \subsection*{Overview}
-\begin{frame} \frametitle{Data Stream Systems\footfullcite{Babcock2002DataStreamSystems}}
+\begin{frame} \frametitle{Data Stream Systems}%\footfullcite{Babcock2002DataStreamSystems}}
 \begin{itemize}
 \item \textbf{Data streams}: Continuous, high volume, size unbound, violative, probably distributed
 \item \emph{Pull paradigm}
@@ -46,7 +49,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame} \frametitle{The Geometric Monitoring Method\footfullcite{Sharfman2006GM}}
+\begin{frame} \frametitle{The Geometric Monitoring Method}%\footfullcite{Sharfman2006GM}}
 \begin{itemize}
 \item Threshold monitoring
 \item Nodes communicate when needed
@@ -86,7 +89,7 @@
 Expand the \emph{geometric monitoring method}:
 \begin{itemize}
 \item<1-> heuristic method for violation resolution
-\item<2-> distance-based hierarchical node clustering\footfullcite{Keren2014GMHetStreams}
+\item<2-> distance-based hierarchical node clustering%\footfullcite{Keren2014GMHetStreams}
 \item<3-> throughout method evaluation on synthetic and real-world datasets
 \end{itemize}
 \end{frame}
@@ -96,23 +99,146 @@ Expand the \emph{geometric monitoring method}:
 \begin{frame}
   \tableofcontents[currentsection]
  \end{frame}
- 
 \subsection{The Geometric Monitoring Method}
 \begin{frame} \frametitle{Geometric Threshold Monitoring}
-
+\begin{itemize}
+%\item \fullcite{Sharfman2006GM}
+\item \textbf{Threshold monitoring}: arbitrary function $f(\cdot)$, threshold $T$\\
+ $$f(\cdot)<T\ \text{or}\ f(\cdot)>T$$
+\item \textbf{Idea}: decompose into local constraints at the nodes
+\end{itemize}
 \end{frame}
-\begin{frame} \frametitle{System Architecture}
 
+\begin{frame} \frametitle{System Architecture} \framesubtitle{Decentralized Scenario}
+\begin{figure}[H]
+\centering
+\vspace{-0.2cm}
+\includegraphics[scale=0.5]{../img/decentralized.tex}
+\caption{\textbf{Mesh-like network topology} example of the decentralized scenario. Dashed lines represent data streams and half arrows represent message exchanges.} 
+\end{figure}
 \end{frame}
-\begin{frame} \frametitle{Computational Model}
 
+\begin{frame} \frametitle{System Architecture} \framesubtitle{Centralized Scenario}
+\begin{figure}[H]
+\centering
+\vspace{-1cm}
+\includegraphics[scale=0.5]{../img/centralized.tex}
+\caption{\textbf{Star-like network topology} example of the centralized scenario.The bold node represents the coordinator node. Dashed lines represent data streams and half arrows represent message exchanges.} 
+\end{figure}
 \end{frame}
+
+\begin{frame} \frametitle{Computational Model}\framesubtitle{Statistics vectors}
+\setbeamercolor{block title}{use=structure,fg=white,bg=blue!55!black}
+\setbeamercolor{block body}{use=structure,fg=black,bg=blue!5!white}
+
+\begin{itemize}
+\item the \emph{monitoring function} $f:\mathbb{R}^d \to \mathbb{R}$
+\item the \emph{threshold} $T \in \mathbb{R}$
+\item the \emph{monitoring node set} : $P=\{p_1, \dots, p_n\}$\\\quad with \emph{weights} $w_1, \dots, w_n$
+\item the \emph{data streams} : $S=\{s_1, \dots, s_n\}$
+\item the $d$-dimensional \emph{local statistics vectors} : $\vec{v_1}(t), \dots, \vec{v_n}(t)$\\\quad represent each node's data stream at time $t$
+\end{itemize}
+\begin{block}{Global statistics vector}
+\vspace{0.2cm}
+\begin{equation}
+\vec{v}(t)=\frac{\sum_{i=1}^n{w_i\vec{v_i}(t)}}{\sum_{i=1}^n{w_i}}
+\label{form:globalStatsVector}
+\end{equation}
+\vspace{0.2cm}
+\end{block}
+\end{frame}
+
+\begin{frame} \frametitle{Computational Model}\framesubtitle{Estimate vector}
+\setbeamercolor{block title}{use=structure,fg=white,bg=blue!55!black}
+\setbeamercolor{block body}{use=structure,fg=black,bg=blue!5!white}
+Infrequent communication between nodes/nodes-coordinator:
+\begin{block}{Estimate vector}
+\begin{equation}
+\vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}'}}{\sum_{i=1}^n {w_i}}
+\label{form:estimateVector}
+\end{equation}
+\end{block}
+\begin{itemize}
+\item the last communicated \emph{local statistics vector} of node $p_i$ : $\vec{v_i}'$
+\item \emph{Local statistics} divergence:$\Delta \vec{v_i}(t)=\vec{v_i}(t)-\vec{v_i}', i=1,\dots,n$
+\end{itemize}
+\begin{columns}
+\setbeamercolor{block title}{use=structure,fg=blue,bg=blue!15!white}
+\setbeamercolor{block body}{use=structure,fg=black,bg=blue!5!white}
+\begin{column}[t]{0.5\textwidth}
+\begin{block}{Decentralized drift vector}
+\vspace{-0.3cm}
+\begin{equation}
+\vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)
+\label{form:decentralizedDrift}
+\end{equation}
+\end{block}
+\end{column}
+\begin{column}[t]{0.5\textwidth}
+\begin{block}{Centralized drift vector}
+\vspace{-0.45cm}
+\begin{equation}
+\vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)+\frac{\vec{\delta_i}}{w_i}
+\label{form:centralizedDrift}
+\end{equation} 
+\end{block}
+\end{column}
+\end{columns}
+\end{frame}
+
 \begin{frame} \frametitle{Computational Model}\framesubtitle{Balancing Process}
-
+\setbeamercolor{block title}{use=structure,fg=white,bg=blue!55!black}
+\setbeamercolor{block body}{use=structure,fg=black,bg=blue!5!white}
+\begin{itemize}
+\item[] \textbf{Centralized scenario}
+\item[] \textbf{Purpose}: resolve possible false alarms
+\item[]
+\begin{block}{Balancing vector}
+\begin{equation}
+\vec{b}=\frac{ \sum_{p_i \in P'} {w_i\vec{u_i}(t)} }{ \sum_{p_i \in P'} {w_i} }
+\label{form:balancingVector}
+\end{equation}
+\end{block}
+\begin{itemize}
+	\item the \emph{balancing set} $P'$: a subset of nodes
+	\item the \emph{slack vector} at the nodes $\vec{\delta_i}=\vec{\delta_i}'+\Delta\vec{\delta_i}$, $\sum_{p_i \in P'} \Delta \vec{\delta_i}= \vec{0}$:
+\end{itemize}
+\begin{equation}
+\Delta\vec{\delta_i}=w_i\vec{b}-w_i\vec{u_i}(t)\ \forall\ p_i \in P'
+\end{equation}
+, readjusts the \emph{drift vectors}~\eqref{form:centralizedDrift}.
+\end{itemize}
 \end{frame}
+
 \begin{frame} \frametitle{Geometric Interpretation}\framesubtitle{Convexity Property}
-
+\begin{block}{Convexity Property}
+\begin{equation}
+\vec{v}(t)=\frac{\sum_{i=1}^n {w_i\vec{u_i}(t)}}{\sum_{i=1}^n {w_i}}
+\label{form:convexityProperty}
+\end{equation}
+\end{block}
+\begin{theorem}[Sharfman et al.~\cite{Sharfman2006GM}]\label{theorem:convexHull}
+Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors in $\mathbb{R}^d$. Let $Conv(\vec{x}, \vec{y_1}, \dots, \vec{y_n})$ be the convex hull of $\vec{x}, \vec{y_1}, \dots, \vec{y_n}$. Let $B(\vec{x}, \vec{y_i})$ be a ball centered at $\frac{\vec{x}+\vec{y_i}}{2}$ and with radius of $\lVert{\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2$ i.e., $B(\vec{x}, \vec{y_i})=\{\vec{z}\ |\ \lVert{\vec{z}-\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2 \leq \lVert{\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2 \}$, then $Conv(vec{x}, \vec{y_1}, \dots, \vec{y_n}) \subset B(\vec{x}, \vec{y_i})$.
+\end{theorem}
 \end{frame}
+
+\begin{frame} \frametitle{Geometric Interpretation}\framesubtitle{Convexity Property}
+\begin{figure}[H]
+\begin{columns}
+\begin{column}[t]{0.35\textwidth}
+\vspace{-6.1cm}
+\caption{Example of a convex hull (light gray) defined by the drift vectors $\vec{u_i}, i=1,2,3,4,5$. The hull is bounded by the spheres created from the estimate vector $\vec{e}$ and the drift vectors $\vec{u_i}, i=1,2,3,4,5$. The global statistics vector $\vec{v}$ is guaranteed to be contained in the convex hull of the drift vectors.} 
+\end{column}
+\begin{column}[t]{0.65\textwidth}
+\vspace{-4cm}
+\includegraphics[scale=0.35, trim=0 0 4.2cm 0]{../img/convex_hull.tex}
+\end{column}
+\end{columns}
+\label{fig:convexHull}
+\end{figure}
+\end{frame}
+
+
 \begin{frame} \frametitle{Geometric Interpretation}\framesubtitle{Local Constraints}
 
 \end{frame}
