@@ -220,7 +220,7 @@ Infrequent communication between nodes/nodes-coordinator:
 \label{form:convexityProperty}
 \end{equation}
 \end{block}
-\begin{theorem}[Sharfman et al.~\cite{Sharfman2006GM}]\label{theorem:convexHull}
+\begin{theorem}[Sharfman et al.]\label{theorem:convexHull} %~\cite{Sharfman2006GM}
 Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors in $\mathbb{R}^d$. Let $Conv(\vec{x}, \vec{y_1}, \dots, \vec{y_n})$ be the convex hull of $\vec{x}, \vec{y_1}, \dots, \vec{y_n}$. Let $B(\vec{x}, \vec{y_i})$ be a ball centered at $\frac{\vec{x}+\vec{y_i}}{2}$ and with radius of $\lVert{\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2$ i.e., $B(\vec{x}, \vec{y_i})=\{\vec{z}\ |\ \lVert{\vec{z}-\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2 \leq \lVert{\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2 \}$, then $Conv(vec{x}, \vec{y_1}, \dots, \vec{y_n}) \subset B(\vec{x}, \vec{y_i})$.
 \end{theorem}
 \end{frame}
@@ -256,29 +256,25 @@ Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors 
 		$\vec{v_i}'=\vec{v_i}(0)$\;
 		Wait messages from all other nodes\;
 		\If{messages from all vectors received}{
-			$\vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}'}}{\sum_{i=1}^n {w_i}}$\;
+			Compute \emph{estimate vector} $\vec{e}(t)$\;
 		}
 	}
-
 	\ForEach(\tcc*[f]{Main monitoring task}){node $p_i$}{
 		\ForEach{new $s_i$ stream update $\vec{v_i}(t)$}{
-			Recalculate $\vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)$\;
+			Recalculate \emph{drift vector} $\vec{u_i}(t)$\;
 			\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
 				Broadcast message $<i,\vec{v_i}(t)>$\;
 				Set $\vec{v_i}'=\vec{v_i}(t)$\;
 			}
-		
-
 			\If{new message $<j,\vec{v_j}(t)>$ received}{
 				Set $\vec{v_j}'=\vec{v_j}(t)$\;
-				Recalculate $\vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}'}}{\sum_{i=1}^n {w_i}}$\;
+				Recalculate \emph{estimate vector} $\vec{e}(t)$\;
 				\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
 					Broadcast message $<i,\vec{v_i}(t)>$\;
 					Set $\vec{v_i}'=\vec{v_i}(t)$\;
 				}
 			}
 		}
-
 	}
 }
 \caption{Decentralized algorithm \label{algo:decentralized}} 
@@ -289,12 +285,10 @@ Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors 
 
 
 \begin{frame}[plain] \frametitle{Protocol}\framesubtitle{Centralized Algorithm}
-\begin{columns}
-\begin{column}{.8\linewidth}
-
-\scalebox{0.43}{
+\noindent\scalebox{0.44}{
+\begin{minipage}{\linewidth}
+\hspace{-2cm}
 \begin{algorithm}[H]
-
 \setstretch{1.30}
 
 \SetKwFunction{Balance}{Balance}
@@ -303,29 +297,27 @@ Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors 
 \Begin{
 	
 	Wait for $<INIT, \cdot>$ messages from all monitoring nodes\tcc*[r]{Initialization}
-	$\vec{e}(0)=\frac{\sum_{i=1}^n {w_i \vec{v_i}(0)}}{\sum_{i=1}^n {w_i}}$\;
-
+	Compute \emph{estimate vector} $\vec{e}(0)$\;
 	\If(\tcc*[f]{Monitoring operation}){new $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message received}{
 		$P'=P' \cup \{<i,\vec{v_i}(t),\vec{u_i}(t)>\}$\;
 		\Balance{$P'$}\;
 	}
 }
-
 \Fn(\tcc*[f]{Balancing Process}){\Balance{$P'$}}{
-	$\vec{b}=\frac{ \sum_{p_i \in P'} {w_i\vec{u_i}(t)} }{ \sum_{p_i \in P'} {w_i} }$\;
+	Compute \emph{balancing vector} $\vec{b}$\;
 	\uIf{$B(\vec{e}, \vec{b})$ is \emph{not} monochromatic}{
 		\uIf{$P-P'\neq \emptyset$}{
 			Send $<REQ>$ message to random node in $P-P'$ set\;
 		}
 		\Else{
-			$\vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}(t)}}{\sum_{i=1}^n {w_i}}$\;
+			Compute \emph{estimate vector} $\vec{e}(t)$\;
 			Send $<NEW\textnormal{-}EST, \vec{e}(t)>$ message to all nodes\;
 			\Return \;
 		}
 	}
 	\Else{
 		\ForEach{$p_i \in P'$}{
-			$\Delta\vec{\delta_i}=w_i\vec{b}-w_i\vec{u_i}(t)$\;
+			Compute \emph{slack adjustment vector} $\Delta\vec{\delta_i}$\;
 			Send $<ADJ\textnormal{-}SLK, \Delta\vec{\delta_i}>$ message to node $p_i$\;
 			\Return \;
 		}
@@ -335,13 +327,11 @@ Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors 
 \caption{Centralized algorithm's coordinator node operation\label{algo:centralizedCoordinatorNode}} 
 \end{algorithm}
 
-}
-\end{column}
-\begin{column}{.8\linewidth}
-\scalebox{0.46}{
-
+\end{minipage}%
+}\hfill\noindent\scalebox{0.42}{
+\begin{minipage}{\linewidth}
+\vspace{-2.5cm}
 \begin{algorithm}[H]
-
 \setstretch{1.30}
 \Begin{
 	\ForEach(\tcc*[f]{Node initialization}){node $p_i$}{
@@ -356,7 +346,7 @@ Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors 
 
 	\ForEach(\tcc*[f]{Main monitoring task}){node $p_i$}{
 		\ForEach{new $s_i$ stream update $\vec{v_i}(t)$}{
-			Recalculate $\vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)+\frac{\vec{\delta_i}}{w_i}$\;
+			Recalculate \emph{drift vector} $\vec{u_i}(t)$\;
 			\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
 				Send $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message to coordinator\;
 				Wait for $<NEW\textnormal{-}EST,\cdot>$ or $<ADJ\textnormal{-}SLK,\cdot>$ message from coordinator\;
@@ -376,21 +366,15 @@ Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors 
 			} 
 
 			\If{new $<ADJ\textnormal{-}SLK, \Delta\vec{\delta_i}>$ message received}{
-				$\vec{\delta_i}=\vec{\delta_i}+\Delta\vec{\delta_i}$\;
+				Recompute \emph{delta vector} $\vec{\delta_i}$\;
 			}
-
 		}
-
 	}
 }
 \caption{Centralized algorithm's monitoring node operation \label{algo:centralizedMonitoringNode}} 
-
-\end{algorithm}  
-
+\end{algorithm}
+\end{minipage}%
 }
-\end{column}%
-\end{columns}
-
 \end{frame}
 
 \subsection{Theoretical Tools}
