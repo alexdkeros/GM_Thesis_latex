@@ -137,145 +137,153 @@
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@subsectionpages {31}{31}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{3}{1}{32}{Problem Statement}}\headcommand {\beamer@subsectionpages {32}{31}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{1}{1}{32/32}{Problem Statement}{0}}
+\headcommand {\slideentry {3}{0}{2}{32/32}{}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {32}{32}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{3}{2}{33}{Implementation}}\headcommand {\beamer@subsectionpages {32}{32}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{33}{Problem Statement}}\headcommand {\beamer@subsectionpages {32}{32}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{1}{33/33}{Implementation}{0}}
+\headcommand {\slideentry {3}{1}{1}{33/33}{Problem Statement}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {33}{33}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsubsectionentry {0}{3}{2}{1}{34}{Distance-based Hierarchical Clustering}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{34}{Implementation}}\headcommand {\beamer@subsectionpages {33}{33}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{2}{34/34}{Implementation}{0}}
+\headcommand {\slideentry {3}{2}{1}{34/34}{Implementation}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {34}{34}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{3}{35/35}{Implementation}{0}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{2}{1}{35}{Distance-based Hierarchical Clustering}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{2}{2}{35/35}{Implementation}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {35}{35}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{4}{36/36}{Implementation}{0}}
+\headcommand {\slideentry {3}{2}{3}{36/36}{Implementation}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {36}{36}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsubsectionentry {0}{3}{2}{2}{37}{Heuristic Balancing}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{5}{37/37}{Implementation}{0}}
+\headcommand {\slideentry {3}{2}{4}{37/37}{Implementation}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {37}{37}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{6}{38/38}{Implementation}{0}}
+\headcommand {\slideentry {3}{2}{5}{38/38}{Implementation}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {38}{38}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{7}{39/39}{Implementation}{0}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{2}{2}{39}{Heuristic Balancing}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{2}{6}{39/39}{Implementation}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {39}{39}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{8}{40/40}{Implementation}{0}}
+\headcommand {\slideentry {3}{2}{7}{40/40}{Implementation}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {40}{40}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsubsectionentry {0}{3}{2}{3}{41}{Violation Detection}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{9}{41/41}{Implementation}{0}}
+\headcommand {\slideentry {3}{2}{8}{41/41}{Implementation}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {41}{41}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsubsectionentry {0}{3}{2}{4}{42}{The Savitzky-Golay Filter}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{10}{42/42}{Implementation}{0}}
+\headcommand {\slideentry {3}{2}{9}{42/42}{Implementation}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {42}{42}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsubsectionentry {0}{3}{2}{5}{43}{Challenges}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{2}{3}{43}{Violation Detection}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {3}{2}{11}{43/43}{Implementation}{0}}
+\headcommand {\slideentry {3}{2}{10}{43/43}{Implementation}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {43}{43}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {4}{Experimental Results}{44}{Experimental Results}{0}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{2}{4}{44}{The Savitzky-Golay Filter}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {32}{43}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {33}{43}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{4}{1}{44}{Data \& Setup}}\headcommand {\beamer@subsectionpages {44}{43}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsubsectionentry {0}{4}{1}{1}{44}{Synthetic Data}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{1}{1}{44/44}{Data \& Setup}{0}}
+\headcommand {\slideentry {3}{2}{11}{44/44}{Implementation}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {44}{44}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsubsectionentry {0}{4}{1}{2}{45}{Real-world Data}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{2}{5}{45}{Challenges}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{1}{2}{45/45}{Data \& Setup}{0}}
+\headcommand {\slideentry {3}{2}{12}{45/45}{Implementation}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {45}{45}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{4}{2}{46}{Experiments}}\headcommand {\beamer@subsectionpages {44}{45}}
+\headcommand {\sectionentry {4}{Experimental Results}{46}{Experimental Results}{0}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{2}{1}{46/46}{Experiments}{0}}
+\headcommand {\beamer@sectionpages {32}{45}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {34}{45}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{4}{1}{46}{Data \& Setup}}\headcommand {\beamer@subsectionpages {46}{45}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsubsectionentry {0}{4}{1}{1}{46}{Synthetic Data}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {4}{1}{1}{46/46}{Data \& Setup}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {46}{46}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsubsectionentry {0}{4}{2}{1}{47}{ Matching Algorithms}}
+\headcommand {\beamer@subsubsectionentry {0}{4}{1}{2}{47}{Real-world Data}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{2}{2}{47/47}{Experiments}{0}}
+\headcommand {\slideentry {4}{1}{2}{47/47}{Data \& Setup}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {47}{47}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsubsectionentry {0}{4}{2}{2}{48}{Balancing Methods}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{48}{Experiments}}\headcommand {\beamer@subsectionpages {46}{47}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{2}{3}{48/48}{Experiments}{0}}
+\headcommand {\slideentry {4}{2}{1}{48/48}{Experiments}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {48}{48}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsubsectionentry {0}{4}{2}{3}{49}{Synthetic Data}}
+\headcommand {\beamer@subsubsectionentry {0}{4}{2}{1}{49}{ Matching Algorithms}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{2}{4}{49/49}{Experiments}{0}}
+\headcommand {\slideentry {4}{2}{2}{49/49}{Experiments}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {49}{49}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsubsectionentry {0}{4}{2}{4}{50}{Real-world Data}}
+\headcommand {\beamer@subsubsectionentry {0}{4}{2}{2}{50}{Balancing Methods}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {4}{2}{5}{50/50}{Experiments}{0}}
+\headcommand {\slideentry {4}{2}{3}{50/50}{Experiments}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {50}{50}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\sectionentry {5}{Conclusions \& Future Work}{51}{Conclusions \& Future Work}{0}}
+\headcommand {\beamer@subsubsectionentry {0}{4}{2}{3}{51}{Synthetic Data}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@sectionpages {44}{50}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionpages {46}{50}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{5}{1}{51}{Conclusion}}\headcommand {\beamer@subsectionpages {51}{50}}
-\defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {5}{1}{1}{51/51}{Conclusion}{0}}
+\headcommand {\slideentry {4}{2}{4}{51/51}{Experiments}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {51}{51}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\beamer@subsectionentry {0}{5}{2}{52}{Future Work}}\headcommand {\beamer@subsectionpages {51}{51}}
+\headcommand {\beamer@subsubsectionentry {0}{4}{2}{4}{52}{Real-world Data}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {5}{2}{1}{52/52}{Future Work}{0}}
+\headcommand {\slideentry {4}{2}{5}{52/52}{Experiments}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {52}{52}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {5}{2}{2}{53/53}{Future Work}{0}}
+\headcommand {\sectionentry {5}{Conclusions \& Future Work}{53}{Conclusions \& Future Work}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {46}{52}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {48}{52}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{5}{1}{53}{Conclusion}}\headcommand {\beamer@subsectionpages {53}{52}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{1}{1}{53/53}{Conclusion}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {53}{53}}
 \defcounter {refsection}{0}\relax 
-\headcommand {\slideentry {5}{2}{3}{54/54}{Future Work}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{54}{Future Work}}\headcommand {\beamer@subsectionpages {53}{53}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{2}{1}{54/54}{Future Work}{0}}
 \defcounter {refsection}{0}\relax 
 \headcommand {\beamer@framepages {54}{54}}
-\headcommand {\beamer@partpages {1}{54}}
-\headcommand {\beamer@subsectionpages {52}{54}}
-\headcommand {\beamer@sectionpages {51}{54}}
-\headcommand {\beamer@documentpages {54}}
-\headcommand {\def \inserttotalframenumber {49}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{2}{2}{55/55}{Future Work}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {55}{55}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{2}{3}{56/56}{Future Work}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\beamer@partpages {1}{56}}
+\headcommand {\beamer@subsectionpages {54}{56}}
+\headcommand {\beamer@sectionpages {53}{56}}
+\headcommand {\beamer@documentpages {56}}
+\headcommand {\def \inserttotalframenumber {51}}

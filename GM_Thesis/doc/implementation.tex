@@ -9,7 +9,7 @@ The initial Geometric Monitoring method~\cite{Sharfman2006GM}, which is describe
 The decentralized algorithm operates on a coordinator-less environment, where nodes are allowed to communicate with each other, whereas the coordinator-based algorithm has a Star network topology, where the coordinator node is the central node (the \emph{hub}) and the Monitoring nodes reside on the edges of the network.
 The algorithm operating on the decentralized setting does not provide a balancing process for local violation resolution. On the other hand, the coordinator based algorithm implements a violation resolution operation every time a local violation occurs, which aims to minimize the communication overhead induced by false violation reports. 
 
-Our focus is centered towards a simplified \textbf{coordinator-based algorithm} (Algorithm~\ref{algo:GM-coordBased}), described in Section~\ref{sec:theorBack-GM}, as it provides a framework for the heuristic balancing process, as well as the node matching operation presented in detail in Sections~\ref{sec:impl-heuristic} and~\ref{sec:impl-distNodeMatch} respectively.
+Our focus is centered towards a simplified \textbf{coordinator-based algorithm} (Algorithms~\ref{algo:centralizedCoordinatorNode},  and~\ref{algo:centralizedMonitoringNode}), described in Section~\ref{sec:theorBack-GM}, as it provides a framework for the heuristic balancing process, as well as the node matching operation presented in detail in Sections~\ref{sec:impl-heuristic} and~\ref{sec:impl-distNodeMatch} respectively.
 
 To aid method formulation and experimentation, the following simplifying assumptions have been made regarding the coordinator-based algorithm:
 \begin{itemize}

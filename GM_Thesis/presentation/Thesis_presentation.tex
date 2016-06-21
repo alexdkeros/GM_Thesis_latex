@@ -509,23 +509,131 @@ Let $G=(V,E)$ a graph:
 
 %%%%%%%%%%%%%  section: IMPL  %%%%%%%%%%%%%%%%%%%%%%%
 \section{Problem Statement \& Implementation}
+\begin{frame}
+  \tableofcontents[currentsection]
+\end{frame}
+ 
 \subsection{Problem Statement}
 \begin{frame} \frametitle{Problem Formulation}
-
+\textbf{Reduce the communication burden} of the \emph{Geometric Monitoring} method by:
+\begin{itemize}
+\item Optimally position \emph{drift vectors} during the \emph{balancing process}
+\item Appropriate node selection for inclusion in the \emph{balancing set}
+\end{itemize}
+,in order to \textbf{increase scalability} in terms of:
+\begin{itemize}
+\item node popullation
+\item stream dimensionality.
+\end{itemize}
 \end{frame}
 \subsection{Implementation}
-\begin{frame} \frametitle{The Geometric Monitoring Framework}
 
+\begin{frame} \frametitle{The Geometric Monitoring Framework} \framesubtitle{Assumptions}
+\noindent\begin{minipage}[t]{0.45\linewidth}
+\begin{itemize}\vspace{-2.5cm}
+\item Coordinator-based scenarion
+\item Instantaneous, loss-less, reliable communication
+\item Iterative operation based on time-steps
+\item System pause during violation resolution
+\item Coordinator node does not monitor a stream
+\end{itemize}
+\end{minipage}\hfill\noindent\scalebox{0.50}{
+\begin{minipage}[t]{\linewidth}
+\begin{algorithm}[H]
+\setstretch{1.30}
+
+\KwData{$monitoringNodes$: a list of Monitoring nodes,\\\quad $coordinator$: the Coordinator node}
+
+\SetAlgoLined
+\Begin{
+ initialization\;
+ 	\Repeat{$globalViolation$}{
+		\ForEach{$node \in\ monitoringNodes$}{
+			$node.DataVectorUpdate()$\;
+			$node.ComputeDriftVector()$\;
+		}
+		\ForEach{$node \in\ monitoringNodes$}{
+			$node.CheckForViolation()$\;
+			\If{$localViolation$}{
+				$node.Report()$\;
+				$coordinator.Balance()$\;
+			}
+		}
+	}
+}
+\caption{Iterative network operation \label{algo:singleHandlingNetwork}} 
+\end{algorithm}
+\end{minipage}%
+}
 \end{frame}
+
 \subsubsection*{Distance-based Hierarchical Clustering}
 \begin{frame} \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Idea}
-
+Node selection for \emph{violation resolution}:
+\begin{itemize}
+\item Elevate \emph{randomness} of the initial \emph{geometric monitoring} method%\footfullcite{Sharfman2006GM}
+\item Hierarchical node clustering scheme%~\footfullcite{Keren2014GMHetStreams}
+\item Decouple matching from the data distribution at the nodes%~\footfullcite{Keren2014GMHetStreams}
+\item Accurately follow \emph{global statistics vector}
+\end{itemize}
 \end{frame}
+
 \begin{frame} \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Weight Function}
-
+\setbeamercolor{block title}{use=structure,fg=white,bg=blue!55!black}
+\setbeamercolor{block body}{use=structure,fg=black,bg=blue!5!white}
+\begin{block}{Weight function}
+\vspace{0.2cm}
+\begin{equation*}
+w_{i,j}=
+\sum_{t=t_0}^{t_{end}}{[(f(\vec{v}_{global}(t))-f(\frac{\vec{v_i}(t)+\vec{v_j}(t)}{2}))+(|\vec{v_i}(t)-\vec{v_j}(t)|)]}
+\end{equation*}
+\vspace{0.2cm}
+\end{block}
 \end{frame}
-\begin{frame} \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Algorithm}
 
+\begin{frame} \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Algorithm}
+\centering
+\scalebox{0.55}{
+\begin{minipage}[t]{1.3\linewidth}
+\begin{algorithm}[H]
+\SetAlgoLined
+\setstretch{1.30}
+\SetKwFunction{DistancePairer}{DistancePairer}
+\SetKwProg{Fn}{Function}{}{end}
+\Fn{\DistancePairer{$nodes$,$i$}}{
+	\KwData{$nodes=[(n_1, [\vec{v_1}(t_0), ... , \vec{v_1}(t_{end})]), ... , (n_k, [\vec{v_k}(t_0), ... , \vec{v_k}(t_{end})])]$: list of nodes with their respective data vectors,$i$: pair type, initial=1} 
+	\KwResult{$nodeHierarchy$: dictionary of \emph{Type-k} pairs}
+
+	\If(\tcp*[f]{recursion stopping condition}){$length(nodes)=1$}{
+		\Return{$nodeHierarchy$}\;
+	}
+	$g=CreateCompleteGraph(nodes)$\tcp*[r]{complete graph with $nodes$ as vertices} 
+	\ForEach(\tcp*[f]{assign weights to edges}){$(n_i, n_j)\in g.Edges()$}{
+		$w_{i,j}=
+		\sum_{t=t_0}^{t_{end}}{[(f(\vec{v}_{global}(t))-f(\frac{\vec{v_i}(t)+\vec{v_j}(t)}{2}))+(|\vec{v_i}(t)-\vec{v_j}(t)|)]}$\;
+		$g.edge(n_i, n_j).weight=w_{i,j}$\;
+	}
+	$nodeHierarchy(\text{Type-i})=g.maximalWeightMatching()$\tcp*[r]{node pairs of \emph{Type-}$i$}
+	\DistancePairer{$nodeHierarchy(\text{Type-i}),i*2$}\;
+}
+\caption{Recursively create Monitoring node pairs and hierarchy \label{algo:nodeMatching}} 
+\end{algorithm}
+\end{minipage}
+}
+\end{frame}
+
+\begin{frame} \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{Example}
+\begin{figure}
+\begin{columns}
+\begin{column}[t]{0.4\linewidth}
+\vspace{-5.5cm}\caption{Distance based node matching operating on 4 nodes ($\{n_0, n_1, n_2, n_3\}$). Distance $d_1$ : the distance of the data vector mean of the paired nodes $n_0$ and $n_3$ from the global mean (\emph{global data vector}), distance $d_2$ : denotes the in-between distance of data vectors $\vec{v_0}(t)$ and $\vec{v_3}(t)$ of the node pair. Both distances are taking part in the edge weighting process.} \label{fig:distoptpairdetailed}
+\end{column}
+\begin{column}[t]{0.6\linewidth}
+\centering
+\includegraphics[scale=0.22]{../img/distoptpair_example_detail_edited.jpeg}
+\end{column}
+\end{columns}
+\end{figure}
 \end{frame}
 \subsubsection*{Heuristic Balancing}
 \begin{frame} \frametitle{The Heuristic Balancing}\framesubtitle{The Idea}
