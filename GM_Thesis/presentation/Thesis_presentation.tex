@@ -8,11 +8,8 @@
 \usepackage[linesnumbered,lined,boxed,ruled,commentsnumbered]{algorithm2e}
 \usepackage{setspace}
 \usepackage{listings}		% code listings
-\usepackage[backend=biber]{biblatex}
+\usepackage[backend=biber,  style=authoryear-comp]{biblatex}
 \addbibresource{presentation.bib}
-
-
-
 
 \usetheme{Dresden}
 \setbeamerfont{subsection in toc}{size=\small}
@@ -43,7 +40,7 @@
  \end{frame}
  
 \subsection*{Overview}
-\begin{frame} \frametitle{Data Stream Systems}%\footfullcite{Babcock2002DataStreamSystems}}
+\begin{frame} \frametitle{Data Stream Systems\footcite{Babcock2002DataStreamSystems}}
 \begin{itemize}
 \item \textbf{Data streams}: Continuous, high volume, size unbound, violative, probably distributed
 \item \emph{Pull paradigm}
@@ -52,7 +49,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame} \frametitle{The Geometric Monitoring Method}%\footfullcite{Sharfman2006GM}}
+\begin{frame} \frametitle{The Geometric Monitoring Method\footfullcite{Sharfman2006GM}}
 \begin{itemize}
 \item Threshold monitoring
 \item Nodes communicate when needed
@@ -92,7 +89,7 @@
 Expand the \emph{geometric monitoring method}:
 \begin{itemize}
 \item<1-> heuristic method for violation resolution
-\item<2-> distance-based hierarchical node clustering%\footfullcite{Keren2014GMHetStreams}
+\item<2-> distance-based hierarchical node clustering\footfullcite{Keren2014GMHetStreams}
 \item<3-> throughout method evaluation on synthetic and real-world datasets
 \end{itemize}
 \end{frame}
@@ -105,7 +102,7 @@ Expand the \emph{geometric monitoring method}:
 \subsection{The Geometric Monitoring Method}
 \begin{frame} \frametitle{Geometric Threshold Monitoring}
 \begin{itemize}
-%\item \fullcite{Sharfman2006GM}
+\item \fullcite{Sharfman2006GM}
 \item \textbf{Threshold monitoring}: arbitrary function $f(\cdot)$, threshold $T$\\
  $$f(\cdot)<T\ \text{or}\ f(\cdot)>T$$
 \item \textbf{Idea}: decompose into local constraints at the nodes
@@ -220,7 +217,7 @@ Infrequent communication between nodes/nodes-coordinator:
 \label{form:convexityProperty}
 \end{equation}
 \end{block}
-\begin{theorem}[Sharfman et al.]\label{theorem:convexHull} %~\cite{Sharfman2006GM}
+\begin{theorem}[\footfullcite{Sharfman2006GM}]\label{theorem:convexHull}
 Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors in $\mathbb{R}^d$. Let $Conv(\vec{x}, \vec{y_1}, \dots, \vec{y_n})$ be the convex hull of $\vec{x}, \vec{y_1}, \dots, \vec{y_n}$. Let $B(\vec{x}, \vec{y_i})$ be a ball centered at $\frac{\vec{x}+\vec{y_i}}{2}$ and with radius of $\lVert{\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2$ i.e., $B(\vec{x}, \vec{y_i})=\{\vec{z}\ |\ \lVert{\vec{z}-\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2 \leq \lVert{\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2 \}$, then $Conv(vec{x}, \vec{y_1}, \dots, \vec{y_n}) \subset B(\vec{x}, \vec{y_i})$.
 \end{theorem}
 \end{frame}
@@ -415,15 +412,15 @@ Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors 
 }
 \end{frame}
 
-%conmin
-\begin{frame} \frametitle{Feasible Directions}
-\emph{Usable feasible direction} $d_t$:\begin{itemize}
-\item a small disposition towards direction $d_t$ does not violate any constraint i.e.,
-$$d_t^T \nabla G(x_t)\leq 0$$
-\item a move towards $d_t$ reduces the objective functions value i.e.,
-$$d_t^T \nabla F(x_t)<0$$.
-\end{itemize}
-\end{frame}
+%%conmin
+%\begin{frame} \frametitle{Feasible Directions}
+%\emph{Usable feasible direction} $d_t$:\begin{itemize}
+%\item a small disposition towards direction $d_t$ does not violate any constraint i.e.,
+%$$d_t^T \nabla G(x_t)\leq 0$$
+%\item a move towards $d_t$ reduces the objective functions value i.e.,
+%$$d_t^T \nabla F(x_t)<0$$.
+%\end{itemize}
+%\end{frame}
 
 %sqp
 \begin{frame} \frametitle{SQP}
@@ -500,10 +497,10 @@ Let $G=(V,E)$ a graph:
 \subsection{Related Work}
 \begin{frame} \frametitle{Related Work}
 \begin{itemize}
-\item \emph{Safe Zones}: optimal local constraints fitted to nodes' data distributions %\footfullcite{Keren2013SafeZones}
-\item Ellipsoidal bounding regions, decouplement of estimate vector from bounding ball construction%\footfullcite{Sharfman2012ShapeSensGM}
-\item Simple shapes as local constraints, hierarchical clustering of nodes for participation to the balancing operation%\footfullcite{Keren2014GMHetStreams}
-\item Prediction models based on velocity and acceleration%\footfullcite{GiatrakosPredictionGM}
+\item \emph{Safe Zones}: optimal local constraints fitted to nodes' data distributions\footfullcite{Keren2013SafeZones}
+\item Ellipsoidal bounding regions, decouplement of estimate vector from bounding ball construction\footfullcite{Sharfman2012ShapeSensGM}
+\item Simple shapes as local constraints, hierarchical clustering of nodes for participation to the balancing operation\footfullcite{Keren2014GMHetStreams}
+\item Prediction models based on velocity and acceleration\footfullcite{GiatrakosPredictionGM}
 \end{itemize}
 \end{frame}
 
@@ -571,9 +568,9 @@ Let $G=(V,E)$ a graph:
 \begin{frame} \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Idea}
 Node selection for \emph{violation resolution}:
 \begin{itemize}
-\item Elevate \emph{randomness} of the initial \emph{geometric monitoring} method%\footfullcite{Sharfman2006GM}
-\item Hierarchical node clustering scheme%~\footfullcite{Keren2014GMHetStreams}
-\item Decouple matching from the data distribution at the nodes%~\footfullcite{Keren2014GMHetStreams}
+\item Elevate \emph{randomness} of the initial \emph{geometric monitoring} method\footfullcite{Sharfman2006GM}
+\item Hierarchical node clustering scheme\footfullcite{Keren2014GMHetStreams}
+\item Decouple matching from the data distribution at the nodes\footfullcite{Keren2014GMHetStreams}
 \item Accurately follow \emph{global statistics vector}
 \item Node ``cancel each other out'' during the \emph{balancing process}
 \end{itemize}
@@ -753,68 +750,348 @@ P'&:\text{the balancing set}
 \end{columns}
 \end{frame}
 
-\subsubsection*{Violation Detection}
-\begin{frame} \frametitle{Violation Detection in the Sphere}\framesubtitle{A Nested Optimization Problem}
-
-\end{frame}
+%\subsubsection*{Violation Detection}
+%\begin{frame} \frametitle{Violation Detection in the Sphere}\framesubtitle{A Nested Optimization Problem}
+%
+%\end{frame}
 \subsubsection*{The Savitzky-Golay Filter}
 \begin{frame} \frametitle{Velocity and Acceleration Estimation via SG Filtering}
-
+\begin{figure}
+\centering\includegraphics[scale=0.30]{../img/savgol.pdf}
+\caption{Savitzky-Golay filtering of a signal with added Gaussian noise. The smoothing window is 50 points, centered at the far right.} 
+\label{fig:savgol}
+\end{figure}
 \end{frame}
-\subsubsection*{Challenges}
-\begin{frame} \frametitle{Implementation Challenges}
 
-\end{frame}
+%\subsubsection*{Challenges}
+%\begin{frame} \frametitle{Implementation Challenges}
+%
+%\end{frame}
 %%%%%%%%%%%%%  section: EXPERIMENTS  %%%%%%%%%%%%%%%%%%%%%%%
 \section{Experimental Results}
+\begin{frame}
+  \tableofcontents[currentsection]
+\end{frame}
+
 \subsection{Data \& Setup}
+\begin{frame}\frametitle{Acronyms for Implemented Methods}
+\begin{itemize}
+\item[] GM: the initial geometric monitoring method\footfullcite{Sharfman2006GM}
+\item[] HM: the proposed heuristic balancing process
+\item[] DIST: the proposed distance-based hierarchical node clustering
+\item[] DISTR: the distribution-based hierarchical node clustering\footfullcite{Keren2014GMHetStreams}
+\end{itemize}
+\end{frame}
+
 \subsubsection*{Synthetic Data}
 \begin{frame} \frametitle{Synthetic Data}
-
+\begin{itemize}
+\item $v_i(t_{k+1})=v_i(t_k) + (1-\lambda)u_{k} + \lambda u_{k+1}$
+\item 1-dimensional
+\item Velocities sampled from user-specified Gaussian distribution
+\item $\lambda$ smoothing parameter
+\item Additive Gaussian noise
+\item 3 sets of datasets: \emph{LIN}, \emph{INT}, \emph{NOISE}
+\end{itemize}
 \end{frame}
+
+\begin{frame}\frametitle{Synthetic Data}\framesubtitle{Examples}
+\begin{columns}
+\begin{column}[t]{0.32\linewidth}
+\begin{figure}
+\vspace{-1cm}
+\centering
+\includegraphics[scale=0.16]{../img/linear1D20N_streams.pdf}
+\caption{\emph{LIN} local statistics streams of 20 nodes} 
+\end{figure}
+\end{column}
+\begin{column}[t]{0.32\linewidth}
+\begin{figure}
+\vspace{-1cm}
+\centering
+\includegraphics[scale=0.16]{../img/interweaving1D20N_streams.pdf}
+\caption{\emph{INT} local statistics streams of 20 nodes} 
+\end{figure}
+\end{column}
+\begin{column}[t]{0.32\linewidth}
+\begin{figure}
+\vspace{-1cm}
+\centering
+\includegraphics[scale=0.16]{../img/noisyinterweaving1D20N_streams.pdf}
+\caption{\emph{NOISE} local statistics streams of 20 nodes} 
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
 \subsubsection*{Real-world Data}
 \begin{frame} \frametitle{Real-world Data}
-
+\begin{itemize}
+\item ``European Environmental Agency - AQ e-Reporting'' database\footfullcite{AirBase}
+\item Hourly measurements of $NO_2$ and $NO$, in micro-grams per cubic meter, averaged over a window of five days for a whole year.
+\item Nodes correspond to randomly selected air quality measurement stations across Austria.
+\end{itemize}
 \end{frame}
+
+\subsubsection*{Real-world Data}
+\begin{frame} \frametitle{Real-world Data}\framesubtitle{Examples}
+\begin{columns}
+\begin{column}[t]{0.5\linewidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.2]{../img/AT_NO2_NO_2014_8N_streams.pdf}
+\caption{Streams of 8 nodes monitoring the ratio $NO/NO_2$.} 
+\end{figure}
+\end{column}
+\begin{column}[t]{0.5\linewidth}
+\begin{figure}
+\centering
+\includegraphics[scale=0.2]{../img/AT_NO2_sq_2014_8N_streams.pdf}
+\caption{Streams of 8 nodes monitoring the variance of $NO_2$ air pollutant.} 
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
 \subsection{Experiments}
-\begin{frame} \frametitle{Notation}
 
-\end{frame}
 \subsubsection*{ Matching Algorithms}
-\begin{frame} \frametitle{RAND, DIST, DISTR Comparison}
-
+\begin{frame} \frametitle{GM, DIST, DISTR Comparison} \framesubtitle{\emph{LIN} dataset}
+\begin{figure}
+\vspace{-0.5cm}
+\centering
+\includegraphics[scale=0.3]{../img/matching_msg_linear.pdf}
+  \caption{Communication costs of methods GM, DISTR and DIST for the \emph{LIN} dataset.}
+\end{figure}
 \end{frame}
+
+\begin{frame} \frametitle{GM, DIST, DISTR Comparison}\framesubtitle{\emph{INT} dataset}
+\begin{figure}
+\vspace{-0.5cm}
+\centering
+\includegraphics[scale=0.3]{../img/matching_msg_interweaving.pdf}
+  \caption{Communication costs of methods GM, DISTR and DIST for the \emph{INT} dataset.}
+\end{figure}
+\end{frame}
+
+\begin{frame} \frametitle{GM, DIST, DISTR Comparison}\framesubtitle{\emph{NOISE} dataset}
+\begin{figure}
+\vspace{-0.5cm}
+\centering
+\includegraphics[scale=0.3]{../img/matching_msg_noisyinterweaving.pdf}
+  \caption{Communication costs of methods GM, DISTR and DIST for the \emph{NOISE} dataset.}
+\end{figure}
+\end{frame}
+
+\begin{frame} \frametitle{GM, DIST, DISTR Comparison} \framesubtitle{\emph{LIN} dataset}
+\begin{figure}
+\vspace{-0.2cm}
+\centering
+\includegraphics[scale=0.4]{../img/matchings_matchings_linear.pdf}
+  \caption{Number of nodes participating in violation resolutions as a fraction of total Local Violations, for the \emph{LIN} dataset.}
+\end{figure}
+\end{frame}
+
+\begin{frame} \frametitle{GM, DIST, DISTR Comparison}\framesubtitle{\emph{INT} dataset}
+\begin{figure}
+\vspace{-0.2cm}
+\centering
+\includegraphics[scale=0.4]{../img/matchings_matchings_interweaving.pdf}
+  \caption{Number of nodes participating in violation resolutions as a fraction of total Local Violations, for the \emph{INT} dataset.}
+\end{figure}
+\end{frame}
+
+\begin{frame} \frametitle{GM, DIST, DISTR Comparison}\framesubtitle{\emph{NOISE} dataset}
+\begin{figure}
+\vspace{-0.2cm}
+\centering
+\includegraphics[scale=0.4]{../img/matchings_matchings_noisyinterweaving.pdf}
+  \caption{Number of nodes participating in violation resolutions as a fraction of total Local Violations, for the \emph{NOISE} dataset.}
+\end{figure}
+\end{frame}
+
 \subsubsection*{Balancing Methods}
-\begin{frame} \frametitle{GM, HM Comparison}
-
+\begin{frame} \frametitle{GM, HM Comparison} \framesubtitle{Messages}
+\begin{columns}
+\begin{column}[t]{0.5\linewidth}
+\begin{figure}
+\vspace{-1cm}
+\centering
+  \includegraphics[scale=0.25]{../img/bal_msg_linear_nodes.pdf}
+  \caption{Communication cost of methods GM and HM for the \emph{LIN} dataset.}
+\end{figure}
+\end{column}
+\begin{column}[t]{0.5\linewidth}
+\begin{figure}
+\vspace{-1cm}
+\centering
+  \includegraphics[scale=0.25]{../img/bal_msg_noisyinterweaving_nodes.pdf}
+  \caption{Communication cost of methods GM and HM for the \emph{NOISE} dataset.}
+\end{figure}
+\end{column}
+\end{columns}
 \end{frame}
+
+\begin{frame} \frametitle{GM, HM Comparison} \framesubtitle{Drift vectors}
+\begin{columns}
+\begin{column}[t]{0.5\linewidth}
+\begin{figure}
+\vspace{-1cm}
+\centering
+  \includegraphics[scale=0.25]{../img/bal_classic_drifts_linear2N.pdf}
+  \caption{Drift vectors of 2 nodes, as formulated by the GM algorithm.}
+\end{figure}
+\end{column}
+\begin{column}[t]{0.5\linewidth}
+\begin{figure}
+\vspace{-1cm}
+\centering
+  \includegraphics[scale=0.25]{../img/bal_heuristic_drifts_linear2N.pdf}
+  \caption{Drift vectors of 2 nodes, as formulated by the HM algorithm.}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
 \subsubsection*{Synthetic Data}
-\begin{frame} \frametitle{GM, HDM Comparison}\framesubtitle{Synthetic Data Monitoring}
-
+\begin{frame} \frametitle{GM, HDM Comparison}\framesubtitle{\emph{LIN}}
+\begin{figure}
+\vspace{-0.5cm}
+\centering
+\includegraphics[scale=0.3]{../img/main_msg_linear_nodes.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{LIN} dataset.}
+\end{figure}
 \end{frame}
+
+\begin{frame} \frametitle{GM, HDM Comparison}\framesubtitle{\emph{INT}}
+\begin{figure}
+\vspace{-0.5cm}
+\centering
+\includegraphics[scale=0.3]{../img/main_msg_interweaving_nodes.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{INT} dataset.}
+\end{figure}
+\end{frame}
+
+\begin{frame} \frametitle{GM, HDM Comparison}\framesubtitle{\emph{NOISE}}
+\begin{figure}
+\vspace{-0.5cm}
+\centering
+\includegraphics[scale=0.3]{../img/main_msg_noisyinterweaving_nodes.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{NOISE} dataset.}
+\end{figure}
+\end{frame}
+
+
+\begin{frame} \frametitle{GM, HDM Comparison}\framesubtitle{\emph{NOISE} - window}
+\begin{figure}
+\vspace{-0.5cm}
+\centering
+\includegraphics[scale=0.3]{../img/main_msg_noisyinterweaving_window.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{NOISE} dataset. Approximation order is set to 1.}
+\end{figure}
+\end{frame}
+
+
+\begin{frame} \frametitle{GM, HDM Comparison}\framesubtitle{\emph{NOISE} - order}
+\begin{figure}
+\vspace{-0.5cm}
+\centering
+ \includegraphics[scale=0.3]{../img/main_msg_noisyinterweaving_order.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{NOISE} dataset. The Savitzky-Golay window size is set to 24.}
+\end{figure}
+ \end{frame}
+
+\begin{frame} \frametitle{GM, HDM Comparison}\framesubtitle{Dimensions - Quadratic Function}
+\begin{columns}
+\begin{column}[t]{0.5\linewidth}
+\begin{figure}
+\vspace{-1cm}
+\centering
+  \includegraphics[scale=0.25]{../img/main_msg_linear_dims.pdf}
+  \caption{Communication cost of methods GM and HDM for the \emph{LIN} dataset.}
+\end{figure}
+\end{column}
+\begin{column}[t]{0.5\linewidth}
+\begin{figure}
+\vspace{-1cm}
+\centering
+  \includegraphics[scale=0.25]{../img/main_msg_noisyinterweaving_dims.pdf}
+  \caption{Communication cost of methods GM and HM for the \emph{NOISE} dataset.}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+ 
 \subsubsection*{Real-world Data}
 \begin{frame} \frametitle{GM, HDM Comparison}\framesubtitle{Air Pollution Monitoring}
-
+\begin{columns}
+\begin{column}[t]{0.5\linewidth}
+\begin{figure}
+\vspace{-0.8cm}
+\centering
+   \includegraphics[scale=0.23]{../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf}
+  \caption{4 to 16 nodes,variance monitoring of $NO_2$. The Savitzky-Golay window size is set to 6, the order is set to 2.}
+\end{figure}
+\end{column}
+\begin{column}[t]{0.5\linewidth}
+\begin{figure}
+\vspace{-0.8cm}
+\centering
+  \includegraphics[scale=0.23]{../img/actual_msg_NO2_NO_2014_nodes.pdf}
+  \caption{4 to 16 nodes, when monitoring $NO/NO_2$. The Savitzky-Golay window size is set to 10, the order is set to 1.}
+\end{figure}
+\end{column}
+\end{columns}
 \end{frame}
 %%%%%%%%%%%%%  section: CONCLUSION  %%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions \& Future Work}
+\begin{frame}
+  \tableofcontents[currentsection]
+\end{frame}
+
 \subsection{Conclusion}
 \begin{frame} \frametitle{Summary \& Concluding Remarks}
-
+The \emph{Geometric monitoring} method:
+\begin{itemize}
+\item An efficient framework for monitoring distributed data streams
+\item Scalability can be improved $\rightarrow$ reduce communication costs
+\end{itemize}
+Our contributions:
+\begin{itemize}
+\item Distance-based hierarchical node clustering
+\item Heuristic balancing method based on SQP and Savitzky-Golay Filtering
+\item Detailed evaluation of proposed methods
+\end{itemize}
+Comments:
+\begin{itemize}
+\item[+] Communication reduction of up to 60\%
+\item[+] Methods fully compatible with the rest of the work
+\item[-] Parameter tweaking for satisfactory results
+\item[-] Multi-objective optimization can be computationally expensive
+\end{itemize}
 \end{frame}
+
 \subsection{Future Work}
 \begin{frame} \frametitle{Future Work}
-
+\begin{itemize}
+\item Multi-objective optimization solvers
+\item More elaborate optimizing fuctions
+\item Sophisticated prediction models (Gaussian processes)
+\item Parameter estimation techniques
+\end{itemize}
 \end{frame}
 
-\begin{frame}[plain]
+{
+\begin{frame}[plain]\frametitle{The End}
 \centering
-The end\\
+\Huge
+Thank you\\
 Questions?
 \end{frame}
-
-\begin{frame}[plain]\frametitle{Appendix}\framesubtitle{Savitzky-Golay filter matrix notation}
-hey you
-\end{frame}
+}
+%
+%\begin{frame}[plain]\frametitle{Appendix}\framesubtitle{Savitzky-Golay filter matrix notation}
+%hey you
+%\end{frame}
 \end{document}
 

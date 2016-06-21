@@ -1,6 +1,6 @@
 \chapter{Experiments} \label{chap:exp}
 
-In order to evaluate our proposed algorithms, the heuristic balancing method (\emph{GM}), the distance based node clustering scheme (\emph{DIST}), as well as the combination of those (\emph{HDM}), we compare them with the geometric monitoring method~\cite{Sharfman2006GM} (\emph{GM}), and the hierarchical clustering method of~\cite{Keren2014GMHetStreams} (\emph{DISTR}). Datasets originate from both synthetic and real-world settings in order to explore the performance, scalability and applicability of our methods in terms of reduction in communication.
+In order to evaluate our proposed algorithms, the heuristic balancing method (\emph{HM}), the distance based node clustering scheme (\emph{DIST}), as well as the combination of those (\emph{HDM}), we compare them with the geometric monitoring method~\cite{Sharfman2006GM} (\emph{GM}), and the hierarchical clustering method of~\cite{Keren2014GMHetStreams} (\emph{DISTR}). Datasets originate from both synthetic and real-world settings in order to explore the performance, scalability and applicability of our methods in terms of reduction in communication.
 
 Firstly, Section~\ref{sec:datasets} contains a detailed description of the datasets and the monitoring functions used for evaluation purposes. Following that, Section~\ref{sec:exp} presents the experimental results along with the necessary commentation.
 
@@ -132,11 +132,11 @@ In Subsection~\ref{subsec:matchingComp} our distance based node matching algorit
 
 \subsection{Node Matching Algorithms} \label{subsec:matchingComp}
 
-The seminar geometric monitoring method~\cite{Sharfman2006GM} dictates that random nodes are requested in order to perform a violation resolution via the balancing method (RAND). Subsequent work~\cite{Keren2014GMHetStreams} examines the partitioning of nodes into disjoint pairs, so that the probability of a violation resolution is maximized by maximizing the percentage of data vectors that result to a successful balancing operation (DISTR), either by iterating over all data vectors pairs between all nodes and evaluating the constraint, or by employing the pdfs of the data streams. Our proposed method depends only on simple Euclidean distance computations between data stream vectors, not being bound on the monitoring function and its possible irregularities. All three methods are being compared alongside the original geometric monitoring balancing method GM.
+The seminar geometric monitoring method~\cite{Sharfman2006GM} dictates that random nodes are requested in order to perform a violation resolution via the balancing method (GM). Subsequent work~\cite{Keren2014GMHetStreams} examines the partitioning of nodes into disjoint pairs, so that the probability of a violation resolution is maximized by maximizing the percentage of data vectors that result to a successful balancing operation (DISTR), either by iterating over all data vectors pairs between all nodes and evaluating the constraint, or by employing the pdfs of the data streams. Our proposed method depends only on simple Euclidean distance computations between data stream vectors, not being bound on the monitoring function and its possible irregularities. All three methods are being compared alongside the original geometric monitoring balancing method GM.
 
-Figure~\ref{fig:matchingComp-msgs} provides information about the communication overhead each method incurs, and how this evolves as a function of node count. Method DIST proves to be comparable with the RAND method for node selection, both surpassing the DISTR method in terms of communication reduction. Specifically, RAND and DIST methods illustrate an equal of better performance than the DISTR method over the whole range of nodes, for all three datasets \emph{LIN, INT} and \emph{NOISE}. Algorithms RAND and DISTR mostly induce the same communication burden, with some exceptions located towards the larger end of the node spectrum, where for 16 nodes DIST method always surpasses the RAND method in terms of communication reduction, and for 20 nodes the RAND method induces less message exchange than the rest of the algorithms. This is due to the random selection DIST and DISTR algorithms perform in case pefect node pairs cannot be created i.e., the node number is not a power of 2.
+Figure~\ref{fig:matchingComp-msgs} provides information about the communication overhead each method incurs, and how this evolves as a function of node count. Method DIST proves to be comparable with the GM method for node selection, both surpassing the DISTR method in terms of communication reduction. Specifically, GM and DIST methods illustrate an equal of better performance than the DISTR method over the whole range of nodes, for all three datasets \emph{LIN, INT} and \emph{NOISE}. Algorithms GM and DISTR mostly induce the same communication burden, with some exceptions located towards the larger end of the node spectrum, where for 16 nodes DIST method always surpasses the GM method in terms of communication reduction, and for 20 nodes the GM method induces less message exchange than the rest of the algorithms. This is due to the random selection DIST and DISTR algorithms perform in case pefect node pairs cannot be created i.e., the node number is not a power of 2.
 
-A graphical illustration of the required nodes for a successful violation resolution is provided in Figure~\ref{fig:matchingComp-matchings}. Following the trend of the aforementioned experiment, RAND and DIST methods achieve a violation resolution by employing far less nodes than the DISTR algorithm. Roughly 70 to 80 percent of all Local Violations are successfully resolved by 2 nodes by employing the RAND and DIST methods. The DISTR method is able to resolve false alarms by using only 2 nodes with a score of 60 percent or less of total Local Violations, with the rest requiring more than 2 nodes to successfully perform the balancing process.
+A graphical illustration of the required nodes for a successful violation resolution is provided in Figure~\ref{fig:matchingComp-matchings}. Following the trend of the aforementioned experiment, GM and DIST methods achieve a violation resolution by employing far less nodes than the DISTR algorithm. Roughly 70 to 80 percent of all Local Violations are successfully resolved by 2 nodes by employing the GM and DIST methods. The DISTR method is able to resolve false alarms by using only 2 nodes with a score of 60 percent or less of total Local Violations, with the rest requiring more than 2 nodes to successfully perform the balancing process.
 
 These results can be explained by viewing how each methods handles node pairing, in Figure~\ref{fig:matchingComp-drifts}. It is evident that the DIST method attempts to group together data streams that are more likely to ``balance each other out'' by taking into account the in-between distance, as well as the distance of the average of the two streams from the global data stream. On the other hand, the DISTR method assists node pairings whose average will not induce a Local Violation, while allowing streams that are more likely to violate the threshold be grouped together. Subsequently, when a node from the latter pair signals a threshold crossing, its pair will not be able to successfully resolve the violation, thus requesting additional nodes from a higher level of the hierarchical clustering.
 
@@ -144,25 +144,25 @@ These results can be explained by viewing how each methods handles node pairing,
 \begin{figure}[!t]
 \begin{subfigure}{0.32\textwidth}
   \includegraphics[width=\linewidth]{img/matching_msg_linear.pdf}
-  \caption{Communication costs of methods RAND,DISTR and DIST for the \emph{LIN} dataset.}
+  \caption{Communication costs of methods GM, DISTR and DIST for the \emph{LIN} dataset.}
 \end{subfigure}\hfill
 \begin{subfigure}{0.32\textwidth}
   \includegraphics[width=\linewidth]{img/matching_msg_interweaving.pdf}
-  \caption{Communication costs of methods RAND,DISTR and DIST for the \emph{INT} dataset.}
+  \caption{Communication costs of methods GM, DISTR and DIST for the \emph{INT} dataset.}
 \end{subfigure}\hfill
 \begin{subfigure}{0.32\textwidth}%
   \includegraphics[width=\linewidth]{img/matching_msg_noisyinterweaving.pdf}
-  \caption{Communication costs of methods RAND,DISTR and DIST for the \emph{NOISE} dataset.}
+  \caption{Communication costs of methods GM, DISTR and DIST for the \emph{NOISE} dataset.}
 \end{subfigure}
 \vspace{0.5cm}
-\caption{Comparison of RAND, DISTR and DIST methods in terms of communication cost in messages over the range of 20 nodes.} \label{fig:matchingComp-msgs}
+\caption{Comparison of GM, DISTR and DIST methods in terms of communication cost in messages over the range of 20 nodes.} \label{fig:matchingComp-msgs}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%drifts matching lin figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!b]
 \begin{subfigure}{0.32\textwidth}
   \includegraphics[width=\linewidth]{img/matchings_classic_random_drifts.pdf}
-  \caption{Drift vectors of 4 nodes as a result of the RAND method.}
+  \caption{Drift vectors of 4 nodes as a result of the GM method.}
 \end{subfigure}\hfill
 \begin{subfigure}{0.32\textwidth}
   \includegraphics[width=\linewidth]{img/matchings_classic_distoptpair_drifts.pdf}
@@ -173,7 +173,7 @@ These results can be explained by viewing how each methods handles node pairing,
   \caption{Drift vectors of 4 nodes as a result of the DISTR method.}
 \end{subfigure}
 \vspace{0.5cm}
-\caption{Drift vectors of 4 nodes as a result of application of RAND, DIST and DISTR methods over the \emph{LIN} dataset.} \label{fig:matchingComp-drifts}
+\caption{Drift vectors of 4 nodes as a result of application of GM, DIST and DISTR methods over the \emph{LIN} dataset.} \label{fig:matchingComp-drifts}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%matchings matching lin figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -195,13 +195,13 @@ These results can be explained by viewing how each methods handles node pairing,
   \caption{Number of nodes participating in violation resolutions as a fraction of total Local Violations, for the \emph{NOISE} dataset.}
 \end{subfigure}
 \vspace{0.5cm}
-\caption{Number of nodes required to successfully resolve a violation, as a fraction of total Local Violations, for methods RAND, DISTR and DIST.} \label{fig:matchingComp-matchings}
+\caption{Number of nodes required to successfully resolve a violation, as a fraction of total Local Violations, for methods GM, DISTR and DIST.} \label{fig:matchingComp-matchings}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Balancing methods} \label{subsec:balComp}
 
-During the balancing process of the original geometric monitoring method~\cite{Sharfman2006GM} (GM) the computed drift vectors of the nodes are set to the value of the balancing vector that successfully resolves the reported Local Violation. In contrast, the heuristic balancing method proposed in this thesis (HM) attempts to optimize the positioning of the new drift vectors by taking into account the properties of each stream. Figure~\ref{fig:balComp-msgs} illustrates the communication cost induced by the balancing methods over a range of 2 to 20 nodes for the datasets \emph{LIN, INT} and \emph{NOISE}, when applied alongside the random node selection method (RAND) for violation resolution. For the HM method a window size of 10 and an approximation order of 1 are employed for the Savitzky-Golay filter.
+During the balancing process of the original geometric monitoring method~\cite{Sharfman2006GM} (GM) the computed drift vectors of the nodes are set to the value of the balancing vector that successfully resolves the reported Local Violation. In contrast, the heuristic balancing method proposed in this thesis (HM) attempts to optimize the positioning of the new drift vectors by taking into account the properties of each stream. Figure~\ref{fig:balComp-msgs} illustrates the communication cost induced by the balancing methods over a range of 2 to 20 nodes for the datasets \emph{LIN, INT} and \emph{NOISE}, when applied alongside the random node selection method (GM) for violation resolution. For the HM method a window size of 10 and an approximation order of 1 are employed for the Savitzky-Golay filter.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%msgs bal  figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[!h]
@@ -241,7 +241,7 @@ When applied to the \emph{LIN} dataset the HM method consistently surpasses the 
 
 \subsection{Monitoring Synthetic Data} \label{subsec:mainComp}
 
-In order to eliminate the unpredictability the RAND method incurs to HM, we compare the GM method with a combination of our proposed methods (DIST, HM), resulting to the HDM method. Figure~\ref{fig:mainComp-msgs} depicts the performance of the two methods over a range of 2 to 20 nodes, in terms of communication cost. Following that, Figures~\ref{fig:mainComp-order} and~\ref{fig:mainComp-wl} examine the way the Savitzky-Golay filter parameters affect the performance of HDM. Finally, Figure~\ref{fig:mainComp-dims} illustrates the scalability of the HDM method compared to the GM method, in terms of communication cost and stream dimensionality.
+In order to eliminate the unpredictability the GM node selection method incurs to HM, we compare the GM method with a combination of our proposed methods (DIST, HM), resulting to the HDM method. Figure~\ref{fig:mainComp-msgs} depicts the performance of the two methods over a range of 2 to 20 nodes, in terms of communication cost. Following that, Figures~\ref{fig:mainComp-order} and~\ref{fig:mainComp-wl} examine the way the Savitzky-Golay filter parameters affect the performance of HDM. Finally, Figure~\ref{fig:mainComp-dims} illustrates the scalability of the HDM method compared to the GM method, in terms of communication cost and stream dimensionality.
 
 Once again, the HDM method outperforms the original GM method when applied onto the \emph{LIN} dataset for any parameter setting of the Savitzky-Golay filter by achieving a communication reduction of up to 60 percent. When datasets in the likes of \emph{INT} and \emph{NOISE} are employed, where smooth and drastic velocity changes can be observed, respectively, fine-tuning the filter's parameters can reduce the communication burden of HDM significantly, surpassing the GM algorithm in terms of communication reduction, as shown in Figures~\ref{fig:mainComp-order} and~\ref{fig:mainComp-wl}. Finally, when multiple stream dimensions are monitored the HDM method illustrates similar performance as with its one-dimensional stream counterparts.
 
