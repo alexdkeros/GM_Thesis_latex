@@ -112,14 +112,14 @@ Expand the \emph{geometric monitoring method}:
 \end{itemize}
 \end{frame}
 
-\begin{frame} \frametitle{System Architecture} \framesubtitle{Decentralized Scenario}
-\begin{figure}[H]
-\centering
-\vspace{-0.2cm}
-\includegraphics[scale=0.5]{../img/decentralized.tex}
-\caption{\textbf{Mesh-like network topology} example of the decentralized scenario. Dashed lines represent data streams and half arrows represent message exchanges.} 
-\end{figure}
-\end{frame}
+%\begin{frame} \frametitle{System Architecture} \framesubtitle{Decentralized Scenario}
+%\begin{figure}[H]
+%\centering
+%\vspace{-0.2cm}
+%\includegraphics[scale=0.5]{../img/decentralized.tex}
+%\caption{\textbf{Mesh-like network topology} example of the decentralized scenario. Dashed lines represent data streams and half arrows represent message exchanges.} 
+%\end{figure}
+%\end{frame}
 
 \begin{frame} \frametitle{System Architecture} \framesubtitle{Centralized Scenario}
 \begin{figure}[H]
@@ -165,28 +165,28 @@ Infrequent communication between nodes/nodes-coordinator:
 \item the last communicated \emph{local statistics vector} of node $p_i$ : $\vec{v_i}'$
 \item \emph{Local statistics} divergence:$\Delta \vec{v_i}(t)=\vec{v_i}(t)-\vec{v_i}', i=1,\dots,n$
 \end{itemize}
-\begin{columns}
 \setbeamercolor{block title}{use=structure,fg=blue,bg=blue!15!white}
 \setbeamercolor{block body}{use=structure,fg=black,bg=blue!5!white}
-\begin{column}[t]{0.5\textwidth}
-\begin{block}{Decentralized drift vector}
-\vspace{-0.3cm}
-\begin{equation}
-\vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)
-\label{form:decentralizedDrift}
-\end{equation}
-\end{block}
-\end{column}
-\begin{column}[t]{0.5\textwidth}
+%\begin{columns}
+%\begin{column}[t]{0.5\textwidth}
+%\begin{block}{Decentralized drift vector}
+%\vspace{-0.3cm}
+%\begin{equation}
+%\vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)
+%\label{form:decentralizedDrift}
+%\end{equation}
+%\end{block}
+%\end{column}
+%\begin{column}[t]{0.5\textwidth}
 \begin{block}{Centralized drift vector}
-\vspace{-0.45cm}
+%\vspace{-0.45cm}
 \begin{equation}
 \vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)+\frac{\vec{\delta_i}}{w_i}
 \label{form:centralizedDrift}
 \end{equation} 
 \end{block}
-\end{column}
-\end{columns}
+%\end{column}
+%\end{columns}
 \end{frame}
 
 \begin{frame} \frametitle{Computational Model}\framesubtitle{Balancing Process}
@@ -241,47 +241,47 @@ Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors 
 \end{figure}
 \end{frame}
 
-\begin{frame}[plain] \frametitle{Protocol}\framesubtitle{Decentralized Algorithm}
-
-\hfill    \scalebox{0.50}{
-    \begin{minipage}{\linewidth}
-\vspace{-2cm}    
-    \begin{algorithm}[H]
-\setstretch{1.30}
-
-
-\Begin{
-	\ForEach(\tcc*[f]{Node initialization}){node $p_i$}{
-		Broadcast $\vec{v_i}(0)$\;
-		$\vec{v_i}'=\vec{v_i}(0)$\;
-		Wait messages from all other nodes\;
-		\If{messages from all vectors received}{
-			Compute \emph{estimate vector} $\vec{e}(t)$\;
-		}
-	}
-	\ForEach(\tcc*[f]{Main monitoring task}){node $p_i$}{
-		\ForEach{new $s_i$ stream update $\vec{v_i}(t)$}{
-			Recalculate \emph{drift vector} $\vec{u_i}(t)$\;
-			\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
-				Broadcast message $<i,\vec{v_i}(t)>$\;
-				Set $\vec{v_i}'=\vec{v_i}(t)$\;
-			}
-			\If{new message $<j,\vec{v_j}(t)>$ received}{
-				Set $\vec{v_j}'=\vec{v_j}(t)$\;
-				Recalculate \emph{estimate vector} $\vec{e}(t)$\;
-				\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
-					Broadcast message $<i,\vec{v_i}(t)>$\;
-					Set $\vec{v_i}'=\vec{v_i}(t)$\;
-				}
-			}
-		}
-	}
-}
-\caption{Decentralized algorithm \label{algo:decentralized}} 
-\end{algorithm}  
-\end{minipage}%
-    }
-\end{frame}
+%\begin{frame}[plain] \frametitle{Protocol}\framesubtitle{Decentralized Algorithm}
+%
+%\hfill    \scalebox{0.50}{
+%    \begin{minipage}{\linewidth}
+%\vspace{-2cm}    
+%    \begin{algorithm}[H]
+%\setstretch{1.30}
+%
+%
+%\Begin{
+%	\ForEach(\tcc*[f]{Node initialization}){node $p_i$}{
+%		Broadcast $\vec{v_i}(0)$\;
+%		$\vec{v_i}'=\vec{v_i}(0)$\;
+%		Wait messages from all other nodes\;
+%		\If{messages from all vectors received}{
+%			Compute \emph{estimate vector} $\vec{e}(t)$\;
+%		}
+%	}
+%	\ForEach(\tcc*[f]{Main monitoring task}){node $p_i$}{
+%		\ForEach{new $s_i$ stream update $\vec{v_i}(t)$}{
+%			Recalculate \emph{drift vector} $\vec{u_i}(t)$\;
+%			\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
+%				Broadcast message $<i,\vec{v_i}(t)>$\;
+%				Set $\vec{v_i}'=\vec{v_i}(t)$\;
+%			}
+%			\If{new message $<j,\vec{v_j}(t)>$ received}{
+%				Set $\vec{v_j}'=\vec{v_j}(t)$\;
+%				Recalculate \emph{estimate vector} $\vec{e}(t)$\;
+%				\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
+%					Broadcast message $<i,\vec{v_i}(t)>$\;
+%					Set $\vec{v_i}'=\vec{v_i}(t)$\;
+%				}
+%			}
+%		}
+%	}
+%}
+%\caption{Decentralized algorithm \label{algo:decentralized}} 
+%\end{algorithm}  
+%\end{minipage}%
+%    }
+%\end{frame}
 
 
 \begin{frame}[plain] \frametitle{Protocol}\framesubtitle{Centralized Algorithm}
@@ -575,6 +575,7 @@ Node selection for \emph{violation resolution}:
 \item Hierarchical node clustering scheme%~\footfullcite{Keren2014GMHetStreams}
 \item Decouple matching from the data distribution at the nodes%~\footfullcite{Keren2014GMHetStreams}
 \item Accurately follow \emph{global statistics vector}
+\item Node ``cancel each other out'' during the \emph{balancing process}
 \end{itemize}
 \end{frame}
 
@@ -591,9 +592,9 @@ w_{i,j}=
 \end{block}
 \end{frame}
 
-\begin{frame} \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Algorithm}
+\begin{frame}[plain] \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Algorithm}
 \centering
-\scalebox{0.55}{
+\scalebox{0.70}{
 \begin{minipage}[t]{1.3\linewidth}
 \begin{algorithm}[H]
 \SetAlgoLined
@@ -635,21 +636,125 @@ w_{i,j}=
 \end{columns}
 \end{figure}
 \end{frame}
+
 \subsubsection*{Heuristic Balancing}
 \begin{frame} \frametitle{The Heuristic Balancing}\framesubtitle{The Idea}
-
+In prior work:
+\begin{itemize}
+\item identical handling of nodes during the balancing process
+\item ignore stream idiosyncrasies and monitoring function peculiarities
+\end{itemize}
+The \emph{heuristic balancing} method:
+\begin{itemize}
+\item optimally position \emph{drift vectors in space}
+\item take into account stream behaviour (\emph{velocity} and \emph{acceleration})
+\end{itemize}
 \end{frame}
+
 \begin{frame} \frametitle{The Heuristic Balancing}\framesubtitle{The Optimizing Function}
-
+\setbeamercolor{block title}{use=structure,fg=white,bg=blue!55!black}
+\setbeamercolor{block body}{use=structure,fg=black,bg=blue!5!white}
+\begin{block}{Weight function}
+\vspace{0.2cm}
+\begin{equation*}
+\max\min \frac{(T-x_i)-accel_i(t_{lv})*t^2}{vel_i(t_{lv})}, \forall n_i \in P'
+\end{equation*}
+\end{block}
+where:
+\scalebox{0.7}{
+\begin{minipage}[t]{\linewidth}
+\vspace{-0.5cm}
+\begin{align*}
+t&:\text{the variable to optimize}\\
+T&:\text{monitoring threshold}\\
+x_i&:\text{the maximum value of the monitoring function $f(\cdot)$ over the bounding ball $B(\vec{e}(t_{lv}), \vec{u_i}(t_{lv}))$,}\\
+vel_i(t_{lv})&:\text{the estimated velocity of the maximum value of the monitoring function $f(\cdot)$}\\
+accel_i(t_{lv})&:\text{the estimated acceleration of the maximum value of the monitoring function $f(\cdot)$}\\
+t_{lv}&:\text{time of Local Violation occurrence}\\
+P'&:\text{the balancing set}
+\end{align*}
+\end{minipage}
+}
 \end{frame}
-\begin{frame} \frametitle{The Heuristic Balancing}\framesubtitle{The Function Formulation}
 
-\end{frame}
-\begin{frame} \frametitle{The Heuristic Balancing}\framesubtitle{The Algorithm}
+%\begin{frame} \frametitle{The Heuristic Balancing}\framesubtitle{The Function Implementation}
+%\begin{align*}
+%\min -z&\\
+%	\text{s.t.}\ \ z&\leq g(h(\vec{e},\vec{u_0}), vel_0, accel_0, T)\\
+%	z&\leq g(h(\vec{e},\vec{u_1}), vel_1, accel_1, T)\\
+%	&\vdots \\
+%	z&\leq g(h(\vec{e},\vec{u_n}), vel_n, accel_n, T)\\
+%	\vec{b}&=\frac{1}{\sum_{i=0}^n{w_i}}\sum_{i=0}^n{(w_i*\vec{u_i})} &&,\forall n_i \in P'
+%\end{align*}
+%where:
+%\begin{align*}
+%g&:\mathbb{R}^4 \to \mathbb{R}, \text{the heuristic optimization function as defined in Equation~\ref{form:heuristic}}\\
+%h&:\mathbb{R}^d \to \mathbb{R}, \text{the function computing the maximum value of the monitoring function $f(\cdot)$ in $B(\vec{e},\vec{u_i})$,}\\&\qquad\text{which is an optimization problem by itself}\\
+%d&: \text{the data vector dimensionality}
+%\end{align*}
+%\end{frame}
 
+\begin{frame}[plain] \frametitle{The Heuristic Balancing}\framesubtitle{The Algorithm}
+\centering
+\scalebox{0.65}{
+\begin{minipage}[t]{1.5\linewidth}
+\begin{algorithm}[H]
+\SetAlgoLined
+\setstretch{1.30}
+\SetKwFunction{RepMessageReceived}{RepMessageReceived}
+\SetKwFunction{RequestNode}{RequestNode}
+\SetKwFunction{Balance}{Balance}
+\SetKwProg{Fn}{Function}{}{end}
+
+\Fn{\RepMessageReceived{$<n_i$,$v_i$,$u_i$,$vel_i$,$accel_i>$}}{
+	add $n_i$ to balancing set $P'$\;
+	\Balance{}\;
+}
+
+\Fn{\Balance{$P'$}}{
+	\If{$length(P')=1$}{
+		\RequestNode{}\tcp*[r]{request node based on respective gathering scheme}
+	}
+
+	$\vec{b}=\sum_{P'}{\frac{w_i*\vec{u_i}}{w_i}}$\;
+
+	\If{$B(\vec{e},\vec{b})$ is monochromatic}{
+		\tcc{heuristic optimization procedure,\\ returns the optimal drift vector positions in set $O$}
+		$O=DriftVectorOptimizationProblem()$\;
+
+		\ForEach{$n_i \in P'$}{
+			$\Delta\delta_i=w_i*\vec{u_i}'-w_i*\vec{u_i}$\tcp*[r]{$\vec{u_i}'$ denotes the optimal drift vector position}
+			$Send(<ADJSLK,n_i,\Delta\delta_i>)$\;
+		}
+	}
+}
+\caption{Heuristic Balancing \label{algo:heuristicbalancing}} 
+\end{algorithm}
+\end{minipage}
+}
 \end{frame}
+
+\begin{frame}\frametitle{The Heuristic Balancing}\framesubtitle{Example}
+\begin{columns}
+\begin{column}[t]{0.5\linewidth}
+\begin{figure}
+\vspace{-1.2cm}
+\includegraphics[scale=0.32]{../img/classic_balancing.tex}
+\caption{The classic balancing method.} 
+\end{figure}
+\end{column}
+\begin{column}[t]{0.5\linewidth}
+\begin{figure}
+\vspace{-1.2cm}
+\includegraphics[scale=0.32]{../img/heuristic_balancing.tex}
+\caption{The heuristic balancing method.} 
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
 \subsubsection*{Violation Detection}
-\begin{frame} \frametitle{Violation Detection in the Sphere}\frametitle{An Nested Optimization Problem}
+\begin{frame} \frametitle{Violation Detection in the Sphere}\framesubtitle{A Nested Optimization Problem}
 
 \end{frame}
 \subsubsection*{The Savitzky-Golay Filter}

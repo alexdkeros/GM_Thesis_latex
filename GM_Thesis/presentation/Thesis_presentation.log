@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.5.27)  21 JUN 2016 20:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.5.27)  21 JUN 2016 21:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1479,14 +1479,14 @@ Package biblatex Info: Reference section=0 on input line 27.
 Package biblatex Info: Reference segment=0 on input line 27.
  (./Thesis_presentation.nav)
 Overfull \hbox (1.00093pt too wide) detected at line 27
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
@@ -1494,16 +1494,16 @@ Overfull \hbox (1.00093pt too wide) has occurred while \output is active
 ]
 (./Thesis_presentation.toc)
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [2
 
 ] (./Thesis_presentation.toc)
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [3
@@ -1553,8 +1553,8 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 53.
 
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [4
@@ -1564,101 +1564,87 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
 (Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 67.
 
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [5
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [6
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [7
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [8
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [9
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [10
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [11
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [12
 
 ] (./Thesis_presentation.toc)
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [13
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [14
 
-] (../img/decentralized.tex
+] (../img/centralized.tex
 \du=\skip87
 )
-File: ../img/decentralized.tex Graphic file (type tex)
-
-Overfull \vbox (11.58826pt too high) detected at line 122
- []
-
-
-Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
- []
-
-[15
-
-] (../img/centralized.tex)
 File: ../img/centralized.tex Graphic file (type tex)
 
 Overfull \vbox (13.33806pt too high) detected at line 131
@@ -1666,27 +1652,27 @@ Overfull \vbox (13.33806pt too high) detected at line 131
 
 
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
+ []
+
+[15
+
+]
+Overfull \hbox (1.00093pt too wide) has occurred while \output is active
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [16
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [17
-
-]
-Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
- []
-
-[18
 
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1698,19 +1684,19 @@ LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
 
 
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
-[19
+[18
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
-[20
+[19
 
 ] (../img/convex_hull.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1736,20 +1722,18 @@ Overfull \vbox (19.51215pt too high) detected at line 242
 
 
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
-[21
+[20
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 284
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 378
 .
  (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [22
-
-] [23
+) [21
 
 ]
 Overfull \vbox (2.59148pt too high) detected at line 395
@@ -1757,51 +1741,51 @@ Overfull \vbox (2.59148pt too high) detected at line 395
 
 
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
+ []
+
+[22
+
+]
+Overfull \hbox (1.00093pt too wide) has occurred while \output is active
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
+ []
+
+[23
+
+]
+Overfull \hbox (1.00093pt too wide) has occurred while \output is active
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [24
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [25
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [26
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [27
-
-]
-Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
- []
-
-[28
-
-]
-Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
- []
-
-[29
 
 ]
 Overfull \hbox (12.40804pt too wide) in paragraph at lines 498--498
@@ -1815,224 +1799,240 @@ Overfull \hbox (7.47592pt too wide) in paragraph at lines 498--498
 
 
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
+ []
+
+[28
+
+]
+Overfull \hbox (1.00093pt too wide) has occurred while \output is active
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
+ []
+
+[29
+
+] (./Thesis_presentation.toc)
+Overfull \hbox (1.00093pt too wide) has occurred while \output is active
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [30
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [31
 
-] (./Thesis_presentation.toc)
+]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [32
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [33
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [34
 
+] [35
+
 ]
-Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+<../img/distoptpair_example_detail_edited.jpeg, id=2826, 906.38625pt x 705.6362
+5pt>
+File: ../img/distoptpair_example_detail_edited.jpeg Graphic file (type jpg)
+ <use ../img/distoptpair_example_detail_edited.jpeg>
+Package pdftex.def Info: ../img/distoptpair_example_detail_edited.jpeg used on 
+input line 638.
+(pdftex.def)             Requested size: 199.40558pt x 155.24045pt.
+
+Overfull \hbox (15.02979pt too wide) in paragraph at lines 638--638
+ [][] 
  []
 
-[35
 
-]
+Overfull \vbox (4.35428pt too high) detected at line 638
+ []
+
+
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [36
 
-]
+ <../img/distoptpair_example_detail_edited.jpeg>]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [37
 
 ]
-<../img/distoptpair_example_detail_edited.jpeg, id=3055, 906.38625pt x 705.6362
-5pt>
-File: ../img/distoptpair_example_detail_edited.jpeg Graphic file (type jpg)
- <use ../img/distoptpair_example_detail_edited.jpeg>
-Package pdftex.def Info: ../img/distoptpair_example_detail_edited.jpeg used on 
-input line 637.
-(pdftex.def)             Requested size: 199.40558pt x 155.24045pt.
-
-Overfull \hbox (15.02979pt too wide) in paragraph at lines 637--637
- [][] 
+Overfull \hbox (170.80911pt too wide) in paragraph at lines 678--678
+[] 
  []
 
 
-Overfull \vbox (4.35428pt too high) detected at line 637
+Overfull \hbox (32.48792pt too wide) in paragraph at lines 678--678
+[]  
  []
 
 
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [38
 
- <../img/distoptpair_example_detail_edited.jpeg>]
-Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+] [39
+
+] (../img/classic_balancing.tex)
+File: ../img/classic_balancing.tex Graphic file (type tex)
+
+Overfull \hbox (2.41425pt too wide) in paragraph at lines 754--754
+ [] 
  []
 
-[39
+(../img/heuristic_balancing.tex)
+File: ../img/heuristic_balancing.tex Graphic file (type tex)
 
-]
+Overfull \hbox (2.41425pt too wide) in paragraph at lines 754--754
+ [] 
+ []
+
+
+Overfull \vbox (7.95929pt too high) detected at line 754
+ []
+
+
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [40
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [41
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [42
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [43
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [44
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [45
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [46
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [47
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [48
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [49
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [50
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [51
 
 ]
 Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][][][] [][][][][][][][][][][][][][]
+ [][][][][][][][] [][][][][]  
  []
 
 [52
 
-]
-Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
- []
+] [53
 
-[53
-
-]
-Overfull \hbox (1.00093pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][][][][] [][][][][][][][][][][][]
-[][] [][][][][][][][] [][][][][]  
- []
-
-[54
-
-] [55
-
-] [56
+] [54
 
 ]
 \tf@nav=\write7
@@ -2044,26 +2044,26 @@ Overfull \hbox (1.00093pt too wide) has occurred while \output is active
 \tf@snm=\write9
 \openout9 = `Thesis_presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 714.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 714.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 819.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 819.
  (./Thesis_presentation.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 714.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 714.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 819.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 819.
 Package rerunfilecheck Info: File `Thesis_presentation.out' has not changed.
-(rerunfilecheck)             Checksum: A46470CC07558D3187EA3FA0B58BBD53;887.
+(rerunfilecheck)             Checksum: E46A232AFC377AA0C69EE9CC2252F8BB;887.
 Package logreq Info: Writing requests to 'Thesis_presentation.run.xml'.
 \openout1 = `Thesis_presentation.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 714.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 819.
  ) 
 Here is how much of TeX's memory you used:
- 37223 strings out of 493105
- 827399 string characters out of 6137072
- 1346971 words of memory out of 5000000
- 39779 multiletter control sequences out of 15000+600000
+ 37243 strings out of 493105
+ 827923 string characters out of 6137072
+ 1345934 words of memory out of 5000000
+ 39801 multiletter control sequences out of 15000+600000
  80384 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,28n,78p,958b,1439s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,27n,78p,958b,1439s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/sha
 re/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/
@@ -2083,10 +2083,10 @@ onts/type1/public/lm/lmtti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
 ic/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/symbols/msbm10.pfb>
-Output written on Thesis_presentation.pdf (56 pages, 566907 bytes).
+Output written on Thesis_presentation.pdf (54 pages, 560110 bytes).
 PDF statistics:
- 4553 PDF objects out of 5155 (max. 8388607)
- 4367 compressed objects within 44 object streams
- 158 named destinations out of 1000 (max. 500000)
+ 4238 PDF objects out of 4296 (max. 8388607)
+ 4059 compressed objects within 41 object streams
+ 153 named destinations out of 1000 (max. 500000)
  178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
