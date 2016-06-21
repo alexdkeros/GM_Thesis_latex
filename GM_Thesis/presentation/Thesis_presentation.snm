@@ -20,3 +20,7 @@
 \beamer@slide {algo:centralizedCoordinatorNode}{23}
 \defcounter {refsection}{0}\relax 
 \beamer@slide {algo:centralizedMonitoringNode}{23}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {algo:nco-primal_descent}{25}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {form:QPsubprob}{27}

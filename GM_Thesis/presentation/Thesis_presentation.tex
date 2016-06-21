@@ -380,32 +380,133 @@ Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors 
 \subsection{Theoretical Tools}
 \subsubsection*{Multi-objective Optimization}
 \begin{frame} \frametitle{Multi-objective Optimization}
-
+\begin{itemize}
+\item \textbf{Multiple}, possibly \textbf{conflicting} objectives to be \emph{simultaneously} optimized
+\item \emph{Pareto optimality}(\emph{non-dominated solutions}): optimal solutions where none of the objective functions can be optimized without the simultaneous degradation of other objective functions' values.
+\item Let vector of $m$ objectives $F(x)=[F_1(x), F_2(x), \dots, F_m(x)]$:
+\begin{align*}
+&\min_{x \in \mathbb{R}^n}{F(x)}\\
+&\ \text{s.t.}\ l\leq x \leq u \\
+			&\qquad G_i=0, i=1,\dots,k_e\\
+			&\qquad G_j\leq 0, j=k_e+1, \dots,k
+\end{align*}
+\item Finding \emph{Pareto optimal} solutions is generally \textbf{NP-hard}.
+\end{itemize}
 \end{frame}
+
 \begin{frame} \frametitle{Non-linear Constraint Optimization}\framesubtitle{Primal Descent}
-
+\centering
+\scalebox{0.75}{
+\begin{minipage}{1.3\linewidth}
+\begin{algorithm}[H]
+\setstretch{1.30}
+\Begin{
+	Choose initial point $x_0 \in X$ and set $t=0$ \tcc*[r]{Initialization}
+	\While(\tcc*[f]{Search}){maximum iteration limit \emph{OR} convergence}{
+		$t=t+1$\;
+		Determine search direction $d_t$\;
+		Determine step length $s_t$, so that $f(x_t+s_td_t)<f(x_t)$\;
+		Update\;
+	}
+}
+\caption{Generic primal descent \label{algo:nco-primal_descent}} 
+\end{algorithm}
+\end{minipage}%
+}
 \end{frame}
-%slsqp
-\begin{frame} \frametitle{Feasible Directions}
 
-\end{frame}
 %conmin
-\begin{frame} \frametitle{SQP}
+\begin{frame} \frametitle{Feasible Directions}
+\emph{Usable feasible direction} $d_t$:\begin{itemize}
+\item a small disposition towards direction $d_t$ does not violate any constraint i.e.,
+$$d_t^T \nabla G(x_t)\leq 0$$
+\item a move towards $d_t$ reduces the objective functions value i.e.,
+$$d_t^T \nabla F(x_t)<0$$.
+\end{itemize}
+\end{frame}
 
+%sqp
+\begin{frame} \frametitle{SQP}
+\begin{itemize}
+\item The \emph{Lagrangian function}: $\mathcal{L}(x,\lambda)=F(x)+\sum_{i=1}^k{\lambda_i G_i(x)}$
+\item \emph{Quadratic programming subproblems}:
+\begin{align*}
+\min_{d \in \mathbb{R}^n}\ &{\frac{1}{2} d^T H_t d + \nabla F(x_t)^T d}\\
+&\nabla G_i(x_t)^T d + G_i(x_t)=0, i=1, \dots, k_e \label{form:QPsubprob}\\
+&\nabla G_i(x_t)^T d + G_i(x_t)\leq 0, i=k_e+1, \dots k
+\intertext{,where:}
+H_t&\text{:Hessian of the Lagrangian function at iteration $t$}\\
+d&\text{:search direction}
+\end{align*}
+\end{itemize}
 \end{frame}
 \subsubsection*{Savitzky-Golay Filtering}
 \begin{frame} \frametitle{The Savitzky-Golay Filter}
-
+\begin{itemize}
+\item Low-pass smoothing filter
+\item \emph{Moving window averaging} paradigm: $g_i=\sum_{n=-n_L}^{n_R} c_n f_{i+n}$
+\item \emph{Least-squares fit} of polynomial $y_i(x)$ over window $n_L+n_R+1$:
+\begin{gather*}
+\sum_{j=i-n_L}^{i+n_R} (y_i(x_j)-f_j)^2= \text{min}
+\intertext{,where:}
+y_i(x)=a_0+a_1 \frac{x-x_i}{\Delta x}+a_2 (\frac{x-x_i}{\Delta x})^2 + \dots + a_M (\frac{x-x_i}{\Delta x})^M
+\end{gather*}
+\item Set $g_i$ to the value of the fitted point $x_i$
+\end{itemize}
 \end{frame}
-\subsubsection*{Matching in Graphs}
-\begin{frame} \frametitle{Maximum Weight Matching}\framesubtitle{The Primal-Dual Method}
 
+\subsubsection*{Matching in Graphs}
+\begin{frame} \frametitle{Maximum Weight Matching}
+Let $G=(V,E)$ a graph:
+\begin{itemize}
+\item \emph{maximum weight matching} $M\subseteq E$ : a subset of edges where 
+\begin{itemize}
+\item no two edges share a common vertex
+\item largest possible number of edges
+\item maximizes the sum of weights
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame} \frametitle{Maximum Weight Matching}\framesubtitle{The Primal-Dual Method}
+\textbf{Primal-Dual Method}
+\begin{align*}
+\begin{split}
+\text{Constraints in Primal}&\Longleftrightarrow \text{Variables in Dual}\\
+\text{Constraints in Dual}\quad &\Longleftrightarrow \text{Variables in Primal}
+\end{split}
+\end{align*}
+\begin{columns}
+\begin{column}[t]{0.49\textwidth}
+\vspace{-1.5cm}
+\begin{align*}
+\intertext{The primal:}
+\max&\quad \sum_{(u,v) \in E} x_{u,v} w_{u,v}\\
+\text{s.t.} &\qquad x_{u,v}\geq 0 &&, (u,v) \in E \\
+	&\quad \sum_{u \in e: e\in E} x_e \leq 1 &&, u \in V
+\end{align*}\end{column}
+\begin{column}[t]{0.49\textwidth}
+\vspace{-1.5cm}
+\begin{align*}
+\intertext{The dual:}
+\min&\quad \sum_{u \in V} y_u\\
+\text{s.t.} &\quad y_u\geq 0 &&, u \in V\\
+	&\quad y_u+y_v \geq w_{u,v} &&,(u,v) \in E
+\end{align*}
+\end{column}
+\end{columns}
 \end{frame}
 
 \subsection{Related Work}
 \begin{frame} \frametitle{Related Work}
-
+\begin{itemize}
+\item \emph{Safe Zones}: optimal local constraints fitted to nodes' data distributions %\footfullcite{Keren2013SafeZones}
+\item Ellipsoidal bounding regions, decouplement of estimate vector from bounding ball construction%\footfullcite{Sharfman2012ShapeSensGM}
+\item Simple shapes as local constraints, hierarchical clustering of nodes for participation to the balancing operation%\footfullcite{Keren2014GMHetStreams}
+\item Prediction models based on velocity and acceleration%\footfullcite{GiatrakosPredictionGM}
+\end{itemize}
 \end{frame}
+
 %%%%%%%%%%%%%  section: IMPL  %%%%%%%%%%%%%%%%%%%%%%%
 \section{Problem Statement \& Implementation}
 \subsection{Problem Statement}
@@ -499,5 +600,8 @@ The end\\
 Questions?
 \end{frame}
 
+\begin{frame}[plain]\frametitle{Appendix}\framesubtitle{Savitzky-Golay filter matrix notation}
+hey you
+\end{frame}
 \end{document}
 
