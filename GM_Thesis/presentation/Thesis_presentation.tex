@@ -794,7 +794,22 @@ Thank you\\
 Questions?
 \end{frame}
 
-
+\section*{  }
+\begin{frame}[plain]
+Assume a moving object $i$ at point $x_i$, with acceleration $a_i$ and current velocity $v_i$. Let $v_f$ be the object's final velocity when it reaches a threshold point $T$ at time $t$, from which it deviates by $d=T-x_i$. Let current time be $t=0$.\\
+Distance (or \emph{Displacement}) in terms of velocity and acceleration is described by:
+\begin{equation}
+d=v_i t+a t^2
+\label{form:displacement}
+\end{equation}
+For which it holds:
+\begin{align*}
+d&=v_i t+a_i t^2 \leftrightarrow\\
+T-x_i&=v_i t + a_i t^2 \leftrightarrow\\
+t&=\frac{(T-x_i)-a_i t^2}{v_i}\\
+\end{align*}
+Thus, $t$ is the expected time the moving object reaches the threshold point $T$.
+\end{frame}
 
 %\begin{frame} \frametitle{System Architecture} \framesubtitle{Decentralized Scenario}
 %\begin{figure}[H]
@@ -805,11 +820,11 @@ Questions?
 %\end{figure}
 %\end{frame}
 
-%\begin{frame} \frametitle{Geometric Interpretation}\framesubtitle{Convexity Property}
-%\begin{theorem}[\footfullcite{Sharfman2006GM}]\label{theorem:convexHull}
-%Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors in $\mathbb{R}^d$. Let $Conv(\vec{x}, \vec{y_1}, \dots, \vec{y_n})$ be the convex hull of $\vec{x}, \vec{y_1}, \dots, \vec{y_n}$. Let $B(\vec{x}, \vec{y_i})$ be a ball centered at $\frac{\vec{x}+\vec{y_i}}{2}$ and with radius of $\lVert{\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2$ i.e., $B(\vec{x}, \vec{y_i})=\{\vec{z}\ |\ \lVert{\vec{z}-\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2 \leq \lVert{\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2 \}$, then $Conv(vec{x}, \vec{y_1}, \dots, \vec{y_n}) \subset B(\vec{x}, \vec{y_i})$.
-%\end{theorem}
-%\end{frame}
+\begin{frame}[plain] \frametitle{Geometric Interpretation}
+\begin{theorem}[{\tiny\fullcite{Sharfman2006GM}}]
+Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors in $\mathbb{R}^d$. Let $Conv(\vec{x}, \vec{y_1}, \dots, \vec{y_n})$ be the convex hull of $\vec{x}, \vec{y_1}, \dots, \vec{y_n}$. Let $B(\vec{x}, \vec{y_i})$ be a ball centered at $\frac{\vec{x}+\vec{y_i}}{2}$ and with radius of $\lVert{\frac{\vec{x}-\vec{y_i}}{2}}\rVert_2$ i.e., $B(\vec{x}, \vec{y_i})=\{\vec{z}\ |\ \lVert{\vec{z}-\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2 \leq \lVert{\frac{\vec{x}-\vec{y_i}}{2}}\rVert_2 \}$, then $Conv(vec{x}, \vec{y_1}, \dots, \vec{y_n}) \subset B(\vec{x}, \vec{y_i})$.
+\end{theorem}
+\end{frame}
 
 
 %\begin{frame}[plain] \frametitle{Protocol}\framesubtitle{Decentralized Algorithm}
@@ -949,157 +964,157 @@ Questions?
 %\end{frame}
 
 
-%\begin{frame} \frametitle{Non-linear Constraint Optimization}\framesubtitle{Primal Descent}
-%\centering
-%\scalebox{0.75}{
-%\begin{minipage}{1.3\linewidth}
-%\begin{algorithm}[H]
-%\setstretch{1.30}
-%\Begin{
-%	Choose initial point $x_0 \in X$ and set $t=0$ \tcc*[r]{Initialization}
-%	\While(\tcc*[f]{Search}){maximum iteration limit \emph{OR} convergence}{
-%		$t=t+1$\;
-%		Determine search direction $d_t$\;
-%		Determine step length $s_t$, so that $f(x_t+s_td_t)<f(x_t)$\;
-%		Update\;
-%	}
-%}
-%\caption{Generic primal descent \label{algo:nco-primal_descent}} 
-%\end{algorithm}
-%\end{minipage}%
-%}
-%\end{frame}
+\begin{frame}[plain] \frametitle{Non-linear Constraint Optimization}\framesubtitle{Primal Descent}
+\centering
+\scalebox{0.75}{
+\begin{minipage}{1.3\linewidth}
+\begin{algorithm}[H]
+\setstretch{1.30}
+\Begin{
+	Choose initial point $x_0 \in X$ and set $t=0$ \tcc*[r]{Initialization}
+	\While(\tcc*[f]{Search}){maximum iteration limit \emph{OR} convergence}{
+		$t=t+1$\;
+		Determine search direction $d_t$\;
+		Determine step length $s_t$, so that $f(x_t+s_td_t)<f(x_t)$\;
+		Update\;
+	}
+}
+\caption{Generic primal descent \label{algo:nco-primal_descent}} 
+\end{algorithm}
+\end{minipage}%
+}
+\end{frame}
 
 %%conmin
-%\begin{frame} \frametitle{Feasible Directions}
-%\emph{Usable feasible direction} $d_t$:\begin{itemize}
-%\item a small disposition towards direction $d_t$ does not violate any constraint i.e.,
-%$$d_t^T \nabla G(x_t)\leq 0$$
-%\item a move towards $d_t$ reduces the objective functions value i.e.,
-%$$d_t^T \nabla F(x_t)<0$$.
-%\end{itemize}
-%\end{frame}
+\begin{frame}[plain] \frametitle{Feasible Directions}
+\emph{Usable feasible direction} $d_t$:\begin{itemize}
+\item a small disposition towards direction $d_t$ does not violate any constraint i.e.,
+$$d_t^T \nabla G(x_t)\leq 0$$
+\item a move towards $d_t$ reduces the objective functions value i.e.,
+$$d_t^T \nabla F(x_t)<0$$.
+\end{itemize}
+\end{frame}
 
-%\begin{frame}
-%\scalebox{0.50}{
-%\begin{minipage}[t]{\linewidth}
-%\begin{algorithm}[H]
-%\setstretch{1.30}
-%
-%\KwData{$monitoringNodes$: a list of Monitoring nodes,\\\quad $coordinator$: the Coordinator node}
-%
-%\SetAlgoLined
-%\Begin{
-% initialization\;
-% 	\Repeat{$globalViolation$}{
-%		\ForEach{$node \in\ monitoringNodes$}{
-%			$node.DataVectorUpdate()$\;
-%			$node.ComputeDriftVector()$\;
-%		}
-%		\ForEach{$node \in\ monitoringNodes$}{
-%			$node.CheckForViolation()$\;
-%			\If{$localViolation$}{
-%				$node.Report()$\;
-%				$coordinator.Balance()$\;
-%			}
-%		}
-%	}
-%}
-%\caption{Iterative network operation \label{algo:singleHandlingNetwork}} 
-%\end{algorithm}
-%\end{minipage}%
-%}
-%\end{frame}
+\begin{frame}[plain]
+\scalebox{0.70}{
+\begin{minipage}[t]{\linewidth}
+\begin{algorithm}[H]
+\setstretch{1.30}
 
+\KwData{$monitoringNodes$: a list of Monitoring nodes,\\\quad $coordinator$: the Coordinator node}
 
-%\begin{frame}[plain] \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Algorithm}
-%\centering
-%\scalebox{0.70}{
-%\begin{minipage}[t]{1.3\linewidth}
-%\begin{algorithm}[H]
-%\SetAlgoLined
-%\setstretch{1.30}
-%\SetKwFunction{DistancePairer}{DistancePairer}
-%\SetKwProg{Fn}{Function}{}{end}
-%\Fn{\DistancePairer{$nodes$,$i$}}{
-%	\KwData{$nodes=[(n_1, [\vec{v_1}(t_0), ... , \vec{v_1}(t_{end})]), ... , (n_k, [\vec{v_k}(t_0), ... , \vec{v_k}(t_{end})])]$: list of nodes with their respective data vectors,$i$: pair type, initial=1} 
-%	\KwResult{$nodeHierarchy$: dictionary of \emph{Type-k} pairs}
-%
-%	\If(\tcp*[f]{recursion stopping condition}){$length(nodes)=1$}{
-%		\Return{$nodeHierarchy$}\;
-%	}
-%	$g=CreateCompleteGraph(nodes)$\tcp*[r]{complete graph with $nodes$ as vertices} 
-%	\ForEach(\tcp*[f]{assign weights to edges}){$(n_i, n_j)\in g.Edges()$}{
-%		$w_{i,j}=
-%		\sum_{t=t_0}^{t_{end}}{[(f(\vec{v}_{global}(t))-f(\frac{\vec{v_i}(t)+\vec{v_j}(t)}{2}))+(|\vec{v_i}(t)-\vec{v_j}(t)|)]}$\;
-%		$g.edge(n_i, n_j).weight=w_{i,j}$\;
-%	}
-%	$nodeHierarchy(\text{Type-i})=g.maximalWeightMatching()$\tcp*[r]{node pairs of \emph{Type-}$i$}
-%	\DistancePairer{$nodeHierarchy(\text{Type-i}),i*2$}\;
-%}
-%\caption{Recursively create Monitoring node pairs and hierarchy \label{algo:nodeMatching}} 
-%\end{algorithm}
-%\end{minipage}
-%}
-%\end{frame}
+\SetAlgoLined
+\Begin{
+ initialization\;
+ 	\Repeat{$globalViolation$}{
+		\ForEach{$node \in\ monitoringNodes$}{
+			$node.DataVectorUpdate()$\;
+			$node.ComputeDriftVector()$\;
+		}
+		\ForEach{$node \in\ monitoringNodes$}{
+			$node.CheckForViolation()$\;
+			\If{$localViolation$}{
+				$node.Report()$\;
+				$coordinator.Balance()$\;
+			}
+		}
+	}
+}
+\caption{Iterative network operation \label{algo:singleHandlingNetwork}} 
+\end{algorithm}
+\end{minipage}%
+}
+\end{frame}
 
 
-%\begin{frame} \frametitle{The Heuristic Balancing}\framesubtitle{The Function Implementation}
-%\begin{align*}
-%\min -z&\\
-%	\text{s.t.}\ \ z&\leq g(h(\vec{e},\vec{u_0}), vel_0, accel_0, T)\\
-%	z&\leq g(h(\vec{e},\vec{u_1}), vel_1, accel_1, T)\\
-%	&\vdots \\
-%	z&\leq g(h(\vec{e},\vec{u_n}), vel_n, accel_n, T)\\
-%	\vec{b}&=\frac{1}{\sum_{i=0}^n{w_i}}\sum_{i=0}^n{(w_i*\vec{u_i})} &&,\forall n_i \in P'
-%\end{align*}
-%where:
-%\begin{align*}
-%g&:\mathbb{R}^4 \to \mathbb{R}, \text{the heuristic optimization function as defined in Equation~\ref{form:heuristic}}\\
-%h&:\mathbb{R}^d \to \mathbb{R}, \text{the function computing the maximum value of the monitoring function $f(\cdot)$ in $B(\vec{e},\vec{u_i})$,}\\&\qquad\text{which is an optimization problem by itself}\\
-%d&: \text{the data vector dimensionality}
-%\end{align*}
-%\end{frame}
-%
-%\begin{frame}[plain] \frametitle{The Heuristic Balancing}\framesubtitle{The Algorithm}
-%\centering
-%\scalebox{0.65}{
-%\begin{minipage}[t]{1.5\linewidth}
-%\begin{algorithm}[H]
-%\SetAlgoLined
-%\setstretch{1.30}
-%\SetKwFunction{RepMessageReceived}{RepMessageReceived}
-%\SetKwFunction{RequestNode}{RequestNode}
-%\SetKwFunction{Balance}{Balance}
-%\SetKwProg{Fn}{Function}{}{end}
-%
-%\Fn{\RepMessageReceived{$<n_i$,$v_i$,$u_i$,$vel_i$,$accel_i>$}}{
-%	add $n_i$ to balancing set $P'$\;
-%	\Balance{}\;
-%}
-%
-%\Fn{\Balance{$P'$}}{
-%	\If{$length(P')=1$}{
-%		\RequestNode{}\tcp*[r]{request node based on respective gathering scheme}
-%	}
-%
-%	$\vec{b}=\sum_{P'}{\frac{w_i*\vec{u_i}}{w_i}}$\;
-%
-%	\If{$B(\vec{e},\vec{b})$ is monochromatic}{
-%		\tcc{heuristic optimization procedure,\\ returns the optimal drift vector positions in set $O$}
-%		$O=DriftVectorOptimizationProblem()$\;
-%
-%		\ForEach{$n_i \in P'$}{
-%			$\Delta\delta_i=w_i*\vec{u_i}'-w_i*\vec{u_i}$\tcp*[r]{$\vec{u_i}'$ denotes the optimal drift vector position}
-%			$Send(<ADJSLK,n_i,\Delta\delta_i>)$\;
-%		}
-%	}
-%}
-%\caption{Heuristic Balancing \label{algo:heuristicbalancing}} 
-%\end{algorithm}
-%\end{minipage}
-%}
-%\end{frame}
+\begin{frame}[plain] \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Algorithm}
+\centering
+\scalebox{0.70}{
+\begin{minipage}[t]{1.3\linewidth}
+\begin{algorithm}[H]
+\SetAlgoLined
+\setstretch{1.30}
+\SetKwFunction{DistancePairer}{DistancePairer}
+\SetKwProg{Fn}{Function}{}{end}
+\Fn{\DistancePairer{$nodes$,$i$}}{
+	\KwData{$nodes=[(n_1, [\vec{v_1}(t_0), ... , \vec{v_1}(t_{end})]), ... , (n_k, [\vec{v_k}(t_0), ... , \vec{v_k}(t_{end})])]$: list of nodes with their respective data vectors,$i$: pair type, initial=1} 
+	\KwResult{$nodeHierarchy$: dictionary of \emph{Type-k} pairs}
+
+	\If(\tcp*[f]{recursion stopping condition}){$length(nodes)=1$}{
+		\Return{$nodeHierarchy$}\;
+	}
+	$g=CreateCompleteGraph(nodes)$\tcp*[r]{complete graph with $nodes$ as vertices} 
+	\ForEach(\tcp*[f]{assign weights to edges}){$(n_i, n_j)\in g.Edges()$}{
+		$w_{i,j}=
+		\sum_{t=t_0}^{t_{end}}{[(f(\vec{v}_{global}(t))-f(\frac{\vec{v_i}(t)+\vec{v_j}(t)}{2}))+(|\vec{v_i}(t)-\vec{v_j}(t)|)]}$\;
+		$g.edge(n_i, n_j).weight=w_{i,j}$\;
+	}
+	$nodeHierarchy(\text{Type-i})=g.maximalWeightMatching()$\tcp*[r]{node pairs of \emph{Type-}$i$}
+	\DistancePairer{$nodeHierarchy(\text{Type-i}),i*2$}\;
+}
+\caption{Recursively create Monitoring node pairs and hierarchy \label{algo:nodeMatching}} 
+\end{algorithm}
+\end{minipage}
+}
+\end{frame}
+
+
+\begin{frame}[plain] \frametitle{The Heuristic Balancing}\framesubtitle{The Function Implementation}
+\begin{align*}
+\min -z&\\
+	\text{s.t.}\ \ z&\leq g(h(\vec{e},\vec{u_0}), vel_0, accel_0, T)\\
+	z&\leq g(h(\vec{e},\vec{u_1}), vel_1, accel_1, T)\\
+	&\vdots \\
+	z&\leq g(h(\vec{e},\vec{u_n}), vel_n, accel_n, T)\\
+	\vec{b}&=\frac{1}{\sum_{i=0}^n{w_i}}\sum_{i=0}^n{(w_i*\vec{u_i})} &&,\forall n_i \in P'
+\end{align*}
+where:
+\begin{align*}
+g&:\mathbb{R}^4 \to \mathbb{R}, \text{the heuristic optimization function}\\
+h&:\mathbb{R}^d \to \mathbb{R}, \text{the max val of the monitoring function $f(\cdot)$ in $B(\vec{e},\vec{u_i})$,}\\
+d&: \text{the data vector dimensionality}
+\end{align*}
+\end{frame}
+
+\begin{frame}[plain] \frametitle{The Heuristic Balancing}\framesubtitle{The Algorithm}
+\centering
+\scalebox{0.65}{
+\begin{minipage}[t]{1.5\linewidth}
+\begin{algorithm}[H]
+\SetAlgoLined
+\setstretch{1.30}
+\SetKwFunction{RepMessageReceived}{RepMessageReceived}
+\SetKwFunction{RequestNode}{RequestNode}
+\SetKwFunction{Balance}{Balance}
+\SetKwProg{Fn}{Function}{}{end}
+
+\Fn{\RepMessageReceived{$<n_i$,$v_i$,$u_i$,$vel_i$,$accel_i>$}}{
+	add $n_i$ to balancing set $P'$\;
+	\Balance{}\;
+}
+
+\Fn{\Balance{$P'$}}{
+	\If{$length(P')=1$}{
+		\RequestNode{}\tcp*[r]{request node based on respective gathering scheme}
+	}
+
+	$\vec{b}=\sum_{P'}{\frac{w_i*\vec{u_i}}{w_i}}$\;
+
+	\If{$B(\vec{e},\vec{b})$ is monochromatic}{
+		\tcc{heuristic optimization procedure,\\ returns the optimal drift vector positions in set $O$}
+		$O=DriftVectorOptimizationProblem()$\;
+
+		\ForEach{$n_i \in P'$}{
+			$\Delta\delta_i=w_i*\vec{u_i}'-w_i*\vec{u_i}$\tcp*[r]{$\vec{u_i}'$ denotes the optimal drift vector position}
+			$Send(<ADJSLK,n_i,\Delta\delta_i>)$\;
+		}
+	}
+}
+\caption{Heuristic Balancing \label{algo:heuristicbalancing}} 
+\end{algorithm}
+\end{minipage}
+}
+\end{frame}
 
 \end{document}
 

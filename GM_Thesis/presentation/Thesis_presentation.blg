@@ -1,15 +1,15 @@
-[0] Config.pm:321> INFO - This is Biber 1.9
+[1] Config.pm:321> INFO - This is Biber 1.9
 [1] Config.pm:324> INFO - Logfile is 'Thesis_presentation.blg'
-[72] biber:277> INFO - === Wed Jun 22, 2016, 21:32:18
-[72] Biber.pm:334> INFO - Reading 'Thesis_presentation.bcf'
-[235] Biber.pm:636> INFO - Found 7 citekeys in bib section 0
-[269] Biber.pm:3052> INFO - Processing section 0
-[307] Biber.pm:3190> INFO - Looking for bibtex format file 'presentation.bib' for section 0
-[311] bibtex.pm:979> INFO - Decoding LaTeX character macros into UTF-8
-[317] bibtex.pm:853> INFO - Found BibTeX data source 'presentation.bib'
-[569] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[569] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[570] Biber.pm:2929> INFO - Sorting list 'nty' of type 'entry' with scheme 'nty' and locale 'en-US'
-[570] Biber.pm:2933> INFO - No sort tailoring available for locale 'en-US'
-[608] bbl.pm:517> INFO - Writing 'Thesis_presentation.bbl' with encoding 'UTF-8'
-[610] bbl.pm:606> INFO - Output to Thesis_presentation.bbl
+[70] biber:277> INFO - === Wed Jun 22, 2016, 22:10:12
+[71] Biber.pm:334> INFO - Reading 'Thesis_presentation.bcf'
+[226] Biber.pm:636> INFO - Found 7 citekeys in bib section 0
+[261] Biber.pm:3052> INFO - Processing section 0
+[300] Biber.pm:3190> INFO - Looking for bibtex format file 'presentation.bib' for section 0
+[304] bibtex.pm:979> INFO - Decoding LaTeX character macros into UTF-8
+[310] bibtex.pm:853> INFO - Found BibTeX data source 'presentation.bib'
+[568] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[568] UCollate.pm:66> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[571] Biber.pm:2929> INFO - Sorting list 'nty' of type 'entry' with scheme 'nty' and locale 'en-US'
+[571] Biber.pm:2933> INFO - No sort tailoring available for locale 'en-US'
+[610] bbl.pm:517> INFO - Writing 'Thesis_presentation.bbl' with encoding 'UTF-8'
+[613] bbl.pm:606> INFO - Output to Thesis_presentation.bbl

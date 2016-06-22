@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.5.27)  22 JUN 2016 21:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.5.27)  22 JUN 2016 22:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1989,7 +1989,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 
 [23
 
-] <../img/savgol.pdf, id=2087, 650.43pt x 505.89pt>
+] <../img/savgol.pdf, id=2088, 650.43pt x 505.89pt>
 File: ../img/savgol.pdf Graphic file (type pdf)
  <use ../img/savgol.pdf>
 Package pdftex.def Info: ../img/savgol.pdf used on input line 291.
@@ -2075,7 +2075,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 [31
 
 ]
-<../img/distoptpair_example_detail_edited.jpeg, id=2758, 906.38625pt x 705.6362
+<../img/distoptpair_example_detail_edited.jpeg, id=2759, 906.38625pt x 705.6362
 5pt>
 File: ../img/distoptpair_example_detail_edited.jpeg Graphic file (type jpg)
  <use ../img/distoptpair_example_detail_edited.jpeg>
@@ -2175,7 +2175,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 
 [38
 
-] <../img/linear1D20N_streams.pdf, id=3334, 650.43pt x 505.89pt>
+] <../img/linear1D20N_streams.pdf, id=3335, 650.43pt x 505.89pt>
 File: ../img/linear1D20N_streams.pdf Graphic file (type pdf)
 
 <use ../img/linear1D20N_streams.pdf>
@@ -2187,7 +2187,7 @@ Overfull \hbox (5.73592pt too wide) in paragraph at lines 530--530
  [] 
  []
 
-<../img/interweaving1D20N_streams.pdf, id=3335, 650.43pt x 505.89pt>
+<../img/interweaving1D20N_streams.pdf, id=3336, 650.43pt x 505.89pt>
 File: ../img/interweaving1D20N_streams.pdf Graphic file (type pdf)
 
 <use ../img/interweaving1D20N_streams.pdf>
@@ -2199,7 +2199,7 @@ Overfull \hbox (5.73592pt too wide) in paragraph at lines 530--530
  [] 
  []
 
-<../img/noisyinterweaving1D20N_streams.pdf, id=3336, 650.43pt x 505.89pt>
+<../img/noisyinterweaving1D20N_streams.pdf, id=3337, 650.43pt x 505.89pt>
 File: ../img/noisyinterweaving1D20N_streams.pdf Graphic file (type pdf)
 
 <use ../img/noisyinterweaving1D20N_streams.pdf>
@@ -2235,7 +2235,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 
 [40
 
-] <../img/AT_NO2_NO_2014_8N_streams.pdf, id=3520, 650.43pt x 505.89pt>
+] <../img/AT_NO2_NO_2014_8N_streams.pdf, id=3521, 650.43pt x 505.89pt>
 File: ../img/AT_NO2_NO_2014_8N_streams.pdf Graphic file (type pdf)
 
 <use ../img/AT_NO2_NO_2014_8N_streams.pdf>
@@ -2243,7 +2243,7 @@ Package pdftex.def Info: ../img/AT_NO2_NO_2014_8N_streams.pdf used on input lin
 e 560.
 (pdftex.def)             Requested size: 130.0837pt x 101.1762pt.
 
-<../img/AT_NO2_sq_2014_8N_streams.pdf, id=3521, 650.43pt x 505.89pt>
+<../img/AT_NO2_sq_2014_8N_streams.pdf, id=3522, 650.43pt x 505.89pt>
 File: ../img/AT_NO2_sq_2014_8N_streams.pdf Graphic file (type pdf)
 
 <use ../img/AT_NO2_sq_2014_8N_streams.pdf>
@@ -2262,7 +2262,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 
 pdfTeX warning: pdflatex (file ../img/AT_NO2_sq_2014_8N_streams.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
->] <../img/matching_msg_linear.pdf, id=3623, 650.43pt x 505.89pt>
+>] <../img/matching_msg_linear.pdf, id=3624, 650.43pt x 505.89pt>
 File: ../img/matching_msg_linear.pdf Graphic file (type pdf)
 
 <use ../img/matching_msg_linear.pdf>
@@ -2285,7 +2285,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 [42
 
  <../img/matching_msg_linear.pdf>]
-<../img/matching_msg_interweaving.pdf, id=3714, 650.43pt x 505.89pt>
+<../img/matching_msg_interweaving.pdf, id=3715, 650.43pt x 505.89pt>
 File: ../img/matching_msg_interweaving.pdf Graphic file (type pdf)
 
 <use ../img/matching_msg_interweaving.pdf>
@@ -2305,7 +2305,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 [43
 
  <../img/matching_msg_interweaving.pdf>]
-<../img/matching_msg_noisyinterweaving.pdf, id=3805, 650.43pt x 505.89pt>
+<../img/matching_msg_noisyinterweaving.pdf, id=3806, 650.43pt x 505.89pt>
 File: ../img/matching_msg_noisyinterweaving.pdf Graphic file (type pdf)
 
 <use ../img/matching_msg_noisyinterweaving.pdf>
@@ -2325,7 +2325,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 [44
 
  <../img/matching_msg_noisyinterweaving.pdf>]
-<../img/matchings_matchings_linear.pdf, id=3895, 722.7pt x 361.35pt>
+<../img/matchings_matchings_linear.pdf, id=3896, 722.7pt x 361.35pt>
 File: ../img/matchings_matchings_linear.pdf Graphic file (type pdf)
 
 <use ../img/matchings_matchings_linear.pdf>
@@ -2345,7 +2345,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 [45
 
  <../img/matchings_matchings_linear.pdf>]
-<../img/matchings_matchings_interweaving.pdf, id=3987, 722.7pt x 361.35pt>
+<../img/matchings_matchings_interweaving.pdf, id=3988, 722.7pt x 361.35pt>
 File: ../img/matchings_matchings_interweaving.pdf Graphic file (type pdf)
 
 <use ../img/matchings_matchings_interweaving.pdf>
@@ -2365,7 +2365,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 [46
 
  <../img/matchings_matchings_interweaving.pdf>]
-<../img/matchings_matchings_noisyinterweaving.pdf, id=4079, 722.7pt x 361.35pt>
+<../img/matchings_matchings_noisyinterweaving.pdf, id=4080, 722.7pt x 361.35pt>
 File: ../img/matchings_matchings_noisyinterweaving.pdf Graphic file (type pdf)
 <use ../img/matchings_matchings_noisyinterweaving.pdf>
 Package pdftex.def Info: ../img/matchings_matchings_noisyinterweaving.pdf used 
@@ -2384,7 +2384,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 [47
 
  <../img/matchings_matchings_noisyinterweaving.pdf>]
-<../img/bal_msg_linear_nodes.pdf, id=4171, 650.43pt x 505.89pt>
+<../img/bal_msg_linear_nodes.pdf, id=4172, 650.43pt x 505.89pt>
 File: ../img/bal_msg_linear_nodes.pdf Graphic file (type pdf)
 
 <use ../img/bal_msg_linear_nodes.pdf>
@@ -2396,7 +2396,7 @@ Overfull \hbox (8.96217pt too wide) in paragraph at lines 639--639
  [] 
  []
 
-<../img/bal_msg_noisyinterweaving_nodes.pdf, id=4172, 650.43pt x 505.89pt>
+<../img/bal_msg_noisyinterweaving_nodes.pdf, id=4173, 650.43pt x 505.89pt>
 File: ../img/bal_msg_noisyinterweaving_nodes.pdf Graphic file (type pdf)
 
 <use ../img/bal_msg_noisyinterweaving_nodes.pdf>
@@ -2424,7 +2424,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 
 pdfTeX warning: pdflatex (file ../img/bal_msg_noisyinterweaving_nodes.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
->] <../img/bal_classic_drifts_linear2N.pdf, id=4269, 650.43pt x 505.89pt>
+>] <../img/bal_classic_drifts_linear2N.pdf, id=4270, 650.43pt x 505.89pt>
 File: ../img/bal_classic_drifts_linear2N.pdf Graphic file (type pdf)
 
 <use ../img/bal_classic_drifts_linear2N.pdf>
@@ -2436,7 +2436,7 @@ Overfull \hbox (8.96217pt too wide) in paragraph at lines 660--660
  [] 
  []
 
-<../img/bal_heuristic_drifts_linear2N.pdf, id=4270, 650.43pt x 505.89pt>
+<../img/bal_heuristic_drifts_linear2N.pdf, id=4271, 650.43pt x 505.89pt>
 File: ../img/bal_heuristic_drifts_linear2N.pdf Graphic file (type pdf)
 
 <use ../img/bal_heuristic_drifts_linear2N.pdf>
@@ -2461,7 +2461,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 
 pdfTeX warning: pdflatex (file ../img/bal_heuristic_drifts_linear2N.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
->] <../img/main_msg_linear_nodes.pdf, id=4361, 650.43pt x 505.89pt>
+>] <../img/main_msg_linear_nodes.pdf, id=4362, 650.43pt x 505.89pt>
 File: ../img/main_msg_linear_nodes.pdf Graphic file (type pdf)
 
 <use ../img/main_msg_linear_nodes.pdf>
@@ -2481,7 +2481,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 [50
 
  <../img/main_msg_linear_nodes.pdf>]
-<../img/main_msg_interweaving_nodes.pdf, id=4450, 650.43pt x 505.89pt>
+<../img/main_msg_interweaving_nodes.pdf, id=4451, 650.43pt x 505.89pt>
 File: ../img/main_msg_interweaving_nodes.pdf Graphic file (type pdf)
 
 <use ../img/main_msg_interweaving_nodes.pdf>
@@ -2501,7 +2501,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 [51
 
  <../img/main_msg_interweaving_nodes.pdf>]
-<../img/main_msg_noisyinterweaving_nodes.pdf, id=4539, 650.43pt x 505.89pt>
+<../img/main_msg_noisyinterweaving_nodes.pdf, id=4540, 650.43pt x 505.89pt>
 File: ../img/main_msg_noisyinterweaving_nodes.pdf Graphic file (type pdf)
 
 <use ../img/main_msg_noisyinterweaving_nodes.pdf>
@@ -2521,7 +2521,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 [52
 
  <../img/main_msg_noisyinterweaving_nodes.pdf>]
-<../img/main_msg_noisyinterweaving_window.pdf, id=4628, 650.43pt x 505.89pt>
+<../img/main_msg_noisyinterweaving_window.pdf, id=4629, 650.43pt x 505.89pt>
 File: ../img/main_msg_noisyinterweaving_window.pdf Graphic file (type pdf)
 
 <use ../img/main_msg_noisyinterweaving_window.pdf>
@@ -2541,7 +2541,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 [53
 
  <../img/main_msg_noisyinterweaving_window.pdf>]
-<../img/main_msg_noisyinterweaving_order.pdf, id=4717, 650.43pt x 505.89pt>
+<../img/main_msg_noisyinterweaving_order.pdf, id=4718, 650.43pt x 505.89pt>
 File: ../img/main_msg_noisyinterweaving_order.pdf Graphic file (type pdf)
 
 <use ../img/main_msg_noisyinterweaving_order.pdf>
@@ -2561,7 +2561,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 [54
 
  <../img/main_msg_noisyinterweaving_order.pdf>]
-<../img/main_msg_linear_dims.pdf, id=4809, 650.43pt x 505.89pt>
+<../img/main_msg_linear_dims.pdf, id=4810, 650.43pt x 505.89pt>
 File: ../img/main_msg_linear_dims.pdf Graphic file (type pdf)
 
 <use ../img/main_msg_linear_dims.pdf>
@@ -2573,7 +2573,7 @@ Overfull \hbox (8.96217pt too wide) in paragraph at lines 729--729
  [] 
  []
 
-<../img/main_msg_noisyinterweaving_dims.pdf, id=4810, 650.43pt x 505.89pt>
+<../img/main_msg_noisyinterweaving_dims.pdf, id=4811, 650.43pt x 505.89pt>
 File: ../img/main_msg_noisyinterweaving_dims.pdf Graphic file (type pdf)
 
 <use ../img/main_msg_noisyinterweaving_dims.pdf>
@@ -2602,7 +2602,7 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 pdfTeX warning: pdflatex (file ../img/main_msg_noisyinterweaving_dims.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
 >]
-<../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf, id=4907, 650.43pt x 505.
+<../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf, id=4908, 650.43pt x 505.
 89pt>
 File: ../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf Graphic file (type p
 df)
@@ -2611,7 +2611,7 @@ Package pdftex.def Info: ../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf u
 sed on input line 751.
 (pdftex.def)             Requested size: 149.59575pt x 116.35225pt.
 
-<../img/actual_msg_NO2_NO_2014_nodes.pdf, id=4908, 650.43pt x 505.89pt>
+<../img/actual_msg_NO2_NO_2014_nodes.pdf, id=4909, 650.43pt x 505.89pt>
 File: ../img/actual_msg_NO2_NO_2014_nodes.pdf Graphic file (type pdf)
 
 <use ../img/actual_msg_NO2_NO_2014_nodes.pdf>
@@ -2661,6 +2661,33 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 
 ] [60
 
+] [61
+
+] [62
+
+]
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 986
+.
+ (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [63
+
+] [64
+
+]
+[65
+
+] [66
+
+]
+Overfull \hbox (4.97762pt too wide) in paragraph at lines 1077--1077
+[]  
+ []
+
+[67
+
+] [68
+
 ]
 \tf@nav=\write7
 \openout7 = `Thesis_presentation.nav'.
@@ -2671,52 +2698,54 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 \tf@snm=\write9
 \openout9 = `Thesis_presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1104.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1104.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1119.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1119.
  (./Thesis_presentation.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1104.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1104.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1119.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1119.
 
 Package rerunfilecheck Info: File `Thesis_presentation.out' has not changed.
 (rerunfilecheck)             Checksum: 05F7000A27DDEA2AED4986272756DE60;887.
 Package logreq Info: Writing requests to 'Thesis_presentation.run.xml'.
 \openout1 = `Thesis_presentation.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1104.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1119.
  ) 
 Here is how much of TeX's memory you used:
- 37841 strings out of 493105
- 838833 string characters out of 6137072
- 1351269 words of memory out of 5000000
- 40354 multiletter control sequences out of 15000+600000
- 82546 words of font info for 78 fonts, out of 8000000 for 9000
+ 37944 strings out of 493105
+ 840268 string characters out of 6137072
+ 1350394 words of memory out of 5000000
+ 40430 multiletter control sequences out of 15000+600000
+ 85883 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,21n,78p,958b,1477s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lms
-s9.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso1
-7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/font
-s/type1/public/lm/lmsso9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmsy5.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Thesis_presentation.pdf (60 pages, 845496 bytes).
+ 56i,25n,78p,958b,1477s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/
+dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/sha
+re/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/
+lm-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm
+/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
+8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss9.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmsso17.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso9.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmsy5.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmtti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/symbols/msbm10.pfb>
+Output written on Thesis_presentation.pdf (68 pages, 907563 bytes).
 PDF statistics:
- 5395 PDF objects out of 6186 (max. 8388607)
- 5123 compressed objects within 52 object streams
- 150 named destinations out of 1000 (max. 500000)
- 297 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5620 PDF objects out of 6186 (max. 8388607)
+ 5335 compressed objects within 54 object streams
+ 172 named destinations out of 1000 (max. 500000)
+ 303 words of extra memory for PDF output out of 10000 (max. 10000000)
 

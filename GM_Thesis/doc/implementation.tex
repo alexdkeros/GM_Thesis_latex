@@ -279,8 +279,6 @@ The heuristic balancing method proposed previously (Section~\ref{sec:impl-heuris
 The \emph{Savitzky-Golay smoothing filter}~\cite{SavGol1964SmoothDiff} (Section~\ref{sec:theorBack-SavitzkyGolay}) is ideal in the heuristic Geometric Monitoring setting, for it smooths and derivates the signal without much additional computational burden, allowing it to be applied directly at the Monitoring Nodes' data streams. By assuming equidistant data points the precomputation of convolution coefficients becomes trivial when specifying the window size, the window center, the order of the polynomial and the desired derivative. Following that, the precomputed coefficients are applied to the desired signal by a simple convolution, which is both fast and, if required, on-line. The application of the filter on a noisy signal, along with the velocity and the acceleration computation of this signal, is shown in Figure~\ref{fig:savgol}.
 
 
-
-%TODO: load savgol pic + upload to git (from demokritos)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% savgol figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
 \centering

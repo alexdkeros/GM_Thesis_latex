@@ -2,3 +2,13 @@
 \beamer@slide {form:QPsubprob}{22}
 \defcounter {refsection}{0}\relax 
 \beamer@slide {fig:savgol}{24}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {form:displacement}{61}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {algo:nco-primal_descent}{63}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {algo:singleHandlingNetwork}{65}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {algo:nodeMatching}{66}
+\defcounter {refsection}{0}\relax 
+\beamer@slide {algo:heuristicbalancing}{68}
