@@ -40,13 +40,10 @@ I.~Sharfman, A.~Schuster, and D.~Keren, ``A geometric approach to monitoring
   \url{http://doi.acm.org/10.1145/1142473.1142508}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Garofalakis2013SketchBasedGM}
-\BIBentryALTinterwordspacing
-M.~N. Garofalakis, D.~Keren, and V.~Samoladas, ``Sketch-based geometric
-  monitoring of distributed stream queries.'' \emph{PVLDB}, vol.~6, no.~10, pp.
-  937--948, 2013. [Online]. Available:
-  \url{http://dblp.uni-trier.de/db/journals/pvldb/pvldb6.html#GarofalakisKS13}
-\BIBentrySTDinterwordspacing
+\bibitem{Sharfman2012ShapeSensGM}
+D.~Keren, I.~Sharfman, A.~Schuster, and A.~Livne, ``Shape sensitive geometric
+  monitoring,'' \emph{IEEE Transactions on Knowledge and Data Engineering},
+  vol.~24, no.~8, pp. 1520--1535, Aug 2012.
 
 \bibitem{SavGol1964SmoothDiff}
 \BIBentryALTinterwordspacing
@@ -116,6 +113,14 @@ G.~Cormode and M.~Garofalakis, ``Approximate continuous querying over
   \url{http://doi.acm.org/10.1145/1366102.1366106}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Garofalakis2013SketchBasedGM}
+\BIBentryALTinterwordspacing
+M.~N. Garofalakis, D.~Keren, and V.~Samoladas, ``Sketch-based geometric
+  monitoring of distributed stream queries.'' \emph{PVLDB}, vol.~6, no.~10, pp.
+  937--948, 2013. [Online]. Available:
+  \url{http://dblp.uni-trier.de/db/journals/pvldb/pvldb6.html#GarofalakisKS13}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Keren2013SafeZones}
 \BIBentryALTinterwordspacing
 D.~Keren, G.~Sagy, A.~Abboud, D.~Ben{-}David, I.~Sharfman, and A.~Schuster,
@@ -128,11 +133,6 @@ D.~Keren, G.~Sagy, A.~Abboud, D.~Ben{-}David, I.~Sharfman, and A.~Schuster,
 \bibitem{Samoladas2013Unification}
 V.~Samoladas, ``Unification fo safe zones and the geometric method with
   application to generalized median monitoring,'' October 2013.
-
-\bibitem{Sharfman2012ShapeSensGM}
-D.~Keren, I.~Sharfman, A.~Schuster, and A.~Livne, ``Shape sensitive geometric
-  monitoring,'' \emph{IEEE Transactions on Knowledge and Data Engineering},
-  vol.~24, no.~8, pp. 1520--1535, Aug 2012.
 
 \bibitem{Keren2014GMHetStreams}
 \BIBentryALTinterwordspacing

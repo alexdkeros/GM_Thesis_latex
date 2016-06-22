@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.5.27)  22 JUN 2016 00:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.5.27)  22 JUN 2016 21:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -701,7 +701,244 @@ Package: beamerinnerthemedefault 2013/10/15  (rcs-revision 65cb471f9634)
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/themes/outer/beamerouterthemede
 fault.sty
 Package: beamerouterthemedefault 2012/12/19  (rcs-revision 1686da3db3c9)
-))) (/usr/share/texmf/tex/latex/lm/lmodern.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box53
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen188
+\pgf@nodesepend=\dimen189
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2014/04/30 v1.2b Input encoding file
+\inpenc@prehook=\toks43
+\inpenc@posthook=\toks44
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+File: utf8.def 2014/09/29 v1.1m UTF-8 support for inputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encoding T1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C0 (decimal 192)
+   defining Unicode char U+00C1 (decimal 193)
+   defining Unicode char U+00C2 (decimal 194)
+   defining Unicode char U+00C3 (decimal 195)
+   defining Unicode char U+00C4 (decimal 196)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00C7 (decimal 199)
+   defining Unicode char U+00C8 (decimal 200)
+   defining Unicode char U+00C9 (decimal 201)
+   defining Unicode char U+00CA (decimal 202)
+   defining Unicode char U+00CB (decimal 203)
+   defining Unicode char U+00CC (decimal 204)
+   defining Unicode char U+00CD (decimal 205)
+   defining Unicode char U+00CE (decimal 206)
+   defining Unicode char U+00CF (decimal 207)
+   defining Unicode char U+00D0 (decimal 208)
+   defining Unicode char U+00D1 (decimal 209)
+   defining Unicode char U+00D2 (decimal 210)
+   defining Unicode char U+00D3 (decimal 211)
+   defining Unicode char U+00D4 (decimal 212)
+   defining Unicode char U+00D5 (decimal 213)
+   defining Unicode char U+00D6 (decimal 214)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00D9 (decimal 217)
+   defining Unicode char U+00DA (decimal 218)
+   defining Unicode char U+00DB (decimal 219)
+   defining Unicode char U+00DC (decimal 220)
+   defining Unicode char U+00DD (decimal 221)
+   defining Unicode char U+00DE (decimal 222)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E0 (decimal 224)
+   defining Unicode char U+00E1 (decimal 225)
+   defining Unicode char U+00E2 (decimal 226)
+   defining Unicode char U+00E3 (decimal 227)
+   defining Unicode char U+00E4 (decimal 228)
+   defining Unicode char U+00E5 (decimal 229)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00E7 (decimal 231)
+   defining Unicode char U+00E8 (decimal 232)
+   defining Unicode char U+00E9 (decimal 233)
+   defining Unicode char U+00EA (decimal 234)
+   defining Unicode char U+00EB (decimal 235)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F0 (decimal 240)
+   defining Unicode char U+00F1 (decimal 241)
+   defining Unicode char U+00F2 (decimal 242)
+   defining Unicode char U+00F3 (decimal 243)
+   defining Unicode char U+00F4 (decimal 244)
+   defining Unicode char U+00F5 (decimal 245)
+   defining Unicode char U+00F6 (decimal 246)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+00F9 (decimal 249)
+   defining Unicode char U+00FA (decimal 250)
+   defining Unicode char U+00FB (decimal 251)
+   defining Unicode char U+00FC (decimal 252)
+   defining Unicode char U+00FD (decimal 253)
+   defining Unicode char U+00FE (decimal 254)
+   defining Unicode char U+00FF (decimal 255)
+   defining Unicode char U+0102 (decimal 258)
+   defining Unicode char U+0103 (decimal 259)
+   defining Unicode char U+0104 (decimal 260)
+   defining Unicode char U+0105 (decimal 261)
+   defining Unicode char U+0106 (decimal 262)
+   defining Unicode char U+0107 (decimal 263)
+   defining Unicode char U+010C (decimal 268)
+   defining Unicode char U+010D (decimal 269)
+   defining Unicode char U+010E (decimal 270)
+   defining Unicode char U+010F (decimal 271)
+   defining Unicode char U+0110 (decimal 272)
+   defining Unicode char U+0111 (decimal 273)
+   defining Unicode char U+0118 (decimal 280)
+   defining Unicode char U+0119 (decimal 281)
+   defining Unicode char U+011A (decimal 282)
+   defining Unicode char U+011B (decimal 283)
+   defining Unicode char U+011E (decimal 286)
+   defining Unicode char U+011F (decimal 287)
+   defining Unicode char U+0130 (decimal 304)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0132 (decimal 306)
+   defining Unicode char U+0133 (decimal 307)
+   defining Unicode char U+0139 (decimal 313)
+   defining Unicode char U+013A (decimal 314)
+   defining Unicode char U+013D (decimal 317)
+   defining Unicode char U+013E (decimal 318)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0143 (decimal 323)
+   defining Unicode char U+0144 (decimal 324)
+   defining Unicode char U+0147 (decimal 327)
+   defining Unicode char U+0148 (decimal 328)
+   defining Unicode char U+014A (decimal 330)
+   defining Unicode char U+014B (decimal 331)
+   defining Unicode char U+0150 (decimal 336)
+   defining Unicode char U+0151 (decimal 337)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+0154 (decimal 340)
+   defining Unicode char U+0155 (decimal 341)
+   defining Unicode char U+0158 (decimal 344)
+   defining Unicode char U+0159 (decimal 345)
+   defining Unicode char U+015A (decimal 346)
+   defining Unicode char U+015B (decimal 347)
+   defining Unicode char U+015E (decimal 350)
+   defining Unicode char U+015F (decimal 351)
+   defining Unicode char U+0160 (decimal 352)
+   defining Unicode char U+0161 (decimal 353)
+   defining Unicode char U+0162 (decimal 354)
+   defining Unicode char U+0163 (decimal 355)
+   defining Unicode char U+0164 (decimal 356)
+   defining Unicode char U+0165 (decimal 357)
+   defining Unicode char U+016E (decimal 366)
+   defining Unicode char U+016F (decimal 367)
+   defining Unicode char U+0170 (decimal 368)
+   defining Unicode char U+0171 (decimal 369)
+   defining Unicode char U+0178 (decimal 376)
+   defining Unicode char U+0179 (decimal 377)
+   defining Unicode char U+017A (decimal 378)
+   defining Unicode char U+017B (decimal 379)
+   defining Unicode char U+017C (decimal 380)
+   defining Unicode char U+017D (decimal 381)
+   defining Unicode char U+017E (decimal 382)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+201E (decimal 8222)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+2423 (decimal 9251)
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encoding OT1
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A1 (decimal 161)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00B8 (decimal 184)
+   defining Unicode char U+00BF (decimal 191)
+   defining Unicode char U+00C5 (decimal 197)
+   defining Unicode char U+00C6 (decimal 198)
+   defining Unicode char U+00D8 (decimal 216)
+   defining Unicode char U+00DF (decimal 223)
+   defining Unicode char U+00E6 (decimal 230)
+   defining Unicode char U+00EC (decimal 236)
+   defining Unicode char U+00ED (decimal 237)
+   defining Unicode char U+00EE (decimal 238)
+   defining Unicode char U+00EF (decimal 239)
+   defining Unicode char U+00F8 (decimal 248)
+   defining Unicode char U+0131 (decimal 305)
+   defining Unicode char U+0141 (decimal 321)
+   defining Unicode char U+0142 (decimal 322)
+   defining Unicode char U+0152 (decimal 338)
+   defining Unicode char U+0153 (decimal 339)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+02C6 (decimal 710)
+   defining Unicode char U+02DC (decimal 732)
+   defining Unicode char U+200C (decimal 8204)
+   defining Unicode char U+2026 (decimal 8230)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2423 (decimal 9251)
+))
+(/usr/share/texmf/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -737,25 +974,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
-
-(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
-\pgfnodeparttextbox=\box53
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
-.sty
-Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen188
-\pgf@nodesepend=\dimen189
-)
-(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
-.sty
-Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
-)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
@@ -766,8 +985,8 @@ Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen190
 \pgffor@skip=\dimen191
-\pgffor@stack=\toks43
-\pgffor@toks=\toks44
+\pgffor@stack=\toks45
+\pgffor@toks=\toks46
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
@@ -811,9 +1030,9 @@ Package: pgfplots 2014/08/04 v1.11 Data Visualization (1.11-3-g4c99d7a)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
-\t@pgfplots@toka=\toks45
-\t@pgfplots@tokb=\toks46
-\t@pgfplots@tokc=\toks47
+\t@pgfplots@toka=\toks47
+\t@pgfplots@tokb=\toks48
+\t@pgfplots@tokc=\toks49
 \pgfplots@tmpa=\dimen199
 \c@pgfplots@coordindex=\count161
 \c@pgfplots@scanlineindex=\count162
@@ -842,7 +1061,7 @@ x.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
 d.code.tex
 \c@pgfplotstable@counta=\count164
-\t@pgfplotstable@a=\toks48
+\t@pgfplotstable@a=\toks50
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
 .code.tex)
@@ -927,8 +1146,8 @@ Package: xkeyval 2014/05/25 v2.7 package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks49
-\XKV@tempa@toks=\toks50
+\XKV@toks=\toks51
+\XKV@tempa@toks=\toks52
 )
 \XKV@depth=\count168
 File: xkeyval.tex 2014/05/25 v2.7 key=value parser (HA)
@@ -1048,7 +1267,7 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count175
 \lst@gtempboxa=\box70
-\lst@token=\toks51
+\lst@token=\toks53
 \lst@length=\count176
 \lst@currlwidth=\dimen229
 \lst@column=\count177
@@ -1149,7 +1368,7 @@ Package biblatex Info: ... file 'blx-dm.def' found.
 
 (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def)
 Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'authoryear-comp.dbx' not found.
+Package biblatex Info: ... file 'authortitle-comp.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@afterword=\count227
@@ -1244,17 +1463,17 @@ File: biblatex.def
 \c@biburllcpenalty=\count341
 \c@smartand=\count342
 )
-Package biblatex Info: Trying to load bibliography style 'authoryear-comp'...
-Package biblatex Info: ... file 'authoryear-comp.bbx' found.
+Package biblatex Info: Trying to load bibliography style 'authortitle-comp'...
+Package biblatex Info: ... file 'authortitle-comp.bbx' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear-comp.bbx
-File: authoryear-comp.bbx 2014/06/25 v2.9a biblatex bibliography style (PK/JW/A
-B)
-Package biblatex Info: Trying to load bibliography style 'authoryear'...
-Package biblatex Info: ... file 'authoryear.bbx' found.
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authortitle-comp.bbx
+File: authortitle-comp.bbx 2014/06/25 v2.9a biblatex bibliography style (PK/JW/
+AB)
+Package biblatex Info: Trying to load bibliography style 'authortitle'...
+Package biblatex Info: ... file 'authortitle.bbx' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
-File: authoryear.bbx 2014/06/25 v2.9a biblatex bibliography style (PK/JW/AB)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authortitle.bbx
+File: authortitle.bbx 2014/06/25 v2.9a biblatex bibliography style (PK/JW/AB)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
@@ -1263,11 +1482,11 @@ File: standard.bbx 2014/06/25 v2.9a biblatex bibliography style (PK/JW/AB)
 \c@bbx:relatedcount=\count343
 \c@bbx:relatedtotal=\count344
 )))
-Package biblatex Info: Trying to load citation style 'authoryear-comp'...
-Package biblatex Info: ... file 'authoryear-comp.cbx' found.
+Package biblatex Info: Trying to load citation style 'authortitle-comp'...
+Package biblatex Info: ... file 'authortitle-comp.cbx' found.
 
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear-comp.cbx
-File: authoryear-comp.cbx 2014/06/25 v2.9a biblatex citation style (PK/JW/AB)
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authortitle-comp.cbx
+File: authortitle-comp.cbx 2014/06/25 v2.9a biblatex citation style (PK/JW/AB)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1310,21 +1529,21 @@ File: english.lbx 2014/06/25 v2.9a biblatex localization (PK/JW/AB)
 (./Thesis_presentation.aux)
 \openout1 = `Thesis_presentation.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 26.
 
  (/usr/share/texmf/tex/latex/lm/ot1lmss.fd
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1370,16 +1589,16 @@ File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 \scratchbox=\box72
 \nofMPsegments=\count348
 \nofMParguments=\count349
-\everyMPshowfont=\toks52
+\everyMPshowfont=\toks54
 \MPscratchCnt=\count350
 Normal \dimen register pool exhausted, switching to extended pool.
 \MPscratchDim=\dimen256
 \MPnumerator=\count351
 \makeMPintoPDFobject=\count352
-\everyMPtoPDFconversion=\toks53
+\everyMPtoPDFconversion=\toks55
 ) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box73
-Package hyperref Info: Link coloring OFF on input line 24.
+Package hyperref Info: Link coloring OFF on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1389,60 +1608,60 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count353
 )
-LaTeX Info: Redefining \ref on input line 24.
-LaTeX Info: Redefining \pageref on input line 24.
-LaTeX Info: Redefining \nameref on input line 24.
+LaTeX Info: Redefining \ref on input line 26.
+LaTeX Info: Redefining \pageref on input line 26.
+LaTeX Info: Redefining \nameref on input line 26.
 
 (./Thesis_presentation.out) (./Thesis_presentation.out)
 \@outlinefile=\write6
 \openout6 = `Thesis_presentation.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 24.
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 26.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/cmss/bx/n on input line 24.
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/bx/n on input line 26.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 24.
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 26.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 24.
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 26.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 24.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 24.
+(Font)                  OT1/lmss/m/n --> OT1/lmr/m/n on input line 26.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> OT1/lmss/bx/n on input line 24.
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/bx/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmr/bx/n --> OT1/lmss/bx/n on input line 24.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 24.
+(Font)                  OT1/lmr/bx/n --> OT1/lmss/bx/n on input line 26.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 24.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/m/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 24.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 24.
+(Font)                  OT1/lmss/bx/n --> OT1/lmss/m/n on input line 26.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 24.
+(Font)                  OT1/lmr/m/it --> OT1/lmss/m/it on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 24.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 24.
+(Font)                  OT1/lmr/bx/it --> OT1/lmss/m/it on input line 26.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 24.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 24.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/m/n on input line 26.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/bx/n on input line 24.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/bx/n on input line 26.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/bx/it on input line 24.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/bx/it on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/lmss/bx/n --> OT1/lmr/bx/n on input line 24.
+(Font)                  OT1/lmss/bx/n --> OT1/lmr/bx/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> OT1/lmss/bx/n on input line 24.
+(Font)                  OT1/lmss/bx/n --> OT1/lmss/bx/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/m/n --> OT1/lmss/bx/n on input line 24.
+(Font)                  OT1/lmss/m/n --> OT1/lmss/bx/n on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/lmss/m/it --> OT1/lmss/bx/it on input line 24.
+(Font)                  OT1/lmss/m/it --> OT1/lmss/bx/it on input line 26.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> OT1/lmtt/bx/n on input line 24.
+(Font)                  OT1/lmtt/m/n --> OT1/lmtt/bx/n on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/translator/dicts/translator-bas
 ic-dictionary/translator-basic-dictionary-English.dict
@@ -1468,36 +1687,35 @@ Dictionary: translator-numbers-dictionary, Language: English
 orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 24.
+LaTeX Info: Redefining \includegraphics on input line 26.
 
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.11} into 
 your preamble.
- on input line 24.
+ on input line 26.
 
 \c@lstlisting=\count354
-Package biblatex Info: No input encoding detected.
-(biblatex)             Assuming 'ascii'.
+Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
-(biblatex)             Assuming data encoding 'ascii'.
+(biblatex)             Assuming data encoding 'utf8'.
 \openout5 = `Thesis_presentation.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Thesis_presentation.bbl' found.
 (./Thesis_presentation.bbl)
-Package biblatex Info: Reference section=0 on input line 24.
-Package biblatex Info: Reference segment=0 on input line 24.
+Package biblatex Info: Reference section=0 on input line 26.
+Package biblatex Info: Reference segment=0 on input line 26.
  (./Thesis_presentation.nav)
-Overfull \hbox (1.84828pt too wide) detected at line 24
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+Overfull \hbox (1.84828pt too wide) detected at line 26
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
@@ -1505,163 +1723,150 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 ]
 (./Thesis_presentation.toc)
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [2
 
 ] (./Thesis_presentation.toc)
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [3
 
 ]
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 50.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 52.
  (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 50.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 52.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 50.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 52.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 50.
+(Font)              <8> on input line 52.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 50.
+(Font)              <6> on input line 52.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 50.
-LaTeX Font Info:    Try loading font information for U+msa on input line 50.
+(Font)              <5> on input line 52.
+LaTeX Font Info:    Try loading font information for U+msa on input line 52.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 50.
+LaTeX Font Info:    Try loading font information for U+msb on input line 52.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 50.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 52.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 50.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 52.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <5> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 50.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 52.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 50.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 52.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 50.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 50.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 50.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 50.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 50.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 50.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 50.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 50.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <9> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 50.
+(Font)              <10.95> on input line 52.
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [4
 
 ]
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 66.
+
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [5
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [6
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [7
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [8
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [9
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [10
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [11
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [12
 
 ] (./Thesis_presentation.toc)
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [13
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [14
@@ -1671,361 +1876,348 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 )
 File: ../img/centralized.tex Graphic file (type tex)
 
-Overfull \vbox (13.33806pt too high) detected at line 128
+Overfull \vbox (13.33806pt too high) detected at line 121
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [15
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [16
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [17
 
 ]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 200.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 200.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 200.
+
+
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [18
 
-]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 223.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <12> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 223.
-
-
-Overfull \vbox (24.89023pt too high) detected at line 223
- []
-
-
-Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
- []
-
-[19
-
 ] (../img/convex_hull.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <20.74> on input line 182.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 182.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 182.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <20.74> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 182.
+
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 182.
+
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <12> not available
 (Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 182.
 
 )
 File: ../img/convex_hull.tex Graphic file (type tex)
 
-Overfull \vbox (19.51215pt too high) detected at line 239
+Overfull \vbox (18.7686pt too high) detected at line 225
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
+ []
+
+[19
+
+]
+Overfull \vbox (4.55963pt too high) detected at line 235
+ []
+
+
+Overfull \hbox (1.84828pt too wide) has occurred while \output is active
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [20
 
 ]
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 375
-.
- (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
-File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [21
-
-]
-Overfull \vbox (2.59148pt too high) detected at line 392
+Overfull \vbox (2.59148pt too high) detected at line 252
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
+ []
+
+[21
+
+]
+Overfull \hbox (1.84828pt too wide) has occurred while \output is active
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [22
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [23
 
-]
+] <../img/savgol.pdf, id=2087, 650.43pt x 505.89pt>
+File: ../img/savgol.pdf Graphic file (type pdf)
+ <use ../img/savgol.pdf>
+Package pdftex.def Info: ../img/savgol.pdf used on input line 291.
+(pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
+
+Overfull \vbox (12.37213pt too high) detected at line 291
+ []
+
+
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [24
 
-]
+ <../img/savgol.pdf>] (../img/matching.tex)
+File: ../img/matching.tex Graphic file (type tex)
+
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [25
 
 ]
+Overfull \hbox (12.40804pt too wide) in paragraph at lines 343--343
+[]  
+ []
+
+
+Overfull \hbox (7.47592pt too wide) in paragraph at lines 343--343
+[]  
+ []
+
+
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [26
 
-]
-Overfull \hbox (12.40804pt too wide) in paragraph at lines 495--495
-[]  
- []
-
-
-Overfull \hbox (7.47592pt too wide) in paragraph at lines 495--495
-[]  
- []
-
-
+] (./Thesis_presentation.toc)
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [27
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [28
 
-] (./Thesis_presentation.toc)
+]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [29
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [30
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
 [31
 
 ]
-Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
- []
-
-[32
-
-]
-Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
- []
-
-[33
-
-] [34
-
-]
-<../img/distoptpair_example_detail_edited.jpeg, id=3063, 906.38625pt x 705.6362
+<../img/distoptpair_example_detail_edited.jpeg, id=2758, 906.38625pt x 705.6362
 5pt>
 File: ../img/distoptpair_example_detail_edited.jpeg Graphic file (type jpg)
  <use ../img/distoptpair_example_detail_edited.jpeg>
 Package pdftex.def Info: ../img/distoptpair_example_detail_edited.jpeg used on 
-input line 635.
+input line 413.
 (pdftex.def)             Requested size: 199.40558pt x 155.24045pt.
 
-Overfull \hbox (15.02979pt too wide) in paragraph at lines 635--635
+Overfull \hbox (15.02979pt too wide) in paragraph at lines 413--413
  [][] 
  []
 
 
-Overfull \vbox (4.35428pt too high) detected at line 635
+Overfull \vbox (4.35428pt too high) detected at line 413
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[35
+[32
 
  <../img/distoptpair_example_detail_edited.jpeg>]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[36
+[33
 
 ]
-Overfull \hbox (170.80911pt too wide) in paragraph at lines 675--675
+Overfull \hbox (170.80911pt too wide) in paragraph at lines 453--453
 [] 
  []
 
 
-Overfull \hbox (32.48792pt too wide) in paragraph at lines 675--675
+Overfull \hbox (32.48792pt too wide) in paragraph at lines 453--453
 []  
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[37
-
-] [38
+[34
 
 ] (../img/classic_balancing.tex)
 File: ../img/classic_balancing.tex Graphic file (type tex)
 
-Overfull \hbox (2.41425pt too wide) in paragraph at lines 751--751
+Overfull \hbox (2.41425pt too wide) in paragraph at lines 472--472
  [] 
  []
 
 (../img/heuristic_balancing.tex)
 File: ../img/heuristic_balancing.tex Graphic file (type tex)
 
-Overfull \hbox (2.41425pt too wide) in paragraph at lines 751--751
+Overfull \hbox (2.41425pt too wide) in paragraph at lines 472--472
  [] 
  []
 
 
-Overfull \vbox (7.95929pt too high) detected at line 751
+Overfull \vbox (7.95929pt too high) detected at line 472
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[39
+[35
 
-] <../img/savgol.pdf, id=3432, 650.43pt x 505.89pt>
-File: ../img/savgol.pdf Graphic file (type pdf)
- <use ../img/savgol.pdf>
-Package pdftex.def Info: ../img/savgol.pdf used on input line 764.
-(pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
-
-Overfull \vbox (12.37213pt too high) detected at line 764
- []
-
-
+] (./Thesis_presentation.toc)
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[40
-
- <../img/savgol.pdf>] (./Thesis_presentation.toc)
-Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
- []
-
-[41
+[36
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[42
+[37
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[43
+[38
 
-] <../img/linear1D20N_streams.pdf, id=3801, 650.43pt x 505.89pt>
+] <../img/linear1D20N_streams.pdf, id=3334, 650.43pt x 505.89pt>
 File: ../img/linear1D20N_streams.pdf Graphic file (type pdf)
 
 <use ../img/linear1D20N_streams.pdf>
-Package pdftex.def Info: ../img/linear1D20N_streams.pdf used on input line 825.
+Package pdftex.def Info: ../img/linear1D20N_streams.pdf used on input line 530.
 
 (pdftex.def)             Requested size: 104.07092pt x 80.94405pt.
 
-Overfull \hbox (5.73592pt too wide) in paragraph at lines 825--825
+Overfull \hbox (5.73592pt too wide) in paragraph at lines 530--530
  [] 
  []
 
-<../img/interweaving1D20N_streams.pdf, id=3802, 650.43pt x 505.89pt>
+<../img/interweaving1D20N_streams.pdf, id=3335, 650.43pt x 505.89pt>
 File: ../img/interweaving1D20N_streams.pdf Graphic file (type pdf)
 
 <use ../img/interweaving1D20N_streams.pdf>
 Package pdftex.def Info: ../img/interweaving1D20N_streams.pdf used on input lin
-e 825.
+e 530.
 (pdftex.def)             Requested size: 104.07092pt x 80.94405pt.
 
-Overfull \hbox (5.73592pt too wide) in paragraph at lines 825--825
+Overfull \hbox (5.73592pt too wide) in paragraph at lines 530--530
  [] 
  []
 
-<../img/noisyinterweaving1D20N_streams.pdf, id=3803, 650.43pt x 505.89pt>
+<../img/noisyinterweaving1D20N_streams.pdf, id=3336, 650.43pt x 505.89pt>
 File: ../img/noisyinterweaving1D20N_streams.pdf Graphic file (type pdf)
 
 <use ../img/noisyinterweaving1D20N_streams.pdf>
 Package pdftex.def Info: ../img/noisyinterweaving1D20N_streams.pdf used on inpu
-t line 825.
+t line 530.
 (pdftex.def)             Requested size: 104.07092pt x 80.94405pt.
 
-Overfull \hbox (5.73592pt too wide) in paragraph at lines 825--825
+Overfull \hbox (5.73592pt too wide) in paragraph at lines 530--530
  [] 
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[44
+[39
 
  <../img/linear1D20N_streams.pdf> <../img/interweaving1D20N_streams.pdf
 
@@ -2037,403 +2229,406 @@ pdfTeX warning: pdflatex (file ../img/noisyinterweaving1D20N_streams.pdf): PDF
 inclusion: multiple pdfs with page group included in a single page
 >]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[45
+[40
 
-] <../img/AT_NO2_NO_2014_8N_streams.pdf, id=3997, 650.43pt x 505.89pt>
+] <../img/AT_NO2_NO_2014_8N_streams.pdf, id=3520, 650.43pt x 505.89pt>
 File: ../img/AT_NO2_NO_2014_8N_streams.pdf Graphic file (type pdf)
 
 <use ../img/AT_NO2_NO_2014_8N_streams.pdf>
 Package pdftex.def Info: ../img/AT_NO2_NO_2014_8N_streams.pdf used on input lin
-e 854.
+e 560.
 (pdftex.def)             Requested size: 130.0837pt x 101.1762pt.
 
-<../img/AT_NO2_sq_2014_8N_streams.pdf, id=3998, 650.43pt x 505.89pt>
+<../img/AT_NO2_sq_2014_8N_streams.pdf, id=3521, 650.43pt x 505.89pt>
 File: ../img/AT_NO2_sq_2014_8N_streams.pdf Graphic file (type pdf)
 
 <use ../img/AT_NO2_sq_2014_8N_streams.pdf>
 Package pdftex.def Info: ../img/AT_NO2_sq_2014_8N_streams.pdf used on input lin
-e 854.
+e 560.
 (pdftex.def)             Requested size: 130.0837pt x 101.1762pt.
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[46
+[41
 
  <../img/AT_NO2_NO_2014_8N_streams.pdf> <../img/AT_NO2_sq_2014_8N_streams.pdf
 
 pdfTeX warning: pdflatex (file ../img/AT_NO2_sq_2014_8N_streams.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
->] <../img/matching_msg_linear.pdf, id=4105, 650.43pt x 505.89pt>
+>] <../img/matching_msg_linear.pdf, id=3623, 650.43pt x 505.89pt>
 File: ../img/matching_msg_linear.pdf Graphic file (type pdf)
 
 <use ../img/matching_msg_linear.pdf>
-Package pdftex.def Info: ../img/matching_msg_linear.pdf used on input line 866.
+Package pdftex.def Info: ../img/matching_msg_linear.pdf used on input line 572.
 
 (pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <9> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 572.
 
-Overfull \vbox (8.20134pt too high) detected at line 866
+
+Overfull \vbox (8.20134pt too high) detected at line 572
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[47
+[42
 
  <../img/matching_msg_linear.pdf>]
-<../img/matching_msg_interweaving.pdf, id=4201, 650.43pt x 505.89pt>
+<../img/matching_msg_interweaving.pdf, id=3714, 650.43pt x 505.89pt>
 File: ../img/matching_msg_interweaving.pdf Graphic file (type pdf)
 
 <use ../img/matching_msg_interweaving.pdf>
 Package pdftex.def Info: ../img/matching_msg_interweaving.pdf used on input lin
-e 875.
+e 581.
 (pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 
-Overfull \vbox (8.20134pt too high) detected at line 875
+Overfull \vbox (8.20134pt too high) detected at line 581
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[48
+[43
 
  <../img/matching_msg_interweaving.pdf>]
-<../img/matching_msg_noisyinterweaving.pdf, id=4296, 650.43pt x 505.89pt>
+<../img/matching_msg_noisyinterweaving.pdf, id=3805, 650.43pt x 505.89pt>
 File: ../img/matching_msg_noisyinterweaving.pdf Graphic file (type pdf)
 
 <use ../img/matching_msg_noisyinterweaving.pdf>
 Package pdftex.def Info: ../img/matching_msg_noisyinterweaving.pdf used on inpu
-t line 884.
+t line 590.
 (pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 
-Overfull \vbox (8.20134pt too high) detected at line 884
+Overfull \vbox (8.20134pt too high) detected at line 590
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[49
+[44
 
  <../img/matching_msg_noisyinterweaving.pdf>]
-<../img/matchings_matchings_linear.pdf, id=4392, 722.7pt x 361.35pt>
+<../img/matchings_matchings_linear.pdf, id=3895, 722.7pt x 361.35pt>
 File: ../img/matchings_matchings_linear.pdf Graphic file (type pdf)
 
 <use ../img/matchings_matchings_linear.pdf>
 Package pdftex.def Info: ../img/matchings_matchings_linear.pdf used on input li
-ne 893.
+ne 599.
 (pdftex.def)             Requested size: 289.07487pt x 144.53743pt.
 
-Overfull \vbox (10.75652pt too high) detected at line 893
+Overfull \vbox (10.75652pt too high) detected at line 599
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[50
+[45
 
  <../img/matchings_matchings_linear.pdf>]
-<../img/matchings_matchings_interweaving.pdf, id=4489, 722.7pt x 361.35pt>
+<../img/matchings_matchings_interweaving.pdf, id=3987, 722.7pt x 361.35pt>
 File: ../img/matchings_matchings_interweaving.pdf Graphic file (type pdf)
 
 <use ../img/matchings_matchings_interweaving.pdf>
 Package pdftex.def Info: ../img/matchings_matchings_interweaving.pdf used on in
-put line 902.
+put line 608.
 (pdftex.def)             Requested size: 289.07487pt x 144.53743pt.
 
-Overfull \vbox (10.75652pt too high) detected at line 902
+Overfull \vbox (10.75652pt too high) detected at line 608
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[51
+[46
 
  <../img/matchings_matchings_interweaving.pdf>]
-<../img/matchings_matchings_noisyinterweaving.pdf, id=4586, 722.7pt x 361.35pt>
+<../img/matchings_matchings_noisyinterweaving.pdf, id=4079, 722.7pt x 361.35pt>
 File: ../img/matchings_matchings_noisyinterweaving.pdf Graphic file (type pdf)
 <use ../img/matchings_matchings_noisyinterweaving.pdf>
 Package pdftex.def Info: ../img/matchings_matchings_noisyinterweaving.pdf used 
-on input line 911.
+on input line 617.
 (pdftex.def)             Requested size: 289.07487pt x 144.53743pt.
 
-Overfull \vbox (10.75652pt too high) detected at line 911
+Overfull \vbox (10.75652pt too high) detected at line 617
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[52
+[47
 
  <../img/matchings_matchings_noisyinterweaving.pdf>]
-<../img/bal_msg_linear_nodes.pdf, id=4683, 650.43pt x 505.89pt>
+<../img/bal_msg_linear_nodes.pdf, id=4171, 650.43pt x 505.89pt>
 File: ../img/bal_msg_linear_nodes.pdf Graphic file (type pdf)
 
 <use ../img/bal_msg_linear_nodes.pdf>
-Package pdftex.def Info: ../img/bal_msg_linear_nodes.pdf used on input line 933
+Package pdftex.def Info: ../img/bal_msg_linear_nodes.pdf used on input line 639
 .
 (pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
 
-Overfull \hbox (8.96217pt too wide) in paragraph at lines 933--933
+Overfull \hbox (8.96217pt too wide) in paragraph at lines 639--639
  [] 
  []
 
-<../img/bal_msg_noisyinterweaving_nodes.pdf, id=4684, 650.43pt x 505.89pt>
+<../img/bal_msg_noisyinterweaving_nodes.pdf, id=4172, 650.43pt x 505.89pt>
 File: ../img/bal_msg_noisyinterweaving_nodes.pdf Graphic file (type pdf)
 
 <use ../img/bal_msg_noisyinterweaving_nodes.pdf>
 Package pdftex.def Info: ../img/bal_msg_noisyinterweaving_nodes.pdf used on inp
-ut line 933.
+ut line 639.
 (pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
 
-Overfull \hbox (8.96217pt too wide) in paragraph at lines 933--933
+Overfull \hbox (8.96217pt too wide) in paragraph at lines 639--639
  [] 
  []
 
 
-Overfull \vbox (7.879pt too high) detected at line 933
+Overfull \vbox (7.879pt too high) detected at line 639
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[53
+[48
 
  <../img/bal_msg_linear_nodes.pdf> <../img/bal_msg_noisyinterweaving_nodes.pdf
 
 pdfTeX warning: pdflatex (file ../img/bal_msg_noisyinterweaving_nodes.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
->] <../img/bal_classic_drifts_linear2N.pdf, id=4786, 650.43pt x 505.89pt>
+>] <../img/bal_classic_drifts_linear2N.pdf, id=4269, 650.43pt x 505.89pt>
 File: ../img/bal_classic_drifts_linear2N.pdf Graphic file (type pdf)
 
 <use ../img/bal_classic_drifts_linear2N.pdf>
 Package pdftex.def Info: ../img/bal_classic_drifts_linear2N.pdf used on input l
-ine 954.
+ine 660.
 (pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
 
-Overfull \hbox (8.96217pt too wide) in paragraph at lines 954--954
+Overfull \hbox (8.96217pt too wide) in paragraph at lines 660--660
  [] 
  []
 
-<../img/bal_heuristic_drifts_linear2N.pdf, id=4787, 650.43pt x 505.89pt>
+<../img/bal_heuristic_drifts_linear2N.pdf, id=4270, 650.43pt x 505.89pt>
 File: ../img/bal_heuristic_drifts_linear2N.pdf Graphic file (type pdf)
 
 <use ../img/bal_heuristic_drifts_linear2N.pdf>
 Package pdftex.def Info: ../img/bal_heuristic_drifts_linear2N.pdf used on input
- line 954.
+ line 660.
 (pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
 
-Overfull \hbox (8.96217pt too wide) in paragraph at lines 954--954
+Overfull \hbox (8.96217pt too wide) in paragraph at lines 660--660
  [] 
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[54
+[49
 
  <../img/bal_classic_drifts_linear2N.pdf> <../img/bal_heuristic_drifts_linear2N
 .pdf
 
 pdfTeX warning: pdflatex (file ../img/bal_heuristic_drifts_linear2N.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
->] <../img/main_msg_linear_nodes.pdf, id=4882, 650.43pt x 505.89pt>
+>] <../img/main_msg_linear_nodes.pdf, id=4361, 650.43pt x 505.89pt>
 File: ../img/main_msg_linear_nodes.pdf Graphic file (type pdf)
 
 <use ../img/main_msg_linear_nodes.pdf>
-Package pdftex.def Info: ../img/main_msg_linear_nodes.pdf used on input line 96
-4.
+Package pdftex.def Info: ../img/main_msg_linear_nodes.pdf used on input line 67
+0.
 (pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 
-Overfull \vbox (8.20134pt too high) detected at line 964
+Overfull \vbox (8.20134pt too high) detected at line 670
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[55
+[50
 
  <../img/main_msg_linear_nodes.pdf>]
-<../img/main_msg_interweaving_nodes.pdf, id=4977, 650.43pt x 505.89pt>
+<../img/main_msg_interweaving_nodes.pdf, id=4450, 650.43pt x 505.89pt>
 File: ../img/main_msg_interweaving_nodes.pdf Graphic file (type pdf)
 
 <use ../img/main_msg_interweaving_nodes.pdf>
 Package pdftex.def Info: ../img/main_msg_interweaving_nodes.pdf used on input l
-ine 973.
+ine 679.
 (pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 
-Overfull \vbox (8.20134pt too high) detected at line 973
+Overfull \vbox (8.20134pt too high) detected at line 679
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[56
+[51
 
  <../img/main_msg_interweaving_nodes.pdf>]
-<../img/main_msg_noisyinterweaving_nodes.pdf, id=5071, 650.43pt x 505.89pt>
+<../img/main_msg_noisyinterweaving_nodes.pdf, id=4539, 650.43pt x 505.89pt>
 File: ../img/main_msg_noisyinterweaving_nodes.pdf Graphic file (type pdf)
 
 <use ../img/main_msg_noisyinterweaving_nodes.pdf>
 Package pdftex.def Info: ../img/main_msg_noisyinterweaving_nodes.pdf used on in
-put line 982.
+put line 688.
 (pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 
-Overfull \vbox (8.20134pt too high) detected at line 982
+Overfull \vbox (8.20134pt too high) detected at line 688
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[57
+[52
 
  <../img/main_msg_noisyinterweaving_nodes.pdf>]
-<../img/main_msg_noisyinterweaving_window.pdf, id=5165, 650.43pt x 505.89pt>
+<../img/main_msg_noisyinterweaving_window.pdf, id=4628, 650.43pt x 505.89pt>
 File: ../img/main_msg_noisyinterweaving_window.pdf Graphic file (type pdf)
 
 <use ../img/main_msg_noisyinterweaving_window.pdf>
 Package pdftex.def Info: ../img/main_msg_noisyinterweaving_window.pdf used on i
-nput line 992.
+nput line 698.
 (pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 
-Overfull \vbox (10.14577pt too high) detected at line 992
+Overfull \vbox (10.14577pt too high) detected at line 698
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[58
+[53
 
  <../img/main_msg_noisyinterweaving_window.pdf>]
-<../img/main_msg_noisyinterweaving_order.pdf, id=5259, 650.43pt x 505.89pt>
+<../img/main_msg_noisyinterweaving_order.pdf, id=4717, 650.43pt x 505.89pt>
 File: ../img/main_msg_noisyinterweaving_order.pdf Graphic file (type pdf)
 
 <use ../img/main_msg_noisyinterweaving_order.pdf>
 Package pdftex.def Info: ../img/main_msg_noisyinterweaving_order.pdf used on in
-put line 1002.
+put line 708.
 (pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 
-Overfull \vbox (10.14577pt too high) detected at line 1002
+Overfull \vbox (10.14577pt too high) detected at line 708
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[59
+[54
 
  <../img/main_msg_noisyinterweaving_order.pdf>]
-<../img/main_msg_linear_dims.pdf, id=5356, 650.43pt x 505.89pt>
+<../img/main_msg_linear_dims.pdf, id=4809, 650.43pt x 505.89pt>
 File: ../img/main_msg_linear_dims.pdf Graphic file (type pdf)
 
 <use ../img/main_msg_linear_dims.pdf>
-Package pdftex.def Info: ../img/main_msg_linear_dims.pdf used on input line 102
-3.
+Package pdftex.def Info: ../img/main_msg_linear_dims.pdf used on input line 729
+.
 (pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
 
-Overfull \hbox (8.96217pt too wide) in paragraph at lines 1023--1023
+Overfull \hbox (8.96217pt too wide) in paragraph at lines 729--729
  [] 
  []
 
-<../img/main_msg_noisyinterweaving_dims.pdf, id=5357, 650.43pt x 505.89pt>
+<../img/main_msg_noisyinterweaving_dims.pdf, id=4810, 650.43pt x 505.89pt>
 File: ../img/main_msg_noisyinterweaving_dims.pdf Graphic file (type pdf)
 
 <use ../img/main_msg_noisyinterweaving_dims.pdf>
 Package pdftex.def Info: ../img/main_msg_noisyinterweaving_dims.pdf used on inp
-ut line 1023.
+ut line 729.
 (pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
 
-Overfull \hbox (8.96217pt too wide) in paragraph at lines 1023--1023
+Overfull \hbox (8.96217pt too wide) in paragraph at lines 729--729
  [] 
  []
 
 
-Overfull \vbox (7.879pt too high) detected at line 1023
+Overfull \vbox (7.879pt too high) detected at line 729
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[60
+[55
 
  <../img/main_msg_linear_dims.pdf> <../img/main_msg_noisyinterweaving_dims.pdf
 
 pdfTeX warning: pdflatex (file ../img/main_msg_noisyinterweaving_dims.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
 >]
-<../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf, id=5458, 650.43pt x 505.
+<../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf, id=4907, 650.43pt x 505.
 89pt>
 File: ../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf Graphic file (type p
 df)
  <use ../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf>
 Package pdftex.def Info: ../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf u
-sed on input line 1045.
+sed on input line 751.
 (pdftex.def)             Requested size: 149.59575pt x 116.35225pt.
 
-<../img/actual_msg_NO2_NO_2014_nodes.pdf, id=5459, 650.43pt x 505.89pt>
+<../img/actual_msg_NO2_NO_2014_nodes.pdf, id=4908, 650.43pt x 505.89pt>
 File: ../img/actual_msg_NO2_NO_2014_nodes.pdf Graphic file (type pdf)
 
 <use ../img/actual_msg_NO2_NO_2014_nodes.pdf>
 Package pdftex.def Info: ../img/actual_msg_NO2_NO_2014_nodes.pdf used on input 
-line 1045.
+line 751.
 (pdftex.def)             Requested size: 149.59575pt x 116.35225pt.
 
-Overfull \vbox (3.09952pt too high) detected at line 1045
+Overfull \vbox (3.09952pt too high) detected at line 751
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[61
+[56
 
  <../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf> <../img/actual_msg_NO2_
 NO_2014_nodes.pdf
@@ -2442,29 +2637,29 @@ pdfTeX warning: pdflatex (file ../img/actual_msg_NO2_NO_2014_nodes.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >] (./Thesis_presentation.toc)
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[62
+[57
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[63
+[58
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][][][] [][][][][][][][][][][][] [][][
-][][][][][][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
+][][][][][][][][][][][][][] [][][][]  
  []
 
-[64
+[59
 
-] [65
+] [60
 
 ]
 \tf@nav=\write7
@@ -2476,54 +2671,52 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 \tf@snm=\write9
 \openout9 = `Thesis_presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1096.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1096.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1104.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1104.
  (./Thesis_presentation.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1096.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1096.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1104.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1104.
 
 Package rerunfilecheck Info: File `Thesis_presentation.out' has not changed.
-(rerunfilecheck)             Checksum: C5237E2B86DA07DEE016EBB50F6C4FE7;887.
+(rerunfilecheck)             Checksum: 05F7000A27DDEA2AED4986272756DE60;887.
 Package logreq Info: Writing requests to 'Thesis_presentation.run.xml'.
 \openout1 = `Thesis_presentation.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1096.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1104.
  ) 
 Here is how much of TeX's memory you used:
- 37620 strings out of 493105
- 838014 string characters out of 6137072
- 1353303 words of memory out of 5000000
- 40119 multiletter control sequences out of 15000+600000
- 86950 words of font info for 85 fonts, out of 8000000 for 9000
+ 37841 strings out of 493105
+ 838833 string characters out of 6137072
+ 1351269 words of memory out of 5000000
+ 40354 multiletter control sequences out of 15000+600000
+ 82546 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,27n,78p,958b,1674s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,21n,78p,958b,1477s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/sha
-re/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/
-lm-mathex.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/pub
-lic/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi12.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
-8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss9.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmsso17.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso9.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmsy5.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmtti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/symbols/msbm10.pfb>
-Output written on Thesis_presentation.pdf (65 pages, 919653 bytes).
+ips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lms
+s9.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmsso10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso1
+7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso8.pfb></usr/share/texmf/font
+s/type1/public/lm/lmsso9.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmsy5.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/symbols/msbm10.pfb>
+Output written on Thesis_presentation.pdf (60 pages, 845496 bytes).
 PDF statistics:
- 5979 PDF objects out of 6186 (max. 8388607)
- 5688 compressed objects within 57 object streams
- 175 named destinations out of 1000 (max. 500000)
- 303 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 5395 PDF objects out of 6186 (max. 8388607)
+ 5123 compressed objects within 52 object streams
+ 150 named destinations out of 1000 (max. 500000)
+ 297 words of extra memory for PDF output out of 10000 (max. 10000000)
 

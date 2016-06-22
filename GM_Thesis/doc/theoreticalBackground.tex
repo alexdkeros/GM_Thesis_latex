@@ -10,7 +10,7 @@ The \emph{Geometric Monitoring} method~\cite{Sharfman2006GM} was devised as a wa
 
 In the current section a detailed presentation of this method is taking place. In Subsection~\ref{subsec:theorBack-GM-sysArch} two system architectures are shown, a decentralized scenario and a centralized one, where Geometric Monitoring can be applied. Subsection~\ref{subsec:theorBack-GM-compMod} explains the computational model, followed by the method's geometric interpretation in Subsection~\ref{subsec:theorBack-GM-geomInt}. Finally, in Subsection~\ref{subsec:theorBack-GM-protocol} the protocol implementing the Geometric Monitoring method is described.
 
-
+\newpage
 \subsection{System Architecture} \label{subsec:theorBack-GM-sysArch}
 
 In~\cite{Sharfman2006GM} two different scenarios of Geometric Monitoring corresponding to different network topologies are examined. The \emph{decentralized scenario} refers to a topology where nodes are allowed to communicate with each other and a central node is absent. The \emph{centralized scenario} models a star network topology, where a coordinator node communicating with all other nodes is existent.
@@ -106,7 +106,7 @@ The geometric interpretation of the property guarantees that the global statisti
 
 
 \begin{theorem}[Sharfman et al.~\cite{Sharfman2006GM}]\label{theorem:convexHull}
-Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors in $\mathbb{R}^d$. Let $Conv(\vec{x}, \vec{y_1}, \dots, \vec{y_n})$ be the convex hull of $\vec{x}, \vec{y_1}, \dots, \vec{y_n}$. Let $B(\vec{x}, \vec{y_i})$ be a ball centered at $\frac{\vec{x}+\vec{y_i}}{2}$ and with radius of $\norm{\frac{\vec{x}+\vec{y_i}}{2}}_2$ i.e., $B(\vec{x}, \vec{y_i})=\{\vec{z}\ |\ \norm{\vec{z}-\frac{\vec{x}+\vec{y_i}}{2}}_2 \leq \norm{\frac{\vec{x}+\vec{y_i}}{2}}_2 \}$, then $Conv(vec{x}, \vec{y_1}, \dots, \vec{y_n}) \subset B(\vec{x}, \vec{y_i})$.
+Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors in $\mathbb{R}^d$. Let $Conv(\vec{x}, \vec{y_1}, \dots, \vec{y_n})$ be the convex hull of $\vec{x}, \vec{y_1}, \dots, \vec{y_n}$. Let $B(\vec{x}, \vec{y_i})$ be a ball centered at $\frac{\vec{x}+\vec{y_i}}{2}$ and with radius of $\norm{\frac{\vec{x}-\vec{y_i}}{2}}_2$ i.e., $B(\vec{x}, \vec{y_i})=\{\vec{z}\ |\ \norm{\vec{z}-\frac{\vec{x}+\vec{y_i}}{2}}_2 \leq \norm{\frac{\vec{x}-\vec{y_i}}{2}}_2 \}$, then $Conv(vec{x}, \vec{y_1}, \dots, \vec{y_n}) \subset B(\vec{x}, \vec{y_i})$.
 \end{theorem}
 
 Essentially, Theorem~\ref{theorem:convexHull} states that $n$ $d$-dimensional spheres defined by $n+1$ vectors can effectively bound the convex hull defined by said vectors, as such: $Conv(\vec{x}, \vec{y_1}, \vec{y_2}, \dots, \vec{y_n}) \subset  \cup B(\vec{x}, \vec{y_i}), i=1,\dots,n$, which finds direct application to the distributed monitoring task if $\vec{x}=\vec{e}$ and $\vec{y_i}=\vec{u_i}, i=1,\dots,n$. An example is depicted in Figure~\ref{fig:convexHull}
@@ -122,6 +122,8 @@ Essentially, Theorem~\ref{theorem:convexHull} states that $n$ $d$-dimensional sp
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newpage
+
 \subsubsection{Local Constraints} \label{subsubsec:theorBack-GM-localConstraints}
 
 The decomposition of the threshold monitoring task to local constraints at the nodes, in which each node monitors its respective bounding sphere $B(\vec{e}, \vec{u_i}), i=1,\dots n$ for a possible threshold violation, induces a coloring upon the spheres. Let $V=\{\vec{x} | f(\vec{x}>T)\}$ be the set of vectors said to be \emph{green}, and $\overline{V}=\{\vec{y} | f(\vec{y}<T)\}$ the \emph{red} set of vectors, then the local constraint monitoring at the nodes is essentially a process of monitoring the monochromaticity of a node's bounding sphere $B(\vec{e}, \vec{u_i})$ i.e., all vectors in the bounding ball are of the same color. As long as this monochromaticity is upheld for the whole of the node set, the convex hull defined by the drift vectors is monochromatic and, by the convexity property, the global statistics vector has not crossed the threshold. In case a single node signals a threshold crossing a \emph{local violation} has occurred. If the local violation coincides with a threshold crossing of the global statistics vector, then a \emph{global violation} has occurred.
@@ -135,6 +137,8 @@ Two variants of a network's topological structure have been proposed for applica
 The decentralized scenario of the geometric monitoring method, summarized in Algorithm~\ref{algo:decentralized}, operates on the mesh network described in Section~\ref{subsubsec:theorBack-GM-decentralized}. Each node $p_i$ keeps track of its drift vector $\vec{v_i}(t)$ and the previously communicated statistics vectors $\vec{v_j}'$ from all other nodes $p_j$, from which the estimate vector is locally computed. At the occurence of a local violation the violating node initiates a global system synchronization by broadcasting its local statistics vector along with its unique identifier, from which the estimate vector is globally updated so that monochromaticity checks are valid.\\ 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% decentralized algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{\centering
+\scalebox{0.96}{
 \begin{algorithm}[H]
 \setstretch{1.30}
 
@@ -172,15 +176,20 @@ The decentralized scenario of the geometric monitoring method, summarized in Alg
 }
 \caption{Decentralized algorithm \label{algo:decentralized}} 
 \end{algorithm}
+}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \subsubsection{Centralized Algorithm} \label{subsubsec:theorBack-GM-centralizedAlgo}
 
-The centralized, coordinator-based geometric monitoring operation is summarized in Algorithms~\ref{algo:centralizedMonitoringNode},  and~\ref{algo:centralizedCoordinatorNode}, where the execution sequence of the monitoring nodes and the execution sequence of the coordinator node are described, respectively. The topology is that of a star network, where nodes are allowed to communicate exclusively with the coordinator node, as described in Section~\ref{subsubsec:theorBack-GM-centralized}. The coordinator node is responsible for answering queries about the monitoring status i.e., has absolute knowledge about threshold violations, and handles the balancing process (Section~\ref{subsubsec:theorBack-GM-balancingProc}). Local streams are tracked by the monitoring nodes on the basis of the last communicated estimate vector, and must inform the coordinator for any local threshold violation. The coordinator node can also monitor is respective data stream without any change in the described framework.\\
+The centralized, coordinator-based geometric monitoring operation is summarized in Algorithms~\ref{algo:centralizedCoordinatorNode} and~\ref{algo:centralizedMonitoringNode}, where the execution sequence of the monitoring nodes and the execution sequence of the coordinator node are described, respectively. The topology is that of a star network, where nodes are allowed to communicate exclusively with the coordinator node, as described in Section~\ref{subsubsec:theorBack-GM-centralized}. The coordinator node is responsible for answering queries about the monitoring status i.e., has absolute knowledge about threshold violations, and handles the balancing process (Section~\ref{subsubsec:theorBack-GM-balancingProc}). Local streams are tracked by the monitoring nodes on the basis of the last communicated estimate vector, and must inform the coordinator for any local threshold violation. The coordinator node can also monitor is respective data stream without any change in the described framework.\\
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% centralized coordinator node algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{algorithm}
+{
+\centering
+\scalebox{0.96}{
+\begin{algorithm}[H]
 \setstretch{1.30}
 
 \SetKwFunction{Balance}{Balance}
@@ -220,11 +229,16 @@ The centralized, coordinator-based geometric monitoring operation is summarized 
 }
 \caption{Centralized algorithm's coordinator node operation\label{algo:centralizedCoordinatorNode}} 
 \end{algorithm}
+}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% centralized monitoring node algo %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+{
+\centering
+\scalebox{0.96}{
 \begin{algorithm}[H]
 \setstretch{1.30}
 \Begin{
@@ -269,8 +283,10 @@ The centralized, coordinator-based geometric monitoring operation is summarized 
 }
 \caption{Centralized algorithm's monitoring node operation \label{algo:centralizedMonitoringNode}} 
 \end{algorithm}
+}
+}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 \section{Multi-objective Optimization} \label{sec:theorBack-MOP}
 
 \emph{Multi-objective optimization}, also known as multi-objective programming, vector optimization and Pareto optimization, belongs to the field of \emph{decision making} and focuses on mathematical optimization problems. As it is evident by the term, multiple, possibly conflicting, objectives exist and are required to be simultaneously optimized. Such problems arise in a multitude of fields, from engineering to finance and molecular studies. 
@@ -332,6 +348,8 @@ $$d_t^T \nabla F(x_t)<0$$.
 \end{enumerate}
 
 In case the feasible region $D$ is convex the line connecting the optimal point, $x^\star$, with any other arbitrary point $x \in D$ lies completely inside the convex region and is, thus, reachable via the feasible directions method.
+
+\newpage
 
 \subsubsection{SQP} \label{subsubsec:theorBack-SQP}
 

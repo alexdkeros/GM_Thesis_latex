@@ -2,7 +2,6 @@ This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: doc/abstract.aux
-A level-1 auxiliary file: doc/pubAbstract.aux
 A level-1 auxiliary file: doc/dedication.aux
 A level-1 auxiliary file: doc/acknowledgments.aux
 A level-1 auxiliary file: doc/introduction.aux
@@ -13,7 +12,6 @@ A level-1 auxiliary file: doc/implementation.aux
 A level-1 auxiliary file: doc/expResults.aux
 A level-1 auxiliary file: doc/conclusions.aux
 The style file: IEEEtran.bst.bst
-A level-1 auxiliary file: doc/appendixGMPythonImpl.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -30,7 +28,7 @@ Warning--I didn't find a database entry for "DBLP:conf/vldb/2013bd3"
 Done.
 You've used 23 entries,
             4039 wiz_defined-function locations,
-            988 strings with 12747 characters,
+            986 strings with 12700 characters,
 and the built_in function-call counts, 17850 in all, are:
 = -- 1482
 > -- 370

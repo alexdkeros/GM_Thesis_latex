@@ -134,14 +134,8 @@ In Subsection~\ref{subsec:matchingComp} our distance based node matching algorit
 
 The seminar geometric monitoring method~\cite{Sharfman2006GM} dictates that random nodes are requested in order to perform a violation resolution via the balancing method (GM). Subsequent work~\cite{Keren2014GMHetStreams} examines the partitioning of nodes into disjoint pairs, so that the probability of a violation resolution is maximized by maximizing the percentage of data vectors that result to a successful balancing operation (DISTR), either by iterating over all data vectors pairs between all nodes and evaluating the constraint, or by employing the pdfs of the data streams. Our proposed method depends only on simple Euclidean distance computations between data stream vectors, not being bound on the monitoring function and its possible irregularities. All three methods are being compared alongside the original geometric monitoring balancing method GM.
 
-Figure~\ref{fig:matchingComp-msgs} provides information about the communication overhead each method incurs, and how this evolves as a function of node count. Method DIST proves to be comparable with the GM method for node selection, both surpassing the DISTR method in terms of communication reduction. Specifically, GM and DIST methods illustrate an equal of better performance than the DISTR method over the whole range of nodes, for all three datasets \emph{LIN, INT} and \emph{NOISE}. Algorithms GM and DISTR mostly induce the same communication burden, with some exceptions located towards the larger end of the node spectrum, where for 16 nodes DIST method always surpasses the GM method in terms of communication reduction, and for 20 nodes the GM method induces less message exchange than the rest of the algorithms. This is due to the random selection DIST and DISTR algorithms perform in case pefect node pairs cannot be created i.e., the node number is not a power of 2.
-
-A graphical illustration of the required nodes for a successful violation resolution is provided in Figure~\ref{fig:matchingComp-matchings}. Following the trend of the aforementioned experiment, GM and DIST methods achieve a violation resolution by employing far less nodes than the DISTR algorithm. Roughly 70 to 80 percent of all Local Violations are successfully resolved by 2 nodes by employing the GM and DIST methods. The DISTR method is able to resolve false alarms by using only 2 nodes with a score of 60 percent or less of total Local Violations, with the rest requiring more than 2 nodes to successfully perform the balancing process.
-
-These results can be explained by viewing how each methods handles node pairing, in Figure~\ref{fig:matchingComp-drifts}. It is evident that the DIST method attempts to group together data streams that are more likely to ``balance each other out'' by taking into account the in-between distance, as well as the distance of the average of the two streams from the global data stream. On the other hand, the DISTR method assists node pairings whose average will not induce a Local Violation, while allowing streams that are more likely to violate the threshold be grouped together. Subsequently, when a node from the latter pair signals a threshold crossing, its pair will not be able to successfully resolve the violation, thus requesting additional nodes from a higher level of the hierarchical clustering.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%msgs matching lin figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!t]
+\begin{figure}[H]
 \begin{subfigure}{0.32\textwidth}
   \includegraphics[width=\linewidth]{img/matching_msg_linear.pdf}
   \caption{Communication costs of methods GM, DISTR and DIST for the \emph{LIN} dataset.}
@@ -158,8 +152,9 @@ These results can be explained by viewing how each methods handles node pairing,
 \caption{Comparison of GM, DISTR and DIST methods in terms of communication cost in messages over the range of 20 nodes.} \label{fig:matchingComp-msgs}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%drifts matching lin figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!b]
+\begin{figure}[H]
 \begin{subfigure}{0.32\textwidth}
   \includegraphics[width=\linewidth]{img/matchings_classic_random_drifts.pdf}
   \caption{Drift vectors of 4 nodes as a result of the GM method.}
@@ -176,8 +171,14 @@ These results can be explained by viewing how each methods handles node pairing,
 \caption{Drift vectors of 4 nodes as a result of application of GM, DIST and DISTR methods over the \emph{LIN} dataset.} \label{fig:matchingComp-drifts}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Figure~\ref{fig:matchingComp-msgs} provides information about the communication overhead each method incurs, and how this evolves as a function of node count. Method DIST proves to be comparable with the GM method for node selection, both surpassing the DISTR method in terms of communication reduction. Specifically, GM and DIST methods illustrate an equal of better performance than the DISTR method over the whole range of nodes, for all three datasets \emph{LIN, INT} and \emph{NOISE}. Algorithms GM and DISTR mostly induce the same communication burden, with some exceptions located towards the larger end of the node spectrum, where for 16 nodes DIST method always surpasses the GM method in terms of communication reduction, and for 20 nodes the GM method induces less message exchange than the rest of the algorithms. This is due to the random selection DIST and DISTR algorithms perform in case pefect node pairs cannot be created i.e., the node number is not a power of 2.
+
+A graphical illustration of the required nodes for a successful violation resolution is provided in Figure~\ref{fig:matchingComp-matchings}. Following the trend of the aforementioned experiment, GM and DIST methods achieve a violation resolution by employing far less nodes than the DISTR algorithm. Roughly 70 to 80 percent of all Local Violations are successfully resolved by 2 nodes by employing the GM and DIST methods. The DISTR method is able to resolve false alarms by using only 2 nodes with a score of 60 percent or less of total Local Violations, with the rest requiring more than 2 nodes to successfully perform the balancing process.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%matchings matching lin figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[!ht]\centering
+\begin{figure}[H]\centering
 \vspace{-0.5cm}
 \begin{subfigure}{\textwidth}
 	\centering
@@ -198,6 +199,8 @@ These results can be explained by viewing how each methods handles node pairing,
 \caption{Number of nodes required to successfully resolve a violation, as a fraction of total Local Violations, for methods GM, DISTR and DIST.} \label{fig:matchingComp-matchings}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+These results can be explained by viewing how each methods handles node pairing, in Figure~\ref{fig:matchingComp-drifts}. It is evident that the DIST method attempts to group together data streams that are more likely to ``balance each other out'' by taking into account the in-between distance, as well as the distance of the average of the two streams from the global data stream. On the other hand, the DISTR method assists node pairings whose average will not induce a Local Violation, while allowing streams that are more likely to violate the threshold be grouped together. Subsequently, when a node from the latter pair signals a threshold crossing, its pair will not be able to successfully resolve the violation, thus requesting additional nodes from a higher level of the hierarchical clustering.
 
 \subsection{Balancing methods} \label{subsec:balComp}
 
@@ -325,14 +328,14 @@ Once again, the HDM method outperforms the original GM method when applied onto 
 \begin{figure}[!h]
 \begin{subfigure}{0.49\textwidth}
   \includegraphics[width=\linewidth]{img/main_classic_drifts_linear4N.pdf}
-  \caption{Drift vectors of 2 nodes, as formulated by the GM algorithm.}
+  \caption{Drift vectors of 4 nodes, as formulated by the GM algorithm.}
 \end{subfigure}\hfill
 \begin{subfigure}{0.49\textwidth}
   \includegraphics[width=\linewidth]{img/main_heuristic_drifts_linear4N.pdf}
-  \caption{Drift vectors of 2 nodes, as formulated by the HDM algorithm.}
+  \caption{Drift vectors of 4 nodes, as formulated by the HDM algorithm.}
 \end{subfigure}\hfill
 \vspace{0.5cm}
-\caption{The drift vectors of 2 nodes with streams originating from the \emph{LIN} dataset, when the GM and HDM methods are applied.} \label{fig:mainComp-drifts}
+\caption{The drift vectors of 4 nodes with streams originating from the \emph{LIN} dataset, when the GM and HDM methods are applied.} \label{fig:mainComp-drifts}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

@@ -4,11 +4,11 @@
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
       <bcf:key>output_encoding</bcf:key>
-      <bcf:value>ascii</bcf:value>
+      <bcf:value>utf8</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>input_encoding</bcf:key>
-      <bcf:value>ascii</bcf:value>
+      <bcf:value>utf8</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>debug</bcf:key>
@@ -65,7 +65,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labeldate</bcf:key>
-      <bcf:value>1</bcf:value>
+      <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="multivalued">
       <bcf:key>labeldatespec</bcf:key>
@@ -121,7 +121,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>sortscheme</bcf:key>
-      <bcf:value>nyt</bcf:value>
+      <bcf:value>nty</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
@@ -617,12 +617,12 @@
       <bcf:sortitem order="6">title</bcf:sortitem>
     </bcf:sort>
     <bcf:sort order="4">
-      <bcf:sortitem order="1">sortyear</bcf:sortitem>
-      <bcf:sortitem order="2">year</bcf:sortitem>
-    </bcf:sort>
-    <bcf:sort order="5">
       <bcf:sortitem order="1">sorttitle</bcf:sortitem>
       <bcf:sortitem order="2">title</bcf:sortitem>
+    </bcf:sort>
+    <bcf:sort order="5">
+      <bcf:sortitem order="1">sortyear</bcf:sortitem>
+      <bcf:sortitem order="2">year</bcf:sortitem>
     </bcf:sort>
     <bcf:sort order="6">
       <bcf:sortitem order="1" pad_side="left" pad_width="4" pad_char="0">volume</bcf:sortitem>
@@ -1974,16 +1974,15 @@
     <bcf:citekey order="4">Keren2014GMHetStreams</bcf:citekey>
     <bcf:citekey order="5">Keren2014GMHetStreams</bcf:citekey>
     <bcf:citekey order="6">Sharfman2006GM</bcf:citekey>
-    <bcf:citekey order="7">Sharfman2006GM</bcf:citekey>
-    <bcf:citekey order="8">Keren2013SafeZones</bcf:citekey>
-    <bcf:citekey order="9">Sharfman2012ShapeSensGM</bcf:citekey>
-    <bcf:citekey order="10">Keren2014GMHetStreams</bcf:citekey>
-    <bcf:citekey order="11">GiatrakosPredictionGM</bcf:citekey>
-    <bcf:citekey order="12">Sharfman2006GM</bcf:citekey>
+    <bcf:citekey order="7">Keren2013SafeZones</bcf:citekey>
+    <bcf:citekey order="8">Sharfman2012ShapeSensGM</bcf:citekey>
+    <bcf:citekey order="9">Keren2014GMHetStreams</bcf:citekey>
+    <bcf:citekey order="10">GiatrakosPredictionGM</bcf:citekey>
+    <bcf:citekey order="11">Sharfman2006GM</bcf:citekey>
+    <bcf:citekey order="12">Keren2014GMHetStreams</bcf:citekey>
     <bcf:citekey order="13">Keren2014GMHetStreams</bcf:citekey>
-    <bcf:citekey order="14">Keren2014GMHetStreams</bcf:citekey>
-    <bcf:citekey order="15">Sharfman2006GM</bcf:citekey>
-    <bcf:citekey order="16">Keren2014GMHetStreams</bcf:citekey>
-    <bcf:citekey order="17">AirBase</bcf:citekey>
+    <bcf:citekey order="14">Sharfman2006GM</bcf:citekey>
+    <bcf:citekey order="15">Keren2014GMHetStreams</bcf:citekey>
+    <bcf:citekey order="16">AirBase</bcf:citekey>
   </bcf:section>
 </bcf:controlfile>

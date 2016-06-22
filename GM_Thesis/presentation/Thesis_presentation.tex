@@ -1,4 +1,6 @@
 \documentclass[hyperref={pdfpagelabels=false}]{beamer}
+\usepackage{pgf}
+\usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{graphicx}          	% add graphics
 \usepackage{tikz,pgfplots}
@@ -8,7 +10,7 @@
 \usepackage[linesnumbered,lined,boxed,ruled,commentsnumbered]{algorithm2e}
 \usepackage{setspace}
 \usepackage{listings}		% code listings
-\usepackage[backend=biber,  style=authoryear-comp]{biblatex}
+\usepackage[backend=biber,style=authortitle-comp]{biblatex}
 \addbibresource{presentation.bib}
 
 \usetheme{Dresden}
@@ -40,7 +42,7 @@
  \end{frame}
  
 \subsection*{Overview}
-\begin{frame} \frametitle{Data Stream Systems\footcite{Babcock2002DataStreamSystems}}
+\begin{frame} \frametitle{Data Stream Systems}\framesubtitle{\tiny(\fullcite{Babcock2002DataStreamSystems})}
 \begin{itemize}
 \item \textbf{Data streams}: Continuous, high volume, size unbound, violative, probably distributed
 \item \emph{Pull paradigm}
@@ -49,7 +51,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame} \frametitle{The Geometric Monitoring Method\footfullcite{Sharfman2006GM}}
+\begin{frame} \frametitle{The Geometric Monitoring Method}\framesubtitle{\tiny(\fullcite{Sharfman2006GM})}
 \begin{itemize}
 \item Threshold monitoring
 \item Nodes communicate when needed
@@ -89,7 +91,7 @@
 Expand the \emph{geometric monitoring method}:
 \begin{itemize}
 \item<1-> heuristic method for violation resolution
-\item<2-> distance-based hierarchical node clustering\footfullcite{Keren2014GMHetStreams}
+\item<2-> distance-based hierarchical node clustering \tiny(\fullcite{Keren2014GMHetStreams})
 \item<3-> throughout method evaluation on synthetic and real-world datasets
 \end{itemize}
 \end{frame}
@@ -108,15 +110,6 @@ Expand the \emph{geometric monitoring method}:
 \item \textbf{Idea}: decompose into local constraints at the nodes
 \end{itemize}
 \end{frame}
-
-%\begin{frame} \frametitle{System Architecture} \framesubtitle{Decentralized Scenario}
-%\begin{figure}[H]
-%\centering
-%\vspace{-0.2cm}
-%\includegraphics[scale=0.5]{../img/decentralized.tex}
-%\caption{\textbf{Mesh-like network topology} example of the decentralized scenario. Dashed lines represent data streams and half arrows represent message exchanges.} 
-%\end{figure}
-%\end{frame}
 
 \begin{frame} \frametitle{System Architecture} \framesubtitle{Centralized Scenario}
 \begin{figure}[H]
@@ -140,10 +133,9 @@ Expand the \emph{geometric monitoring method}:
 \end{itemize}
 \begin{block}{Global statistics vector}
 \vspace{0.2cm}
-\begin{equation}
+\begin{equation*}
 \vec{v}(t)=\frac{\sum_{i=1}^n{w_i\vec{v_i}(t)}}{\sum_{i=1}^n{w_i}}
-\label{form:globalStatsVector}
-\end{equation}
+\end{equation*}
 \vspace{0.2cm}
 \end{block}
 \end{frame}
@@ -153,10 +145,9 @@ Expand the \emph{geometric monitoring method}:
 \setbeamercolor{block body}{use=structure,fg=black,bg=blue!5!white}
 Infrequent communication between nodes/nodes-coordinator:
 \begin{block}{Estimate vector}
-\begin{equation}
+\begin{equation*}
 \vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}'}}{\sum_{i=1}^n {w_i}}
-\label{form:estimateVector}
-\end{equation}
+\end{equation*}
 \end{block}
 \begin{itemize}
 \item the last communicated \emph{local statistics vector} of node $p_i$ : $\vec{v_i}'$
@@ -177,10 +168,9 @@ Infrequent communication between nodes/nodes-coordinator:
 %\begin{column}[t]{0.5\textwidth}
 \begin{block}{Centralized drift vector}
 %\vspace{-0.45cm}
-\begin{equation}
+\begin{equation*}
 \vec{u_i}(t)=\vec{e}(t)+\Delta \vec{v_i}(t)+\frac{\vec{\delta_i}}{w_i}
-\label{form:centralizedDrift}
-\end{equation} 
+\end{equation*} 
 \end{block}
 %\end{column}
 %\end{columns}
@@ -194,184 +184,54 @@ Infrequent communication between nodes/nodes-coordinator:
 \item[] \textbf{Purpose}: resolve possible false alarms
 \item[]
 \begin{block}{Balancing vector}
-\begin{equation}
+\begin{equation*}
 \vec{b}=\frac{ \sum_{p_i \in P'} {w_i\vec{u_i}(t)} }{ \sum_{p_i \in P'} {w_i} }
-\label{form:balancingVector}
-\end{equation}
+\end{equation*}
 \end{block}
 \begin{itemize}
 	\item the \emph{balancing set} $P'$: a subset of nodes
 	\item the \emph{slack vector} at the nodes $\vec{\delta_i}=\vec{\delta_i}'+\Delta\vec{\delta_i}$, $\sum_{p_i \in P'} \Delta \vec{\delta_i}= \vec{0}$:
 \end{itemize}
-\begin{equation}
+\begin{equation*}
 \Delta\vec{\delta_i}=w_i\vec{b}-w_i\vec{u_i}(t)\ \forall\ p_i \in P'
-\end{equation}
-, readjusts the \emph{drift vectors}~\eqref{form:centralizedDrift}.
+\end{equation*}
+, readjusts the \emph{drift vectors}.
 \end{itemize}
 \end{frame}
 
-\begin{frame} \frametitle{Geometric Interpretation}\framesubtitle{Convexity Property}
-\begin{block}{Convexity Property}
-\begin{equation}
-\vec{v}(t)=\frac{\sum_{i=1}^n {w_i\vec{u_i}(t)}}{\sum_{i=1}^n {w_i}}
-\label{form:convexityProperty}
-\end{equation}
-\end{block}
-\begin{theorem}[\footfullcite{Sharfman2006GM}]\label{theorem:convexHull}
-Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors in $\mathbb{R}^d$. Let $Conv(\vec{x}, \vec{y_1}, \dots, \vec{y_n})$ be the convex hull of $\vec{x}, \vec{y_1}, \dots, \vec{y_n}$. Let $B(\vec{x}, \vec{y_i})$ be a ball centered at $\frac{\vec{x}+\vec{y_i}}{2}$ and with radius of $\lVert{\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2$ i.e., $B(\vec{x}, \vec{y_i})=\{\vec{z}\ |\ \lVert{\vec{z}-\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2 \leq \lVert{\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2 \}$, then $Conv(vec{x}, \vec{y_1}, \dots, \vec{y_n}) \subset B(\vec{x}, \vec{y_i})$.
-\end{theorem}
-\end{frame}
-
 \begin{frame} \frametitle{Geometric Interpretation}\framesubtitle{Convexity Property \& Local Constraints}
-\begin{figure}[H]
+\setbeamercolor{block title}{use=structure,fg=white,bg=blue!55!black}
+\setbeamercolor{block body}{use=structure,fg=black,bg=blue!5!white}
 \begin{columns}
 \begin{column}[t]{0.35\textwidth}
-\vspace{-6.1cm}
-\caption{Example of a convex hull (light gray) defined by the drift vectors $\vec{u_i}, i=1,2,3,4,5$. The hull is bounded by the spheres created from the estimate vector $\vec{e}$ and the drift vectors $\vec{u_i}, i=1,2,3,4,5$. The global statistics vector $\vec{v}$ is guaranteed to be contained in the convex hull of the drift vectors.} 
+\begin{block}{Convexity Property}
+\begin{equation*}
+\vec{v}(t)=\frac{\sum_{i=1}^n {w_i\vec{u_i}(t)}}{\sum_{i=1}^n {w_i}}
+\end{equation*}
+\vspace{0.2cm}
+\end{block}
+\begin{figure}[H]
+\vspace{-0.2cm}
+\caption{Example of a convex hull (light gray) defined by the drift vectors $\vec{u_i}, i=1,2,3,4,5$ and bounded by spheres.}
+\end{figure}
 \end{column}
 \begin{column}[t]{0.65\textwidth}
-\vspace{-4cm}
+\begin{figure}[H]
+\vspace{-.8cm}
 \includegraphics[scale=0.35, trim=0 0 4.2cm 0]{../img/convex_hull.tex}
+\end{figure}
 \end{column}
 \end{columns}
-\label{fig:convexHull}
-\end{figure}
 \end{frame}
 
-%\begin{frame}[plain] \frametitle{Protocol}\framesubtitle{Decentralized Algorithm}
-%
-%\hfill    \scalebox{0.50}{
-%    \begin{minipage}{\linewidth}
-%\vspace{-2cm}    
-%    \begin{algorithm}[H]
-%\setstretch{1.30}
-%
-%
-%\Begin{
-%	\ForEach(\tcc*[f]{Node initialization}){node $p_i$}{
-%		Broadcast $\vec{v_i}(0)$\;
-%		$\vec{v_i}'=\vec{v_i}(0)$\;
-%		Wait messages from all other nodes\;
-%		\If{messages from all vectors received}{
-%			Compute \emph{estimate vector} $\vec{e}(t)$\;
-%		}
-%	}
-%	\ForEach(\tcc*[f]{Main monitoring task}){node $p_i$}{
-%		\ForEach{new $s_i$ stream update $\vec{v_i}(t)$}{
-%			Recalculate \emph{drift vector} $\vec{u_i}(t)$\;
-%			\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
-%				Broadcast message $<i,\vec{v_i}(t)>$\;
-%				Set $\vec{v_i}'=\vec{v_i}(t)$\;
-%			}
-%			\If{new message $<j,\vec{v_j}(t)>$ received}{
-%				Set $\vec{v_j}'=\vec{v_j}(t)$\;
-%				Recalculate \emph{estimate vector} $\vec{e}(t)$\;
-%				\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
-%					Broadcast message $<i,\vec{v_i}(t)>$\;
-%					Set $\vec{v_i}'=\vec{v_i}(t)$\;
-%				}
-%			}
-%		}
-%	}
-%}
-%\caption{Decentralized algorithm \label{algo:decentralized}} 
-%\end{algorithm}  
-%\end{minipage}%
-%    }
-%\end{frame}
-
-
-\begin{frame}[plain] \frametitle{Protocol}\framesubtitle{Centralized Algorithm}
-\noindent\scalebox{0.44}{
-\begin{minipage}{\linewidth}
-\hspace{-2cm}
-\begin{algorithm}[H]
-\setstretch{1.30}
-
-\SetKwFunction{Balance}{Balance}
-\SetKwProg{Fn}{Function}{}{end}
-
-\Begin{
-	
-	Wait for $<INIT, \cdot>$ messages from all monitoring nodes\tcc*[r]{Initialization}
-	Compute \emph{estimate vector} $\vec{e}(0)$\;
-	\If(\tcc*[f]{Monitoring operation}){new $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message received}{
-		$P'=P' \cup \{<i,\vec{v_i}(t),\vec{u_i}(t)>\}$\;
-		\Balance{$P'$}\;
-	}
-}
-\Fn(\tcc*[f]{Balancing Process}){\Balance{$P'$}}{
-	Compute \emph{balancing vector} $\vec{b}$\;
-	\uIf{$B(\vec{e}, \vec{b})$ is \emph{not} monochromatic}{
-		\uIf{$P-P'\neq \emptyset$}{
-			Send $<REQ>$ message to random node in $P-P'$ set\;
-		}
-		\Else{
-			Compute \emph{estimate vector} $\vec{e}(t)$\;
-			Send $<NEW\textnormal{-}EST, \vec{e}(t)>$ message to all nodes\;
-			\Return \;
-		}
-	}
-	\Else{
-		\ForEach{$p_i \in P'$}{
-			Compute \emph{slack adjustment vector} $\Delta\vec{\delta_i}$\;
-			Send $<ADJ\textnormal{-}SLK, \Delta\vec{\delta_i}>$ message to node $p_i$\;
-			\Return \;
-		}
-	}
-
-}
-\caption{Centralized algorithm's coordinator node operation\label{algo:centralizedCoordinatorNode}} 
-\end{algorithm}
-
-\end{minipage}%
-}\hfill\noindent\scalebox{0.42}{
-\begin{minipage}{\linewidth}
-\vspace{-2.5cm}
-\begin{algorithm}[H]
-\setstretch{1.30}
-\Begin{
-	\ForEach(\tcc*[f]{Node initialization}){node $p_i$}{
-		Send $<INIT,\vec{v_i}(0)>$ message to coordinator\;
-		$\vec{v_i}'=\vec{v_i}(0)$\;
-		$\vec{\delta_i}=\vec{0}$\;
-		Wait message from coordinator\;
-		\If{$<NEW\textnormal{-}EST, \vec{e}>$ message received}{
-			Set $\vec{e}(t)=\vec{e}$\;
-		}
-	}
-
-	\ForEach(\tcc*[f]{Main monitoring task}){node $p_i$}{
-		\ForEach{new $s_i$ stream update $\vec{v_i}(t)$}{
-			Recalculate \emph{drift vector} $\vec{u_i}(t)$\;
-			\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
-				Send $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message to coordinator\;
-				Wait for $<NEW\textnormal{-}EST,\cdot>$ or $<ADJ\textnormal{-}SLK,\cdot>$ message from coordinator\;
-			}
-		
-		
-			\If{new message $<REQ>$ received}{
-				Send $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message to coordinator\;
-				Wait for $<NEW\textnormal{-}EST,\cdot>$ or $<ADJ\textnormal{-}SLK,\cdot>$ message from coordinator\;
-
-			}
-
-			\If{new $<NEW\textnormal{-}EST, \vec{e}>$ message received}{
-				Set $\vec{e}(t)=\vec{e}$\;
-				$\vec{v_i}'=\vec{v_i}(t)$\;
-				$\vec{\delta_i}=\vec{0}$\;
-			} 
-
-			\If{new $<ADJ\textnormal{-}SLK, \Delta\vec{\delta_i}>$ message received}{
-				Recompute \emph{delta vector} $\vec{\delta_i}$\;
-			}
-		}
-	}
-}
-\caption{Centralized algorithm's monitoring node operation \label{algo:centralizedMonitoringNode}} 
-\end{algorithm}
-\end{minipage}%
-}
+\subsection{Related Work}
+\begin{frame} \frametitle{Related Work}
+\begin{itemize}
+\item \emph{Safe Zones}: optimal local constraints fitted to nodes' data distributions {\tiny(\fullcite{Keren2013SafeZones})}
+\item Ellipsoidal bounding regions, decouplement of estimate vector from bounding ball construction {\tiny(\fullcite{Sharfman2012ShapeSensGM})}
+\item Simple shapes as local constraints, hierarchical clustering of nodes for participation to the balancing operation {\tiny(\fullcite{Keren2014GMHetStreams})}
+\item Prediction models based on velocity and acceleration {\tiny(\fullcite{GiatrakosPredictionGM})}
+\end{itemize}
 \end{frame}
 
 \subsection{Theoretical Tools}
@@ -391,37 +251,6 @@ Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors 
 \end{itemize}
 \end{frame}
 
-\begin{frame} \frametitle{Non-linear Constraint Optimization}\framesubtitle{Primal Descent}
-\centering
-\scalebox{0.75}{
-\begin{minipage}{1.3\linewidth}
-\begin{algorithm}[H]
-\setstretch{1.30}
-\Begin{
-	Choose initial point $x_0 \in X$ and set $t=0$ \tcc*[r]{Initialization}
-	\While(\tcc*[f]{Search}){maximum iteration limit \emph{OR} convergence}{
-		$t=t+1$\;
-		Determine search direction $d_t$\;
-		Determine step length $s_t$, so that $f(x_t+s_td_t)<f(x_t)$\;
-		Update\;
-	}
-}
-\caption{Generic primal descent \label{algo:nco-primal_descent}} 
-\end{algorithm}
-\end{minipage}%
-}
-\end{frame}
-
-%%conmin
-%\begin{frame} \frametitle{Feasible Directions}
-%\emph{Usable feasible direction} $d_t$:\begin{itemize}
-%\item a small disposition towards direction $d_t$ does not violate any constraint i.e.,
-%$$d_t^T \nabla G(x_t)\leq 0$$
-%\item a move towards $d_t$ reduces the objective functions value i.e.,
-%$$d_t^T \nabla F(x_t)<0$$.
-%\end{itemize}
-%\end{frame}
-
 %sqp
 \begin{frame} \frametitle{SQP}
 \begin{itemize}
@@ -432,28 +261,41 @@ Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors 
 &\nabla G_i(x_t)^T d + G_i(x_t)=0, i=1, \dots, k_e \label{form:QPsubprob}\\
 &\nabla G_i(x_t)^T d + G_i(x_t)\leq 0, i=k_e+1, \dots k
 \intertext{,where:}
-H_t&\text{:Hessian of the Lagrangian function at iteration $t$}\\
-d&\text{:search direction}
+H_t&\text{: Hessian of the Lagrangian function at iteration $t$}\\
+d&\text{: search direction}
 \end{align*}
 \end{itemize}
 \end{frame}
+
 \subsubsection*{Savitzky-Golay Filtering}
-\begin{frame} \frametitle{The Savitzky-Golay Filter}
+\begin{frame} \frametitle{The Savitzky-Golay Low-Pass Smoothing Filter}
 \begin{itemize}
-\item Low-pass smoothing filter
+\item Convolution based \textbf{smoothing}, \textbf{velocity} and \textbf{acceleration} estimation
 \item \emph{Moving window averaging} paradigm: $g_i=\sum_{n=-n_L}^{n_R} c_n f_{i+n}$
-\item \emph{Least-squares fit} of polynomial $y_i(x)$ over window $n_L+n_R+1$:
+\item \emph{Least-squares fit} of polynomial: 
 \begin{gather*}
-\sum_{j=i-n_L}^{i+n_R} (y_i(x_j)-f_j)^2= \text{min}
-\intertext{,where:}
 y_i(x)=a_0+a_1 \frac{x-x_i}{\Delta x}+a_2 (\frac{x-x_i}{\Delta x})^2 + \dots + a_M (\frac{x-x_i}{\Delta x})^M
+\intertext{,over window $n_L+n_R+1$:}
+\sum_{j=i-n_L}^{i+n_R} (y_i(x_j)-f_j)^2= \text{min}
 \end{gather*}
-\item Set $g_i$ to the value of the fitted point $x_i$
+\item Set $g_i$ to the value of the fitted point $x_i$.
 \end{itemize}
+\end{frame}
+
+\begin{frame} \frametitle{Velocity and Acceleration Estimation via SG Filtering}
+\begin{figure}
+\centering\includegraphics[scale=0.30]{../img/savgol.pdf}
+\caption{Savitzky-Golay filtering of a signal with added Gaussian noise. The smoothing window is 50 points, centered at the far right.} 
+\label{fig:savgol}
+\end{figure}
 \end{frame}
 
 \subsubsection*{Matching in Graphs}
 \begin{frame} \frametitle{Maximum Weight Matching}
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{../img/matching.tex}
+\end{figure}
 Let $G=(V,E)$ a graph:
 \begin{itemize}
 \item \emph{maximum weight matching} $M\subseteq E$ : a subset of edges where 
@@ -466,18 +308,24 @@ Let $G=(V,E)$ a graph:
 \end{frame}
 
 \begin{frame} \frametitle{Maximum Weight Matching}\framesubtitle{The Primal-Dual Method}
-\textbf{Primal-Dual Method}
+\setbeamercolor{block title}{use=structure,fg=black,bg=blue!5!white}
+\setbeamercolor{block body}{use=structure,fg=black,bg=blue!5!white}
+
+\begin{block}{}
+\vspace{-0.4cm}
 \begin{align*}
 \begin{split}
 \text{Constraints in Primal}&\Longleftrightarrow \text{Variables in Dual}\\
 \text{Constraints in Dual}\quad &\Longleftrightarrow \text{Variables in Primal}
 \end{split}
 \end{align*}
+\end{block}
+\vspace{0.4cm}
 \begin{columns}
 \begin{column}[t]{0.49\textwidth}
 \vspace{-1.5cm}
 \begin{align*}
-\intertext{The primal:}
+\intertext{\textbf{The primal}:}
 \max&\quad \sum_{(u,v) \in E} x_{u,v} w_{u,v}\\
 \text{s.t.} &\qquad x_{u,v}\geq 0 &&, (u,v) \in E \\
 	&\quad \sum_{u \in e: e\in E} x_e \leq 1 &&, u \in V
@@ -485,23 +333,13 @@ Let $G=(V,E)$ a graph:
 \begin{column}[t]{0.49\textwidth}
 \vspace{-1.5cm}
 \begin{align*}
-\intertext{The dual:}
+\intertext{\textbf{The dual}:}
 \min&\quad \sum_{u \in V} y_u\\
 \text{s.t.} &\quad y_u\geq 0 &&, u \in V\\
 	&\quad y_u+y_v \geq w_{u,v} &&,(u,v) \in E
 \end{align*}
 \end{column}
 \end{columns}
-\end{frame}
-
-\subsection{Related Work}
-\begin{frame} \frametitle{Related Work}
-\begin{itemize}
-\item \emph{Safe Zones}: optimal local constraints fitted to nodes' data distributions\footfullcite{Keren2013SafeZones}
-\item Ellipsoidal bounding regions, decouplement of estimate vector from bounding ball construction\footfullcite{Sharfman2012ShapeSensGM}
-\item Simple shapes as local constraints, hierarchical clustering of nodes for participation to the balancing operation\footfullcite{Keren2014GMHetStreams}
-\item Prediction models based on velocity and acceleration\footfullcite{GiatrakosPredictionGM}
-\end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%  section: IMPL  %%%%%%%%%%%%%%%%%%%%%%%
@@ -526,51 +364,22 @@ Let $G=(V,E)$ a graph:
 \subsection{Implementation}
 
 \begin{frame} \frametitle{The Geometric Monitoring Framework} \framesubtitle{Assumptions}
-\noindent\begin{minipage}[t]{0.45\linewidth}
-\begin{itemize}\vspace{-2.5cm}
-\item Coordinator-based scenarion
+\begin{itemize}
+\item Coordinator-based scenario
 \item Instantaneous, loss-less, reliable communication
 \item Iterative operation based on time-steps
 \item System pause during violation resolution
 \item Coordinator node does not monitor a stream
 \end{itemize}
-\end{minipage}\hfill\noindent\scalebox{0.50}{
-\begin{minipage}[t]{\linewidth}
-\begin{algorithm}[H]
-\setstretch{1.30}
-
-\KwData{$monitoringNodes$: a list of Monitoring nodes,\\\quad $coordinator$: the Coordinator node}
-
-\SetAlgoLined
-\Begin{
- initialization\;
- 	\Repeat{$globalViolation$}{
-		\ForEach{$node \in\ monitoringNodes$}{
-			$node.DataVectorUpdate()$\;
-			$node.ComputeDriftVector()$\;
-		}
-		\ForEach{$node \in\ monitoringNodes$}{
-			$node.CheckForViolation()$\;
-			\If{$localViolation$}{
-				$node.Report()$\;
-				$coordinator.Balance()$\;
-			}
-		}
-	}
-}
-\caption{Iterative network operation \label{algo:singleHandlingNetwork}} 
-\end{algorithm}
-\end{minipage}%
-}
 \end{frame}
 
 \subsubsection*{Distance-based Hierarchical Clustering}
 \begin{frame} \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Idea}
 Node selection for \emph{violation resolution}:
 \begin{itemize}
-\item Elevate \emph{randomness} of the initial \emph{geometric monitoring} method\footfullcite{Sharfman2006GM}
-\item Hierarchical node clustering scheme\footfullcite{Keren2014GMHetStreams}
-\item Decouple matching from the data distribution at the nodes\footfullcite{Keren2014GMHetStreams}
+\item Elevate \emph{randomness} of the initial \emph{geometric monitoring} method {\tiny(\fullcite{Sharfman2006GM})}
+\item Hierarchical node clustering scheme {\tiny(\fullcite{Keren2014GMHetStreams})}
+\item Decouple matching from the data distribution at the nodes {\tiny(\fullcite{Keren2014GMHetStreams})}
 \item Accurately follow \emph{global statistics vector}
 \item Node ``cancel each other out'' during the \emph{balancing process}
 \end{itemize}
@@ -589,42 +398,11 @@ w_{i,j}=
 \end{block}
 \end{frame}
 
-\begin{frame}[plain] \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Algorithm}
-\centering
-\scalebox{0.70}{
-\begin{minipage}[t]{1.3\linewidth}
-\begin{algorithm}[H]
-\SetAlgoLined
-\setstretch{1.30}
-\SetKwFunction{DistancePairer}{DistancePairer}
-\SetKwProg{Fn}{Function}{}{end}
-\Fn{\DistancePairer{$nodes$,$i$}}{
-	\KwData{$nodes=[(n_1, [\vec{v_1}(t_0), ... , \vec{v_1}(t_{end})]), ... , (n_k, [\vec{v_k}(t_0), ... , \vec{v_k}(t_{end})])]$: list of nodes with their respective data vectors,$i$: pair type, initial=1} 
-	\KwResult{$nodeHierarchy$: dictionary of \emph{Type-k} pairs}
-
-	\If(\tcp*[f]{recursion stopping condition}){$length(nodes)=1$}{
-		\Return{$nodeHierarchy$}\;
-	}
-	$g=CreateCompleteGraph(nodes)$\tcp*[r]{complete graph with $nodes$ as vertices} 
-	\ForEach(\tcp*[f]{assign weights to edges}){$(n_i, n_j)\in g.Edges()$}{
-		$w_{i,j}=
-		\sum_{t=t_0}^{t_{end}}{[(f(\vec{v}_{global}(t))-f(\frac{\vec{v_i}(t)+\vec{v_j}(t)}{2}))+(|\vec{v_i}(t)-\vec{v_j}(t)|)]}$\;
-		$g.edge(n_i, n_j).weight=w_{i,j}$\;
-	}
-	$nodeHierarchy(\text{Type-i})=g.maximalWeightMatching()$\tcp*[r]{node pairs of \emph{Type-}$i$}
-	\DistancePairer{$nodeHierarchy(\text{Type-i}),i*2$}\;
-}
-\caption{Recursively create Monitoring node pairs and hierarchy \label{algo:nodeMatching}} 
-\end{algorithm}
-\end{minipage}
-}
-\end{frame}
-
 \begin{frame} \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{Example}
 \begin{figure}
 \begin{columns}
 \begin{column}[t]{0.4\linewidth}
-\vspace{-5.5cm}\caption{Distance based node matching operating on 4 nodes ($\{n_0, n_1, n_2, n_3\}$). Distance $d_1$ : the distance of the data vector mean of the paired nodes $n_0$ and $n_3$ from the global mean (\emph{global data vector}), distance $d_2$ : denotes the in-between distance of data vectors $\vec{v_0}(t)$ and $\vec{v_3}(t)$ of the node pair. Both distances are taking part in the edge weighting process.} \label{fig:distoptpairdetailed}
+\vspace{-5.5cm}\caption{Distance based node matching operating on 4 nodes ($\{n_0, n_1, n_2, n_3\}$). Distance $d_1$ : the distance of the data vector mean of the paired nodes $n_0$ and $n_3$ from the global mean (\emph{global data vector}), distance $d_2$ : denotes the in-between distance of data vectors $\vec{v_0}(t)$ and $\vec{v_3}(t)$ of the node pair. Both distances are taking part in the edge weighting process.}
 \end{column}
 \begin{column}[t]{0.6\linewidth}
 \centering
@@ -674,63 +452,6 @@ P'&:\text{the balancing set}
 }
 \end{frame}
 
-%\begin{frame} \frametitle{The Heuristic Balancing}\framesubtitle{The Function Implementation}
-%\begin{align*}
-%\min -z&\\
-%	\text{s.t.}\ \ z&\leq g(h(\vec{e},\vec{u_0}), vel_0, accel_0, T)\\
-%	z&\leq g(h(\vec{e},\vec{u_1}), vel_1, accel_1, T)\\
-%	&\vdots \\
-%	z&\leq g(h(\vec{e},\vec{u_n}), vel_n, accel_n, T)\\
-%	\vec{b}&=\frac{1}{\sum_{i=0}^n{w_i}}\sum_{i=0}^n{(w_i*\vec{u_i})} &&,\forall n_i \in P'
-%\end{align*}
-%where:
-%\begin{align*}
-%g&:\mathbb{R}^4 \to \mathbb{R}, \text{the heuristic optimization function as defined in Equation~\ref{form:heuristic}}\\
-%h&:\mathbb{R}^d \to \mathbb{R}, \text{the function computing the maximum value of the monitoring function $f(\cdot)$ in $B(\vec{e},\vec{u_i})$,}\\&\qquad\text{which is an optimization problem by itself}\\
-%d&: \text{the data vector dimensionality}
-%\end{align*}
-%\end{frame}
-
-\begin{frame}[plain] \frametitle{The Heuristic Balancing}\framesubtitle{The Algorithm}
-\centering
-\scalebox{0.65}{
-\begin{minipage}[t]{1.5\linewidth}
-\begin{algorithm}[H]
-\SetAlgoLined
-\setstretch{1.30}
-\SetKwFunction{RepMessageReceived}{RepMessageReceived}
-\SetKwFunction{RequestNode}{RequestNode}
-\SetKwFunction{Balance}{Balance}
-\SetKwProg{Fn}{Function}{}{end}
-
-\Fn{\RepMessageReceived{$<n_i$,$v_i$,$u_i$,$vel_i$,$accel_i>$}}{
-	add $n_i$ to balancing set $P'$\;
-	\Balance{}\;
-}
-
-\Fn{\Balance{$P'$}}{
-	\If{$length(P')=1$}{
-		\RequestNode{}\tcp*[r]{request node based on respective gathering scheme}
-	}
-
-	$\vec{b}=\sum_{P'}{\frac{w_i*\vec{u_i}}{w_i}}$\;
-
-	\If{$B(\vec{e},\vec{b})$ is monochromatic}{
-		\tcc{heuristic optimization procedure,\\ returns the optimal drift vector positions in set $O$}
-		$O=DriftVectorOptimizationProblem()$\;
-
-		\ForEach{$n_i \in P'$}{
-			$\Delta\delta_i=w_i*\vec{u_i}'-w_i*\vec{u_i}$\tcp*[r]{$\vec{u_i}'$ denotes the optimal drift vector position}
-			$Send(<ADJSLK,n_i,\Delta\delta_i>)$\;
-		}
-	}
-}
-\caption{Heuristic Balancing \label{algo:heuristicbalancing}} 
-\end{algorithm}
-\end{minipage}
-}
-\end{frame}
-
 \begin{frame}\frametitle{The Heuristic Balancing}\framesubtitle{Example}
 \begin{columns}
 \begin{column}[t]{0.5\linewidth}
@@ -750,23 +471,6 @@ P'&:\text{the balancing set}
 \end{columns}
 \end{frame}
 
-%\subsubsection*{Violation Detection}
-%\begin{frame} \frametitle{Violation Detection in the Sphere}\framesubtitle{A Nested Optimization Problem}
-%
-%\end{frame}
-\subsubsection*{The Savitzky-Golay Filter}
-\begin{frame} \frametitle{Velocity and Acceleration Estimation via SG Filtering}
-\begin{figure}
-\centering\includegraphics[scale=0.30]{../img/savgol.pdf}
-\caption{Savitzky-Golay filtering of a signal with added Gaussian noise. The smoothing window is 50 points, centered at the far right.} 
-\label{fig:savgol}
-\end{figure}
-\end{frame}
-
-%\subsubsection*{Challenges}
-%\begin{frame} \frametitle{Implementation Challenges}
-%
-%\end{frame}
 %%%%%%%%%%%%%  section: EXPERIMENTS  %%%%%%%%%%%%%%%%%%%%%%%
 \section{Experimental Results}
 \begin{frame}
@@ -776,10 +480,10 @@ P'&:\text{the balancing set}
 \subsection{Data \& Setup}
 \begin{frame}\frametitle{Acronyms for Implemented Methods}
 \begin{itemize}
-\item[] GM: the initial geometric monitoring method\footfullcite{Sharfman2006GM}
+\item[] GM: the initial geometric monitoring method {\tiny(\fullcite{Sharfman2006GM})}
 \item[] HM: the proposed heuristic balancing process
 \item[] DIST: the proposed distance-based hierarchical node clustering
-\item[] DISTR: the distribution-based hierarchical node clustering\footfullcite{Keren2014GMHetStreams}
+\item[] DISTR: the distribution-based hierarchical node clustering {\tiny(\fullcite{Keren2014GMHetStreams})}
 \end{itemize}
 \end{frame}
 
@@ -792,6 +496,7 @@ P'&:\text{the balancing set}
 \item $\lambda$ smoothing parameter
 \item Additive Gaussian noise
 \item 3 sets of datasets: \emph{LIN}, \emph{INT}, \emph{NOISE}
+\item First 20\% of data streams used as training data, when needed
 \end{itemize}
 \end{frame}
 
@@ -827,9 +532,10 @@ P'&:\text{the balancing set}
 \subsubsection*{Real-world Data}
 \begin{frame} \frametitle{Real-world Data}
 \begin{itemize}
-\item ``European Environmental Agency - AQ e-Reporting'' database\footfullcite{AirBase}
+\item ``European Environmental Agency - AQ e-Reporting'' database {\tiny(\fullcite{AirBase})}
 \item Hourly measurements of $NO_2$ and $NO$, in micro-grams per cubic meter, averaged over a window of five days for a whole year.
 \item Nodes correspond to randomly selected air quality measurement stations across Austria.
+\item First month of measurements used as training data, when needed.
 \end{itemize}
 \end{frame}
 
@@ -1081,17 +787,319 @@ Comments:
 \end{itemize}
 \end{frame}
 
-{
 \begin{frame}[plain]\frametitle{The End}
 \centering
 \Huge
 Thank you\\
 Questions?
 \end{frame}
-}
-%
-%\begin{frame}[plain]\frametitle{Appendix}\framesubtitle{Savitzky-Golay filter matrix notation}
-%hey you
+
+
+
+%\begin{frame} \frametitle{System Architecture} \framesubtitle{Decentralized Scenario}
+%\begin{figure}[H]
+%\centering
+%\vspace{-0.2cm}
+%\includegraphics[scale=0.5]{../img/decentralized.tex}
+%\caption{\textbf{Mesh-like network topology} example of the decentralized scenario. Dashed lines represent data streams and half arrows represent message exchanges.} 
+%\end{figure}
 %\end{frame}
+
+%\begin{frame} \frametitle{Geometric Interpretation}\framesubtitle{Convexity Property}
+%\begin{theorem}[\footfullcite{Sharfman2006GM}]\label{theorem:convexHull}
+%Let $\vec{x}, \vec{y_1}, \dots, \vec{y_n} \in \mathbb{R}^d$ be a set of vectors in $\mathbb{R}^d$. Let $Conv(\vec{x}, \vec{y_1}, \dots, \vec{y_n})$ be the convex hull of $\vec{x}, \vec{y_1}, \dots, \vec{y_n}$. Let $B(\vec{x}, \vec{y_i})$ be a ball centered at $\frac{\vec{x}+\vec{y_i}}{2}$ and with radius of $\lVert{\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2$ i.e., $B(\vec{x}, \vec{y_i})=\{\vec{z}\ |\ \lVert{\vec{z}-\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2 \leq \lVert{\frac{\vec{x}+\vec{y_i}}{2}}\rVert_2 \}$, then $Conv(vec{x}, \vec{y_1}, \dots, \vec{y_n}) \subset B(\vec{x}, \vec{y_i})$.
+%\end{theorem}
+%\end{frame}
+
+
+%\begin{frame}[plain] \frametitle{Protocol}\framesubtitle{Decentralized Algorithm}
+%
+%\hfill    \scalebox{0.50}{
+%    \begin{minipage}{\linewidth}
+%\vspace{-2cm}    
+%    \begin{algorithm}[H]
+%\setstretch{1.30}
+%
+%
+%\Begin{
+%	\ForEach(\tcc*[f]{Node initialization}){node $p_i$}{
+%		Broadcast $\vec{v_i}(0)$\;
+%		$\vec{v_i}'=\vec{v_i}(0)$\;
+%		Wait messages from all other nodes\;
+%		\If{messages from all vectors received}{
+%			Compute \emph{estimate vector} $\vec{e}(t)$\;
+%		}
+%	}
+%	\ForEach(\tcc*[f]{Main monitoring task}){node $p_i$}{
+%		\ForEach{new $s_i$ stream update $\vec{v_i}(t)$}{
+%			Recalculate \emph{drift vector} $\vec{u_i}(t)$\;
+%			\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
+%				Broadcast message $<i,\vec{v_i}(t)>$\;
+%				Set $\vec{v_i}'=\vec{v_i}(t)$\;
+%			}
+%			\If{new message $<j,\vec{v_j}(t)>$ received}{
+%				Set $\vec{v_j}'=\vec{v_j}(t)$\;
+%				Recalculate \emph{estimate vector} $\vec{e}(t)$\;
+%				\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
+%					Broadcast message $<i,\vec{v_i}(t)>$\;
+%					Set $\vec{v_i}'=\vec{v_i}(t)$\;
+%				}
+%			}
+%		}
+%	}
+%}
+%\caption{Decentralized algorithm \label{algo:decentralized}} 
+%\end{algorithm}  
+%\end{minipage}%
+%    }
+%\end{frame}
+
+%
+%\begin{frame}[plain] \frametitle{Protocol}\framesubtitle{Centralized Algorithm}
+%\noindent\scalebox{0.44}{
+%\begin{minipage}{\linewidth}
+%\hspace{-2cm}
+%\begin{algorithm}[H]
+%\setstretch{1.30}
+%
+%\SetKwFunction{Balance}{Balance}
+%\SetKwProg{Fn}{Function}{}{end}
+%
+%\Begin{
+%	
+%	Wait for $<INIT, \cdot>$ messages from all monitoring nodes\tcc*[r]{Initialization}
+%	Compute \emph{estimate vector} $\vec{e}(0)$\;
+%	\If(\tcc*[f]{Monitoring operation}){new $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message received}{
+%		$P'=P' \cup \{<i,\vec{v_i}(t),\vec{u_i}(t)>\}$\;
+%		\Balance{$P'$}\;
+%	}
+%}
+%\Fn(\tcc*[f]{Balancing Process}){\Balance{$P'$}}{
+%	Compute \emph{balancing vector} $\vec{b}$\;
+%	\uIf{$B(\vec{e}, \vec{b})$ is \emph{not} monochromatic}{
+%		\uIf{$P-P'\neq \emptyset$}{
+%			Send $<REQ>$ message to random node in $P-P'$ set\;
+%		}
+%		\Else{
+%			Compute \emph{estimate vector} $\vec{e}(t)$\;
+%			Send $<NEW\textnormal{-}EST, \vec{e}(t)>$ message to all nodes\;
+%			\Return \;
+%		}
+%	}
+%	\Else{
+%		\ForEach{$p_i \in P'$}{
+%			Compute \emph{slack adjustment vector} $\Delta\vec{\delta_i}$\;
+%			Send $<ADJ\textnormal{-}SLK, \Delta\vec{\delta_i}>$ message to node $p_i$\;
+%			\Return \;
+%		}
+%	}
+%
+%}
+%\caption{Centralized algorithm's coordinator node operation\label{algo:centralizedCoordinatorNode}} 
+%\end{algorithm}
+%
+%\end{minipage}%
+%}\hfill\noindent\scalebox{0.42}{
+%\begin{minipage}{\linewidth}
+%\vspace{-2.5cm}
+%\begin{algorithm}[H]
+%\setstretch{1.30}
+%\Begin{
+%	\ForEach(\tcc*[f]{Node initialization}){node $p_i$}{
+%		Send $<INIT,\vec{v_i}(0)>$ message to coordinator\;
+%		$\vec{v_i}'=\vec{v_i}(0)$\;
+%		$\vec{\delta_i}=\vec{0}$\;
+%		Wait message from coordinator\;
+%		\If{$<NEW\textnormal{-}EST, \vec{e}>$ message received}{
+%			Set $\vec{e}(t)=\vec{e}$\;
+%		}
+%	}
+%
+%	\ForEach(\tcc*[f]{Main monitoring task}){node $p_i$}{
+%		\ForEach{new $s_i$ stream update $\vec{v_i}(t)$}{
+%			Recalculate \emph{drift vector} $\vec{u_i}(t)$\;
+%			\If{$B(\vec{e},\vec{u_i}(t))$ is \emph{not} monochromatic}{
+%				Send $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message to coordinator\;
+%				Wait for $<NEW\textnormal{-}EST,\cdot>$ or $<ADJ\textnormal{-}SLK,\cdot>$ message from coordinator\;
+%			}
+%		
+%		
+%			\If{new message $<REQ>$ received}{
+%				Send $<REP,\vec{v_i}(t),\vec{u_i}(t)>$ message to coordinator\;
+%				Wait for $<NEW\textnormal{-}EST,\cdot>$ or $<ADJ\textnormal{-}SLK,\cdot>$ message from coordinator\;
+%
+%			}
+%
+%			\If{new $<NEW\textnormal{-}EST, \vec{e}>$ message received}{
+%				Set $\vec{e}(t)=\vec{e}$\;
+%				$\vec{v_i}'=\vec{v_i}(t)$\;
+%				$\vec{\delta_i}=\vec{0}$\;
+%			} 
+%
+%			\If{new $<ADJ\textnormal{-}SLK, \Delta\vec{\delta_i}>$ message received}{
+%				Recompute \emph{delta vector} $\vec{\delta_i}$\;
+%			}
+%		}
+%	}
+%}
+%\caption{Centralized algorithm's monitoring node operation \label{algo:centralizedMonitoringNode}} 
+%\end{algorithm}
+%\end{minipage}%
+%}
+%\end{frame}
+
+
+%\begin{frame} \frametitle{Non-linear Constraint Optimization}\framesubtitle{Primal Descent}
+%\centering
+%\scalebox{0.75}{
+%\begin{minipage}{1.3\linewidth}
+%\begin{algorithm}[H]
+%\setstretch{1.30}
+%\Begin{
+%	Choose initial point $x_0 \in X$ and set $t=0$ \tcc*[r]{Initialization}
+%	\While(\tcc*[f]{Search}){maximum iteration limit \emph{OR} convergence}{
+%		$t=t+1$\;
+%		Determine search direction $d_t$\;
+%		Determine step length $s_t$, so that $f(x_t+s_td_t)<f(x_t)$\;
+%		Update\;
+%	}
+%}
+%\caption{Generic primal descent \label{algo:nco-primal_descent}} 
+%\end{algorithm}
+%\end{minipage}%
+%}
+%\end{frame}
+
+%%conmin
+%\begin{frame} \frametitle{Feasible Directions}
+%\emph{Usable feasible direction} $d_t$:\begin{itemize}
+%\item a small disposition towards direction $d_t$ does not violate any constraint i.e.,
+%$$d_t^T \nabla G(x_t)\leq 0$$
+%\item a move towards $d_t$ reduces the objective functions value i.e.,
+%$$d_t^T \nabla F(x_t)<0$$.
+%\end{itemize}
+%\end{frame}
+
+%\begin{frame}
+%\scalebox{0.50}{
+%\begin{minipage}[t]{\linewidth}
+%\begin{algorithm}[H]
+%\setstretch{1.30}
+%
+%\KwData{$monitoringNodes$: a list of Monitoring nodes,\\\quad $coordinator$: the Coordinator node}
+%
+%\SetAlgoLined
+%\Begin{
+% initialization\;
+% 	\Repeat{$globalViolation$}{
+%		\ForEach{$node \in\ monitoringNodes$}{
+%			$node.DataVectorUpdate()$\;
+%			$node.ComputeDriftVector()$\;
+%		}
+%		\ForEach{$node \in\ monitoringNodes$}{
+%			$node.CheckForViolation()$\;
+%			\If{$localViolation$}{
+%				$node.Report()$\;
+%				$coordinator.Balance()$\;
+%			}
+%		}
+%	}
+%}
+%\caption{Iterative network operation \label{algo:singleHandlingNetwork}} 
+%\end{algorithm}
+%\end{minipage}%
+%}
+%\end{frame}
+
+
+%\begin{frame}[plain] \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Algorithm}
+%\centering
+%\scalebox{0.70}{
+%\begin{minipage}[t]{1.3\linewidth}
+%\begin{algorithm}[H]
+%\SetAlgoLined
+%\setstretch{1.30}
+%\SetKwFunction{DistancePairer}{DistancePairer}
+%\SetKwProg{Fn}{Function}{}{end}
+%\Fn{\DistancePairer{$nodes$,$i$}}{
+%	\KwData{$nodes=[(n_1, [\vec{v_1}(t_0), ... , \vec{v_1}(t_{end})]), ... , (n_k, [\vec{v_k}(t_0), ... , \vec{v_k}(t_{end})])]$: list of nodes with their respective data vectors,$i$: pair type, initial=1} 
+%	\KwResult{$nodeHierarchy$: dictionary of \emph{Type-k} pairs}
+%
+%	\If(\tcp*[f]{recursion stopping condition}){$length(nodes)=1$}{
+%		\Return{$nodeHierarchy$}\;
+%	}
+%	$g=CreateCompleteGraph(nodes)$\tcp*[r]{complete graph with $nodes$ as vertices} 
+%	\ForEach(\tcp*[f]{assign weights to edges}){$(n_i, n_j)\in g.Edges()$}{
+%		$w_{i,j}=
+%		\sum_{t=t_0}^{t_{end}}{[(f(\vec{v}_{global}(t))-f(\frac{\vec{v_i}(t)+\vec{v_j}(t)}{2}))+(|\vec{v_i}(t)-\vec{v_j}(t)|)]}$\;
+%		$g.edge(n_i, n_j).weight=w_{i,j}$\;
+%	}
+%	$nodeHierarchy(\text{Type-i})=g.maximalWeightMatching()$\tcp*[r]{node pairs of \emph{Type-}$i$}
+%	\DistancePairer{$nodeHierarchy(\text{Type-i}),i*2$}\;
+%}
+%\caption{Recursively create Monitoring node pairs and hierarchy \label{algo:nodeMatching}} 
+%\end{algorithm}
+%\end{minipage}
+%}
+%\end{frame}
+
+
+%\begin{frame} \frametitle{The Heuristic Balancing}\framesubtitle{The Function Implementation}
+%\begin{align*}
+%\min -z&\\
+%	\text{s.t.}\ \ z&\leq g(h(\vec{e},\vec{u_0}), vel_0, accel_0, T)\\
+%	z&\leq g(h(\vec{e},\vec{u_1}), vel_1, accel_1, T)\\
+%	&\vdots \\
+%	z&\leq g(h(\vec{e},\vec{u_n}), vel_n, accel_n, T)\\
+%	\vec{b}&=\frac{1}{\sum_{i=0}^n{w_i}}\sum_{i=0}^n{(w_i*\vec{u_i})} &&,\forall n_i \in P'
+%\end{align*}
+%where:
+%\begin{align*}
+%g&:\mathbb{R}^4 \to \mathbb{R}, \text{the heuristic optimization function as defined in Equation~\ref{form:heuristic}}\\
+%h&:\mathbb{R}^d \to \mathbb{R}, \text{the function computing the maximum value of the monitoring function $f(\cdot)$ in $B(\vec{e},\vec{u_i})$,}\\&\qquad\text{which is an optimization problem by itself}\\
+%d&: \text{the data vector dimensionality}
+%\end{align*}
+%\end{frame}
+%
+%\begin{frame}[plain] \frametitle{The Heuristic Balancing}\framesubtitle{The Algorithm}
+%\centering
+%\scalebox{0.65}{
+%\begin{minipage}[t]{1.5\linewidth}
+%\begin{algorithm}[H]
+%\SetAlgoLined
+%\setstretch{1.30}
+%\SetKwFunction{RepMessageReceived}{RepMessageReceived}
+%\SetKwFunction{RequestNode}{RequestNode}
+%\SetKwFunction{Balance}{Balance}
+%\SetKwProg{Fn}{Function}{}{end}
+%
+%\Fn{\RepMessageReceived{$<n_i$,$v_i$,$u_i$,$vel_i$,$accel_i>$}}{
+%	add $n_i$ to balancing set $P'$\;
+%	\Balance{}\;
+%}
+%
+%\Fn{\Balance{$P'$}}{
+%	\If{$length(P')=1$}{
+%		\RequestNode{}\tcp*[r]{request node based on respective gathering scheme}
+%	}
+%
+%	$\vec{b}=\sum_{P'}{\frac{w_i*\vec{u_i}}{w_i}}$\;
+%
+%	\If{$B(\vec{e},\vec{b})$ is monochromatic}{
+%		\tcc{heuristic optimization procedure,\\ returns the optimal drift vector positions in set $O$}
+%		$O=DriftVectorOptimizationProblem()$\;
+%
+%		\ForEach{$n_i \in P'$}{
+%			$\Delta\delta_i=w_i*\vec{u_i}'-w_i*\vec{u_i}$\tcp*[r]{$\vec{u_i}'$ denotes the optimal drift vector position}
+%			$Send(<ADJSLK,n_i,\Delta\delta_i>)$\;
+%		}
+%	}
+%}
+%\caption{Heuristic Balancing \label{algo:heuristicbalancing}} 
+%\end{algorithm}
+%\end{minipage}
+%}
+%\end{frame}
+
 \end{document}
 
