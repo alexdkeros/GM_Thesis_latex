@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.5.27)  22 JUN 2016 22:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2016.5.27)  23 JUN 2016 04:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1708,14 +1708,14 @@ Package biblatex Info: Reference section=0 on input line 26.
 Package biblatex Info: Reference segment=0 on input line 26.
  (./Thesis_presentation.nav)
 Overfull \hbox (1.84828pt too wide) detected at line 26
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
@@ -1723,16 +1723,16 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 ]
 (./Thesis_presentation.toc)
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [2
 
 ] (./Thesis_presentation.toc)
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [3
@@ -1782,91 +1782,88 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 52.
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [4
 
 ]
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 66.
-
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [5
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [6
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [7
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [8
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [9
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [10
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [11
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [12
 
 ] (./Thesis_presentation.toc)
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [13
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [14
@@ -1876,348 +1873,361 @@ Overfull \hbox (1.84828pt too wide) has occurred while \output is active
 )
 File: ../img/centralized.tex Graphic file (type tex)
 
-Overfull \vbox (13.33806pt too high) detected at line 121
+Overfull \vbox (13.33806pt too high) detected at line 117
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [15
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [16
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [17
 
-]
+] (../img/local_constraints.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 200.
+(Font)              <20.74> on input line 76.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 200.
+(Font)              <14.4> on input line 76.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 76.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <20.74> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 76.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 76.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <12> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 76.
+)
+File: ../img/local_constraints.tex Graphic file (type tex)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 181.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 181.
+LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10> not available
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 181.
+
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <7> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 200.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 181.
+
+
+Overfull \vbox (11.2607pt too high) detected at line 181
+ []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [18
 
-] (../img/convex_hull.tex
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 182.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 182.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 182.
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <20.74> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 182.
-
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <14.4> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 182.
-
-LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <12> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 182.
-
-)
-File: ../img/convex_hull.tex Graphic file (type tex)
-
-Overfull \vbox (18.7686pt too high) detected at line 225
- []
-
-
+]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [19
 
-]
-Overfull \vbox (4.55963pt too high) detected at line 235
+] (../img/convex_hull.tex)
+File: ../img/convex_hull.tex Graphic file (type tex)
+
+Overfull \vbox (18.7686pt too high) detected at line 229
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [20
 
 ]
-Overfull \vbox (2.59148pt too high) detected at line 252
+Overfull \vbox (4.55963pt too high) detected at line 239
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [21
 
 ]
+Overfull \vbox (2.59148pt too high) detected at line 256
+ []
+
+
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [22
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [23
 
-] <../img/savgol.pdf, id=2088, 650.43pt x 505.89pt>
+]
+Overfull \hbox (1.84828pt too wide) has occurred while \output is active
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
+ []
+
+[24
+
+] <../img/savgol.pdf, id=2195, 650.43pt x 505.89pt>
 File: ../img/savgol.pdf Graphic file (type pdf)
  <use ../img/savgol.pdf>
-Package pdftex.def Info: ../img/savgol.pdf used on input line 291.
+Package pdftex.def Info: ../img/savgol.pdf used on input line 295.
 (pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 
-Overfull \vbox (12.37213pt too high) detected at line 291
+Overfull \vbox (12.37213pt too high) detected at line 295
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
-[24
+[25
 
  <../img/savgol.pdf>] (../img/matching.tex)
 File: ../img/matching.tex Graphic file (type tex)
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
- []
-
-[25
-
-]
-Overfull \hbox (12.40804pt too wide) in paragraph at lines 343--343
-[]  
- []
-
-
-Overfull \hbox (7.47592pt too wide) in paragraph at lines 343--343
-[]  
- []
-
-
-Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [26
 
-] (./Thesis_presentation.toc)
+]
+Overfull \hbox (12.40804pt too wide) in paragraph at lines 347--347
+[]  
+ []
+
+
+Overfull \hbox (7.47592pt too wide) in paragraph at lines 347--347
+[]  
+ []
+
+
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [27
 
-]
+] (./Thesis_presentation.toc)
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [28
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [29
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [30
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [31
 
 ]
-<../img/distoptpair_example_detail_edited.jpeg, id=2759, 906.38625pt x 705.6362
-5pt>
-File: ../img/distoptpair_example_detail_edited.jpeg Graphic file (type jpg)
- <use ../img/distoptpair_example_detail_edited.jpeg>
-Package pdftex.def Info: ../img/distoptpair_example_detail_edited.jpeg used on 
-input line 413.
-(pdftex.def)             Requested size: 199.40558pt x 155.24045pt.
-
-Overfull \hbox (15.02979pt too wide) in paragraph at lines 413--413
- [][] 
- []
-
-
-Overfull \vbox (4.35428pt too high) detected at line 413
- []
-
-
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [32
 
- <../img/distoptpair_example_detail_edited.jpeg>]
+]
+<../img/distoptpair_example_detail_edited.jpeg, id=2874, 906.38625pt x 705.6362
+5pt>
+File: ../img/distoptpair_example_detail_edited.jpeg Graphic file (type jpg)
+ <use ../img/distoptpair_example_detail_edited.jpeg>
+Package pdftex.def Info: ../img/distoptpair_example_detail_edited.jpeg used on 
+input line 417.
+(pdftex.def)             Requested size: 199.40558pt x 155.24045pt.
+
+Overfull \hbox (15.02979pt too wide) in paragraph at lines 417--417
+ [][] 
+ []
+
+
+Overfull \vbox (4.35428pt too high) detected at line 417
+ []
+
+
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [33
 
+ <../img/distoptpair_example_detail_edited.jpeg>]
+Overfull \hbox (1.84828pt too wide) has occurred while \output is active
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
+ []
+
+[34
+
 ]
-Overfull \hbox (170.80911pt too wide) in paragraph at lines 453--453
+Overfull \hbox (170.80911pt too wide) in paragraph at lines 457--457
 [] 
  []
 
 
-Overfull \hbox (32.48792pt too wide) in paragraph at lines 453--453
+Overfull \hbox (32.48792pt too wide) in paragraph at lines 457--457
 []  
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
-[34
+[35
 
 ] (../img/classic_balancing.tex)
 File: ../img/classic_balancing.tex Graphic file (type tex)
 
-Overfull \hbox (2.41425pt too wide) in paragraph at lines 472--472
+Overfull \hbox (2.41425pt too wide) in paragraph at lines 476--476
  [] 
  []
 
 (../img/heuristic_balancing.tex)
 File: ../img/heuristic_balancing.tex Graphic file (type tex)
 
-Overfull \hbox (2.41425pt too wide) in paragraph at lines 472--472
+Overfull \hbox (2.41425pt too wide) in paragraph at lines 476--476
  [] 
  []
 
 
-Overfull \vbox (7.95929pt too high) detected at line 472
+Overfull \vbox (7.95929pt too high) detected at line 476
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
- []
-
-[35
-
-] (./Thesis_presentation.toc)
-Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [36
 
-]
+] (./Thesis_presentation.toc)
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [37
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [38
 
-] <../img/linear1D20N_streams.pdf, id=3335, 650.43pt x 505.89pt>
+]
+Overfull \hbox (1.84828pt too wide) has occurred while \output is active
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
+ []
+
+[39
+
+] <../img/linear1D20N_streams.pdf, id=3457, 650.43pt x 505.89pt>
 File: ../img/linear1D20N_streams.pdf Graphic file (type pdf)
 
 <use ../img/linear1D20N_streams.pdf>
-Package pdftex.def Info: ../img/linear1D20N_streams.pdf used on input line 530.
+Package pdftex.def Info: ../img/linear1D20N_streams.pdf used on input line 534.
 
 (pdftex.def)             Requested size: 104.07092pt x 80.94405pt.
 
-Overfull \hbox (5.73592pt too wide) in paragraph at lines 530--530
+Overfull \hbox (5.73592pt too wide) in paragraph at lines 534--534
  [] 
  []
 
-<../img/interweaving1D20N_streams.pdf, id=3336, 650.43pt x 505.89pt>
+<../img/interweaving1D20N_streams.pdf, id=3458, 650.43pt x 505.89pt>
 File: ../img/interweaving1D20N_streams.pdf Graphic file (type pdf)
 
 <use ../img/interweaving1D20N_streams.pdf>
 Package pdftex.def Info: ../img/interweaving1D20N_streams.pdf used on input lin
-e 530.
+e 534.
 (pdftex.def)             Requested size: 104.07092pt x 80.94405pt.
 
-Overfull \hbox (5.73592pt too wide) in paragraph at lines 530--530
+Overfull \hbox (5.73592pt too wide) in paragraph at lines 534--534
  [] 
  []
 
-<../img/noisyinterweaving1D20N_streams.pdf, id=3337, 650.43pt x 505.89pt>
+<../img/noisyinterweaving1D20N_streams.pdf, id=3459, 650.43pt x 505.89pt>
 File: ../img/noisyinterweaving1D20N_streams.pdf Graphic file (type pdf)
 
 <use ../img/noisyinterweaving1D20N_streams.pdf>
 Package pdftex.def Info: ../img/noisyinterweaving1D20N_streams.pdf used on inpu
-t line 530.
+t line 534.
 (pdftex.def)             Requested size: 104.07092pt x 80.94405pt.
 
-Overfull \hbox (5.73592pt too wide) in paragraph at lines 530--530
+Overfull \hbox (5.73592pt too wide) in paragraph at lines 534--534
  [] 
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
-[39
+[40
 
  <../img/linear1D20N_streams.pdf> <../img/interweaving1D20N_streams.pdf
 
@@ -2229,406 +2239,406 @@ pdfTeX warning: pdflatex (file ../img/noisyinterweaving1D20N_streams.pdf): PDF
 inclusion: multiple pdfs with page group included in a single page
 >]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
-[40
+[41
 
-] <../img/AT_NO2_NO_2014_8N_streams.pdf, id=3521, 650.43pt x 505.89pt>
+] <../img/AT_NO2_NO_2014_8N_streams.pdf, id=3645, 650.43pt x 505.89pt>
 File: ../img/AT_NO2_NO_2014_8N_streams.pdf Graphic file (type pdf)
 
 <use ../img/AT_NO2_NO_2014_8N_streams.pdf>
 Package pdftex.def Info: ../img/AT_NO2_NO_2014_8N_streams.pdf used on input lin
-e 560.
+e 564.
 (pdftex.def)             Requested size: 130.0837pt x 101.1762pt.
 
-<../img/AT_NO2_sq_2014_8N_streams.pdf, id=3522, 650.43pt x 505.89pt>
+<../img/AT_NO2_sq_2014_8N_streams.pdf, id=3646, 650.43pt x 505.89pt>
 File: ../img/AT_NO2_sq_2014_8N_streams.pdf Graphic file (type pdf)
 
 <use ../img/AT_NO2_sq_2014_8N_streams.pdf>
 Package pdftex.def Info: ../img/AT_NO2_sq_2014_8N_streams.pdf used on input lin
-e 560.
+e 564.
 (pdftex.def)             Requested size: 130.0837pt x 101.1762pt.
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
-[41
+[42
 
  <../img/AT_NO2_NO_2014_8N_streams.pdf> <../img/AT_NO2_sq_2014_8N_streams.pdf
 
 pdfTeX warning: pdflatex (file ../img/AT_NO2_sq_2014_8N_streams.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
->] <../img/matching_msg_linear.pdf, id=3624, 650.43pt x 505.89pt>
+>] <../img/matching_msg_linear.pdf, id=3749, 650.43pt x 505.89pt>
 File: ../img/matching_msg_linear.pdf Graphic file (type pdf)
 
 <use ../img/matching_msg_linear.pdf>
-Package pdftex.def Info: ../img/matching_msg_linear.pdf used on input line 572.
+Package pdftex.def Info: ../img/matching_msg_linear.pdf used on input line 576.
 
 (pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <9> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 572.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 576.
 
 
-Overfull \vbox (8.20134pt too high) detected at line 572
+Overfull \vbox (8.20134pt too high) detected at line 576
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
- []
-
-[42
-
- <../img/matching_msg_linear.pdf>]
-<../img/matching_msg_interweaving.pdf, id=3715, 650.43pt x 505.89pt>
-File: ../img/matching_msg_interweaving.pdf Graphic file (type pdf)
-
-<use ../img/matching_msg_interweaving.pdf>
-Package pdftex.def Info: ../img/matching_msg_interweaving.pdf used on input lin
-e 581.
-(pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
-
-Overfull \vbox (8.20134pt too high) detected at line 581
- []
-
-
-Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [43
 
- <../img/matching_msg_interweaving.pdf>]
-<../img/matching_msg_noisyinterweaving.pdf, id=3806, 650.43pt x 505.89pt>
-File: ../img/matching_msg_noisyinterweaving.pdf Graphic file (type pdf)
+ <../img/matching_msg_linear.pdf>]
+<../img/matching_msg_interweaving.pdf, id=3843, 650.43pt x 505.89pt>
+File: ../img/matching_msg_interweaving.pdf Graphic file (type pdf)
 
-<use ../img/matching_msg_noisyinterweaving.pdf>
-Package pdftex.def Info: ../img/matching_msg_noisyinterweaving.pdf used on inpu
-t line 590.
+<use ../img/matching_msg_interweaving.pdf>
+Package pdftex.def Info: ../img/matching_msg_interweaving.pdf used on input lin
+e 585.
 (pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 
-Overfull \vbox (8.20134pt too high) detected at line 590
+Overfull \vbox (8.20134pt too high) detected at line 585
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [44
 
- <../img/matching_msg_noisyinterweaving.pdf>]
-<../img/matchings_matchings_linear.pdf, id=3896, 722.7pt x 361.35pt>
-File: ../img/matchings_matchings_linear.pdf Graphic file (type pdf)
+ <../img/matching_msg_interweaving.pdf>]
+<../img/matching_msg_noisyinterweaving.pdf, id=3933, 650.43pt x 505.89pt>
+File: ../img/matching_msg_noisyinterweaving.pdf Graphic file (type pdf)
 
-<use ../img/matchings_matchings_linear.pdf>
-Package pdftex.def Info: ../img/matchings_matchings_linear.pdf used on input li
-ne 599.
-(pdftex.def)             Requested size: 289.07487pt x 144.53743pt.
+<use ../img/matching_msg_noisyinterweaving.pdf>
+Package pdftex.def Info: ../img/matching_msg_noisyinterweaving.pdf used on inpu
+t line 594.
+(pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 
-Overfull \vbox (10.75652pt too high) detected at line 599
+Overfull \vbox (8.20134pt too high) detected at line 594
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [45
 
- <../img/matchings_matchings_linear.pdf>]
-<../img/matchings_matchings_interweaving.pdf, id=3988, 722.7pt x 361.35pt>
-File: ../img/matchings_matchings_interweaving.pdf Graphic file (type pdf)
+ <../img/matching_msg_noisyinterweaving.pdf>]
+<../img/matchings_matchings_linear.pdf, id=4024, 722.7pt x 361.35pt>
+File: ../img/matchings_matchings_linear.pdf Graphic file (type pdf)
 
-<use ../img/matchings_matchings_interweaving.pdf>
-Package pdftex.def Info: ../img/matchings_matchings_interweaving.pdf used on in
-put line 608.
+<use ../img/matchings_matchings_linear.pdf>
+Package pdftex.def Info: ../img/matchings_matchings_linear.pdf used on input li
+ne 603.
 (pdftex.def)             Requested size: 289.07487pt x 144.53743pt.
 
-Overfull \vbox (10.75652pt too high) detected at line 608
+Overfull \vbox (10.75652pt too high) detected at line 603
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [46
 
- <../img/matchings_matchings_interweaving.pdf>]
-<../img/matchings_matchings_noisyinterweaving.pdf, id=4080, 722.7pt x 361.35pt>
-File: ../img/matchings_matchings_noisyinterweaving.pdf Graphic file (type pdf)
-<use ../img/matchings_matchings_noisyinterweaving.pdf>
-Package pdftex.def Info: ../img/matchings_matchings_noisyinterweaving.pdf used 
-on input line 617.
+ <../img/matchings_matchings_linear.pdf>]
+<../img/matchings_matchings_interweaving.pdf, id=4117, 722.7pt x 361.35pt>
+File: ../img/matchings_matchings_interweaving.pdf Graphic file (type pdf)
+
+<use ../img/matchings_matchings_interweaving.pdf>
+Package pdftex.def Info: ../img/matchings_matchings_interweaving.pdf used on in
+put line 612.
 (pdftex.def)             Requested size: 289.07487pt x 144.53743pt.
 
-Overfull \vbox (10.75652pt too high) detected at line 617
+Overfull \vbox (10.75652pt too high) detected at line 612
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [47
 
- <../img/matchings_matchings_noisyinterweaving.pdf>]
-<../img/bal_msg_linear_nodes.pdf, id=4172, 650.43pt x 505.89pt>
-File: ../img/bal_msg_linear_nodes.pdf Graphic file (type pdf)
+ <../img/matchings_matchings_interweaving.pdf>]
+<../img/matchings_matchings_noisyinterweaving.pdf, id=4210, 722.7pt x 361.35pt>
+File: ../img/matchings_matchings_noisyinterweaving.pdf Graphic file (type pdf)
+<use ../img/matchings_matchings_noisyinterweaving.pdf>
+Package pdftex.def Info: ../img/matchings_matchings_noisyinterweaving.pdf used 
+on input line 621.
+(pdftex.def)             Requested size: 289.07487pt x 144.53743pt.
 
-<use ../img/bal_msg_linear_nodes.pdf>
-Package pdftex.def Info: ../img/bal_msg_linear_nodes.pdf used on input line 639
-.
-(pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
-
-Overfull \hbox (8.96217pt too wide) in paragraph at lines 639--639
- [] 
- []
-
-<../img/bal_msg_noisyinterweaving_nodes.pdf, id=4173, 650.43pt x 505.89pt>
-File: ../img/bal_msg_noisyinterweaving_nodes.pdf Graphic file (type pdf)
-
-<use ../img/bal_msg_noisyinterweaving_nodes.pdf>
-Package pdftex.def Info: ../img/bal_msg_noisyinterweaving_nodes.pdf used on inp
-ut line 639.
-(pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
-
-Overfull \hbox (8.96217pt too wide) in paragraph at lines 639--639
- [] 
- []
-
-
-Overfull \vbox (7.879pt too high) detected at line 639
+Overfull \vbox (10.75652pt too high) detected at line 621
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [48
+
+ <../img/matchings_matchings_noisyinterweaving.pdf>]
+<../img/bal_msg_linear_nodes.pdf, id=4303, 650.43pt x 505.89pt>
+File: ../img/bal_msg_linear_nodes.pdf Graphic file (type pdf)
+
+<use ../img/bal_msg_linear_nodes.pdf>
+Package pdftex.def Info: ../img/bal_msg_linear_nodes.pdf used on input line 643
+.
+(pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
+
+Overfull \hbox (8.96217pt too wide) in paragraph at lines 643--643
+ [] 
+ []
+
+<../img/bal_msg_noisyinterweaving_nodes.pdf, id=4304, 650.43pt x 505.89pt>
+File: ../img/bal_msg_noisyinterweaving_nodes.pdf Graphic file (type pdf)
+
+<use ../img/bal_msg_noisyinterweaving_nodes.pdf>
+Package pdftex.def Info: ../img/bal_msg_noisyinterweaving_nodes.pdf used on inp
+ut line 643.
+(pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
+
+Overfull \hbox (8.96217pt too wide) in paragraph at lines 643--643
+ [] 
+ []
+
+
+Overfull \vbox (7.879pt too high) detected at line 643
+ []
+
+
+Overfull \hbox (1.84828pt too wide) has occurred while \output is active
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
+ []
+
+[49
 
  <../img/bal_msg_linear_nodes.pdf> <../img/bal_msg_noisyinterweaving_nodes.pdf
 
 pdfTeX warning: pdflatex (file ../img/bal_msg_noisyinterweaving_nodes.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
->] <../img/bal_classic_drifts_linear2N.pdf, id=4270, 650.43pt x 505.89pt>
+>] <../img/bal_classic_drifts_linear2N.pdf, id=4403, 650.43pt x 505.89pt>
 File: ../img/bal_classic_drifts_linear2N.pdf Graphic file (type pdf)
 
 <use ../img/bal_classic_drifts_linear2N.pdf>
 Package pdftex.def Info: ../img/bal_classic_drifts_linear2N.pdf used on input l
-ine 660.
+ine 664.
 (pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
 
-Overfull \hbox (8.96217pt too wide) in paragraph at lines 660--660
+Overfull \hbox (8.96217pt too wide) in paragraph at lines 664--664
  [] 
  []
 
-<../img/bal_heuristic_drifts_linear2N.pdf, id=4271, 650.43pt x 505.89pt>
+<../img/bal_heuristic_drifts_linear2N.pdf, id=4404, 650.43pt x 505.89pt>
 File: ../img/bal_heuristic_drifts_linear2N.pdf Graphic file (type pdf)
 
 <use ../img/bal_heuristic_drifts_linear2N.pdf>
 Package pdftex.def Info: ../img/bal_heuristic_drifts_linear2N.pdf used on input
- line 660.
+ line 664.
 (pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
 
-Overfull \hbox (8.96217pt too wide) in paragraph at lines 660--660
+Overfull \hbox (8.96217pt too wide) in paragraph at lines 664--664
  [] 
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
-[49
+[50
 
  <../img/bal_classic_drifts_linear2N.pdf> <../img/bal_heuristic_drifts_linear2N
 .pdf
 
 pdfTeX warning: pdflatex (file ../img/bal_heuristic_drifts_linear2N.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
->] <../img/main_msg_linear_nodes.pdf, id=4362, 650.43pt x 505.89pt>
+>] <../img/main_msg_linear_nodes.pdf, id=4495, 650.43pt x 505.89pt>
 File: ../img/main_msg_linear_nodes.pdf Graphic file (type pdf)
 
 <use ../img/main_msg_linear_nodes.pdf>
 Package pdftex.def Info: ../img/main_msg_linear_nodes.pdf used on input line 67
-0.
+4.
 (pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 
-Overfull \vbox (8.20134pt too high) detected at line 670
+Overfull \vbox (8.20134pt too high) detected at line 674
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
- []
-
-[50
-
- <../img/main_msg_linear_nodes.pdf>]
-<../img/main_msg_interweaving_nodes.pdf, id=4451, 650.43pt x 505.89pt>
-File: ../img/main_msg_interweaving_nodes.pdf Graphic file (type pdf)
-
-<use ../img/main_msg_interweaving_nodes.pdf>
-Package pdftex.def Info: ../img/main_msg_interweaving_nodes.pdf used on input l
-ine 679.
-(pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
-
-Overfull \vbox (8.20134pt too high) detected at line 679
- []
-
-
-Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [51
 
- <../img/main_msg_interweaving_nodes.pdf>]
-<../img/main_msg_noisyinterweaving_nodes.pdf, id=4540, 650.43pt x 505.89pt>
-File: ../img/main_msg_noisyinterweaving_nodes.pdf Graphic file (type pdf)
+ <../img/main_msg_linear_nodes.pdf>]
+<../img/main_msg_interweaving_nodes.pdf, id=4586, 650.43pt x 505.89pt>
+File: ../img/main_msg_interweaving_nodes.pdf Graphic file (type pdf)
 
-<use ../img/main_msg_noisyinterweaving_nodes.pdf>
-Package pdftex.def Info: ../img/main_msg_noisyinterweaving_nodes.pdf used on in
-put line 688.
+<use ../img/main_msg_interweaving_nodes.pdf>
+Package pdftex.def Info: ../img/main_msg_interweaving_nodes.pdf used on input l
+ine 683.
 (pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 
-Overfull \vbox (8.20134pt too high) detected at line 688
+Overfull \vbox (8.20134pt too high) detected at line 683
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [52
 
- <../img/main_msg_noisyinterweaving_nodes.pdf>]
-<../img/main_msg_noisyinterweaving_window.pdf, id=4629, 650.43pt x 505.89pt>
-File: ../img/main_msg_noisyinterweaving_window.pdf Graphic file (type pdf)
+ <../img/main_msg_interweaving_nodes.pdf>]
+<../img/main_msg_noisyinterweaving_nodes.pdf, id=4676, 650.43pt x 505.89pt>
+File: ../img/main_msg_noisyinterweaving_nodes.pdf Graphic file (type pdf)
 
-<use ../img/main_msg_noisyinterweaving_window.pdf>
-Package pdftex.def Info: ../img/main_msg_noisyinterweaving_window.pdf used on i
-nput line 698.
+<use ../img/main_msg_noisyinterweaving_nodes.pdf>
+Package pdftex.def Info: ../img/main_msg_noisyinterweaving_nodes.pdf used on in
+put line 692.
 (pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 
-Overfull \vbox (10.14577pt too high) detected at line 698
+Overfull \vbox (8.20134pt too high) detected at line 692
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [53
 
- <../img/main_msg_noisyinterweaving_window.pdf>]
-<../img/main_msg_noisyinterweaving_order.pdf, id=4718, 650.43pt x 505.89pt>
-File: ../img/main_msg_noisyinterweaving_order.pdf Graphic file (type pdf)
+ <../img/main_msg_noisyinterweaving_nodes.pdf>]
+<../img/main_msg_noisyinterweaving_window.pdf, id=4765, 650.43pt x 505.89pt>
+File: ../img/main_msg_noisyinterweaving_window.pdf Graphic file (type pdf)
 
-<use ../img/main_msg_noisyinterweaving_order.pdf>
-Package pdftex.def Info: ../img/main_msg_noisyinterweaving_order.pdf used on in
-put line 708.
+<use ../img/main_msg_noisyinterweaving_window.pdf>
+Package pdftex.def Info: ../img/main_msg_noisyinterweaving_window.pdf used on i
+nput line 702.
 (pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 
-Overfull \vbox (10.14577pt too high) detected at line 708
+Overfull \vbox (10.14577pt too high) detected at line 702
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [54
 
- <../img/main_msg_noisyinterweaving_order.pdf>]
-<../img/main_msg_linear_dims.pdf, id=4810, 650.43pt x 505.89pt>
-File: ../img/main_msg_linear_dims.pdf Graphic file (type pdf)
+ <../img/main_msg_noisyinterweaving_window.pdf>]
+<../img/main_msg_noisyinterweaving_order.pdf, id=4855, 650.43pt x 505.89pt>
+File: ../img/main_msg_noisyinterweaving_order.pdf Graphic file (type pdf)
 
-<use ../img/main_msg_linear_dims.pdf>
-Package pdftex.def Info: ../img/main_msg_linear_dims.pdf used on input line 729
-.
-(pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
+<use ../img/main_msg_noisyinterweaving_order.pdf>
+Package pdftex.def Info: ../img/main_msg_noisyinterweaving_order.pdf used on in
+put line 712.
+(pdftex.def)             Requested size: 195.1305pt x 151.76816pt.
 
-Overfull \hbox (8.96217pt too wide) in paragraph at lines 729--729
- [] 
- []
-
-<../img/main_msg_noisyinterweaving_dims.pdf, id=4811, 650.43pt x 505.89pt>
-File: ../img/main_msg_noisyinterweaving_dims.pdf Graphic file (type pdf)
-
-<use ../img/main_msg_noisyinterweaving_dims.pdf>
-Package pdftex.def Info: ../img/main_msg_noisyinterweaving_dims.pdf used on inp
-ut line 729.
-(pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
-
-Overfull \hbox (8.96217pt too wide) in paragraph at lines 729--729
- [] 
- []
-
-
-Overfull \vbox (7.879pt too high) detected at line 729
+Overfull \vbox (10.14577pt too high) detected at line 712
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [55
+
+ <../img/main_msg_noisyinterweaving_order.pdf>]
+<../img/main_msg_linear_dims.pdf, id=4949, 650.43pt x 505.89pt>
+File: ../img/main_msg_linear_dims.pdf Graphic file (type pdf)
+
+<use ../img/main_msg_linear_dims.pdf>
+Package pdftex.def Info: ../img/main_msg_linear_dims.pdf used on input line 733
+.
+(pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
+
+Overfull \hbox (8.96217pt too wide) in paragraph at lines 733--733
+ [] 
+ []
+
+<../img/main_msg_noisyinterweaving_dims.pdf, id=4950, 650.43pt x 505.89pt>
+File: ../img/main_msg_noisyinterweaving_dims.pdf Graphic file (type pdf)
+
+<use ../img/main_msg_noisyinterweaving_dims.pdf>
+Package pdftex.def Info: ../img/main_msg_noisyinterweaving_dims.pdf used on inp
+ut line 733.
+(pdftex.def)             Requested size: 162.6071pt x 126.47218pt.
+
+Overfull \hbox (8.96217pt too wide) in paragraph at lines 733--733
+ [] 
+ []
+
+
+Overfull \vbox (7.879pt too high) detected at line 733
+ []
+
+
+Overfull \hbox (1.84828pt too wide) has occurred while \output is active
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
+ []
+
+[56
 
  <../img/main_msg_linear_dims.pdf> <../img/main_msg_noisyinterweaving_dims.pdf
 
 pdfTeX warning: pdflatex (file ../img/main_msg_noisyinterweaving_dims.pdf): PDF
  inclusion: multiple pdfs with page group included in a single page
 >]
-<../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf, id=4908, 650.43pt x 505.
+<../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf, id=5047, 650.43pt x 505.
 89pt>
 File: ../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf Graphic file (type p
 df)
  <use ../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf>
 Package pdftex.def Info: ../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf u
-sed on input line 751.
+sed on input line 755.
 (pdftex.def)             Requested size: 149.59575pt x 116.35225pt.
 
-<../img/actual_msg_NO2_NO_2014_nodes.pdf, id=4909, 650.43pt x 505.89pt>
+<../img/actual_msg_NO2_NO_2014_nodes.pdf, id=5048, 650.43pt x 505.89pt>
 File: ../img/actual_msg_NO2_NO_2014_nodes.pdf Graphic file (type pdf)
 
 <use ../img/actual_msg_NO2_NO_2014_nodes.pdf>
 Package pdftex.def Info: ../img/actual_msg_NO2_NO_2014_nodes.pdf used on input 
-line 751.
+line 755.
 (pdftex.def)             Requested size: 149.59575pt x 116.35225pt.
 
-Overfull \vbox (3.09952pt too high) detected at line 751
+Overfull \vbox (3.09952pt too high) detected at line 755
  []
 
 
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
-[56
+[57
 
  <../img/actual_msg_NO2_sq_2014_nodes_wl_6_order_2.pdf> <../img/actual_msg_NO2_
 NO_2014_nodes.pdf
@@ -2637,56 +2647,58 @@ pdfTeX warning: pdflatex (file ../img/actual_msg_NO2_NO_2014_nodes.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >] (./Thesis_presentation.toc)
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
- []
-
-[57
-
-]
-Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [58
 
 ]
 Overfull \hbox (1.84828pt too wide) has occurred while \output is active
-  [] [][][][][] [][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][
-][][][][][][][][][][][][][] [][][][]  
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
  []
 
 [59
 
-] [60
+]
+Overfull \hbox (1.84828pt too wide) has occurred while \output is active
+  [] [][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][
+][][][][][][][][][][][][][][] [][][][]  
+ []
+
+[60
 
 ] [61
 
 ] [62
 
+] [63
+
 ]
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 986
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 990
 .
  (/usr/share/texmf/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [63
+) [64
 
-] [64
-
-]
-[65
-
-] [66
+] [65
 
 ]
-Overfull \hbox (4.97762pt too wide) in paragraph at lines 1077--1077
+[66
+
+] [67
+
+] [68
+
+]
+Overfull \hbox (4.97762pt too wide) in paragraph at lines 1114--1114
 []  
  []
 
-[67
+[69
 
-] [68
+] [70
 
 ]
 \tf@nav=\write7
@@ -2698,27 +2710,27 @@ Overfull \hbox (4.97762pt too wide) in paragraph at lines 1077--1077
 \tf@snm=\write9
 \openout9 = `Thesis_presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1119.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1119.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1156.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1156.
  (./Thesis_presentation.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1119.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1119.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1156.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1156.
 
 Package rerunfilecheck Info: File `Thesis_presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 05F7000A27DDEA2AED4986272756DE60;887.
+(rerunfilecheck)             Checksum: D5BB1F3F000A272DB1CEA376DB34BEA9;887.
 Package logreq Info: Writing requests to 'Thesis_presentation.run.xml'.
 \openout1 = `Thesis_presentation.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1119.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1156.
  ) 
 Here is how much of TeX's memory you used:
- 37944 strings out of 493105
- 840268 string characters out of 6137072
- 1350394 words of memory out of 5000000
- 40430 multiletter control sequences out of 15000+600000
- 85883 words of font info for 81 fonts, out of 8000000 for 9000
+ 37959 strings out of 493105
+ 840517 string characters out of 6137072
+ 1351423 words of memory out of 5000000
+ 40438 multiletter control sequences out of 15000+600000
+ 91313 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,25n,78p,958b,1477s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,25n,78p,958b,1458s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/sha
 re/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/
@@ -2732,20 +2744,21 @@ e/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm
 f/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmss
 8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss9.pfb></usr/share/texmf/fonts
 /type1/public/lm/lmssbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmsso17.pfb></usr/share/texmf/fonts/
-type1/public/lm/lmsso8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso9.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmsy5.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmtti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/symbols/msbm10.pfb>
-Output written on Thesis_presentation.pdf (68 pages, 907563 bytes).
+fb></usr/share/texmf/fonts/type1/public/lm/lmsso12.pfb></usr/share/texmf/fonts/
+type1/public/lm/lmsso17.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso8.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmsso9.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy5.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+tti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
+am10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msa
+m7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm1
+0.pfb>
+Output written on Thesis_presentation.pdf (70 pages, 934466 bytes).
 PDF statistics:
- 5620 PDF objects out of 6186 (max. 8388607)
- 5335 compressed objects within 54 object streams
- 172 named destinations out of 1000 (max. 500000)
+ 5793 PDF objects out of 6186 (max. 8388607)
+ 5502 compressed objects within 56 object streams
+ 176 named destinations out of 1000 (max. 500000)
  303 words of extra memory for PDF output out of 10000 (max. 10000000)
 

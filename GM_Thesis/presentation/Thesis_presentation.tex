@@ -51,20 +51,6 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame} \frametitle{The Geometric Monitoring Method}\framesubtitle{\tiny(\fullcite{Sharfman2006GM})}
-\begin{itemize}
-\item Threshold monitoring
-\item Nodes communicate when needed
-	\begin{itemize}
-	\item Local constraints
-	\item Violation resolution (\emph{false alarms})
-	\end{itemize}
-\item Arbitrary function monitoring
-\item Tight accuracy bounds
-\item A promising framework for \emph{distributed data stream monitoring}
-\end{itemize}
-\end{frame}
-
 \begin{frame} \frametitle{Motivation}
 \setbeamercovered{transparent}
 \begin{itemize}
@@ -83,6 +69,16 @@
 	\item<3-> incremental/real-time operation
 	\item<4-> \textbf{Minimize communication while retaining accuracy bounds}
 \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame} \frametitle{The Geometric Monitoring Method}\framesubtitle{\tiny(\fullcite{Sharfman2006GM})}
+\begin{itemize}
+\item Threshold monitoring
+\item Arbitrary function monitoring
+\item Nodes communicate when needed
+\item Tight accuracy bounds
+\item A promising framework for \emph{distributed data stream monitoring}
 \end{itemize}
 \end{frame}
 
@@ -143,7 +139,7 @@ Expand the \emph{geometric monitoring method}:
 \begin{frame} \frametitle{Computational Model}\framesubtitle{Estimate vector}
 \setbeamercolor{block title}{use=structure,fg=white,bg=blue!55!black}
 \setbeamercolor{block body}{use=structure,fg=black,bg=blue!5!white}
-Infrequent communication between nodes/nodes-coordinator:
+Infrequent communication between nodes and coordinator:
 \begin{block}{Estimate vector}
 \begin{equation*}
 \vec{e}(t)=\frac{\sum_{i=1}^n {w_i \vec{v_i}'}}{\sum_{i=1}^n {w_i}}
@@ -174,6 +170,14 @@ Infrequent communication between nodes/nodes-coordinator:
 \end{block}
 %\end{column}
 %\end{columns}
+\end{frame}
+
+\begin{frame} \frametitle{Computational Model}\framesubtitle{Local Constraints}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.3, trim=0 0 4.2cm 0]{../img/local_constraints.tex}
+\caption{Bounding ball $B(\vec{e}, \vec{u_i}(t))$ as local constraint at node $p_i$}
+\end{figure}
 \end{frame}
 
 \begin{frame} \frametitle{Computational Model}\framesubtitle{Balancing Process}
@@ -377,11 +381,11 @@ Let $G=(V,E)$ a graph:
 \begin{frame} \frametitle{The Distance-based Hierarchical Clustering}\framesubtitle{The Idea}
 Node selection for \emph{violation resolution}:
 \begin{itemize}
-\item Elevate \emph{randomness} of the initial \emph{geometric monitoring} method {\tiny(\fullcite{Sharfman2006GM})}
 \item Hierarchical node clustering scheme {\tiny(\fullcite{Keren2014GMHetStreams})}
+\item Elevate \emph{randomness} of the initial \emph{geometric monitoring} method {\tiny(\fullcite{Sharfman2006GM})}
 \item Decouple matching from the data distribution at the nodes {\tiny(\fullcite{Keren2014GMHetStreams})}
 \item Accurately follow \emph{global statistics vector}
-\item Node ``cancel each other out'' during the \emph{balancing process}
+\item Nodes ``cancel each other out'' during the \emph{balancing process}
 \end{itemize}
 \end{frame}
 
@@ -993,6 +997,39 @@ $$d_t^T \nabla G(x_t)\leq 0$$
 \item a move towards $d_t$ reduces the objective functions value i.e.,
 $$d_t^T \nabla F(x_t)<0$$.
 \end{itemize}
+\end{frame}
+
+\begin{frame}[plain]\frametitle{Savitzky-Golay Filter}
+\[
+\mathbf{J}=\begin{bmatrix}
+    1      & -n_L   & \dots &(-n_L)^M \\
+    \vdots & \vdots &       &  \vdots \\
+    1      &     0  & \dots &	0     \\
+    \vdots & \vdots &       & \vdots  \\
+    1      &   n_R  & \dots &  n_R^M
+\end{bmatrix}, 
+\mathbf{a}=\begin{bmatrix}
+a_M\\
+\vdots\\
+a_1\\
+a_0
+\end{bmatrix}, 
+\mathbf{f}=\begin{bmatrix}
+f_{i-n_L}\\
+\vdots\\
+f_i\\
+\vdots\\
+f_{i+n_R}
+\end{bmatrix}
+\]
+The least squares fitting:
+\[
+\lVert\mathbf{J}\mathbf{a}-\mathbf{f}\rVert_2=\text{min}
+\]
+The \emph{convolution coefficients} are contained in:
+\[\mathbf{C}=(\mathbf{J}^T \mathbf{J})^{-1} \mathbf{J}^T\]
+,and the smoothed signal can be easily computed as such:
+\[g_i=(\mathbf{C} e_{M+1})^T \mathbf{f}\]
 \end{frame}
 
 \begin{frame}[plain]
